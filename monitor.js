@@ -885,6 +885,18 @@ async function mainToday() {
   if (!products.length) {
     const dbg = path.join(__dirname, 'data', 'b-today-debug.html');
     try { fs.writeFileSync(dbg, html); } catch (e) {}
+    // 诊断信息直接进日志（云函数场景日志即可见）
+    const cnt = (re2s) => (html.match(re2s) || []).length;
+    const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '?';
+    log(`[诊断] 页面长度=${html.length} title=${title.slice(0, 50)}`);
+    log(`[诊断] itemIdentityId=${cnt(/itemIdentityId/g)} baseSpuId=${cnt(/baseSpuId/g)} productResult=${cnt(/productResult/g)} __react_data__=${cnt(/__react_data__/g)} 验证词命中=${VERIFY_PHRASES.some(p => html.includes(p))}`);
+    const wm = [...new Set(html.match(/window\.[A-Za-z_$][\w$]*\s*=/g) || [])];
+    log(`[诊断] window赋值: ${wm.slice(0, 12).join(' ')}`);
+    // 搜可能的数据载体字段
+    ['skuId', 'skuName', 'wareId', 'wname', 'providerData', 'spuId'].forEach(k => {
+      const c = cnt(new RegExp(k, 'g'));
+      if (c) log(`[诊断] 字段 ${k}: ${c} 次`);
+    });
     log('解析出 0 个商品，疑似 cookie 失效或页面结构变化，HTML 已存 ' + dbg);
     process.exit(0);
   }

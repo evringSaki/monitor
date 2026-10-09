@@ -111,8 +111,21 @@ exports.main_handler = async (event, context) => {
   const env = { ...process.env, MODE: 'today', STATE_PATH: TMP_STATE, LOG_PATH: '/tmp/history.log' };
   const r = cp.spawnSync('node', [path.join(__dirname, 'monitor.js')], { env, encoding: 'utf8', timeout: 240000 });
   const out = (r.stdout || '') + (r.stderr || '');
-  log.push(...out.trim().split('\n').slice(-12)); // 只带最后 12 行，避免日志超长
+  log.push(...out.trim().split('\n').slice(-14)); // 只带最后 14 行，避免日志超长
   const exitCode = r.status == null ? -1 : r.status;
+
+  // 3.5) 若 monitor 留下了 debug 页面（解析 0 商品时），回传 GitHub 供远程分析
+  const dbgLocal = path.join(__dirname, 'data', 'b-today-debug.html');
+  if (fs.existsSync(dbgLocal) && fs.statSync(dbgLocal).size > 1000) {
+    const dbgShaResp = await ghRequest('GET', `/repos/${GITHUB_REPO}/contents/data/b-today-debug.html`);
+    const up2 = await ghRequest('PUT', `/repos/${GITHUB_REPO}/contents/data/b-today-debug.html`, {
+      message: `debug: 云函数页面样本 ${ts()}`,
+      content: fs.readFileSync(dbgLocal, 'base64'),
+      ...(dbgShaResp.json && dbgShaResp.json.sha ? { sha: dbgShaResp.json.sha } : {}),
+    });
+    log.push(`debug页面回传: ${up2.status === 200 || up2.status === 201 ? '✅ 已存 GitHub data/b-today-debug.html' : '❌ HTTP ' + up2.status}`);
+    try { fs.unlinkSync(dbgLocal); } catch (e) {}
+  }
 
   // 4) 回写快照
   const up = await uploadSnapshot(dl.sha);
