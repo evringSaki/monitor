@@ -764,11 +764,47 @@ function pickField(str, field) {
 }
 
 // 从 SSR HTML 提取今日抢购全部商品
+// 页面里两种商品格式：
+//   A: "itemIdentityId":"X" + "productResult":{...}          （appointment_buy 楼层）
+//   B: "baseSpuId":"X" + 平铺 name/jdPrice/skuStockInfo       （feeds 楼层）
+// 实时字段在深层：skuStockInfo.soldRate=真实已抢%、remainNum=剩余件数、skuPriceInfo.price=真实抢购价
 function extractTodayProducts(html) {
   const s = unescapePageJson(html);
-  const out = [];
-  const seen = new Set();
-  const re = /"itemIdentityId":"(\d+)"/g;
+  const map = new Map();
+
+  function upsert(sku, patch) {
+    if (!/^\d{6,15}$/.test(String(sku))) return;
+    const cur = map.get(sku) || {
+      sku, name: '', price: '', priceSrc: '', process: '', processSrc: '',
+      canSell: '', shop: '', stageStatus: '', stageStartTime: '',
+      soldOut: '', remainNum: '', soldRate: '',
+      firstSeen: new Date().toISOString(),
+    };
+    for (const [k, v] of Object.entries(patch)) {
+      if (v === '' || v == null) continue;
+      if (k === 'price') {
+        // promo(真实抢购价) > base(原价)
+        if (!cur.price || (patch.priceSrc === 'promo' && cur.priceSrc !== 'promo')) { cur.price = v; cur.priceSrc = patch.priceSrc; }
+      } else if (k === 'process') {
+        // stock(soldRate 实时已抢) > base(productProcess)
+        if (!cur.process || (patch.processSrc === 'stock' && cur.processSrc !== 'stock')) { cur.process = v; cur.processSrc = patch.processSrc; }
+      } else if (['soldOut', 'remainNum', 'soldRate'].includes(k) || !cur[k]) {
+        cur[k] = v;
+      }
+    }
+    map.set(sku, cur);
+  }
+
+  function findObjAfter(str, key) {
+    const i = str.indexOf('"' + key + '"');
+    if (i < 0) return '';
+    const brace = str.indexOf('{', i);
+    if (brace < 0) return '';
+    return extractObj(str, brace) || '';
+  }
+
+  // ---- 格式A ----
+  const re = /"itemIdentityId"\s*:\s*"(\d+)"/g;
   let m;
   while ((m = re.exec(s)) !== null) {
     let prIdx = s.indexOf('"productResult"', m.index);
@@ -776,24 +812,44 @@ function extractTodayProducts(html) {
     prIdx = s.indexOf('{', prIdx);
     if (prIdx < 0) continue;
     const raw = extractObj(s, prIdx) || s.slice(prIdx, prIdx + 9000);
-    const sku = m[1];
-    if (seen.has(sku)) continue;
-    seen.add(sku);
-    const name = pickField(raw, 'name') || pickField(raw, 'shortTitle') || '';
-    const shop = pickField(raw, 'shopName') || '';
-    out.push({
-      sku,
-      name: name || shop,
-      price: pickField(raw, 'pPrice'),
-      process: pickField(raw, 'productProcess'),   // 已抢百分比
-      canSell: pickField(raw, 'canSell'),          // N=未开抢/不可卖 Y=可抢
-      shop,
+    upsert(m[1], {
+      name: pickField(raw, 'name') || pickField(raw, 'shortTitle') || pickField(raw, 'shopName'),
+      price: pickField(raw, 'pPrice'), priceSrc: 'base',
+      process: pickField(raw, 'productProcess'), processSrc: 'base',
+      canSell: pickField(raw, 'canSell'),
+      shop: pickField(raw, 'shopName'),
       stageStatus: pickField(raw, 'stageStatus'),
-      stageStartTime: pickField(raw, 'stageStartTime'), // 开抢时刻(毫秒)
-      firstSeen: new Date().toISOString(),
+      stageStartTime: pickField(raw, 'stageStartTime'),
+    });
+    const stock = findObjAfter(raw, 'skuStockInfo');
+    if (stock) {
+      const rate = pickField(stock, 'soldRate');
+      upsert(m[1], {
+        soldRate: rate, remainNum: pickField(stock, 'remainNum'), soldOut: pickField(stock, 'soldOut'),
+        process: rate ? rate + '%' : '', processSrc: 'stock',
+      });
+    }
+    const priceInfo = findObjAfter(raw, 'skuPriceInfo');
+    if (priceInfo) upsert(m[1], { price: pickField(priceInfo, 'price'), priceSrc: 'promo' });
+  }
+
+  // ---- 格式B ----
+  const re2 = /"baseSpuId"\s*:\s*"(\d{6,15})"/g;
+  while ((m = re2.exec(s)) !== null) {
+    const seg = s.slice(m.index, m.index + 9000);
+    const stock = findObjAfter(seg.slice(seg.indexOf('"skuStockInfo"') >= 0 ? seg.indexOf('"skuStockInfo"') : 0), 'skuStockInfo');
+    upsert(m[1], {
+      name: pickField(seg, 'name'),
+      price: pickField(seg, 'jdPrice'), priceSrc: 'base',
+      shop: pickField(seg, 'shopName'),
+      soldRate: pickField(stock, 'soldRate'),
+      remainNum: pickField(stock, 'remainNum'),
+      soldOut: pickField(stock, 'soldOut'),
+      process: pickField(stock, 'soldRate') ? pickField(stock, 'soldRate') + '%' : '', processSrc: 'stock',
     });
   }
-  return out;
+
+  return [...map.values()];
 }
 
 function fmtToday(p) {
@@ -844,8 +900,11 @@ async function mainToday() {
   if (fs.existsSync(STATE_PATH)) {
     try { prev0 = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); } catch (e) {}
   }
-  if (prev0 && prev0.total && products.length < prev0.total * 0.7) {
-    log(`警告：本次 ${products.length} 个比上次 ${prev0.total} 个骤降超 30%，疑似降级页，跳过本次`);
+  // 骤降保护（修正版）：只防"真降级页"。降级页特征 = 页面字节也明显偏小
+  // （风控降级页 ~36万字节，全量页 ~50万）。页面全量但商品骤减 = 真实业务变化
+  // （如 20:00 开抢后原价 SPU 从楼层撤下），必须放行，否则监控卡死在旧基线。
+  if (prev0 && prev0.total && products.length < prev0.total * 0.7 && html.length < 450000) {
+    log(`警告：本次 ${products.length} 个比上次 ${prev0.total} 个骤降且页面仅 ${html.length} 字节，疑似降级页，跳过本次`);
     process.exit(0);
   }
 
