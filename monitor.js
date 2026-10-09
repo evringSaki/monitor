@@ -877,7 +877,9 @@ async function mainToday() {
   }
   if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
   // 每次都留存页面样本（云函数场景由 scf-index 回传 GitHub，用于远程诊断）
-  try { fs.writeFileSync(path.join(__dirname, 'data', 'last-page.html'), html); } catch (e) {}
+  // 注意：云函数代码目录 /var/user 只读，必须写 /tmp
+  try { fs.writeFileSync('/tmp/last-page.html', html); } catch (e) {}
+  try { fs.mkdirSync(path.join(__dirname, 'data'), { recursive: true }); fs.writeFileSync(path.join(__dirname, 'data', 'last-page.html'), html); } catch (e) {}
 
   // 2) 解析
   let products;

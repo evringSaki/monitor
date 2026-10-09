@@ -115,19 +115,15 @@ exports.main_handler = async (event, context) => {
   const exitCode = r.status == null ? -1 : r.status;
 
   // 3.5) 页面样本回传：无论 monitor 结果如何，都把本次抓到的页面传到 GitHub（远程诊断用）
-  const sampleLocal = path.join(__dirname, 'data', 'last-page.html');
+  const sampleLocal = fs.existsSync('/tmp/last-page.html') ? '/tmp/last-page.html' : path.join(__dirname, 'data', 'last-page.html');
   if (fs.existsSync(sampleLocal) && fs.statSync(sampleLocal).size > 1000) {
-    const startedAt = context && context.time ? new Date(context.time).getTime() : 0;
-    const isFresh = !startedAt || (fs.statSync(sampleLocal).mtime.getTime() > startedAt - 60000);
-    if (isFresh) {
-      const shaResp = await ghRequest('GET', `/repos/${GITHUB_REPO}/contents/data/last-page.html`);
-      const up2 = await ghRequest('PUT', `/repos/${GITHUB_REPO}/contents/data/last-page.html`, {
-        message: `debug: 云函数页面样本 ${ts()}`,
-        content: fs.readFileSync(sampleLocal, 'base64'),
-        ...(shaResp.json && shaResp.json.sha ? { sha: shaResp.json.sha } : {}),
-      });
-      log.push(`页面样本回传: ${up2.status === 200 || up2.status === 201 ? '✅ data/last-page.html' : '❌ HTTP ' + up2.status}`);
-    }
+    const shaResp = await ghRequest('GET', `/repos/${GITHUB_REPO}/contents/data/last-page.html`);
+    const up2 = await ghRequest('PUT', `/repos/${GITHUB_REPO}/contents/data/last-page.html`, {
+      message: `debug: 云函数页面样本 ${ts()}`,
+      content: fs.readFileSync(sampleLocal, 'base64'),
+      ...(shaResp.json && shaResp.json.sha ? { sha: shaResp.json.sha } : {}),
+    });
+    log.push(`页面样本回传: ${up2.status === 200 || up2.status === 201 ? '✅ data/last-page.html' : '❌ HTTP ' + up2.status}`);
   }
 
   // 4) 回写快照
