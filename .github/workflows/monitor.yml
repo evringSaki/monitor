@@ -30,14 +30,14 @@ jobs:
       contents: write   # 写回 snapshot.json 到仓库
     steps:
       - name: 拉取代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 设置 Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: 首次运行创建 data 目录
         run: mkdir -p data
