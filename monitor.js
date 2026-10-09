@@ -146,6 +146,26 @@ function extractReactData(html) {
 
 function extractMainProducts(ad) {
   const map = new Map();
+  // 第一遍：有些活动页（如"加倍补"）商品卡片把 SKU 藏在 jump.params.skuId 里，
+  // 商品名在同级字段 wname 上，两个字段不在同一个对象里，所以要先把 sku→名字 建索引
+  const infoBySku = new Map();
+  (function index(o) {
+    if (!o || typeof o !== 'object') return;
+    if (Array.isArray(o)) { o.forEach(index); return; }
+    const jumpSku = o.jump && o.jump.params && (o.jump.params.skuId || o.jump.params.sku);
+    if (jumpSku && /^\d{5,}$/.test(String(jumpSku))) {
+      const k = String(jumpSku);
+      if (!infoBySku.has(k)) {
+        infoBySku.set(k, {
+          name: o.wname || o.name || o.shortTitle || o.nameCn || o.wareName || '',
+          price: o.jdPrice != null ? String(o.jdPrice) : (o.pPrice != null ? String(o.pPrice) : ''),
+          shop: o.shopName || o.venderName || '',
+          pic: o.imageUrl || o.smallImageUrl || o.picUrl || '',
+        });
+      }
+    }
+    Object.values(o).forEach(index);
+  })(ad);
   (function walk(o) {
     if (!o || typeof o !== 'object') return;
     if (Array.isArray(o)) { o.forEach(walk); return; }
@@ -153,13 +173,14 @@ function extractMainProducts(ad) {
     if (sku && /^\d{5,}$/.test(String(sku))) {
       const k = String(sku);
       if (!map.has(k)) {
+        const fb = infoBySku.get(k) || {};   // 名字回填（跨对象取）
         map.set(k, {
           sku: k, source: 'main',
-          name: o.name || o.shortTitle || o.nameCn || '',
-          price: o.jdPrice != null ? String(o.jdPrice) : (o.pPrice != null ? String(o.pPrice) : (o.tkPrice != null ? String(o.tkPrice) : '')),
-          shop: o.shopName || '',
+          name: o.name || o.shortTitle || o.nameCn || o.wname || o.wareName || fb.name || '',
+          price: o.jdPrice != null ? String(o.jdPrice) : (o.pPrice != null ? String(o.pPrice) : (o.tkPrice != null ? String(o.tkPrice) : (fb.price || ''))),
+          shop: o.shopName || fb.shop || '',
           isNew: !!o.isNew,
-          pic: o.picUrl || (o.image && o.image.picUrl) || '',
+          pic: o.picUrl || (o.image && o.image.picUrl) || fb.pic || '',
         });
       }
     }
