@@ -81,6 +81,7 @@ function fetchHtml(url, opts) {
         'sec-ch-ua-platform': '"Android"',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
+        ...(o.cookie ? { Cookie: o.cookie } : {}),
         ...(o.viaJina ? { 'X-Return-Format': 'html' } : {}),
       },
       timeout: 45000,
@@ -727,6 +728,165 @@ async function main() {
   }
 }
 
+// ================= 场B：今日抢购（带登录 cookie 抓 SSR 直出数据） =================
+// 原理：活动页对登录用户会把「今日抢购」商品（itemIdentityId + productResult）直接 SSR 进 HTML，
+// 无需 h5st 签名接口——带 cookie GET 一次页面 + 字符串解析即可，1-3 秒出全量清单。
+const JD_COOKIE = process.env.JD_COOKIE || '';
+
+// 还原页面里多层转义的 JSON 字符串，再按字段正则抽取（不依赖整体 JSON.parse，抗结构变化）
+function unescapePageJson(html) {
+  let s = html;
+  for (let i = 0; i < 5 && /\\+"/.test(s); i++) s = s.replace(/\\+"/g, '"');
+  return s;
+}
+
+function extractObj(str, startIdx) {
+  let depth = 0, inStr = false, esc = false;
+  for (let i = startIdx; i < str.length; i++) {
+    const c = str[i];
+    if (esc) { esc = false; continue; }
+    if (c === '\\') { esc = true; continue; }
+    if (c === '"') inStr = !inStr;
+    if (inStr) continue;
+    if (c === '{') depth++;
+    else if (c === '}') { depth--; if (depth === 0) return str.slice(startIdx, i + 1); }
+  }
+  return null;
+}
+
+function pickField(str, field) {
+  const m = str.match(new RegExp('"' + field + '":"?([^",}\\\\]+)"?'));
+  return m ? m[1] : '';
+}
+
+// 从 SSR HTML 提取今日抢购全部商品
+function extractTodayProducts(html) {
+  const s = unescapePageJson(html);
+  const out = [];
+  const seen = new Set();
+  const re = /"itemIdentityId":"(\d+)"/g;
+  let m;
+  while ((m = re.exec(s)) !== null) {
+    const prIdx = s.indexOf('"productResult":{', m.index);
+    if (prIdx < 0 || prIdx - m.index > 300) continue;
+    const raw = extractObj(s, prIdx + '"productResult":'.length) || s.slice(prIdx, prIdx + 6000);
+    const sku = m[1];
+    if (seen.has(sku)) continue;
+    seen.add(sku);
+    const name = pickField(raw, 'name') || pickField(raw, 'shortTitle') || '';
+    const shop = pickField(raw, 'shopName') || '';
+    out.push({
+      sku,
+      name: name || shop,
+      price: pickField(raw, 'pPrice'),
+      process: pickField(raw, 'productProcess'),   // 已抢百分比
+      canSell: pickField(raw, 'canSell'),          // N=未开抢/不可卖 Y=可抢
+      shop,
+      stageStatus: pickField(raw, 'stageStatus'),
+      stageStartTime: pickField(raw, 'stageStartTime'), // 开抢时刻(毫秒)
+      firstSeen: new Date().toISOString(),
+    });
+  }
+  return out;
+}
+
+function fmtToday(p) {
+  // productProcess 自带 "16%"，去重；开抢时间用 UTC+8 显示北京时间
+  const pct = String(p.process || '').replace(/%$/, '');
+  const t = p.stageStartTime ? new Date(+p.stageStartTime + 8 * 3600e3).toISOString().replace('T', ' ').slice(0, 16) : '';
+  return `${p.name || '(未命名)'} ￥${p.price || '?'} 已抢${pct}% ${p.shop || '-'} SKU:${p.sku}${t ? ' 开抢:' + t : ''} https://item.m.jd.com/product/${p.sku}.html`;
+}
+
+async function mainToday() {
+  ensureDir(STATE_PATH);
+  if (!JD_COOKIE) { log('错误：未设置 JD_COOKIE 环境变量（需要登录态才能拿到今日抢购数据）'); process.exit(2); }
+
+  // 1) 带登录 cookie 抓活动页（不走 jina 中转——cookie 只应发给京东 itself）
+  let html = null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    global.__UA__ = UA_POOL[(attempt - 1) % UA_POOL.length];
+    try {
+      html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE });
+      if (VERIFY_PHRASES.some(p => html.includes(p))) { log(`第 ${attempt} 次命中验证页，cookie 可能失效`); html = null; }
+    } catch (e) { log(`第 ${attempt}/3 次抓取失败：${e.message}`); html = null; }
+    if (html) break;
+    await sleep(3000 + Math.floor(Math.random() * 4000));
+  }
+  if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
+
+  // 2) 解析
+  let products;
+  try { products = extractTodayProducts(html); }
+  catch (e) { log('解析失败：' + e.message); process.exit(2); }
+  log(`抓取成功：今日抢购 ${products.length} 个商品`);
+  if (!products.length) {
+    const dbg = path.join(__dirname, 'data', 'b-today-debug.html');
+    try { fs.writeFileSync(dbg, html); } catch (e) {}
+    log('解析出 0 个商品，疑似 cookie 失效或页面结构变化，HTML 已存 ' + dbg);
+    process.exit(0);
+  }
+  products.forEach(p => log('  · ' + fmtToday(p)));
+
+  // 3) 首跑建基线
+  if (!fs.existsSync(STATE_PATH)) {
+    fs.writeFileSync(STATE_PATH, JSON.stringify({ time: new Date().toISOString(), total: products.length, products }, null, 2));
+    log('基准快照已建立（首次运行，' + products.length + ' 个商品）');
+    process.exit(0);
+  }
+
+  // 4) 对比
+  let prev;
+  try { prev = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); }
+  catch (e) { prev = { products: [] }; }
+  const prevBySku = new Map((prev.products || []).map(p => [p.sku, p]));
+  const ev = { added: [], sellable: [], priceChanged: [], soldOut: [] };
+  for (const p of products) {
+    const old = prevBySku.get(p.sku);
+    if (!old) { ev.added.push(p); continue; }
+    p.streak = (old.streak || 1) + 1;
+    if (String(old.canSell) !== 'Y' && String(p.canSell) === 'Y') ev.sellable.push(p);
+    if (String(old.canSell) === 'Y' && String(p.canSell) !== 'Y') ev.soldOut.push(p);
+    if (old.price && p.price && old.price !== p.price) ev.priceChanged.push({ ...p, from: old.price, to: p.price });
+  }
+
+  // 5) 写回快照（无论是否有变化，累积 streak 防重复报警）
+  fs.writeFileSync(STATE_PATH, JSON.stringify({ time: new Date().toISOString(), total: products.length, products }, null, 2));
+
+  // 6) 推送
+  const notify = async (title, lines, html2) => {
+    log(title + '\n' + lines.map(l => '  ' + l).join('\n'));
+    await qmsgPushList('【今日抢购】' + title, lines.slice(0, 8).map((l, i) => `${i + 1}. ${cleanName(l).slice(0, 30)}`), '（详情请打开官方 App 查看）\n时间: ' + ts());
+    await pushPlusSend('【今日抢购】' + title, html2);
+  };
+
+  if (ev.added.length) {
+    const lines = ev.added.map(p => `${p.name || '新品'} ￥${p.price} 已抢${String(p.process).replace(/%$/, '')}%`);
+    const htmlBody = ev.added.slice(0, 20).map((p, i) =>
+      `${i + 1}. <a href="https://item.m.jd.com/product/${p.sku}.html">${p.name || '新品'}</a><br>&nbsp;&nbsp;￥${p.price} ｜ 已抢 ${p.process}% ｜ ${p.shop || ''}`).join('<br>');
+    await notify(`新上 ${ev.added.length} 个商品！`, lines, htmlBody + '<br>——<br>时间: ' + ts());
+    process.exit(1);
+  }
+  if (ev.sellable.length) {
+    const lines = ev.sellable.map(p => `${p.name} 可以抢了！`);
+    const htmlBody = ev.sellable.slice(0, 20).map(p =>
+      `<a href="https://item.m.jd.com/product/${p.sku}.html"><b>${p.name}</b></a> 开抢！￥${p.price}｜已抢 ${String(p.process).replace(/%$/, '')}%`).join('<br>');
+    await notify(`${ev.sellable.length} 个商品开抢！`, lines, htmlBody + '<br>——<br>时间: ' + ts());
+    process.exit(1);
+  }
+  if (ev.soldOut.length) {
+    await notify(`${ev.soldOut.length} 个商品已售罄`, ev.soldOut.map(p => `${p.name} 已抢完`),
+      ev.soldOut.slice(0, 10).map(p => `${p.name} 已售罄（已抢 ${String(p.process).replace(/%$/, '')}%）`).join('<br>'));
+    process.exit(1);
+  }
+  if (ev.priceChanged.length) {
+    await notify(`${ev.priceChanged.length} 个商品价格变动`, ev.priceChanged.map(c => `${c.name} ￥${c.from}→￥${c.to}`),
+      ev.priceChanged.slice(0, 10).map(c => `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name}</a>：￥${c.from} → <b>￥${c.to}</b>`).join('<br>'));
+    process.exit(1);
+  }
+  log('检查完成，今日抢购无变化');
+  process.exit(0);
+}
+
 if (process.env.QMSG_TEST === '1') {
   // GitHub Actions → Run workflow 勾选 test_push：只发一条测试消息，验证 QQ/微信能否真的收到
   (async () => {
@@ -739,6 +899,9 @@ if (process.env.QMSG_TEST === '1') {
       process.exit(0);
     } catch (e) { log('测试推送异常：' + e.message); process.exit(2); }
   })();
+} else if (process.env.MODE === 'today') {
+  // 场B：今日抢购监控（带登录 cookie 抓 SSR）
+  mainToday().catch(e => { log('致命错误：' + e.message); process.exit(2); });
 } else if (require.main === module) {
   main().catch(e => { log('致命错误：' + e.message); process.exit(2); });
 }
