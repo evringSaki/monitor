@@ -1443,3 +1443,33 @@
 [2026/10/10 00:32:40]【场B今日】 [诊断] itemIdentityId=0 baseSpuId=0 productResult=0 __react_data__=0 验证词命中=false
 [2026/10/10 00:32:40]【场B今日】 [诊断] window赋值: window.jap = window.lazyFailedScripts= window.$preload= window.$layloadOrderScripts= window.isStatic= window.MPingPromise= window.onGetBridgeChannelType= window.__bridge_channel_type__= window.h5CpsMtaData= window.__babel_pv_reported__= window.putExpoPV= window.__expo_pv_reported__=
 [2026/10/10 00:32:40]【场B今日】 解析出 0 个商品，疑似 cookie 失效或页面结构变化，HTML 已存 /home/runner/work/monitor/monitor/data/b-today-debug.html
+[2026/10/10 01:40:53]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:40:53]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/10/10 01:40:53]【场A】 等待 4.6 秒后重试...
+[2026/10/10 01:40:59]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:40:59]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/10/10 01:40:59]【场A】 等待 4.0 秒后重试...
+[2026/10/10 01:41:04]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 01:41:04]【场A】 第 3/5 次命中验证页，稍后重试
+[2026/10/10 01:41:04]【场A】 等待 2.0 秒后重试...
+[2026/10/10 01:41:09]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 01:41:09]【场A】 第 4/5 次命中验证页，稍后重试
+[2026/10/10 01:41:09]【场A】 等待 2.0 秒后重试...
+[2026/10/10 01:41:13]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 01:41:13]【场A】 第 5 次尝试（jina中转）获取到真实页面，长度 548885
+[2026/10/10 01:41:13]【场A】 抓取成功：70 个 SKU（时段商品 7 个 / 楼层商品 7 个）
+[2026/10/10 01:41:13]【场A】 当前场次：20:00 场（stageId=335917882）；全部场次：20:00:00 → 10:00:00 → 10:00:00
+[2026/10/10 01:41:13]【场A】 检查完成，无上新 （热区 3 个，仅记录不推送）
+[2026/10/10 01:41:14]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:14]【场B今日】 第 1 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:21]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:21]【场B今日】 第 2 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:26]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:26]【场B今日】 第 3 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:30]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:30]【场B今日】 第 4 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:35]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:35]【场B今日】 第 5 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:41]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 01:41:41]【场B今日】 第 6 次命中验证页，cookie 可能失效
+[2026/10/10 01:41:49]【场B今日】 抓取失败（验证页/网络/cookie 失效），本次跳过
