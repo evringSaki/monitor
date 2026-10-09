@@ -1412,3 +1412,34 @@
 [2026/10/10 00:11:44]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
 [2026/10/10 00:11:44]【场B今日】 抓取成功：今日抢购 5 个商品（页面 306441 字节）
 [2026/10/10 00:11:44]【场B今日】 警告：仅 5 个商品（< 阈值 12），疑似风控降级页，本次跳过（不建基线/不对比/不覆盖快照）
+[2026/10/10 00:31:41]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:31:42]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/10/10 00:31:42]【场A】 等待 6.5 秒后重试...
+[2026/10/10 00:31:49]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:31:49]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/10/10 00:31:49]【场A】 等待 6.0 秒后重试...
+[2026/10/10 00:31:56]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 00:31:56]【场A】 第 3/5 次命中验证页，稍后重试
+[2026/10/10 00:31:56]【场A】 等待 2.0 秒后重试...
+[2026/10/10 00:32:00]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 00:32:00]【场A】 第 4/5 次命中验证页，稍后重试
+[2026/10/10 00:32:00]【场A】 等待 2.0 秒后重试...
+[2026/10/10 00:32:03]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/10/10 00:32:03]【场A】 第 5/5 次命中验证页，稍后重试
+[2026/10/10 00:32:03]【场A】 全部重试均失败（验证页/网络），本次跳过
+[2026/10/10 00:32:04]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:04]【场B今日】 第 1 次命中验证页，cookie 可能失效
+[2026/10/10 00:32:11]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:11]【场B今日】 第 2 次命中验证页，cookie 可能失效
+[2026/10/10 00:32:17]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:17]【场B今日】 第 3 次命中验证页，cookie 可能失效
+[2026/10/10 00:32:26]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:26]【场B今日】 第 4 次命中验证页，cookie 可能失效
+[2026/10/10 00:32:32]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:32]【场B今日】 第 5 次命中验证页，cookie 可能失效
+[2026/10/10 00:32:40]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 00:32:40]【场B今日】 抓取成功：今日抢购 0 个商品（页面 39246 字节）
+[2026/10/10 00:32:40]【场B今日】 [诊断] 页面长度=39246 title=?
+[2026/10/10 00:32:40]【场B今日】 [诊断] itemIdentityId=0 baseSpuId=0 productResult=0 __react_data__=0 验证词命中=false
+[2026/10/10 00:32:40]【场B今日】 [诊断] window赋值: window.jap = window.lazyFailedScripts= window.$preload= window.$layloadOrderScripts= window.isStatic= window.MPingPromise= window.onGetBridgeChannelType= window.__bridge_channel_type__= window.h5CpsMtaData= window.__babel_pv_reported__= window.putExpoPV= window.__expo_pv_reported__=
+[2026/10/10 00:32:40]【场B今日】 解析出 0 个商品，疑似 cookie 失效或页面结构变化，HTML 已存 /home/runner/work/monitor/monitor/data/b-today-debug.html
