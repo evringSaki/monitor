@@ -42,18 +42,48 @@ jobs:
       - name: 首次运行创建 data 目录
         run: mkdir -p data
 
-      - name: 执行监控
-        id: run
+      - name: 执行监控-场A
+        id: runA
+        if: ${{ !inputs.test_push }}
         env:
           QMSG_KEY: ${{ secrets.QMSG_KEY }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          PAGE_URL: 'https://pro.m.jd.com/mall/active/6WUG9FgpNWoAAx9qRSPsmSiVcyt/index.html'
           STATE_PATH: ./data/snapshot.json
           LOG_PATH: ./data/history.log
-          QMSG_TEST: ${{ inputs.test_push && '1' || '0' }}
+          PAGE_LABEL: '场A'
         run: |
-          echo "=== 开始 $(date -Iseconds) ==="
+          echo "=== 场A 开始 $(date -Iseconds) ==="
           node monitor.js || echo "退出码 $?（1=有更新，属正常）"
-          echo "=== 完成 ==="
+          echo "=== 场A 完成 ==="
+
+      - name: 执行监控-场B
+        id: runB
+        if: ${{ !inputs.test_push }}
+        env:
+          QMSG_KEY: ${{ secrets.QMSG_KEY }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          PAGE_URL: 'https://pro.m.jd.com/mall/active/USFY4Q1KPsHd54cN8AVUPHZdHpT/index.html'
+          STATE_PATH: ./data/snapshot-B.json
+          LOG_PATH: ./data/history.log
+          PAGE_LABEL: '场B'
+        run: |
+          echo "=== 场B 开始 $(date -Iseconds) ==="
+          node monitor.js || echo "退出码 $?（1=有更新，属正常）"
+          echo "=== 场B 完成 ==="
+
+      - name: 推送链路测试
+        id: runTest
+        if: ${{ inputs.test_push }}
+        env:
+          QMSG_KEY: ${{ secrets.QMSG_KEY }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          LOG_PATH: ./data/history.log
+          QMSG_TEST: '1'
+        run: |
+          echo "=== 测试开始 $(date -Iseconds) ==="
+          node monitor.js
+          echo "=== 测试完成 ==="
 
       - name: 回写快照到仓库
         if: always()

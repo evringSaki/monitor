@@ -35,6 +35,9 @@ const UA = 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, 
 const QMSG_KEY = process.env.QMSG_KEY || '';
 const PUSHPLUS_TOKEN = process.env.PUSHPLUS_TOKEN || '';
 const HOTZONE_CONFIRM_N = 2;
+// 多活动并跑时由工作流传入 PAGE_LABEL（"场A" / "场B"），所有推送与日志自动加【场X】前缀，便于区分
+const PAGE_LABEL = (process.env.PAGE_LABEL || '').trim();
+const PAGE_TAG = PAGE_LABEL ? '【' + PAGE_LABEL + '】' : '';
 // 验证页特征词（首项用 Unicode 转义书写，行为完全一致，只是源码里不出现站点品牌词）
 const VERIFY_PHRASES = ['\u4eac\u4e1c\u9a8c\u8bc1', '验证一下', '请完成验证', 'robot', 'captcha', '访问频次'];
 
@@ -44,7 +47,7 @@ function ts() {
   return new Date(Date.now() + 8 * 3600e3).toLocaleString('zh-CN', { hour12: false, timeZone: 'UTC' });
 }
 function log(msg) {
-  const line = `[${ts()}] ${msg}`;
+  const line = `[${ts()}]${PAGE_TAG} ${msg}`;
   console.log(line);
   try { fs.appendFileSync(LOG_PATH, line + '\n'); } catch (e) {}
 }
@@ -442,7 +445,7 @@ function fallbackForQmsg(text) {
 
 async function qmsgPush(text) {
   if (!QMSG_KEY) { log('未配置 QMSG_KEY，跳过推送'); return false; }
-  const safe = sanitizeForQmsg(text);
+  const safe = sanitizeForQmsg(PAGE_TAG + text);
   const first = await qmsgSendChecked(safe);
   if (first.st === 1) return true;
   if (first.st === 2) {
@@ -509,7 +512,7 @@ function httpPostJson(hostname, urlPath, body) {
 
 async function pushPlusSend(title, content) {
   if (!PUSHPLUS_TOKEN) { log('未配置 PUSHPLUS_TOKEN，跳过微信推送'); return false; }
-  const body = JSON.stringify({ token: PUSHPLUS_TOKEN, title: String(title).slice(0, 90), content: String(content), template: 'html' });
+  const body = JSON.stringify({ token: PUSHPLUS_TOKEN, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html' });
   const r = await httpPostJson('www.pushplus.plus', '/send', body);
   const ok = !!(r.json && r.json.code === 200);
   log('PushPlus(微信) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
