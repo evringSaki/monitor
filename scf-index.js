@@ -47,7 +47,7 @@ function ghRequest(method, urlPath, bodyObj) {
         ...(GITHUB_TOKEN ? { 'Authorization': 'Bearer ' + GITHUB_TOKEN } : {}),
         ...(body ? { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) } : {}),
       },
-      timeout: 30000,
+      timeout: 15000,
     }, (res) => {
       const chunks = [];
       res.on('data', c => chunks.push(c));
@@ -102,10 +102,10 @@ exports.main_handler = async (event, context) => {
     return { summary: '未配置 GITHUB_TOKEN / GITHUB_REPO（快照需要持久化到仓库）', log };
   }
 
-  // 2) 拉快照
+  // 2) 拉快照（失败不阻塞——没有基线时 monitor 自动走首跑建基线，监控本体不受影响）
   const dl = await downloadSnapshot();
-  log.push(`拉取快照: ${dl.ok ? (dl.sha ? '已有基线' : dl.reason) : '❌ ' + dl.reason}`);
-  if (!dl.ok) return { summary: '快照拉取失败，跳过本次', log };
+  log.push(`拉取快照: ${dl.ok ? (dl.sha ? '已有基线' : dl.reason) : '❌ ' + dl.reason + '（继续执行，无基线时将重建）'}`);
+  if (!dl.ok) { try { fs.unlinkSync(TMP_STATE); } catch (e) {} }
 
   // 3) 跑监控（子进程复用 monitor.js）
   const env = { ...process.env, MODE: 'today', STATE_PATH: TMP_STATE, LOG_PATH: '/tmp/history.log' };

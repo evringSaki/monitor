@@ -85,7 +85,7 @@ function fetchHtml(url, opts) {
         ...(o.refererOverride ? { Referer: o.refererOverride } : {}),
         ...(o.viaJina ? { 'X-Return-Format': 'html' } : {}),
       },
-      timeout: 45000,
+      timeout: o.timeoutMs || 45000,
     }, (res) => {
       if (res.statusCode !== 200) { res.resume(); return reject(new Error('HTTP ' + res.statusCode)); }
       log('响应状态 ' + res.statusCode + '，content-encoding=' + (res.headers['content-encoding'] || '(无)') + '，content-type=' + (res.headers['content-type'] || '(无)'));
@@ -870,19 +870,20 @@ async function mainToday() {
   // → 加 title 校验 + 自动重试；全部失败时退回最后一次替代页（解析出 0 自然跳过，无害）
   const ENTRY_REFERER = 'https://pro.m.jd.com/mall/active/23tsgwDHV1PDuZFshYDVeJMPDyDJ/index.html';
   let html = null, lastHtml = null;
-  for (let attempt = 1; attempt <= 6; attempt++) {
+  const MAX_TRY = Number(process.env.MAX_TRY || 3);
+  for (let attempt = 1; attempt <= MAX_TRY; attempt++) {
     global.__UA__ = UA_POOL[(attempt - 1) % UA_POOL.length];
     try {
-      html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE, refererOverride: ENTRY_REFERER });
+      html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE, refererOverride: ENTRY_REFERER, timeoutMs: 20000 });
       const t = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
       if (VERIFY_PHRASES.some(p => html.includes(p))) { log(`第 ${attempt} 次命中验证页，cookie 可能失效`); html = null; }
       else if (t && !/加倍补|超级补贴/.test(t)) {
         log(`第 ${attempt} 次拿到替代页面「${t.slice(0, 20)}」（机房IP被路由），重试`);
         lastHtml = html; html = null;
       }
-    } catch (e) { log(`第 ${attempt}/6 次抓取失败：${e.message}`); html = null; }
+    } catch (e) { log(`第 ${attempt}/${MAX_TRY} 次抓取失败：${e.message}`); html = null; }
     if (html) break;
-    await sleep(3000 + Math.floor(Math.random() * 5000));
+    await sleep(1500 + Math.floor(Math.random() * 1500));
   }
   if (!html && lastHtml) { log('6 次均未命中目标页，用最后一次替代页做最终尝试'); html = lastHtml; }
   if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
