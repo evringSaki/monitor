@@ -26,7 +26,7 @@ const zlib = require('zlib');
 
 // ================= 配置 =================
 const PAGE_URL = process.env.PAGE_URL ||
-  'https://pro.m.jd.com/mall/active/6WUG9FgpNWoAAx9qRSPsmSiVcyt/index.html';
+  'https://h5static.m.jd.com/mall/active/USFY4Q1KPsHd54cN8AVUPHZdHpT/index.html?babelChannel=ttt3&homepagebybt=1&secJump=1&visitScene=1';
 // 站点源（Referer / Origin 头由它推导，源码里不再硬编码站点地址）
 const SITE_ORIGIN = new URL(PAGE_URL).origin;
 const STATE_PATH = process.env.STATE_PATH || path.join(__dirname, 'data', 'snapshot.json');
