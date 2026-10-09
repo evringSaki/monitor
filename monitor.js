@@ -732,6 +732,9 @@ async function main() {
 // 原理：活动页对登录用户会把「今日抢购」商品（itemIdentityId + productResult）直接 SSR 进 HTML，
 // 无需 h5st 签名接口——带 cookie GET 一次页面 + 字符串解析即可，1-3 秒出全量清单。
 const JD_COOKIE = process.env.JD_COOKIE || '';
+// 今日抢购全量清单的最小可信数量（2026-10-09 实测完整 17 个；被风控降级时只剩 6 个）
+// 低于此值视为风控降级页，跳过本次，防止坏数据进基线
+const MIN_TODAY_PRODUCTS = Number(process.env.MIN_TODAY_PRODUCTS || 12);
 
 // 还原页面里多层转义的 JSON 字符串，再按字段正则抽取（不依赖整体 JSON.parse，抗结构变化）
 function unescapePageJson(html) {
@@ -802,15 +805,16 @@ async function mainToday() {
   if (!JD_COOKIE) { log('错误：未设置 JD_COOKIE 环境变量（需要登录态才能拿到今日抢购数据）'); process.exit(2); }
 
   // 1) 带登录 cookie 抓活动页（不走 jina 中转——cookie 只应发给京东 itself）
+  // 海外 CI 的 IP + 登录态容易被风控：首轮验证页/部分楼层降级页概率高，多重试几次
   let html = null;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 6; attempt++) {
     global.__UA__ = UA_POOL[(attempt - 1) % UA_POOL.length];
     try {
       html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE });
       if (VERIFY_PHRASES.some(p => html.includes(p))) { log(`第 ${attempt} 次命中验证页，cookie 可能失效`); html = null; }
-    } catch (e) { log(`第 ${attempt}/3 次抓取失败：${e.message}`); html = null; }
+    } catch (e) { log(`第 ${attempt}/6 次抓取失败：${e.message}`); html = null; }
     if (html) break;
-    await sleep(3000 + Math.floor(Math.random() * 4000));
+    await sleep(3000 + Math.floor(Math.random() * 5000));
   }
   if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
 
@@ -818,13 +822,30 @@ async function mainToday() {
   let products;
   try { products = extractTodayProducts(html); }
   catch (e) { log('解析失败：' + e.message); process.exit(2); }
-  log(`抓取成功：今日抢购 ${products.length} 个商品`);
+  log(`抓取成功：今日抢购 ${products.length} 个商品（页面 ${html.length} 字节）`);
   if (!products.length) {
     const dbg = path.join(__dirname, 'data', 'b-today-debug.html');
     try { fs.writeFileSync(dbg, html); } catch (e) {}
     log('解析出 0 个商品，疑似 cookie 失效或页面结构变化，HTML 已存 ' + dbg);
     process.exit(0);
   }
+
+  // 2.5) 降级页防护（海外 IP + 登录态易被京东风控）：
+  // 完整页 ~50 万字节 / 全量清单；被风控时只渲染部分楼层（实测 17 个 → 6 个）。
+  // 用降级页做基线或对比都会产生错误结果，必须跳过。
+  if (products.length < MIN_TODAY_PRODUCTS) {
+    log(`警告：仅 ${products.length} 个商品（< 阈值 ${MIN_TODAY_PRODUCTS}），疑似风控降级页，本次跳过（不建基线/不对比/不覆盖快照）`);
+    process.exit(0);
+  }
+  let prev0 = null;
+  if (fs.existsSync(STATE_PATH)) {
+    try { prev0 = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); } catch (e) {}
+  }
+  if (prev0 && prev0.total && products.length < prev0.total * 0.7) {
+    log(`警告：本次 ${products.length} 个比上次 ${prev0.total} 个骤降超 30%，疑似降级页，跳过本次`);
+    process.exit(0);
+  }
+
   products.forEach(p => log('  · ' + fmtToday(p)));
 
   // 3) 首跑建基线
