@@ -93,6 +93,17 @@ async function uploadSnapshot(sha) {
 }
 
 exports.main_handler = async (event, context) => {
+  // 全局硬性兜底：无论内部何处挂起（DNS/网络），120 秒必返回，避免撞函数超时
+  return Promise.race([
+    mainLogic(event, context),
+    new Promise(resolve => setTimeout(() => resolve({
+      summary: '⚠️ 120 秒兜底返回（内部仍有挂起，见下方日志）',
+      log: ['内部逻辑超时被兜底打断——检查 monitor 步骤卡点'],
+    }), 120000)),
+  ]);
+};
+
+async function mainLogic(event, context) {
   const log = [];
   log.push(`[${ts()}] 云函数触发`);
 

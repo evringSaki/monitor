@@ -56,7 +56,17 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 // ================= 抓取 =================
 // opts.viaJina: 通过 r.jina.ai 中转（应对目标站 IP 封锁）
+// 硬性兜底：DNS 解析/连接建立阶段不受 socket timeout 控制，可能永久挂起
+// （阿里云 FC 实测 5 分钟超时即此因），所以整体包一层 race 强制打断
 function fetchHtml(url, opts) {
+  const hardMs = (opts && opts.timeoutMs) || 20000;
+  return Promise.race([
+    fetchHtmlReal(url, opts),
+    new Promise(resolve => setTimeout(() => resolve(null), hardMs + 3000)),
+  ]);
+}
+
+async function fetchHtmlReal(url, opts) {
   const o = opts || {};
   // 每次请求都带 _ts 破缓存：否则 CDN 边缘节点可能缓存旧 HTML，
   // 导致场次切换（10:00 场 → 20:00 场）被延迟一整轮（5 分钟）才检测到
@@ -875,6 +885,7 @@ async function mainToday() {
     global.__UA__ = UA_POOL[(attempt - 1) % UA_POOL.length];
     try {
       html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE, refererOverride: ENTRY_REFERER, timeoutMs: 20000 });
+      if (!html) { log(`第 ${attempt} 次抓取卡死（DNS/连接挂起），已强制打断`); continue; }
       const t = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
       if (VERIFY_PHRASES.some(p => html.includes(p))) { log(`第 ${attempt} 次命中验证页，cookie 可能失效`); html = null; }
       else if (t && !/加倍补|超级补贴/.test(t)) {
