@@ -82,6 +82,7 @@ function fetchHtml(url, opts) {
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
         ...(o.cookie ? { Cookie: o.cookie } : {}),
+        ...(o.refererOverride ? { Referer: o.refererOverride } : {}),
         ...(o.viaJina ? { 'X-Return-Format': 'html' } : {}),
       },
       timeout: 45000,
@@ -865,16 +866,25 @@ async function mainToday() {
 
   // 1) 带登录 cookie 抓活动页（不走 jina 中转——cookie 只应发给京东 itself）
   // 海外 CI 的 IP + 登录态容易被风控：首轮验证页/部分楼层降级页概率高，多重试几次
-  let html = null;
+  // 云函数机房 IP 还会被京东间歇性路由到替代活动页「大牌1元抢新」（title 不同、无今日抢购数据）
+  // → 加 title 校验 + 自动重试；全部失败时退回最后一次替代页（解析出 0 自然跳过，无害）
+  const ENTRY_REFERER = 'https://pro.m.jd.com/mall/active/23tsgwDHV1PDuZFshYDVeJMPDyDJ/index.html';
+  let html = null, lastHtml = null;
   for (let attempt = 1; attempt <= 6; attempt++) {
     global.__UA__ = UA_POOL[(attempt - 1) % UA_POOL.length];
     try {
-      html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE });
+      html = await fetchHtml(PAGE_URL, { cookie: JD_COOKIE, refererOverride: ENTRY_REFERER });
+      const t = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
       if (VERIFY_PHRASES.some(p => html.includes(p))) { log(`第 ${attempt} 次命中验证页，cookie 可能失效`); html = null; }
+      else if (t && !/加倍补|超级补贴/.test(t)) {
+        log(`第 ${attempt} 次拿到替代页面「${t.slice(0, 20)}」（机房IP被路由），重试`);
+        lastHtml = html; html = null;
+      }
     } catch (e) { log(`第 ${attempt}/6 次抓取失败：${e.message}`); html = null; }
     if (html) break;
     await sleep(3000 + Math.floor(Math.random() * 5000));
   }
+  if (!html && lastHtml) { log('6 次均未命中目标页，用最后一次替代页做最终尝试'); html = lastHtml; }
   if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
   // 每次都留存页面样本（云函数场景由 scf-index 回传 GitHub，用于远程诊断）
   // 注意：云函数代码目录 /var/user 只读，必须写 /tmp
