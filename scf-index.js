@@ -137,3 +137,6 @@ exports.main_handler = async (event, context) => {
     log,
   };
 };
+
+// 阿里云函数计算 FC 兼容入口（事件函数处理器默认 index.handler）
+exports.handler = exports.main_handler;
