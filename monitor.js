@@ -758,7 +758,8 @@ function extractObj(str, startIdx) {
 }
 
 function pickField(str, field) {
-  const m = str.match(new RegExp('"' + field + '":"?([^",}\\\\]+)"?'));
+  // \s* 兼容格式化 JSON（冒号后带空格）与紧凑 JSON
+  const m = str.match(new RegExp('"' + field + '"\\s*:\\s*"?([^",}\\s][^",}\\\\]*?)"?\\s*[,}]'));
   return m ? m[1] : '';
 }
 
@@ -770,9 +771,11 @@ function extractTodayProducts(html) {
   const re = /"itemIdentityId":"(\d+)"/g;
   let m;
   while ((m = re.exec(s)) !== null) {
-    const prIdx = s.indexOf('"productResult":{', m.index);
+    let prIdx = s.indexOf('"productResult"', m.index);
     if (prIdx < 0 || prIdx - m.index > 300) continue;
-    const raw = extractObj(s, prIdx + '"productResult":'.length) || s.slice(prIdx, prIdx + 6000);
+    prIdx = s.indexOf('{', prIdx);
+    if (prIdx < 0) continue;
+    const raw = extractObj(s, prIdx) || s.slice(prIdx, prIdx + 9000);
     const sku = m[1];
     if (seen.has(sku)) continue;
     seen.add(sku);
