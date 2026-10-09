@@ -1491,3 +1491,21 @@
 [2026/10/10 01:48:12]【场B今日】 响应状态 200，content-encoding=gzip，content-type=text/html;charset=UTF-8
 [2026/10/10 01:48:12]【场B今日】 第 6 次命中验证页，cookie 可能失效
 [2026/10/10 01:48:20]【场B今日】 抓取失败（验证页/网络/cookie 失效），本次跳过
+[2026/10/10 02:54:33]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:54:33]【场A】 第 1 次尝试（直连）获取到真实页面，长度 476967
+[2026/10/10 02:54:33]【场A】 抓取成功：52 个 SKU（时段商品 7 个 / 楼层商品 7 个）
+[2026/10/10 02:54:33]【场A】 当前场次：20:00 场（stageId=335917882）；全部场次：20:00:00 → 10:00:00 → 10:00:00
+[2026/10/10 02:54:33]【场A】 检查完成，无上新 
+[2026/10/10 02:54:34]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:54:34]【场B今日】 第 1 次命中验证页，cookie 可能失效
+[2026/10/10 02:54:41]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:54:41]【场B今日】 第 2 次命中验证页，cookie 可能失效
+[2026/10/10 02:54:46]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:54:46]【场B今日】 第 3 次命中验证页，cookie 可能失效
+[2026/10/10 02:54:52]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:54:52]【场B今日】 第 4 次命中验证页，cookie 可能失效
+[2026/10/10 02:55:00]【场B今日】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 02:55:00]【场B今日】 第 5 次命中验证页，cookie 可能失效
+[2026/10/10 02:55:07]【场B今日】 响应状态 200，content-encoding=gzip，content-type=text/html;charset=UTF-8
+[2026/10/10 02:55:07]【场B今日】 第 6 次命中验证页，cookie 可能失效
+[2026/10/10 02:55:12]【场B今日】 抓取失败（验证页/网络/cookie 失效），本次跳过
