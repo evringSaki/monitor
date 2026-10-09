@@ -876,6 +876,8 @@ async function mainToday() {
     await sleep(3000 + Math.floor(Math.random() * 5000));
   }
   if (!html) { log('抓取失败（验证页/网络/cookie 失效），本次跳过'); process.exit(0); }
+  // 每次都留存页面样本（云函数场景由 scf-index 回传 GitHub，用于远程诊断）
+  try { fs.writeFileSync(path.join(__dirname, 'data', 'last-page.html'), html); } catch (e) {}
 
   // 2) 解析
   let products;

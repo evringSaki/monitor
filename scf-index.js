@@ -114,17 +114,20 @@ exports.main_handler = async (event, context) => {
   log.push(...out.trim().split('\n').slice(-14)); // 只带最后 14 行，避免日志超长
   const exitCode = r.status == null ? -1 : r.status;
 
-  // 3.5) 若 monitor 留下了 debug 页面（解析 0 商品时），回传 GitHub 供远程分析
-  const dbgLocal = path.join(__dirname, 'data', 'b-today-debug.html');
-  if (fs.existsSync(dbgLocal) && fs.statSync(dbgLocal).size > 1000) {
-    const dbgShaResp = await ghRequest('GET', `/repos/${GITHUB_REPO}/contents/data/b-today-debug.html`);
-    const up2 = await ghRequest('PUT', `/repos/${GITHUB_REPO}/contents/data/b-today-debug.html`, {
-      message: `debug: 云函数页面样本 ${ts()}`,
-      content: fs.readFileSync(dbgLocal, 'base64'),
-      ...(dbgShaResp.json && dbgShaResp.json.sha ? { sha: dbgShaResp.json.sha } : {}),
-    });
-    log.push(`debug页面回传: ${up2.status === 200 || up2.status === 201 ? '✅ 已存 GitHub data/b-today-debug.html' : '❌ HTTP ' + up2.status}`);
-    try { fs.unlinkSync(dbgLocal); } catch (e) {}
+  // 3.5) 页面样本回传：无论 monitor 结果如何，都把本次抓到的页面传到 GitHub（远程诊断用）
+  const sampleLocal = path.join(__dirname, 'data', 'last-page.html');
+  if (fs.existsSync(sampleLocal) && fs.statSync(sampleLocal).size > 1000) {
+    const startedAt = context && context.time ? new Date(context.time).getTime() : 0;
+    const isFresh = !startedAt || (fs.statSync(sampleLocal).mtime.getTime() > startedAt - 60000);
+    if (isFresh) {
+      const shaResp = await ghRequest('GET', `/repos/${GITHUB_REPO}/contents/data/last-page.html`);
+      const up2 = await ghRequest('PUT', `/repos/${GITHUB_REPO}/contents/data/last-page.html`, {
+        message: `debug: 云函数页面样本 ${ts()}`,
+        content: fs.readFileSync(sampleLocal, 'base64'),
+        ...(shaResp.json && shaResp.json.sha ? { sha: shaResp.json.sha } : {}),
+      });
+      log.push(`页面样本回传: ${up2.status === 200 || up2.status === 201 ? '✅ data/last-page.html' : '❌ HTTP ' + up2.status}`);
+    }
   }
 
   // 4) 回写快照
