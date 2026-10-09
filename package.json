@@ -1,0 +1,13 @@
+{
+  "name": "new-arrivals-monitor",
+  "version": "1.0.0",
+  "description": "商城活动页商品上新监控 - 云端版",
+  "private": true,
+  "main": "monitor.js",
+  "scripts": {
+    "start": "node monitor.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

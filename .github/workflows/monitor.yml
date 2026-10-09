@@ -1,0 +1,72 @@
+name: 上新监控
+
+on:
+  # 推送代码时立即触发（快照回写不触发，避免死循环）
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+  # 定时触发（避开整点高峰，降低被 GitHub 延迟/丢弃的概率）
+  schedule:
+    - cron: '2-57/5 * * * *'   # 每小时的 2,7,12...57 分
+    # 开抢时段加密（UTC 11:55-12:11 = 北京 19:55-20:11）
+    # 让 20:00 场切换后第一时间就被抓到，避免"迟到 5 分钟"
+    - cron: '55-59/2 11 * * *'
+    - cron: '0-11/2 12 * * *'
+  # 允许手动触发（Actions 页面 → Run workflow）
+  # 勾选 test_push 可只发一条 QQ 测试消息，用来验证推送链路是否真的能送达
+  workflow_dispatch:
+    inputs:
+      test_push:
+        description: '只发一条 QQ 测试消息（验证推送能否送达）'
+        type: boolean
+        default: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write   # 写回 snapshot.json 到仓库
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 首次运行创建 data 目录
+        run: mkdir -p data
+
+      - name: 执行监控
+        id: run
+        env:
+          QMSG_KEY: ${{ secrets.QMSG_KEY }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          STATE_PATH: ./data/snapshot.json
+          LOG_PATH: ./data/history.log
+          QMSG_TEST: ${{ inputs.test_push && '1' || '0' }}
+        run: |
+          echo "=== 开始 $(date -Iseconds) ==="
+          node monitor.js || echo "退出码 $?（1=有更新，属正常）"
+          echo "=== 完成 ==="
+
+      - name: 回写快照到仓库
+        if: always()
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/ 2>/dev/null || true
+          # 仅当有变更时提交
+          if git diff --cached --quiet; then
+            echo "无变更，跳过 commit"
+          else
+            git commit -m "chore: 更新监控快照 $(date -Iseconds)"
+            git pull --rebase --autostash 2>/dev/null || true
+            git push
+            echo "已提交新快照"
+          fi
