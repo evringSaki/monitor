@@ -25,9 +25,9 @@ const fs = require('fs');
 const path = require('path');
 const cp = require('child_process');
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
-const GITHUB_REPO = process.env.GITHUB_REPO || '';
-const GITHUB_PATH = process.env.GITHUB_PATH || 'data/b-today-snapshot.json';
+const GITHUB_TOKEN = (process.env.GITHUB_TOKEN || '').trim();
+const GITHUB_REPO = (process.env.GITHUB_REPO || '').trim().replace(/^\/+|\/+$/g, '');
+const GITHUB_PATH = (process.env.GITHUB_PATH || 'data/b-today-snapshot.json').trim().replace(/^\/+|\/+$/g, '');
 const TMP_STATE = '/tmp/snapshot.json';
 
 function ts() {
@@ -39,7 +39,7 @@ function ghRequest(method, urlPath, bodyObj) {
     const body = bodyObj ? JSON.stringify(bodyObj) : null;
     const req = https.request({
       hostname: 'api.github.com',
-      path: urlPath,
+      path: encodeURI(urlPath),
       method,
       headers: {
         'User-Agent': 'scf-monitor',
