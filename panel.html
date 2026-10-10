@@ -60,9 +60,8 @@
   <div class="toolbar">
     <select id="src" onchange="render()" style="font-weight:600">
       <option value="stage" selected>⏰ 当前场次时段商品</option>
-      <option value="all">全部来源</option>
       <option value="main">楼层商品</option>
-      <option value="other">其它（热区/兜底）</option>
+      <option value="all">全部（不含热区）</option>
     </select>
     <input id="q" placeholder="筛选商品名 / SKU / 店铺…" style="min-width:240px" oninput="render()">
     <input id="pmin" type="number" placeholder="价格≥" style="width:90px" oninput="render()">
@@ -140,9 +139,9 @@ function render() {
   const src = document.getElementById('src').value;
 
   let list = prods.filter(p => {
+    if (p.source === 'hotzone') return false; // 热区商品（广告图跳转SKU，无名噪音）永不显示
     if (src === 'stage' && p.source !== 'stage') return false;
     if (src === 'main' && p.source !== 'main') return false;
-    if (src === 'other' && (p.source === 'stage' || p.source === 'main')) return false;
     if (q && !((p.name||'') + p.sku + (p.shop||'')).toLowerCase().includes(q)) return false;
     const pr = parseFloat(p.price);
     if (!isNaN(pmin) && !(pr >= pmin)) return false;
