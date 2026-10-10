@@ -57,27 +57,6 @@ jobs:
           node monitor.js || echo "退出码 $?（1=有更新，属正常）"
           echo "=== 场A 完成 ==="
 
-      - name: 执行监控-场B今日抢购
-        id: runBToday
-        if: ${{ !inputs.test_push }}
-        env:
-          QMSG_KEY: ${{ secrets.QMSG_KEY }}
-          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          PAGE_URL: 'https://pro.m.jd.com/mall/active/USFY4Q1KPsHd54cN8AVUPHZdHpT/index.html?babelChannel=ttt3&homepagebybt=1&secJump=1&visitScene=1'
-          STATE_PATH: ./data/b-today-snapshot.json
-          LOG_PATH: ./data/history.log
-          PAGE_LABEL: '场B今日'
-          MODE: 'today'
-        run: |
-          echo "=== 场B今日抢购 开始 $(date -Iseconds) ==="
-          if [ -z "$JD_COOKIE" ]; then
-            echo "未配置 JD_COOKIE Secret，跳过（GitHub 仓库 Settings → Secrets and variables → Actions → New repository secret → Name: JD_COOKIE）"
-          else
-            node monitor.js || echo "退出码 $?（1=有更新，属正常）"
-          fi
-          echo "=== 场B今日抢购 完成 ==="
-
       - name: 推送链路测试
         id: runTest
         if: ${{ inputs.test_push }}
