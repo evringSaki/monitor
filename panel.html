@@ -46,7 +46,7 @@
 </head>
 <body>
   <h1><span class="dot" id="dot"></span>场A上新监控面板 <button class="ghost" style="margin-left:auto" onclick="doRefresh(this)">⟳ 立即抓取并对比</button></h1>
-  <div class="sub">本地直连 · 每 30 秒自动刷新快照 · 数据源 data/snapshot.json</div>
+  <div class="sub">本地直连 · 每 5 分钟自动刷新快照 · 数据源 data/snapshot.json</div>
 
   <div class="alert" id="alert"></div>
 
@@ -190,7 +190,7 @@ async function saveCfg() {
 }
 
 load();
-setInterval(load, 30000);
+setInterval(load, 300000); // 每 5 分钟自动刷新快照
 </script>
 </body>
 </html>
