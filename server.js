@@ -62,6 +62,14 @@ function doRefresh() {
   return { busy: false, out: lastRefreshOut };
 }
 
+// 自动抓取：每 5 分钟一次（面板服务开着就自动监控，不依赖 GitHub schedule）
+const AUTO_MS = Number(process.env.AUTO_MS || 5 * 60 * 1000);
+setInterval(() => {
+  if (refreshing) return;
+  console.log(`[${new Date().toLocaleString('zh-CN', { hour12: false })}] 自动抓取开始`);
+  doRefresh();
+}, AUTO_MS);
+
 const server = http.createServer((req, res) => {
   const url = (req.url || '/').split('?')[0];
 
