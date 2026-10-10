@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>场A上新监控面板</title>
+<style>
+  :root { --bg:#0f1420; --card:#171e2e; --card2:#1d2540; --line:#2a3454; --txt:#e8ecf5; --dim:#8b95ad; --acc:#4f8cff; --ok:#2ecc71; --warn:#f5a623; --bad:#ff5252; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--txt); font-family:"Segoe UI","Microsoft YaHei",sans-serif; padding:20px; max-width:1200px; margin:0 auto; }
+  h1 { font-size:22px; display:flex; align-items:center; gap:12px; }
+  h1 .dot { width:10px; height:10px; border-radius:50%; background:var(--ok); box-shadow:0 0 8px var(--ok); animation:pulse 2s infinite; }
+  @keyframes pulse { 50% { opacity:.4; } }
+  .sub { color:var(--dim); font-size:13px; margin:6px 0 18px; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .card .k { color:var(--dim); font-size:12px; margin-bottom:6px; }
+  .card .v { font-size:22px; font-weight:600; }
+  .card .v small { font-size:12px; color:var(--dim); font-weight:400; }
+  .alert { background:linear-gradient(90deg,#123b23,#17de6e22); border:1px solid #1f6b3a; border-radius:10px; padding:12px 16px; margin-bottom:16px; display:none; }
+  .alert.show { display:block; }
+  .alert b { color:var(--ok); }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px; }
+  .toolbar input, .toolbar select { background:var(--card2); border:1px solid var(--line); color:var(--txt); border-radius:8px; padding:8px 12px; font-size:13px; outline:none; }
+  .toolbar input:focus { border-color:var(--acc); }
+  button { background:var(--acc); color:#fff; border:none; border-radius:8px; padding:9px 18px; font-size:13px; cursor:pointer; font-weight:600; transition:.15s; }
+  button:hover { filter:brightness(1.15); }
+  button:disabled { opacity:.5; cursor:wait; }
+  button.ghost { background:var(--card2); border:1px solid var(--line); color:var(--txt); font-weight:400; }
+  label.chk { display:flex; align-items:center; gap:6px; color:var(--dim); font-size:13px; cursor:pointer; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:12px; overflow:hidden; }
+  th { text-align:left; color:var(--dim); font-size:12px; padding:10px 12px; border-bottom:1px solid var(--line); }
+  td { padding:10px 12px; font-size:13px; border-bottom:1px solid #202944; }
+  tr:hover td { background:#1a2238; }
+  .tag { display:inline-block; padding:2px 8px; border-radius:20px; font-size:11px; margin-right:4px; }
+  .tag.main { background:#1c3a6e; color:#7fb0ff; }
+  .tag.stage { background:#3d2f14; color:#ffce67; }
+  .tag.hot { background:#2e2440; color:#c39bff; }
+  .tag.new { background:#12402a; color:#4ade80; }
+  a { color:var(--acc); text-decoration:none; }
+  .logbox { background:#0b0f19; border:1px solid var(--line); border-radius:10px; padding:12px; font-family:Consolas,monospace; font-size:12px; color:#9fb0cc; max-height:220px; overflow:auto; white-space:pre-wrap; margin-top:16px; }
+  .empty { text-align:center; color:var(--dim); padding:40px; }
+  .spin { display:inline-block; width:14px; height:14px; border:2px solid #fff4; border-top-color:#fff; border-radius:50%; animation:spin 1s linear infinite; vertical-align:-2px; margin-right:6px; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+  <h1><span class="dot" id="dot"></span>场A上新监控面板 <button class="ghost" style="margin-left:auto" onclick="doRefresh(this)">⟳ 立即抓取并对比</button></h1>
+  <div class="sub">本地直连 · 每 30 秒自动刷新快照 · 数据源 data/snapshot.json</div>
+
+  <div class="alert" id="alert"></div>
+
+  <div class="stats">
+    <div class="card"><div class="k">商品总数</div><div class="v" id="stTotal">-</div></div>
+    <div class="card"><div class="k">楼层商品 / 时段商品</div><div class="v" id="stSplit">-</div></div>
+    <div class="card"><div class="k">当前场次</div><div class="v" id="stStage">-</div></div>
+    <div class="card"><div class="k">快照时间</div><div class="v" id="stTime" style="font-size:14px">-</div></div>
+  </div>
+
+  <div class="toolbar">
+    <input id="q" placeholder="筛选商品名 / SKU / 店铺…" style="min-width:240px" oninput="render()">
+    <input id="pmin" type="number" placeholder="价格≥" style="width:90px" oninput="render()">
+    <input id="pmax" type="number" placeholder="价格≤" style="width:90px" oninput="render()">
+    <label class="chk"><input type="checkbox" id="onlyNew" onchange="render()">只看新上</label>
+    <label class="chk"><input type="checkbox" id="onlyChanged" onchange="render()">只看有库存/限购</label>
+    <button class="ghost" onclick="showCfg()">⚙ 推送设置</button>
+  </div>
+
+  <table>
+    <thead><tr><th>商品</th><th>价格</th><th>库存/限购</th><th>店铺</th><th>SKU</th><th>链接</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" style="display:none">暂无数据——点右上角「立即抓取并对比」获取商品清单</div>
+
+  <div class="logbox" id="log">日志加载中…</div>
+
+  <div id="cfgModal" style="display:none; position:fixed; inset:0; background:#000a; z-index:9; align-items:center; justify-content:center;">
+    <div class="card" style="width:360px; padding:20px;">
+      <b>推送设置（可选）</b>
+      <div style="margin:12px 0 6px; color:var(--dim); font-size:12px;">Qmsg KEY（QQ 推送）</div>
+      <input id="cfgQmsg" style="width:100%; background:var(--card2); border:1px solid var(--line); color:var(--txt); border-radius:8px; padding:8px;">
+      <div style="margin:12px 0 6px; color:var(--dim); font-size:12px;">PushPlus Token（微信推送）</div>
+      <input id="cfgPush" style="width:100%; background:var(--card2); border:1px solid var(--line); color:var(--txt); border-radius:8px; padding:8px;">
+      <div style="margin-top:16px; text-align:right;">
+        <button class="ghost" onclick="hideCfg()">取消</button>
+        <button onclick="saveCfg()">保存</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+let DATA = { snapshot:{ total:0, products:{} }, log:'' };
+let lastAlert = '';
+
+function fmtTime(t) { return t ? new Date(t).toLocaleString('zh-CN', { hour12:false }) : '-'; }
+
+async function load() {
+  try {
+    const r = await fetch('/api/snapshot');
+    DATA = await r.json();
+    render();
+  } catch (e) { document.getElementById('dot').style.background = 'var(--bad)'; }
+}
+
+function render() {
+  const snap = DATA.snapshot || {};
+  const prods = Object.values(snap.products || {});
+  document.getElementById('stTotal').textContent = snap.total ?? 0;
+  document.getElementById('stSplit').textContent = `${snap.mainCount ?? 0} / ${snap.stageCount ?? 0}`;
+  document.getElementById('stTime').textContent = fmtTime(snap.time);
+
+  // 场次
+  const all = (snap.stage && snap.stage.all) || [];
+  const cur = all.find(s => s.id === (snap.stage && snap.stage.id));
+  document.getElementById('stStage').innerHTML = cur
+    ? `${(cur.time||'').slice(11,16)} <small>共 ${all.length} 场: ${all.map(x=>String(x.time||'').slice(11,16)).filter(Boolean).join('→')}</small>`
+    : '-';
+
+  // 告警条：来自日志的最新上新/变动
+  const logText = DATA.log || '';
+  const m = logText.match(/【上新】[^\n]*|【新场次】[^\n]*|【价格变动】[^\n]*|场次已切换[^\n]*/g);
+  const latest = m && m[m.length-1];
+  const el = document.getElementById('alert');
+  if (latest && latest !== lastAlert) { lastAlert = latest; }
+  if (latest) { el.innerHTML = '🔔 <b>' + latest.replace(/</g,'&lt;') + '</b>'; el.classList.add('show'); }
+  else el.classList.remove('show');
+
+  // 筛选
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const pmin = parseFloat(document.getElementById('pmin').value);
+  const pmax = parseFloat(document.getElementById('pmax').value);
+  const onlyNew = document.getElementById('onlyNew').checked;
+  const onlyChanged = document.getElementById('onlyChanged').checked;
+
+  let list = prods.filter(p => {
+    if (q && !((p.name||'') + p.sku + (p.shop||'')).toLowerCase().includes(q)) return false;
+    const pr = parseFloat(p.price);
+    if (!isNaN(pmin) && !(pr >= pmin)) return false;
+    if (!isNaN(pmax) && !(pr <= pmax)) return false;
+    if (onlyNew && !(p.streak === 1 || p.isNew)) return false;
+    if (onlyChanged && !(p.stock || p.limit)) return false;
+    return true;
+  }).sort((a,b) => (b.source==='main') - (a.source==='main') || a.sku.localeCompare(b.sku));
+
+  const rows = document.getElementById('rows');
+  document.getElementById('empty').style.display = list.length ? 'none' : 'block';
+  rows.innerHTML = list.map(p => {
+    const tag = p.source === 'stage' ? '<span class="tag stage">时段</span>'
+      : p.source === 'main' ? '<span class="tag main">楼层</span>' : '<span class="tag hot">热区</span>';
+    const isNew = p.streak === 1 ? '<span class="tag new">NEW</span>' : '';
+    const name = (p.name || '(热区商品)').replace(/</g,'&lt;').slice(0, 46);
+    const extra = [p.stock && '库存'+p.stock, p.limit && '限购'+p.limit].filter(Boolean).join(' / ') || '-';
+    return `<tr>
+      <td>${tag}${isNew} ${name}</td>
+      <td><b>${p.price ? '￥'+p.price : '-'}</b></td>
+      <td>${extra}</td>
+      <td>${(p.shop||'-').slice(0,18)}</td>
+      <td style="color:var(--dim)">${p.sku}</td>
+      <td><a href="https://item.m.jd.com/product/${p.sku}.html" target="_blank">打开 ↗</a></td>
+    </tr>`;
+  }).join('');
+}
+
+async function doRefresh(btn) {
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>抓取中…约30秒';
+  try {
+    const r = await fetch('/api/refresh', { method:'POST' });
+    const j = await r.json();
+    DATA.snapshot = j.snapshot;
+    DATA.log = (await (await fetch('/api/log')).json()).log;
+    render();
+    const lg = document.getElementById('log');
+    lg.textContent = j.out || lg.textContent;
+  } catch (e) { alert('抓取失败: ' + e.message); }
+  btn.disabled = false; btn.innerHTML = '⟳ 立即抓取并对比';
+}
+
+async function showCfg() {
+  const cfg = await (await fetch('/api/config')).json();
+  document.getElementById('cfgQmsg').value = cfg.qmsgKey || '';
+  document.getElementById('cfgPush').value = cfg.pushplusToken || '';
+  document.getElementById('cfgModal').style.display = 'flex';
+}
+function hideCfg() { document.getElementById('cfgModal').style.display = 'none'; }
+async function saveCfg() {
+  await fetch('/api/config', { method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ qmsgKey: document.getElementById('cfgQmsg').value.trim(), pushplusToken: document.getElementById('cfgPush').value.trim() }) });
+  hideCfg();
+}
+
+load();
+setInterval(load, 30000);
+</script>
+</body>
+</html>
