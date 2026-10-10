@@ -9,7 +9,10 @@ on:
       - 'data/**'
   # 定时触发（标准写法，GitHub 最稳）
   schedule:
-    - cron: '*/5 * * * *'        # 每 5 分钟
+    - cron: '*/5 * * * *'        # 每 5 分钟（GitHub 有延迟，以 cron-job.org 触发为准）
+  # 外部准时钟（cron-job.org）触发入口
+  repository_dispatch:
+    types: [monitor]
   # 允许手动触发（Actions 页面 → Run workflow）
   # 勾选 test_push 可只发一条 QQ 测试消息，用来验证推送链路是否真的能送达
   workflow_dispatch:
