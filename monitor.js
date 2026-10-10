@@ -201,6 +201,32 @@ function extractMainProducts(ad) {
   return map;
 }
 
+// 通用 SKU 兜底扫描：JSF material 楼层等所有格式的 skuId→name/jdPrice 就近配对
+// （覆盖 extractMainProducts/extractStageData 抓不到的楼层，如 materialQryType=sync 的 SsrCodeTemplate）
+function extractGenericSkus(html) {
+  const s = html.replace(/\\"/g, '"');
+  const out = new Map();
+  const re = /"skuId"\s*:\s*"(\d{8,15})"/g;
+  let m;
+  while ((m = re.exec(s)) !== null) {
+    const sku = m[1];
+    if (out.has(sku)) continue;
+    const seg = s.slice(m.index, m.index + 2500);
+    const nameM = seg.match(/"name"\s*:\s*"([^"]{4,90})"/) || seg.match(/"copyWriting"\s*:\s*"([^"]{4,60})"/) || seg.match(/"mainShortTitle"\s*:\s*"([^"]{4,60})"/);
+    if (!nameM) continue; // 无名字的裸 skuId（广告位/埋点）不收
+    out.set(sku, {
+      sku,
+      source: 'jsf',
+      name: nameM[1],
+      price: (seg.match(/"jdPrice"\s*:\s*"?([\d.]+)"?/) || [])[1] || '',
+      shop: (seg.match(/"shopName"\s*:\s*"([^"]{2,40})"/) || [])[1] || '',
+      stock: '', limit: '', isNew: false, pic: '',
+      firstSeen: new Date().toISOString(),
+    });
+  }
+  return out;
+}
+
 function extractHotzoneSkus(html) {
   const out = new Map();
   const re = /\\"sku\\":\\"(\d+)\\"/g;
@@ -266,6 +292,11 @@ function buildSnapshot(html) {
   const hotzone = extractHotzoneSkus(html);
   for (const [sku, p] of products) hotzone.set(sku, p);
   for (const [sku, p] of stage.products) hotzone.set(sku, p); // 时段商品优先级最高
+  for (const [sku, p] of extractGenericSkus(html)) {
+    const ex = hotzone.get(sku);
+    // 通用扫描带名字，可补全/覆盖热区抓到的无名字版本；已有名字的正式商品（main/stage）不覆盖
+    if (!ex || !ex.name) hotzone.set(sku, p);
+  }
   const curStage = stage.stages.find(s => String(s.stageId) === stage.currentStageId) || {};
   return {
     time: new Date().toISOString(),
