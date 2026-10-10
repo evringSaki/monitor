@@ -2038,3 +2038,8 @@
 [2026/10/10 17:15:28]【场A】 末 300 字符: 179372/610bb1d5Ef2972c2b/5f06a5cb1683c8cf.jpg" style="width:100%;"/><div style="color:rgb(155, 155, 155);text-align:center;line-height:44px;">加载失败，请点击重试</div>';panel.onclick=function(){window.location.reload();};document.body.appendChild(panel);}}</script> </body> </html>
 [2026/10/10 17:15:28]【场A】 window.* 赋值出现: window.jap =, window.lazyFailedScripts=, window.isStatic=, window.MPingPromise=, window.onGetBridgeChannelType=, window.__bridge_channel_type__=, window.h5CpsMtaData=, window.__babel_pv_reported__=, window.__babel_pv_reported__=, window.putExpoPV=, window.__expo_pv_reported__=, window.putVirtualPv=, window.setMtaSpmParamCB=, window.putFirstExpo=, window.__prepare_tracking__=, window.__track_source_url__=, window.__native_container_aid__=, window.__pv_report_visibility__=, window.BOOMR_mq=, window.BOOMR_API_key=
 [2026/10/10 17:15:28]【场A】 解析失败：未找到 __react_data__（页面结构可能已变，HTML 已保存）（页面结构可能已变）
+[2026/10/10 17:20:27]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/10 17:20:27]【场A】 第 1 次尝试（直连）获取到真实页面，长度 752546
+[2026/10/10 17:20:27]【场A】 抓取成功：117 个 SKU（时段商品 34 个 / 楼层商品 34 个）
+[2026/10/10 17:20:27]【场A】 当前场次：10:00 场（stageId=322238658）；全部场次：10:00:00 → 10:00:00 → 10:00:00
+[2026/10/10 17:20:27]【场A】 检查完成，无上新 （热区 21 个，仅记录不推送）
