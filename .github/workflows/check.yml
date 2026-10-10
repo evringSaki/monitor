@@ -12,9 +12,6 @@ on:
     - cron: '*/5 * * * *'        # 每 5 分钟
   # 外部准时钟（cron-job.org）触发入口
   repository_dispatch:
-    types: [monitor]（GitHub 有延迟，以 cron-job.org 触发为准）
-  # 外部准时钟（cron-job.org）触发入口
-  repository_dispatch:
     types: [monitor]
   # 允许手动触发（Actions 页面 → Run workflow）
   # 勾选 test_push 可只发一条 QQ 测试消息，用来验证推送链路是否真的能送达
