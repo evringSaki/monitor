@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-13T19:55:32.065Z",
+  "time": "2026-10-13T20:00:51.271Z",
   "activityName": "上新活动",
   "stage": {
     "id": "340118615",
@@ -38,7 +38,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -50,7 +50,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -62,9 +62,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 22,
+      "streak": 23,
       "firstSeen": "2026-10-13T18:05:25.906Z",
       "pending": false
+    },
+    "100101176570": {
+      "sku": "100101176570",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-13T20:00:51.271Z",
+      "pending": true
     },
     "100193510036": {
       "sku": "100193510036",
@@ -74,7 +86,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -86,7 +98,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -98,31 +110,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
-      "pending": false
-    },
-    "100260943316": {
-      "sku": "100260943316",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100327980386": {
-      "sku": "100327980386",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -134,8 +122,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "100327980386": {
+      "sku": "100327980386",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "100260943316": {
+      "sku": "100260943316",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
     "100294607488": {
@@ -146,20 +158,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 120,
+      "streak": 121,
       "firstSeen": "2026-10-13T09:40:26.627Z",
       "pending": false
     },
-    "100367669582": {
-      "sku": "100367669582",
+    "100044596035": {
+      "sku": "100044596035",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
     "100289780334": {
@@ -170,19 +182,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
-      "pending": false
-    },
-    "100249153391": {
-      "sku": "100249153391",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -194,8 +194,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 128,
+      "streak": 129,
       "firstSeen": "2026-10-13T09:00:46.623Z",
+      "pending": false
+    },
+    "100249153391": {
+      "sku": "100249153391",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "100133332620": {
@@ -206,8 +218,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 97,
+      "streak": 98,
       "firstSeen": "2026-10-13T11:40:29.910Z",
+      "pending": false
+    },
+    "100367669582": {
+      "sku": "100367669582",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "10226945294112": {
@@ -218,20 +242,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
-      "pending": false
-    },
-    "100044596035": {
-      "sku": "100044596035",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
     "100388478872": {
@@ -242,7 +254,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 128,
+      "streak": 129,
       "firstSeen": "2026-10-13T09:00:46.623Z",
       "pending": false
     },
@@ -254,7 +266,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -266,7 +278,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 120,
+      "streak": 121,
       "firstSeen": "2026-10-13T09:40:26.627Z",
       "pending": false
     },
@@ -278,7 +290,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 12,
+      "streak": 13,
       "firstSeen": "2026-10-13T19:01:02.208Z",
       "pending": false
     },
@@ -290,44 +302,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 92,
+      "streak": 93,
       "firstSeen": "2026-10-13T12:05:26.357Z",
-      "pending": false
-    },
-    "100245452103": {
-      "sku": "100245452103",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
-      "pending": false
-    },
-    "10177602932285": {
-      "sku": "10177602932285",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 120,
-      "firstSeen": "2026-10-13T09:40:26.627Z",
-      "pending": false
-    },
-    "100162612658": {
-      "sku": "100162612658",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "100011733813": {
@@ -338,7 +314,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -350,7 +326,31 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "10177602932285": {
+      "sku": "10177602932285",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 121,
+      "firstSeen": "2026-10-13T09:40:26.627Z",
+      "pending": false
+    },
+    "100245452103": {
+      "sku": "100245452103",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -362,19 +362,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100043755889": {
-      "sku": "100043755889",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -386,7 +374,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
@@ -398,8 +386,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "100162612658": {
+      "sku": "100162612658",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "100043755889": {
+      "sku": "100043755889",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
     "100157747995": {
@@ -410,20 +422,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 57,
+      "streak": 58,
       "firstSeen": "2026-10-13T15:01:07.991Z",
-      "pending": false
-    },
-    "100048883077": {
-      "sku": "100048883077",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "100088640019": {
@@ -434,20 +434,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
-    "100256383399": {
-      "sku": "100256383399",
+    "100048883077": {
+      "sku": "100048883077",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 97,
-      "firstSeen": "2026-10-13T11:40:29.911Z",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "100242817654": {
+      "sku": "100242817654",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 165,
+      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "100253584841": {
@@ -458,7 +470,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z",
       "pending": false
     },
@@ -470,20 +482,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100242817654": {
-      "sku": "100242817654",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 164,
-      "firstSeen": "2026-10-13T05:50:28.611Z",
       "pending": false
     },
     "100331681632": {
@@ -494,8 +494,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 164,
+      "streak": 165,
       "firstSeen": "2026-10-13T05:50:28.611Z",
+      "pending": false
+    },
+    "10147790938123": {
+      "sku": "10147790938123",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 93,
+      "firstSeen": "2026-10-13T12:05:26.357Z",
       "pending": false
     },
     "100398005934": {
@@ -506,20 +518,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-13T16:10:32.170Z",
       "pending": false
     },
-    "100090848965": {
-      "sku": "100090848965",
+    "100256383399": {
+      "sku": "100256383399",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 101,
-      "firstSeen": "2026-10-13T11:20:31.062Z",
+      "streak": 98,
+      "firstSeen": "2026-10-13T11:40:29.911Z",
       "pending": false
     },
     "100201858079": {
@@ -530,8 +542,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 92,
+      "streak": 93,
       "firstSeen": "2026-10-13T12:05:26.357Z",
+      "pending": false
+    },
+    "100090848965": {
+      "sku": "100090848965",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 102,
+      "firstSeen": "2026-10-13T11:20:31.062Z",
       "pending": false
     },
     "100043181586": {
@@ -542,7 +566,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 101,
+      "streak": 102,
+      "firstSeen": "2026-10-13T11:20:31.062Z",
+      "pending": false
+    },
+    "100254242331": {
+      "sku": "100254242331",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 102,
       "firstSeen": "2026-10-13T11:20:31.062Z",
       "pending": false
     },
@@ -554,20 +590,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 101,
+      "streak": 102,
       "firstSeen": "2026-10-13T11:20:31.062Z",
-      "pending": false
-    },
-    "10147790938123": {
-      "sku": "10147790938123",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 92,
-      "firstSeen": "2026-10-13T12:05:26.357Z",
       "pending": false
     },
     "100025590019": {
@@ -578,32 +602,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100254242331": {
-      "sku": "100254242331",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 101,
-      "firstSeen": "2026-10-13T11:20:31.062Z",
-      "pending": false
-    },
-    "100190999031": {
-      "sku": "100190999031",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 97,
-      "firstSeen": "2026-10-13T11:40:29.911Z",
       "pending": false
     },
     "100034467933": {
@@ -614,20 +614,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 92,
+      "streak": 93,
       "firstSeen": "2026-10-13T12:05:26.357Z",
       "pending": false
     },
-    "10231651835080": {
-      "sku": "10231651835080",
+    "100190999031": {
+      "sku": "100190999031",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 40,
-      "firstSeen": "2026-10-13T16:20:31.247Z",
+      "streak": 98,
+      "firstSeen": "2026-10-13T11:40:29.911Z",
       "pending": false
     },
     "100266661882": {
@@ -638,8 +638,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
+      "pending": false
+    },
+    "10231651835080": {
+      "sku": "10231651835080",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 41,
+      "firstSeen": "2026-10-13T16:20:31.247Z",
+      "pending": false
+    },
+    "100032854353": {
+      "sku": "100032854353",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 102,
+      "firstSeen": "2026-10-13T11:20:31.062Z",
       "pending": false
     },
     "100247044502": {
@@ -650,7 +674,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 101,
+      "streak": 102,
       "firstSeen": "2026-10-13T11:20:31.062Z",
       "pending": false
     },
@@ -662,79 +686,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100032854353": {
-      "sku": "100032854353",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 101,
-      "firstSeen": "2026-10-13T11:20:31.062Z",
-      "pending": false
-    },
-    "100145066352": {
-      "sku": "100145066352",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100385803634": {
-      "sku": "100385803634",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 12,
-      "firstSeen": "2026-10-13T19:01:02.208Z",
-      "pending": false
-    },
-    "10097690450020": {
-      "sku": "10097690450020",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-13T19:50:28.885Z",
-      "pending": false
-    },
-    "100127087887": {
-      "sku": "100127087887",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 33,
-      "firstSeen": "2026-10-13T17:00:52.575Z",
-      "pending": false
-    },
-    "100028158302": {
-      "sku": "100028158302",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -746,7 +698,55 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
+      "pending": false
+    },
+    "100145066352": {
+      "sku": "100145066352",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
+      "pending": false
+    },
+    "100127087887": {
+      "sku": "100127087887",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 34,
+      "firstSeen": "2026-10-13T17:00:52.575Z",
+      "pending": false
+    },
+    "100256401194": {
+      "sku": "100256401194",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 3,
+      "firstSeen": "2026-10-13T19:50:28.885Z",
+      "pending": false
+    },
+    "10097690450020": {
+      "sku": "10097690450020",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -758,19 +758,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 22,
+      "streak": 23,
       "firstSeen": "2026-10-13T18:05:25.906Z",
       "pending": false
     },
-    "100256401194": {
-      "sku": "100256401194",
+    "100028158302": {
+      "sku": "100028158302",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
+      "streak": 3,
       "firstSeen": "2026-10-13T19:50:28.885Z",
       "pending": false
     },
@@ -784,18 +784,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/537069/10/12490/6794/6accebf1F043d32ae/00ae0c80c81d4271.png",
-      "streak": 93,
-      "firstSeen": "2026-10-13T12:00:49.347Z"
-    },
-    "100280851491": {
-      "sku": "100280851491",
-      "source": "main",
-      "name": "青蛙王子氨基酸儿童洗发沐浴二合一6-12岁宝宝用 五效合一温和无刺激100ml",
-      "price": "11.9",
-      "shop": "青蛙王子京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/541799/38/6395/15457/6acca3bbF9ec32a4d/00ae0c80c8c64385.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100418193780": {
@@ -806,20 +795,7 @@
       "shop": "鳄鱼宝宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/534024/19/10204/6663/6acceb5bF097440fe/00ae0c80c80c62d0.png",
-      "streak": 93,
-      "firstSeen": "2026-10-13T12:00:49.347Z"
-    },
-    "100007188386": {
-      "sku": "100007188386",
-      "source": "stage",
-      "stageId": "340118615",
-      "name": "青蛙王子润唇膏",
-      "price": "10.9",
-      "stock": "400",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/540505/35/7602/14025/6acca3dfF9fd76868/00ae0c80c8fe6489.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100418254552": {
@@ -832,7 +808,18 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/541467/10/6712/6964/6accebbbF9ae0b795/00ae0c80c839cd5f.png",
-      "streak": 93,
+      "streak": 94,
+      "firstSeen": "2026-10-13T12:00:49.347Z"
+    },
+    "100280851491": {
+      "sku": "100280851491",
+      "source": "main",
+      "name": "青蛙王子氨基酸儿童洗发沐浴二合一6-12岁宝宝用 五效合一温和无刺激100ml",
+      "price": "11.9",
+      "shop": "青蛙王子京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/541799/38/6395/15457/6acca3bbF9ec32a4d/00ae0c80c8c64385.png",
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100419065470": {
@@ -845,7 +832,20 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/537965/37/11210/5564/6acceb75F75116e81/00ae0c80c810994f.png",
-      "streak": 93,
+      "streak": 94,
+      "firstSeen": "2026-10-13T12:00:49.347Z"
+    },
+    "100007188386": {
+      "sku": "100007188386",
+      "source": "stage",
+      "stageId": "340118615",
+      "name": "青蛙王子润唇膏",
+      "price": "10.9",
+      "stock": "400",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/540505/35/7602/14025/6acca3dfF9fd76868/00ae0c80c8fe6489.png",
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100327881702": {
@@ -856,7 +856,7 @@
       "shop": "青蛙王子京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/534984/20/14455/15957/6acca3d7F7f657cea/00ae0c80c8d5ff2b.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100320429293": {
@@ -867,7 +867,7 @@
       "shop": "鳄鱼宝宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/539294/23/9201/8485/6acceb9dF37d93a26/00ae0c80c8d6d8b1.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100418308438": {
@@ -880,7 +880,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/541374/6/7258/6663/6acceb54F9a73bcc4/00ae0c80c81c56a5.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100356294654": {
@@ -891,7 +891,7 @@
       "shop": "青蛙王子京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/535753/6/14489/17821/6acca40aF49aa7614/00ae0c80c85eb51c.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100278333704": {
@@ -902,7 +902,7 @@
       "shop": "青蛙王子京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/544904/36/2846/14756/6acca3f3Fa4b8ee36/00ae0c80c831af9a.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100265743183": {
@@ -913,7 +913,7 @@
       "shop": "贝德美（bodcrme）京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545647/19/1295/11397/6acc9184Fe942af70/02760c80c8fe65e3.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100410367730": {
@@ -926,7 +926,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/546406/32/1101/18052/6acca3f7F8db8c40c/00ae0c80c8cc692f.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100418809350": {
@@ -937,7 +937,7 @@
       "shop": "鳄鱼宝宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/533632/38/15021/6581/6accebdcFd51d0bbf/00ae0c80c80fff93.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100198917245": {
@@ -950,7 +950,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/537471/37/11208/15457/6acca3b3F727ddfbe/00ae0c80c8b50bd8.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     },
     "100086311581": {
@@ -963,7 +963,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/542635/27/4895/33023/6acc9156F79cb71d8/02760c80c893fe56.png",
-      "streak": 93,
+      "streak": 94,
       "firstSeen": "2026-10-13T12:00:49.347Z"
     }
   },
