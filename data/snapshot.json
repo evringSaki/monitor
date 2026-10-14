@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-14T15:40:33.121Z",
+  "time": "2026-10-14T15:45:40.659Z",
   "activityName": "上新活动",
   "stage": {
     "id": "340118722",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "total": 98,
+  "total": 109,
   "mainCount": 30,
   "stageCount": 25,
   "products": {
@@ -38,9 +38,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10101811435868": {
+      "sku": "10101811435868",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100335886514": {
       "sku": "100335886514",
@@ -50,7 +62,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -62,9 +74,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10088001848527": {
+      "sku": "10088001848527",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100193510036": {
       "sku": "100193510036",
@@ -74,7 +98,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -86,9 +110,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100377393160": {
       "sku": "100377393160",
@@ -98,9 +122,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10230747057240": {
+      "sku": "10230747057240",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100156852995": {
       "sku": "100156852995",
@@ -110,7 +146,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -122,9 +158,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10236219595437": {
+      "sku": "10236219595437",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100289780334": {
       "sku": "100289780334",
@@ -134,7 +182,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -146,9 +194,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100261393056": {
       "sku": "100261393056",
@@ -158,7 +206,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -170,9 +218,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100094029525": {
       "sku": "100094029525",
@@ -182,9 +230,33 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10234511697348": {
+      "sku": "10234511697348",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
+    },
+    "10235880432491": {
+      "sku": "10235880432491",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100044596035": {
       "sku": "100044596035",
@@ -194,8 +266,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
+      "pending": false
+    },
+    "10058915079832": {
+      "sku": "10058915079832",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
       "pending": true
     },
     "100324242014": {
@@ -206,9 +290,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10174646372523": {
+      "sku": "10174646372523",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100388478872": {
       "sku": "100388478872",
@@ -218,7 +314,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -230,8 +326,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
+      "pending": false
+    },
+    "10117253999386": {
+      "sku": "10117253999386",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
       "pending": true
     },
     "100048883077": {
@@ -242,7 +350,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -254,9 +362,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100341068628": {
       "sku": "100341068628",
@@ -266,7 +374,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -278,7 +386,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -290,7 +398,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -302,9 +410,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100022646676": {
       "sku": "100022646676",
@@ -314,7 +422,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -326,7 +434,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -338,7 +446,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -350,7 +458,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -362,9 +470,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100291830033": {
       "sku": "100291830033",
@@ -374,7 +482,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -386,7 +494,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -398,9 +506,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10234747713273": {
+      "sku": "10234747713273",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100127087887": {
       "sku": "100127087887",
@@ -410,7 +530,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -422,7 +542,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -434,7 +554,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -446,9 +566,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100241538687": {
       "sku": "100241538687",
@@ -458,7 +578,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -470,7 +590,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -482,7 +602,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -494,7 +614,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -506,7 +626,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -518,7 +638,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -530,9 +650,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
+    },
+    "10223615453729": {
+      "sku": "10223615453729",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-14T15:45:40.660Z",
+      "pending": true
     },
     "100256401194": {
       "sku": "100256401194",
@@ -542,7 +674,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -554,7 +686,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 8,
+      "streak": 9,
       "firstSeen": "2026-10-14T15:01:30.297Z",
       "pending": false
     },
@@ -566,7 +698,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -578,9 +710,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "100090848965": {
       "sku": "100090848965",
@@ -590,7 +722,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -602,7 +734,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -614,7 +746,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -626,7 +758,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -638,7 +770,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -650,7 +782,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -662,7 +794,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -674,7 +806,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -686,9 +818,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 1,
+      "streak": 2,
       "firstSeen": "2026-10-14T15:40:33.121Z",
-      "pending": true
+      "pending": false
     },
     "10097690450020": {
       "sku": "10097690450020",
@@ -698,7 +830,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -710,7 +842,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 16,
+      "streak": 17,
       "firstSeen": "2026-10-14T14:25:47.445Z",
       "pending": false
     },
@@ -722,7 +854,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/537109/12/12282/6312/6aceda64F4fe6157f/00ae0c80c8c0a733.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10222871715969": {
@@ -733,7 +865,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/540803/5/9833/7165/6aceda40F69541f51/00ae0c80c8513987.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100388856794": {
@@ -746,7 +878,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/537596/19/12114/19366/6ace288dF008755e0/00ae0c80c8041232.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100265109601": {
@@ -757,7 +889,7 @@
       "shop": "京东全球购游戏设备自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/546923/22/1452/19067/6acd9704F7c0837db/02760c80c8e4de7e.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10233474492987": {
@@ -768,7 +900,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/537777/13/11825/24541/6acd8d11Fa24ccbad/00ae0c80c84f9774.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10235967389311": {
@@ -779,7 +911,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545556/25/2357/6820/6acd8d08F92a1032e/00ae0c80c86468b5.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10222898805449": {
@@ -790,7 +922,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/534710/6/14456/10591/6aceda37Fab5829a9/00ae0c80c8c8abc2.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10216326290265": {
@@ -801,7 +933,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545534/26/3175/9623/6aceda5dFdfbd5fff/00ae0c80c8ed9564.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100388921152": {
@@ -814,7 +946,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/546300/16/2358/21374/6ace2869F50d17819/00ae0c80c8c02c8b.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10231357967904": {
@@ -825,7 +957,7 @@
       "shop": "Dulce Vida海外旗舰店",
       "isNew": false,
       "pic": "jfs/t1/541370/13/7065/48680/6acd9b79F67c6624d/02760c80c82e9fc9.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100306032125": {
@@ -838,7 +970,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/534504/18/14527/4021/6acd9dedF10e5ec0b/00ae0c80c8434858.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100386644626": {
@@ -851,7 +983,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/542747/15/5124/5168/6ace2886Fb62d69f4/00ae0c80c84c3eda.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10222465936188": {
@@ -862,7 +994,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/536596/11/13707/9028/6aceda46F3e8a680a/00ae0c80c8b9e54f.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100388957384": {
@@ -873,7 +1005,7 @@
       "shop": "乐扣乐扣（LOCK&LOCK）海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/543794/36/4368/7442/6ace28a7Fc38fc8f7/00ae0c80c8019220.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100342097640": {
@@ -886,7 +1018,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/547193/39/1063/9646/6acd97d7F83fc7cbb/00ae0c80c87f48b7.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10231301492508": {
@@ -897,7 +1029,7 @@
       "shop": "Dulce Vida海外旗舰店",
       "isNew": false,
       "pic": "jfs/t1/542387/2/6686/48514/6acd9b61F0de5b5e4/02760c80c8d4e793.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604698": {
@@ -910,7 +1042,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/541447/29/8415/55300/6acda596F947ae2f9/02760c80c8364117.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604772": {
@@ -923,7 +1055,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/540418/28/9307/45937/6acda43dFcce88b47/02760c80c88c145c.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604654": {
@@ -936,7 +1068,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/540418/28/9307/45937/6acda43dFcce88b47/02760c80c88c145c.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100353530726": {
@@ -947,20 +1079,7 @@
       "shop": "京东全球购游戏设备自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/547190/14/966/19386/6acd9722F34e8761b/02760c80c83ed7cb.png",
-      "streak": 42,
-      "firstSeen": "2026-10-14T12:01:03.564Z"
-    },
-    "100426266188": {
-      "sku": "100426266188",
-      "source": "stage",
-      "stageId": "340118722",
-      "name": "知名美国床品",
-      "price": "1699",
-      "stock": "10",
-      "limit": "2",
-      "shop": "",
-      "pic": "jfs/t1/533462/40/14940/43540/6acda5e1F9edd2e98/02760c80c86668d0.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604672": {
@@ -973,7 +1092,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/539091/22/10197/20707/6acda4c2Fdb2a5c08/02760c80c80cfe86.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604540": {
@@ -986,7 +1105,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/543508/31/5951/60025/6acda570Fc779ffe6/02760c80c80f1426.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100329319285": {
@@ -999,7 +1118,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/546330/29/1721/47048/6acda5bbF9e7036ef/02760c80c83aa19b.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604692": {
@@ -1012,7 +1131,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/541658/19/6034/44633/6acda63bFfa76076e/02760c80c886ef3c.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100431604742": {
@@ -1025,7 +1144,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/540652/11/8981/39642/6acda3ddF4c2ef7ff/02760c80c86c09b1.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10222446395974": {
@@ -1036,7 +1155,7 @@
       "shop": "11街海外官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/538291/28/11585/4855/6aceda4eF8b8fcc62/00ae0c80c83b4333.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100388921222": {
@@ -1047,7 +1166,7 @@
       "shop": "乐扣乐扣（LOCK&LOCK）海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/535180/2/14222/18316/6ace2872F564080a3/00ae0c80c8c41a31.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100388957358": {
@@ -1058,7 +1177,7 @@
       "shop": "乐扣乐扣（LOCK&LOCK）海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/546963/22/1781/18009/6ace28bbFe7c80445/00ae0c80c8ece4c6.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100298892457": {
@@ -1069,7 +1188,20 @@
       "shop": "乐扣乐扣（LOCK&LOCK）海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/538771/37/11260/21721/6ace289eF249f6521/00ae0c80c8f15999.png",
-      "streak": 42,
+      "streak": 43,
+      "firstSeen": "2026-10-14T12:01:03.564Z"
+    },
+    "100426266188": {
+      "sku": "100426266188",
+      "source": "stage",
+      "stageId": "340118722",
+      "name": "知名美国床品",
+      "price": "1699",
+      "stock": "10",
+      "limit": "2",
+      "shop": "",
+      "pic": "jfs/t1/533462/40/14940/43540/6acda5e1F9edd2e98/02760c80c86668d0.png",
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034284320713": {
@@ -1082,7 +1214,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/538585/19/11633/6312/6aceda0cFe2eb18c9/00ae0c80c8dffbe0.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034925446427": {
@@ -1095,7 +1227,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/545348/26/3743/7165/6aced9e9F6e437a34/00ae0c80c842360b.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100265108391": {
@@ -1108,7 +1240,7 @@
       "limit": "3",
       "shop": "",
       "pic": "jfs/t1/540546/9/9094/12311/6acd96a1F4f933c11/00ae0c80c8968035.jpg",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10035909751079": {
@@ -1121,7 +1253,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/543225/39/5394/24541/6acd8cfcF380bbf9d/00ae0c80c8acc0bd.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10036152135078": {
@@ -1134,7 +1266,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/537358/8/11849/6820/6acd8ceaF4d5b3d88/00ae0c80c830455a.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034927734874": {
@@ -1147,7 +1279,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/537767/21/12488/10591/6aced9ddF8bd2afaf/00ae0c80c881e9bf.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034406397116": {
@@ -1160,7 +1292,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/543404/27/5823/9623/6aceda07Fe4a93de7/00ae0c80c87dc9da.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034829794762": {
@@ -1173,7 +1305,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/540053/18/8799/8324/6acd9ccaF6a506856/00ae0c80c8b754f5.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034892575953": {
@@ -1186,7 +1318,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/535763/14/10522/9028/6aced9f6Ffbe505f3/00ae0c80c80c23fb.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "100298973161": {
@@ -1199,7 +1331,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/539904/38/9397/7442/6ace28a4F828e4d0b/00ae0c80c8c8afb8.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     },
     "10034890777851": {
@@ -1212,7 +1344,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/543120/23/5491/4855/6aced9fcF108d0320/00ae0c80c8f1e431.png",
-      "streak": 42,
+      "streak": 43,
       "firstSeen": "2026-10-14T12:01:03.564Z"
     }
   },
