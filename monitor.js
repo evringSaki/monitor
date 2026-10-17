@@ -323,7 +323,10 @@ function diffSnapshots(prev, curr) {
   for (const [sku, p] of Object.entries(currP)) {
     const old = prevP[sku];
     if (!old) {
-      if (isTracked(p)) ev.addedMain.push(p);
+      // 已推送过的 SKU（楼层轮换中消失又重现）不再重复推送
+      const wasNotified = (prev.notified || []).indexOf(sku) >= 0;
+      if (isTracked(p) && !wasNotified) ev.addedMain.push(p);
+      else if (isTracked(p) && wasNotified) p.streak = (prevP[sku] && prevP[sku].streak) || 2;
       else { p.pending = true; ev.hotzoneCandidates.push(p); }
     } else {
       p.streak = (old.streak || 1) + 1;
@@ -697,6 +700,12 @@ async function main() {
   const ev = diffSnapshots(prev, snap);
   // 只推楼层/时段商品（有名字有价格的正经商品）；热区图片位不推（无名、噪音大，只在快照里记录）
   const confirmed = ev.addedMain.length;
+  // 已推送名单持久化：本轮推送的 SKU 记入 snap.notified（楼层轮换导致商品消失重现时不再重复推送）
+  const prevNotified = (prev && prev.notified) || [];
+  if (confirmed > 0) {
+    const add = ev.addedMain.map(p => p.sku);
+    snap.notified = [...new Set([...prevNotified, ...add])].slice(-600); // 上限600防无限增长
+  } else snap.notified = prevNotified;
 
   // 5.5) 给无名字的新商品（热区 SKU）补名字：活动页热区只有链接没名字，
   //      去商品页抓 <title>（截掉平台水印式尾缀），成功则随快照持久化
@@ -713,7 +722,7 @@ async function main() {
     }
   }
 
-  // 无论是否有更新，都把最新状态（含 streak/pending 累积）写回，避免重复报警
+  // 无论是否有更新，都把最新状态（含 streak/pending/notified 累积）写回，避免重复报警
   fs.writeFileSync(STATE_PATH, JSON.stringify(snap, null, 2));
 
   // 倒计时提醒（快照已落盘，标记随快照一起 commit，不会重复推送）
