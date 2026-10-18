@@ -173,7 +173,6 @@ function extractMainProducts(ad) {
           // 专享价（活动现价）pPrice 优先；jdPrice 是日常价，存到 orig 供展示与变价参考
           price: (o.pPrice != null && String(o.pPrice) !== '') ? String(o.pPrice) : (o.jdPrice != null ? String(o.jdPrice) : ''),
           orig: o.jdPrice != null ? String(o.jdPrice) : '',
-          mk: o.mkPrice != null ? String(o.mkPrice) : '',
           shop: o.shopName || o.venderName || '',
           pic: o.imageUrl || o.smallImageUrl || o.picUrl || '',
         });
@@ -198,7 +197,6 @@ function extractMainProducts(ad) {
           name: o.name || o.shortTitle || o.nameCn || o.wname || o.wareName || fb.name || '',
           price: pp,
           orig: o.jdPrice != null ? String(o.jdPrice) : (fb.orig || ''),
-          mk: o.mkPrice != null ? String(o.mkPrice) : (fb.mk || ''),
           shop: o.shopName || fb.shop || '',
           isNew: !!o.isNew,
           pic: o.picUrl || (o.image && o.image.picUrl) || fb.pic || '',
