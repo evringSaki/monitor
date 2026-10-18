@@ -318,6 +318,7 @@ function buildSnapshot(html) {
 function diffSnapshots(prev, curr) {
   const prevP = prev.products || {};
   const currP = curr.products || {};
+  const prevBook = prev.priceBook || {};
   const ev = { addedMain: [], addedHotzoneConfirmed: [], hotzoneCandidates: [], removed: [], priceChanged: [], stageChanged: null };
   const isTracked = (p) => p.source === 'main' || p.source === 'stage';
   for (const [sku, p] of Object.entries(currP)) {
@@ -326,7 +327,14 @@ function diffSnapshots(prev, curr) {
       // 已推送过的 SKU（楼层轮换中消失又重现）不再重复推送
       const wasNotified = (prev.notified || []).indexOf(sku) >= 0;
       if (isTracked(p) && !wasNotified) ev.addedMain.push(p);
-      else if (isTracked(p) && wasNotified) p.streak = (prevP[sku] && prevP[sku].streak) || 2;
+      else if (isTracked(p) && wasNotified) {
+        p.streak = (prevP[sku] && prevP[sku].streak) || 2;
+        // 楼层轮换消失又重现：直接对比会因旧快照没有该商品而漏掉变价，
+        // 改用价格册 priceBook（消失的商品价格保留 3 天）对比
+        const pb = prevBook[sku];
+        if (pb && pb.price && p.price && pb.price !== p.price)
+          ev.priceChanged.push({ sku, name: p.name, from: pb.price, to: p.price });
+      }
       else { p.pending = true; ev.hotzoneCandidates.push(p); }
     } else {
       p.streak = (old.streak || 1) + 1;
@@ -698,6 +706,19 @@ async function main() {
   }
 
   const ev = diffSnapshots(prev, snap);
+  // 价格册：记录 tracked 商品的最新价，楼层轮换导致商品短暂消失时仍保留 3 天，
+  // 重现时可对比出变价（否则消失期间的旧价丢失，变价永远检测不到）
+  const bookNow = Date.now();
+  const prevBook = (prev && prev.priceBook) || {};
+  const book = {};
+  for (const p of Object.values(snap.products)) {
+    if ((p.source === 'main' || p.source === 'stage') && p.price)
+      book[p.sku] = { price: p.price, name: p.name, at: bookNow };
+  }
+  for (const [sku, e] of Object.entries(prevBook)) {
+    if (!book[sku] && bookNow - (e.at || 0) <= 3 * 864e5) book[sku] = e;
+  }
+  snap.priceBook = book;
   // 只推楼层/时段商品（有名字有价格的正经商品）；热区图片位不推（无名、噪音大，只在快照里记录）
   const confirmed = ev.addedMain.length;
   // 已推送名单持久化：本轮推送的 SKU 记入 snap.notified（楼层轮换导致商品消失重现时不再重复推送）
@@ -738,7 +759,10 @@ async function main() {
       `距 <b>${label}</b> 开抢还有约 <b>${mins} 分钟</b>，请提前打开官方 App 准备<br>今日场次: ${schedule}<br>时间: ${ts()}`);
   }
 
-  if (confirmed > 0) {
+  const hasNew = confirmed > 0;
+  const hasPrice = ev.priceChanged.length > 0;
+
+  if (hasNew) {
     const allNew = ev.addedMain;
     const label = stageLabel(snap.stage);
     const isStageStart = !!ev.stageChanged;
@@ -752,26 +776,37 @@ async function main() {
     const tail = (confirmed > 8 ? `...等共 ${confirmed} 个\n` : '') + `（详情请打开官方 App 查看）\n时间: ${ts()}`;
     await qmsgPushList(head, lines, tail);
     // 微信（PushPlus）通道：完整版——名称可点链接 + 价格/库存/限购，QQ 被过滤的商品这里照发
-    await pushPlusSend(head, productsHtml(allNew.slice(0, 20)) +
-      (confirmed > 20 ? `<br>...等共 ${confirmed} 个` : '') + '<br>——<br>时间: ' + ts());
-    process.exit(1); // 1 = 有更新，触发 git commit
+    let wxBody = productsHtml(allNew.slice(0, 20)) + (confirmed > 20 ? `<br>...等共 ${confirmed} 个` : '');
+    // 同一轮还有变价：追加"变动"段（旧逻辑用 else-if，上新出现时变价被吞且快照已更新，永远丢失）
+    if (hasPrice) {
+      wxBody += `<br>——<br>💰 <b>变价 ${ev.priceChanged.length} 个</b><br>` +
+        ev.priceChanged.slice(0, 10).map(c => `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from} → <b>￥${c.to}</b>`).join('<br>') +
+        (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '');
+    }
+    wxBody += '<br>——<br>时间: ' + ts();
+    await pushPlusSend(head, wxBody);
   } else if (ev.stageChanged) {
     const label = stageLabel(snap.stage);
     log(`场次已切换至 ${label}（stageId=${snap.stage.id}），但商品列表无变化`);
     await qmsgPush(`【上新监控】场次已切换：${label || '新时段'}\n当前共 ${snap.stageCount || 0} 个商品\n时间: ${ts()}`);
     await pushPlusSend(`【上新监控】场次已切换 ${label || '新时段'}`,
       `场次已切换：<b>${label || '新时段'}</b><br>当前共 ${snap.stageCount || 0} 个商品<br>时间: ${ts()}`);
-    process.exit(1);
-  } else if (ev.priceChanged.length) {
+  }
+
+  // 变价推送：独立于上新/场次切换判断（不再被 else-if 吞掉）；
+  // QQ 通道只提示条数（价格数字/词会被 Qmsg 判违规静默丢弃），微信发完整明细
+  if (hasPrice && !hasNew) {
     log(`【价格变动】${ev.priceChanged.length} 个`);
-    // 价格类词/数字不能出现在 QQ 通道（会被判违规），这里只提示"有变动"
     await qmsgPush(`【上新监控】${ev.priceChanged.length} 个商品信息有变动，请打开官方 App 查看\n` +
       ev.priceChanged.slice(0, 5).map(c => `· ${cleanName(c.name) || '（未命名）'}`).join('\n'));
-    // 微信通道发完整价格变动明细
     await pushPlusSend(`【上新监控】${ev.priceChanged.length} 个商品价格变动`,
-      ev.priceChanged.slice(0, 10).map(c => `· ${c.name || '（未命名）'}：￥${c.from} → <b>￥${c.to}</b>`).join('<br>') +
+      `当前商品数：${snap.total}（上轮 ${prev.total || '?'}）<br>` +
+      ev.priceChanged.slice(0, 10).map(c => `💰 <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from} → <b>￥${c.to}</b>`).join('<br>') +
       (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '') + '<br>时间: ' + ts());
-    process.exit(1);
+  }
+
+  if (hasNew || ev.stageChanged || hasPrice) {
+    process.exit(1); // 1 = 有更新，触发 git commit
   } else {
     const cand = ev.hotzoneCandidates.length ? `（热区 ${ev.hotzoneCandidates.length} 个，仅记录不推送）` : '';
     log(`检查完成，无上新 ${cand}`);
