@@ -291,11 +291,47 @@ function extractStageData(ad) {
   return { stages: best.stages, products, currentStageId };
 }
 
+// 新品秒杀楼层：商品带 productPromoInfo.promoPrice（秒杀专享价，如 "1"/"159"），
+// 这才是开抢后的真实到手价；jdPrice 是日常价。71 个商品 = 别人机器人显示的商品数
+function extractFlashProducts(ad) {
+  const out = new Map();
+  const seen = new Set();
+  (function walk(o) {
+    if (!o || typeof o !== 'object' || seen.has(o)) return;
+    seen.add(o);
+    if (Array.isArray(o)) { o.forEach(walk); return; }
+    if (o.productPromoInfo && o.productBaseInfo) {
+      const b = o.productBaseInfo, promo = o.productPromoInfo;
+      const sku = String(b.skuId || b.sku || '');
+      if (/^\d{5,}$/.test(sku) && !out.has(sku)) {
+        const jd = b.jdPrice != null ? String(b.jdPrice) : '';
+        const promoP = promo.promoPrice != null && String(promo.promoPrice) !== '' ? String(promo.promoPrice) : '';
+        out.set(sku, {
+          sku, source: 'flash',
+          name: b.name || b.shortTitle || '',
+          price: promoP || jd,           // 现价 = 秒杀专享价
+          orig: jd,                       // 日常价
+          promoStatus: String(promo.promoStatus || ''),
+          promoBegin: String(promo.timeBegin || ''),
+          promoEnd: String(promo.timeEnd || ''),
+          deleted: promo.delete === true,
+          shop: b.shopName || '',
+          isNew: false,
+          pic: b.imageUrl || b.picUrl || '',
+        });
+      }
+    }
+    Object.values(o).forEach(walk);
+  })(ad);
+  return out;
+}
+
 function buildSnapshot(html) {
   const react = extractReactData(html);
   const ad = react.activityData || {};
   const stage = extractStageData(ad);
   const products = extractMainProducts(ad);
+  const flash = extractFlashProducts(ad);
   const hotzone = extractHotzoneSkus(html);
   for (const [sku, p] of products) hotzone.set(sku, p);
   for (const [sku, p] of stage.products) hotzone.set(sku, p); // 时段商品优先级最高
@@ -303,6 +339,10 @@ function buildSnapshot(html) {
     const ex = hotzone.get(sku);
     // 通用扫描带名字，可补全/覆盖热区抓到的无名字版本；已有名字的正式商品（main/stage）不覆盖
     if (!ex || !ex.name) hotzone.set(sku, p);
+  }
+  // 新品秒杀楼层优先级最高： promoPrice 才是开抢后的真实到手价，覆盖 main/stage 的配置价
+  for (const [sku, p] of flash) {
+    hotzone.set(sku, p);
   }
   const curStage = stage.stages.find(s => String(s.stageId) === stage.currentStageId) || {};
   return {
@@ -317,6 +357,7 @@ function buildSnapshot(html) {
     total: hotzone.size,
     mainCount: products.size,
     stageCount: stage.products.size,
+    flashCount: flash.size,
     products: Object.fromEntries([...hotzone.entries()].map(([sku, p]) => [sku, { ...p, streak: 1, firstSeen: new Date().toISOString() }])),
   };
 }
@@ -327,7 +368,7 @@ function diffSnapshots(prev, curr) {
   const currP = curr.products || {};
   const prevBook = prev.priceBook || {};
   const ev = { addedMain: [], addedHotzoneConfirmed: [], hotzoneCandidates: [], removed: [], priceChanged: [], stageChanged: null };
-  const isTracked = (p) => p.source === 'main' || p.source === 'stage';
+  const isTracked = (p) => p.source === 'main' || p.source === 'stage' || p.source === 'flash';
   for (const [sku, p] of Object.entries(currP)) {
     const old = prevP[sku];
     if (!old) {
@@ -347,7 +388,10 @@ function diffSnapshots(prev, curr) {
       p.streak = (old.streak || 1) + 1;
       p.firstSeen = old.firstSeen || p.firstSeen;
       if (isTracked(p)) {
-        if (old.price && p.price && old.price !== p.price)
+        // 首次从 main/stage 配置价切换为 flash 秒杀价时不报变价（升级过渡，防止整层刷屏），
+        // 之后 flash 价再变化就是真实的秒杀价变动
+        const flashTakeover = p.source === 'flash' && old.source !== 'flash';
+        if (old.price && p.price && old.price !== p.price && !flashTakeover)
           ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
       } else {
         if (old.pending && p.streak >= HOTZONE_CONFIRM_N) {
@@ -749,7 +793,7 @@ async function main() {
   const prevBook = (prev && prev.priceBook) || {};
   const book = {};
   for (const p of Object.values(snap.products)) {
-    if ((p.source === 'main' || p.source === 'stage') && p.price)
+    if ((p.source === 'main' || p.source === 'stage' || p.source === 'flash') && p.price)
       book[p.sku] = { price: p.price, orig: p.orig || '', name: p.name, at: bookNow };
   }
   for (const [sku, e] of Object.entries(prevBook)) {
