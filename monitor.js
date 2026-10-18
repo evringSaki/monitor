@@ -602,10 +602,13 @@ async function pushPlusSend(title, content) {
 }
 
 // QQ 渠道（PushPlus 官方 QQ 机器人，需在 pushplus 后台绑定）：与微信同内容，
-// 不走 Qmsg 的内容审查——链接/价格/商品名完整可发。同一 token 额度 200 条/天两渠道合计
+// 不走 Qmsg 的内容审查——链接/价格/商品名完整可发。
+// QQ 渠道可用独立 token（PUSHPLUS_QQ_TOKEN，绑定 QQ 机器人的账号），缺省回落到微信 token
+const PUSHPLUS_QQ_TOKEN = process.env.PUSHPLUS_QQ_TOKEN || '';
 async function pushPlusQQSend(title, content) {
-  if (!PUSHPLUS_TOKEN) { log('未配置 PUSHPLUS_TOKEN，跳过 QQ 机器人推送'); return false; }
-  const body = JSON.stringify({ token: PUSHPLUS_TOKEN, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'qq' });
+  const tk = PUSHPLUS_QQ_TOKEN || PUSHPLUS_TOKEN;
+  if (!tk) { log('未配置 PUSHPLUS token，跳过 QQ 机器人推送'); return false; }
+  const body = JSON.stringify({ token: tk, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'qq' });
   const r = await httpPostJson('www.pushplus.plus', '/send', body);
   const ok = !!(r.json && r.json.code === 200);
   log('PushPlus(QQ机器人) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
