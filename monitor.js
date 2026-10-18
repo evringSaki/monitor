@@ -170,7 +170,10 @@ function extractMainProducts(ad) {
       if (!infoBySku.has(k)) {
         infoBySku.set(k, {
           name: o.wname || o.name || o.shortTitle || o.nameCn || o.wareName || '',
-          price: o.jdPrice != null ? String(o.jdPrice) : (o.pPrice != null ? String(o.pPrice) : ''),
+          // 专享价（活动现价）pPrice 优先；jdPrice 是日常价，存到 orig 供展示与变价参考
+          price: (o.pPrice != null && String(o.pPrice) !== '') ? String(o.pPrice) : (o.jdPrice != null ? String(o.jdPrice) : ''),
+          orig: o.jdPrice != null ? String(o.jdPrice) : '',
+          mk: o.mkPrice != null ? String(o.mkPrice) : '',
           shop: o.shopName || o.venderName || '',
           pic: o.imageUrl || o.smallImageUrl || o.picUrl || '',
         });
@@ -186,10 +189,16 @@ function extractMainProducts(ad) {
       const k = String(sku);
       if (!map.has(k)) {
         const fb = infoBySku.get(k) || {};   // 名字回填（跨对象取）
+        // 现价取专享价 pPrice（活动价），jdPrice 是日常价存 orig；两者随快照持久化
+        const pp = (o.pPrice != null && String(o.pPrice) !== '') ? String(o.pPrice)
+          : (o.jdPrice != null ? String(o.jdPrice)
+            : (o.tkPrice != null ? String(o.tkPrice) : (fb.price || '')));
         map.set(k, {
           sku: k, source: 'main',
           name: o.name || o.shortTitle || o.nameCn || o.wname || o.wareName || fb.name || '',
-          price: o.jdPrice != null ? String(o.jdPrice) : (o.pPrice != null ? String(o.pPrice) : (o.tkPrice != null ? String(o.tkPrice) : (fb.price || ''))),
+          price: pp,
+          orig: o.jdPrice != null ? String(o.jdPrice) : (fb.orig || ''),
+          mk: o.mkPrice != null ? String(o.mkPrice) : (fb.mk || ''),
           shop: o.shopName || fb.shop || '',
           isNew: !!o.isNew,
           pic: o.picUrl || (o.image && o.image.picUrl) || fb.pic || '',
@@ -333,7 +342,7 @@ function diffSnapshots(prev, curr) {
         // 改用价格册 priceBook（消失的商品价格保留 3 天）对比
         const pb = prevBook[sku];
         if (pb && pb.price && p.price && pb.price !== p.price)
-          ev.priceChanged.push({ sku, name: p.name, from: pb.price, to: p.price });
+          ev.priceChanged.push({ sku, name: p.name, from: pb.price, to: p.price, orig: p.orig || pb.orig || '' });
       }
       else { p.pending = true; ev.hotzoneCandidates.push(p); }
     } else {
@@ -341,7 +350,7 @@ function diffSnapshots(prev, curr) {
       p.firstSeen = old.firstSeen || p.firstSeen;
       if (isTracked(p)) {
         if (old.price && p.price && old.price !== p.price)
-          ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price });
+          ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
       } else {
         if (old.pending && p.streak >= HOTZONE_CONFIRM_N) {
           p.pending = false;
@@ -365,7 +374,7 @@ function diffSnapshots(prev, curr) {
 
 function fmtProduct(p) {
   const name = p.name ? p.name.slice(0, 40) : '(热区商品)';
-  const price = p.price ? `￥${p.price}` : '';
+  const price = p.price ? `￥${p.price}${p.orig && p.orig !== p.price ? `（日常价￥${p.orig}）` : ''}` : '';
   const extra = [];
   if (p.stock) extra.push(`库存${p.stock}`);
   if (p.limit) extra.push(`限购${p.limit}`);
@@ -599,10 +608,19 @@ function productsHtml(items) {
   return items.map((p, i) => {
     const name = String(p.name || '').slice(0, 40) || '（热区商品）';
     const bits = [];
-    if (p.price) bits.push('￥' + p.price);
+    // 现价=专享价；日常价不同则加删除线展示，对齐"￥229（原价 ￥350）"的常见样式
+    if (p.price) bits.push('￥' + p.price + (p.orig && p.orig !== p.price ? ' <s>日常价￥' + p.orig + '</s>' : ''));
     if (p.stock) bits.push('库存' + p.stock);
     if (p.limit) bits.push('限购' + p.limit);
     return (i + 1) + '. <a href="https://item.m.jd.com/product/' + p.sku + '.html">' + name + '</a><br>&nbsp;&nbsp;' + bits.join(' ｜ ');
+  }).join('<br>');
+}
+
+// 变价明细（微信）：对齐"￥839（日常价 ￥1399） → ￥419.5（日常价 ￥1399）"样式
+function priceChangeHtml(list) {
+  return list.map(c => {
+    const og = c.orig ? `（日常价 ￥${c.orig}）` : '';
+    return `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from}${og} → <b>￥${c.to}</b>${og}`;
   }).join('<br>');
 }
 
@@ -713,7 +731,7 @@ async function main() {
   const book = {};
   for (const p of Object.values(snap.products)) {
     if ((p.source === 'main' || p.source === 'stage') && p.price)
-      book[p.sku] = { price: p.price, name: p.name, at: bookNow };
+      book[p.sku] = { price: p.price, orig: p.orig || '', name: p.name, at: bookNow };
   }
   for (const [sku, e] of Object.entries(prevBook)) {
     if (!book[sku] && bookNow - (e.at || 0) <= 3 * 864e5) book[sku] = e;
@@ -780,7 +798,7 @@ async function main() {
     // 同一轮还有变价：追加"变动"段（旧逻辑用 else-if，上新出现时变价被吞且快照已更新，永远丢失）
     if (hasPrice) {
       wxBody += `<br>——<br>💰 <b>变价 ${ev.priceChanged.length} 个</b><br>` +
-        ev.priceChanged.slice(0, 10).map(c => `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from} → <b>￥${c.to}</b>`).join('<br>') +
+        priceChangeHtml(ev.priceChanged.slice(0, 10)) +
         (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '');
     }
     wxBody += '<br>——<br>时间: ' + ts();
@@ -801,7 +819,7 @@ async function main() {
       ev.priceChanged.slice(0, 5).map(c => `· ${cleanName(c.name) || '（未命名）'}`).join('\n'));
     await pushPlusSend(`【上新监控】${ev.priceChanged.length} 个商品价格变动`,
       `当前商品数：${snap.total}（上轮 ${prev.total || '?'}）<br>` +
-      ev.priceChanged.slice(0, 10).map(c => `💰 <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from} → <b>￥${c.to}</b>`).join('<br>') +
+      priceChangeHtml(ev.priceChanged.slice(0, 10)) +
       (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '') + '<br>时间: ' + ts());
   }
 

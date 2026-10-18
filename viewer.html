@@ -139,7 +139,8 @@ function render() {
     const name = (p.name || '(未命名)').replace(/</g, '&lt;').slice(0, 46);
     const extra = [p.stock && '库存' + p.stock, p.limit && '限购' + p.limit].filter(Boolean).join(' / ') || '-';
     return '<tr><td>' + tag + isNew + ' ' + name + '</td>'
-      + '<td><b>' + (p.price ? '￥' + p.price : '-') + '</b></td>'
+      + '<td><b>' + (p.price ? '￥' + p.price : '-') + '</b>'
+      + (p.orig && p.orig !== p.price ? ' <s style="color:var(--dim);font-weight:400">￥' + p.orig + '</s>' : '') + '</td>'
       + '<td>' + extra + '</td>'
       + '<td>' + (p.shop || '-').slice(0, 18) + '</td>'
       + '<td style="color:var(--dim)">' + p.sku + '</td>'
