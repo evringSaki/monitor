@@ -617,7 +617,7 @@ async function pushPlusQQSend(title, content) {
 
 // 微信 + QQ 机器人同时推（同一 PushPlus 账号，两个渠道内容一致）
 async function pushPlusAll(title, content) {
-  const a = await pushPlusAll(title, content);
+  const a = await pushPlusSend(title, content);
   const b = await pushPlusQQSend(title, content);
   return a || b;
 }
