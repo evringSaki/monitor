@@ -601,6 +601,24 @@ async function pushPlusSend(title, content) {
   return ok;
 }
 
+// QQ 渠道（PushPlus 官方 QQ 机器人，需在 pushplus 后台绑定）：与微信同内容，
+// 不走 Qmsg 的内容审查——链接/价格/商品名完整可发。同一 token 额度 200 条/天两渠道合计
+async function pushPlusQQSend(title, content) {
+  if (!PUSHPLUS_TOKEN) { log('未配置 PUSHPLUS_TOKEN，跳过 QQ 机器人推送'); return false; }
+  const body = JSON.stringify({ token: PUSHPLUS_TOKEN, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'qq' });
+  const r = await httpPostJson('www.pushplus.plus', '/send', body);
+  const ok = !!(r.json && r.json.code === 200);
+  log('PushPlus(QQ机器人) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
+  return ok;
+}
+
+// 微信 + QQ 机器人同时推（同一 PushPlus 账号，两个渠道内容一致）
+async function pushPlusAll(title, content) {
+  const a = await pushPlusAll(title, content);
+  const b = await pushPlusQQSend(title, content);
+  return a || b;
+}
+
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
 function productsHtml(items) {
   return items.map((p, i) => {
@@ -771,7 +789,7 @@ async function main() {
     await qmsgPush(`【上新监控】距 ${label} 开抢还有约 ${mins} 分钟，请提前打开官方 App 准备\n` +
       `今日场次: ${schedule}\n` +
       `开抢后会自动推送商品名\n时间: ${ts()}`);
-    await pushPlusSend(`【上新监控】${label} 开抢倒计时 ${mins} 分钟`,
+    await pushPlusAll(`【上新监控】${label} 开抢倒计时 ${mins} 分钟`,
       `距 <b>${label}</b> 开抢还有约 <b>${mins} 分钟</b>，请提前打开官方 App 准备<br>今日场次: ${schedule}<br>时间: ${ts()}`);
   }
 
@@ -800,12 +818,12 @@ async function main() {
         (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '');
     }
     wxBody += '<br>——<br>时间: ' + ts();
-    await pushPlusSend(head, wxBody);
+    await pushPlusAll(head, wxBody);
   } else if (ev.stageChanged) {
     const label = stageLabel(snap.stage);
     log(`场次已切换至 ${label}（stageId=${snap.stage.id}），但商品列表无变化`);
     await qmsgPush(`【上新监控】场次已切换：${label || '新时段'}\n当前共 ${snap.stageCount || 0} 个商品\n时间: ${ts()}`);
-    await pushPlusSend(`【上新监控】场次已切换 ${label || '新时段'}`,
+    await pushPlusAll(`【上新监控】场次已切换 ${label || '新时段'}`,
       `场次已切换：<b>${label || '新时段'}</b><br>当前共 ${snap.stageCount || 0} 个商品<br>时间: ${ts()}`);
   }
 
@@ -815,7 +833,7 @@ async function main() {
     log(`【价格变动】${ev.priceChanged.length} 个`);
     await qmsgPush(`【上新监控】${ev.priceChanged.length} 个商品信息有变动，请打开官方 App 查看\n` +
       ev.priceChanged.slice(0, 5).map(c => `· ${cleanName(c.name) || '（未命名）'}`).join('\n'));
-    await pushPlusSend(`【上新监控】${ev.priceChanged.length} 个商品价格变动`,
+    await pushPlusAll(`【上新监控】${ev.priceChanged.length} 个商品价格变动`,
       `当前商品数：${snap.total}（上轮 ${prev.total || '?'}）<br>` +
       priceChangeHtml(ev.priceChanged.slice(0, 10)) +
       (ev.priceChanged.length > 10 ? `<br>...等共 ${ev.priceChanged.length} 个` : '') + '<br>时间: ' + ts());
@@ -1068,7 +1086,7 @@ async function mainToday() {
   const notify = async (title, lines, html2) => {
     log(title + '\n' + lines.map(l => '  ' + l).join('\n'));
     await qmsgPushList('【今日抢购】' + title, lines.slice(0, 8).map((l, i) => `${i + 1}. ${cleanName(l).slice(0, 30)}`), '（详情请打开官方 App 查看）\n时间: ' + ts());
-    await pushPlusSend('【今日抢购】' + title, html2);
+    await pushPlusAll('【今日抢购】' + title, html2);
   };
 
   if (ev.added.length) {
@@ -1105,9 +1123,9 @@ if (process.env.QMSG_TEST === '1') {
     try {
       const okQ = await qmsgPush(`【上新监控】推送链路测试\n（详情请打开官方 App 查看）\n时间: ${ts()}`);
       log(okQ ? '测试消息已送达 QQ ✅' : '测试消息未送达 QQ ❌（请看上方投递结果）');
-      const okW = await pushPlusSend('【上新监控】微信通道测试',
-        'QQ + 微信双通道测试<br>微信通道可带 <a href="https://example.com/product/100241543515.html">商品链接</a>、价格、库存等完整信息<br>时间: ' + ts());
-      log(okW ? '微信测试消息已提交 ✅' : '微信测试消息未提交 ❌（请看上方 PushPlus 结果）');
+      const okW = await pushPlusAll('【上新监控】微信+QQ通道测试',
+        '微信 + QQ 机器人双通道测试<br>可带 <a href="https://example.com/product/100241543515.html">商品链接</a>、价格、库存等完整信息<br>时间: ' + ts());
+      log(okW ? '微信/QQ 测试消息已提交 ✅' : '微信/QQ 测试消息未提交 ❌（请看上方 PushPlus 结果）');
       process.exit(0);
     } catch (e) { log('测试推送异常：' + e.message); process.exit(2); }
   })();
@@ -1119,4 +1137,4 @@ if (process.env.QMSG_TEST === '1') {
 }
 
 // 供 qmsg_selftest.js 复用（验证推送是否真的送达 QQ，而不只是接口返回 success）
-module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, productsHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };
+module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, pushPlusQQSend, pushPlusAll, productsHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };
