@@ -7,22 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: 测试价格来源
+      - name: 带cookie抓活动页，验证是否含实时价
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
         run: |
-          echo "=== item.m.jd.com 跟随重定向 ==="
-          curl -sL -m 25 -A "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36" \
-            -e "https://pro.m.jd.com/" \
-            "https://item.m.jd.com/product/100302423051.html" -o /tmp/item.html -w "final %{url_effective} HTTP %{http_code} size %{size_download}\n"
-          grep -c '419\.5' /tmp/item.html || echo "无 419.5"
-          grep -o '"p":"[0-9.]*"' /tmp/item.html | head -8 || true
-          grep -o '"price":"\?[0-9.]*"\?' /tmp/item.html | head -8 || true
-          grep -o 'window\._itemOnly[^<]\{0,200\}' /tmp/item.html | head -2 || true
-          echo "=== PC 商品页 ==="
-          curl -sL -m 25 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-            "https://item.jd.com/100302423051.html" -o /tmp/pc.html -w "final %{url_effective} HTTP %{http_code} size %{size_download}\n"
-          grep -c '419\.5' /tmp/pc.html || echo "无 419.5"
-          grep -o '"op":"[0-9.]*"\|"m":"[0-9.]*"\|"p":"[0-9.]*"' /tmp/pc.html | head -8 || true
-          echo "=== 移动端 SSR 接口 ==="
-          curl -s -m 20 -A "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" \
-            "https://wqitem.jd.com/item/view?sku=100302423051" -o /tmp/wq.html -w "HTTP %{http_code} size %{size_download}\n"
-          grep -c '419\.5' /tmp/wq.html || echo "无 419.5"
+          echo "cookie 长度: ${#JD_COOKIE}"
+          curl -s -m 25 -A "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36" \
+            -H "Referer: https://pro.m.jd.com/" \
+            -b "$JD_COOKIE" \
+            "https://pro.m.jd.com/mall/active/6WUG9FgpNWoAAx9qRSPsmSiVcyt/index.html" -o /tmp/a.html -w "HTTP %{http_code} size %{size_download}\n"
+          echo "=== 已知实时价关键词检查（419.5 蔻驰 / 159 卡西欧 / 149 网球王子 / 99 ibaby） ==="
+          for kw in 419.5 4195 159 149; do echo -n "$kw: "; grep -c "$kw" /tmp/a.html || echo 0; done
+          echo "=== skuPriceInfo 出现次数 ==="
+          grep -c 'skuPriceInfo' /tmp/a.html || echo 0
+          echo "=== skuPriceInfo 样本 ==="
+          grep -o 'skuPriceInfo[^}]\{0,120\}' /tmp/a.html | head -4 || echo 无
+          echo "=== promoPrice 非空样本 ==="
+          grep -o '"promoPrice":"[0-9.]*"' /tmp/a.html | sort | uniq -c | sort -rn | head -8 || echo 无
+          echo "=== regularPrice 样本 ==="
+          grep -o '"regularPrice":[0-9.]*' /tmp/a.html | sort | uniq -c | sort -rn | head -8 || echo 无
