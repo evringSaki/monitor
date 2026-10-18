@@ -1,0 +1,20 @@
+name: price-probe
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: 测试价格接口
+        run: |
+          echo "=== p.3.cn mgets ==="
+          curl -s -m 20 -w "\nHTTP %{http_code}\n" "https://p.3.cn/prices/mgets?skuIds=J_100302423051,J_10221331541386,J_100124085512" || echo FAIL
+          echo "=== c0.3.cn stock ==="
+          curl -s -m 20 -w "\nHTTP %{http_code}\n" "https://c0.3.cn/stock?skuId=100302423051&area=1_72_2799_0&venderId=1000365862&cat=0" | head -c 600 || echo FAIL
+          echo ""
+          echo "=== item.m.jd.com 商品页 ==="
+          curl -s -m 20 -A "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 Chrome/120 Mobile Safari/537.36" "https://item.m.jd.com/product/100302423051.html" -o /tmp/item.html -w "HTTP %{http_code} size %{size_download}\n"
+          grep -o '419\.5' /tmp/item.html | head -3 || echo "页面中无 419.5"
+          grep -o '"price"[^,]\{0,30\}' /tmp/item.html | head -5 || true
