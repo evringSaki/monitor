@@ -5,16 +5,24 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     steps:
-      - name: 测试价格接口
+      - name: 测试价格来源
         run: |
-          echo "=== p.3.cn mgets ==="
-          curl -s -m 20 -w "\nHTTP %{http_code}\n" "https://p.3.cn/prices/mgets?skuIds=J_100302423051,J_10221331541386,J_100124085512" || echo FAIL
-          echo "=== c0.3.cn stock ==="
-          curl -s -m 20 -w "\nHTTP %{http_code}\n" "https://c0.3.cn/stock?skuId=100302423051&area=1_72_2799_0&venderId=1000365862&cat=0" | head -c 600 || echo FAIL
-          echo ""
-          echo "=== item.m.jd.com 商品页 ==="
-          curl -s -m 20 -A "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 Chrome/120 Mobile Safari/537.36" "https://item.m.jd.com/product/100302423051.html" -o /tmp/item.html -w "HTTP %{http_code} size %{size_download}\n"
-          grep -o '419\.5' /tmp/item.html | head -3 || echo "页面中无 419.5"
-          grep -o '"price"[^,]\{0,30\}' /tmp/item.html | head -5 || true
+          echo "=== item.m.jd.com 跟随重定向 ==="
+          curl -sL -m 25 -A "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36" \
+            -e "https://pro.m.jd.com/" \
+            "https://item.m.jd.com/product/100302423051.html" -o /tmp/item.html -w "final %{url_effective} HTTP %{http_code} size %{size_download}\n"
+          grep -c '419\.5' /tmp/item.html || echo "无 419.5"
+          grep -o '"p":"[0-9.]*"' /tmp/item.html | head -8 || true
+          grep -o '"price":"\?[0-9.]*"\?' /tmp/item.html | head -8 || true
+          grep -o 'window\._itemOnly[^<]\{0,200\}' /tmp/item.html | head -2 || true
+          echo "=== PC 商品页 ==="
+          curl -sL -m 25 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            "https://item.jd.com/100302423051.html" -o /tmp/pc.html -w "final %{url_effective} HTTP %{http_code} size %{size_download}\n"
+          grep -c '419\.5' /tmp/pc.html || echo "无 419.5"
+          grep -o '"op":"[0-9.]*"\|"m":"[0-9.]*"\|"p":"[0-9.]*"' /tmp/pc.html | head -8 || true
+          echo "=== 移动端 SSR 接口 ==="
+          curl -s -m 20 -A "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" \
+            "https://wqitem.jd.com/item/view?sku=100302423051" -o /tmp/wq.html -w "HTTP %{http_code} size %{size_download}\n"
+          grep -c '419\.5' /tmp/wq.html || echo "无 419.5"
