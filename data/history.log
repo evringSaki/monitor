@@ -23674,3 +23674,15 @@
 [2026/10/20 11:10:27]【场A】 末 300 字符: 179372/610bb1d5Ef2972c2b/5f06a5cb1683c8cf.jpg" style="width:100%;"/><div style="color:rgb(155, 155, 155);text-align:center;line-height:44px;">加载失败，请点击重试</div>';panel.onclick=function(){window.location.reload();};document.body.appendChild(panel);}}</script> </body> </html>
 [2026/10/20 11:10:27]【场A】 window.* 赋值出现: window.jap =, window.lazyFailedScripts=, window.isStatic=, window.MPingPromise=, window.onGetBridgeChannelType=, window.__bridge_channel_type__=, window.h5CpsMtaData=, window.__babel_pv_reported__=, window.__babel_pv_reported__=, window.putExpoPV=, window.__expo_pv_reported__=, window.putVirtualPv=, window.setMtaSpmParamCB=, window.putFirstExpo=, window.__prepare_tracking__=, window.__track_source_url__=, window.__native_container_aid__=, window.__pv_report_visibility__=, window.BOOMR_mq=, window.BOOMR_API_key=
 [2026/10/20 11:10:27]【场A】 解析失败：未找到 __react_data__（页面结构可能已变，HTML 已保存）（页面结构可能已变）
+[2026/10/20 11:15:27]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/10/20 11:15:27]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1187431
+[2026/10/20 11:15:27]【场A】 抓取成功：197 个 SKU（时段商品 87 个 / 楼层商品 98 个）
+[2026/10/20 11:15:27]【场A】 当前场次：10:00 场（stageId=331219744）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/10/20 11:15:27]【场A】 【上新】4 个商品：
+  + MUJI米糠发酵清透控油面膜 贴片面膜 新品 28ml  ￥1（日常价￥12） | 无印良品（MUJI）京东自营旗舰店 | SKU:100266660381 | https://item.m.jd.com/product/100266660381.html
+  + Masata婴儿抚触油按摩油保湿润肤油天然植萃温和秋冬精华油150ml ￥59.5（日常价￥149） | Masata海外京东自营旗舰店 | SKU:100407937874 | https://item.m.jd.com/product/100407937874.html
+  + EVER EDEN安唯伊婴儿胎脂2号面霜 四季锁水保湿霜宝宝换季润肤护肤 50m ￥118.5（日常价￥349） | Evereden安唯伊海外京东自营旗舰店 | SKU:100034833453 | https://item.m.jd.com/product/100034833453.html
+  + 米糠清透控油面膜 ￥12 [库存200 限购1] <场次331219744> | - | SKU:100087992110 | https://item.m.jd.com/product/100087992110.html
+[2026/10/20 11:15:31]【场A】 Qmsg 投递结果 msgId=181509 → ✅ 已送达 QQ
+[2026/10/20 11:15:32]【场A】 PushPlus(微信) ✅ 已提交
+[2026/10/20 11:15:32]【场A】 PushPlus(QQ机器人) ✅ 已提交
