@@ -1206,7 +1206,9 @@ async function mainToday() {
   let prev;
   try { prev = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); }
   catch (e) { prev = { products: [] }; }
-  const prevBySku = new Map((prev.products || []).map(p => [p.sku, p]));
+  // 兼容旧格式基线（对象 map 而非数组）：切换监控模式后首次运行不至于崩溃
+  const prevList = Array.isArray(prev.products) ? prev.products : Object.values(prev.products || {});
+  const prevBySku = new Map(prevList.map(p => [p.sku, p]));
   const ev = { added: [], sellable: [], priceChanged: [], soldOut: [] };
   for (const p of products) {
     const old = prevBySku.get(p.sku);
