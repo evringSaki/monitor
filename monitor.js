@@ -1114,26 +1114,11 @@ function fmtToday(p) {
   // productProcess 自带 "16%"，去重；开抢时间用 UTC+8 显示北京时间
   const pct = String(p.process || '').replace(/%$/, '');
   const t = p.stageStartTime ? new Date(+p.stageStartTime + 8 * 3600e3).toISOString().replace('T', ' ').slice(0, 16) : '';
-  return `${p.tab === 'tomorrow' ? '[明日预告] ' : ''}${p.name || '(未命名)'} ￥${p.price || '?'} 已抢${pct}% ${p.shop || '-'} SKU:${p.sku}${t ? ' 开抢:' + t : ''} https://item.m.jd.com/product/${p.sku}.html`;
+  return `${p.name || '(未命名)'} ￥${p.price || '?'} 已抢${pct}% ${p.shop || '-'} SKU:${p.sku}${t ? ' 开抢:' + t : ''} https://item.m.jd.com/product/${p.sku}.html`;
 }
 
 async function mainToday() {
   ensureDir(STATE_PATH);
-  // 浏览器通道：feed-browser.js 已把商品写成 JSON，这里只做快照对比与推送（无需 cookie）
-  if (process.env.FEED_FILE) {
-    let feed;
-    try { feed = JSON.parse(fs.readFileSync(process.env.FEED_FILE, 'utf8')); }
-    catch (e) { log('读取浏览器商品数据失败：' + e.message); process.exit(0); }
-    const list = (feed.products || []).filter(p => p && p.sku);
-    log(`浏览器通道：读取到 ${list.length} 个商品`);
-    if (!list.length) { log('商品为空，跳过本次'); process.exit(0); }
-    if (list.length < MIN_TODAY_PRODUCTS) {
-      log(`警告：仅 ${list.length} 个商品（< 阈值 ${MIN_TODAY_PRODUCTS}），疑似加载不全，跳过本次`);
-      process.exit(0);
-    }
-    list.forEach(p => log('  · ' + fmtToday(p)));
-    return runTodayDiff(list);
-  }
   if (!JD_COOKIE) { log('错误：未设置 JD_COOKIE 环境变量（需要登录态才能拿到今日抢购数据）'); process.exit(2); }
 
   // 1) 带登录 cookie 抓活动页（不走 jina 中转——cookie 只应发给京东 itself）
@@ -1209,11 +1194,7 @@ async function mainToday() {
   }
 
   products.forEach(p => log('  · ' + fmtToday(p)));
-  return runTodayDiff(products);
-}
 
-// 今日抢购/加倍补：快照对比 + 推送（products 来自 cookie SSR 或浏览器通道）
-async function runTodayDiff(products) {
   // 3) 首跑建基线
   if (!fs.existsSync(STATE_PATH)) {
     fs.writeFileSync(STATE_PATH, JSON.stringify({ time: new Date().toISOString(), total: products.length, products }, null, 2));
@@ -1225,24 +1206,12 @@ async function runTodayDiff(products) {
   let prev;
   try { prev = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); }
   catch (e) { prev = { products: [] }; }
-  // 兼容旧格式基线（对象 map 而非数组）：切换监控模式后首次运行不至于崩溃
-  const prevList = Array.isArray(prev.products) ? prev.products : Object.values(prev.products || {});
-  const prevBySku = new Map(prevList.map(p => [p.sku, p]));
+  const prevBySku = new Map((prev.products || []).map(p => [p.sku, p]));
   const ev = { added: [], sellable: [], priceChanged: [], soldOut: [] };
   for (const p of products) {
     const old = prevBySku.get(p.sku);
-    if (!old) {
-      // 浏览器通道抓取的列表偶有缺漏（接口分页不稳定）：新增需连续 2 轮确认，避免误报刷屏
-      p.streak = 1;
-      p.pending = true;
-      continue;
-    }
+    if (!old) { ev.added.push(p); continue; }
     p.streak = (old.streak || 1) + 1;
-    if (old.pending) {
-      // 上一轮是待确认状态：本轮仍在 → 确认为真上新
-      p.pending = false;
-      if (p.streak >= 2) ev.added.push(p);
-    }
     if (String(old.canSell) !== 'Y' && String(p.canSell) === 'Y') ev.sellable.push(p);
     if (String(old.canSell) === 'Y' && String(p.canSell) !== 'Y') ev.soldOut.push(p);
     if (old.price && p.price && old.price !== p.price) ev.priceChanged.push({ ...p, from: old.price, to: p.price });
@@ -1259,11 +1228,9 @@ async function runTodayDiff(products) {
   };
 
   if (ev.added.length) {
-    const tabTag = (p) => p.tab === 'tomorrow' ? '【明日预告】' : '';
-    const lines = ev.added.map(p => `${tabTag(p)}${p.name || '新品'} ￥${p.price} 已抢${String(p.process).replace(/%$/, '')}%`);
-    const htmlBody = ev.added.slice(0, 40).map((p, i) =>
-      `${i + 1}. ${tabTag(p)}<a href="https://item.m.jd.com/product/${p.sku}.html">${p.name || '新品'}</a><br>&nbsp;&nbsp;￥${p.price} ｜ 已抢 ${p.process}% ｜ ${p.shop || ''}`).join('<br>') +
-      (ev.added.length > 40 ? `<br>...等共 ${ev.added.length} 个` : '');
+    const lines = ev.added.map(p => `${p.name || '新品'} ￥${p.price} 已抢${String(p.process).replace(/%$/, '')}%`);
+    const htmlBody = ev.added.slice(0, 20).map((p, i) =>
+      `${i + 1}. <a href="https://item.m.jd.com/product/${p.sku}.html">${p.name || '新品'}</a><br>&nbsp;&nbsp;￥${p.price} ｜ 已抢 ${p.process}% ｜ ${p.shop || ''}`).join('<br>');
     await notify(`新上 ${ev.added.length} 个商品！`, lines, htmlBody + '<br>——<br>时间: ' + ts());
     process.exit(1);
   }
