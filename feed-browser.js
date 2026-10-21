@@ -116,7 +116,8 @@ function ingest(p) {
         return { before, after: window.scrollY, bottom: window.innerHeight + window.scrollY >= document.body.scrollHeight - 40 };
       });
       await page.waitForTimeout(1500);
-      if (products.size === before) idle++; else idle = 0;
+      // 还没抓到任何商品时不判定 idle（页面可能仍在渲染/接口未触发）
+      if (products.size > 0 && products.size === before) idle++; else if (products.size > before) idle = 0;
       // 到底且没有新商品：尝试找"加载更多/点击加载"按钮
       if (y.bottom && idle >= 2) {
         const more = page.getByText(/加载更多|点击加载|查看更多/).first();
@@ -135,8 +136,13 @@ function ingest(p) {
   }
 
   try {
-    await page.goto(PAGE_URL, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    await page.waitForTimeout(5000);
+    // 最多两次尝试：页面偶发白屏/未触发接口时重载一次
+    for (let attempt = 1; attempt <= 2 && products.size === 0; attempt++) {
+      const url = attempt === 1 ? PAGE_URL : PAGE_URL + '?_r=' + Date.now();
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+      for (let i = 0; i < 25 && products.size === 0; i++) await page.waitForTimeout(1000);
+      log(`第 ${attempt} 次加载完成：已抓 ${products.size} 个商品`);
+    }
     await scrollLoad('今日抢购', MAX_SCROLL);
     log(`今日抢购：累计 ${products.size} 个`);
 
