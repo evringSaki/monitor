@@ -70,8 +70,7 @@ jobs:
           ACTIVITY_ID: USFY4Q1KPsHd54cN8AVUPHZdHpT
           FEED_FILE: ./data/feed-latest.json
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-          SESSIONS: '1'
-          DEBUG_API: '1'
+          SESSIONS: '2'
         run: |
           echo "=== 浏览器通道开始 $(date -Iseconds) ==="
           rm -f ./data/feed-latest.json

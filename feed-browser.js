@@ -89,6 +89,7 @@ async function runSession(browser, idx) {
   const page = await ctx.newPage();
   let inflight = 0;
   let lastPageNum = 0;
+  let lastCode = '?';
   let tab = 'today';
 
   page.on('request', r => { if (r.url().includes('queryBabelFeeds')) inflight++; });
@@ -128,10 +129,12 @@ async function runSession(browser, idx) {
       const j = JSON.parse(text);
       const floors = j.floorList || [];
       lastPageNum = Number(j.pageNum || lastPageNum);
+      lastCode = String(j.code == null ? '?' : j.code);
       let added = 0;
       floors.forEach(f => (f.providerData || []).forEach(p => { if (ingest(p, tab)) added++; }));
-      log(`[会话${idx}] pageNum=${j.pageNum} 楼层=${floors.length} 新增=${added} 累计=${products.size}`);
+      log(`[会话${idx}] pageNum=${j.pageNum} code=${lastCode} ${j.msg || ''} 楼层=${floors.length} 新增=${added} 累计=${products.size}`);
     } catch (e) {
+      lastCode = 'parse-fail';
       log(`[会话${idx}] 响应解析失败：${e.message.slice(0, 60)}`);
     } finally {
       inflight = Math.max(0, inflight - 1);
@@ -160,6 +163,13 @@ async function runSession(browser, idx) {
       await page.waitForTimeout(1800);
       await settle(8000);
       if (st.h === lastH) sameH++; else { sameH = 0; lastH = st.h; }
+      // 接口报错（限流/风控）时不能判定"列表结束"，继续尝试
+      if (lastCode !== '0' && lastCode !== '?') {
+        log(`[会话${idx}] 接口 code=${lastCode}，稍后重试`);
+        idle = 0;
+        await page.waitForTimeout(3000);
+        continue;
+      }
       if (products.size > before) idle = 0; else if (inflight === 0) idle++;
       if (i % 6 === 0) log(`[会话${idx}] ${tag} 进度：scrollY=${st.y} 高度=${st.h} 累计=${products.size} 页码=${lastPageNum}`);
       if (idle >= 8 && sameH >= 3) {
