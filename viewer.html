@@ -32,6 +32,7 @@ tr:hover td{background:#1a2238}
 .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:10px;margin-right:3px}
 .tag.main{background:#1c3a6e;color:#7fb0ff}
 .tag.stage{background:#3d2f14;color:#ffce67}
+.tag.flash{background:#4a1d1d;color:#ff8a7a}
 .tag.new{background:#12402a;color:#4ade80}
 a{color:var(--acc);text-decoration:none}
 .empty{text-align:center;color:var(--dim);padding:30px}
@@ -52,9 +53,10 @@ a{color:var(--acc);text-decoration:none}
 
 <div class="toolbar">
 <select id="src" onchange="render()">
-<option value="stage" selected>⏰ 时段商品</option>
+<option value="all" selected>全部商品</option>
+<option value="flash">🔥 秒杀商品</option>
+<option value="stage">⏰ 时段商品</option>
 <option value="main">楼层商品</option>
-<option value="all">全部</option>
 </select>
 <input id="q" placeholder="筛选商品名 / SKU / 店铺…" style="min-width:200px" oninput="render()">
 <input id="pmin" type="number" placeholder="价格≥" style="width:80px" oninput="render()">
@@ -122,6 +124,7 @@ function render() {
   let list = prods.filter(p => {
     if (src === 'stage' && p.source !== 'stage') return false;
     if (src === 'main' && p.source !== 'main') return false;
+    if (src === 'flash' && p.source !== 'flash') return false;
     if (q && !((p.name || '') + p.sku + (p.shop || '')).toLowerCase().includes(q)) return false;
     const pr = parseFloat(p.price);
     if (!isNaN(pmin) && !(pr >= pmin)) return false;
@@ -134,7 +137,8 @@ function render() {
   document.getElementById('empty').style.display = list.length ? 'none' : 'block';
   document.getElementById('rows').innerHTML = list.map(p => {
     const tag = p.source === 'stage' ? '<span class="tag stage">时段</span>'
-      : p.source === 'main' ? '<span class="tag main">楼层</span>' : '';
+      : p.source === 'main' ? '<span class="tag main">楼层</span>'
+        : p.source === 'flash' ? '<span class="tag flash">秒杀</span>' : '';
     const isNew = p.streak === 1 ? '<span class="tag new">NEW</span>' : '';
     const name = (p.name || '(未命名)').replace(/</g, '&lt;').slice(0, 46);
     const extra = [p.stock && '库存' + p.stock, p.limit && '限购' + p.limit].filter(Boolean).join(' / ') || '-';
