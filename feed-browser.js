@@ -148,6 +148,9 @@ function ingest(p) {
 
     // 「明日预告」tab：展示下一场商品
     if (process.env.INCLUDE_TOMORROW !== '0') {
+      // 先回到顶部，否则 tab 在视口外点击会被拦截
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(1200);
       const tab = page.getByText('明日预告', { exact: false }).first();
       if (await tab.count()) {
         await tab.scrollIntoViewIfNeeded().catch(() => {});
