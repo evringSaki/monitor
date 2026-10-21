@@ -93,6 +93,27 @@ async function runSession(browser, idx) {
 
   page.on('request', r => { if (r.url().includes('queryBabelFeeds')) inflight++; });
   page.on('requestfailed', r => { if (r.url().includes('queryBabelFeeds')) inflight = Math.max(0, inflight - 1); });
+  // 诊断：记录页面调用的所有 api.m.jd.com 接口及其返回规模（DEBUG_API=1 时启用）
+  const apiStats = {};
+  if (process.env.DEBUG_API === '1') {
+    page.on('response', async res => {
+      const u = res.url();
+      if (!u.includes('api.m.jd.com')) return;
+      const fid = (u.match(/functionId=([A-Za-z0-9_]+)/) || [])[1] || 'unknown';
+      try {
+        const t = await res.text();
+        let n = 0, extra = '';
+        try {
+          const j = JSON.parse(t);
+          n = (j.floorList ? j.floorList.length : 0) + (j.goodsList ? j.goodsList.length : 0) + (j.wareInfoList ? Object.keys(j.wareInfoList).length : 0);
+          if (j.floorList && j.floorList[0] && j.floorList[0].template) extra = 'template=' + j.floorList[0].template;
+        } catch (e) { extra = '非JSON ' + t.slice(0, 30).replace(/\s+/g, ' '); }
+        apiStats[fid] = apiStats[fid] || { calls: 0, items: 0 };
+        apiStats[fid].calls++; apiStats[fid].items += n;
+        if (n) log(`[API] ${fid} 返回 ${n} 项 ${extra}`);
+      } catch (e) {}
+    });
+  }
   page.on('response', async res => {
     if (!res.url().includes('queryBabelFeeds')) return;
     let text = null;
