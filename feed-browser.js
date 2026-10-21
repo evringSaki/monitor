@@ -28,7 +28,7 @@ const ACTIVITY = process.env.ACTIVITY_ID || 'USFY4Q1KPsHd54cN8AVUPHZdHpT';
 const PAGE_URL = `https://pro.m.jd.com/mall/active/${ACTIVITY}/index.html`
   + '?babelChannel=ttt3&homepagebybt=1&secJump=1&visitScene=1';
 const OUT = process.env.FEED_FILE || path.join(__dirname, 'data', 'feed-latest.json');
-const SESSIONS = Number(process.env.SESSIONS || 2);
+const SESSIONS = Number(process.env.SESSIONS || 3);
 const MAX_SCROLL = Number(process.env.MAX_SCROLL || 30);
 const UA = 'Mozilla/5.0 (Linux; Android 13; Pixel 7; wv) AppleWebKit/537.36 (KHTML, like Gecko) ' +
   'Version/4.0 Chrome/120.0.0.0 Mobile Safari/537.36 jdapp;JDAndroid;14.0.0;';
@@ -95,15 +95,23 @@ async function runSession(browser, idx) {
   page.on('requestfailed', r => { if (r.url().includes('queryBabelFeeds')) inflight = Math.max(0, inflight - 1); });
   page.on('response', async res => {
     if (!res.url().includes('queryBabelFeeds')) return;
+    let text = null;
+    for (let attempt = 1; attempt <= 3 && text === null; attempt++) {
+      try { text = await res.text(); } catch (e) {
+        if (attempt === 3) log(`[会话${idx}] 响应体读取失败：${e.message.slice(0, 60)}`);
+        else await page.waitForTimeout(400);
+      }
+    }
     try {
-      const j = await res.json();
+      if (!text) return;
+      const j = JSON.parse(text);
       const floors = j.floorList || [];
       lastPageNum = Number(j.pageNum || lastPageNum);
       let added = 0;
       floors.forEach(f => (f.providerData || []).forEach(p => { if (ingest(p, tab)) added++; }));
       log(`[会话${idx}] pageNum=${j.pageNum} 楼层=${floors.length} 新增=${added} 累计=${products.size}`);
     } catch (e) {
-      log(`[会话${idx}] 响应解析失败：${e.message}`);
+      log(`[会话${idx}] 响应解析失败：${e.message.slice(0, 60)}`);
     } finally {
       inflight = Math.max(0, inflight - 1);
     }
@@ -141,14 +149,17 @@ async function runSession(browser, idx) {
   }
 
   try {
-    for (let attempt = 1; attempt <= 2 && products.size === 0; attempt++) {
-      const url = attempt === 1 ? PAGE_URL : PAGE_URL + '?_r=' + Date.now();
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
-      for (let i = 0; i < 25; i++) {
-        if (products.size > 0) break;
-        await page.waitForTimeout(1000);
-      }
-      log(`[会话${idx}] 第 ${attempt} 次加载：累计 ${products.size} 个`);
+    // 只加载一次，绝不中途重载（重载会打断正在读取的响应体，导致首屏 14 个丢失）
+    const url = idx === 1 ? PAGE_URL : PAGE_URL + (PAGE_URL.includes('?') ? '&' : '?') + '_r=' + Date.now() + '_' + idx;
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    const baseCount = products.size;
+    const waitUntil = Date.now() + 45000;
+    while (products.size === baseCount && Date.now() < waitUntil) await page.waitForTimeout(1000);
+    log(`[会话${idx}] 首屏完成：新增 ${products.size - baseCount} 个，累计 ${products.size} 个`);
+    if (products.size === baseCount) {
+      log(`[会话${idx}] 首屏无数据，跳过该会话`);
+      await ctx.close().catch(() => {});
+      return;
     }
     await scrollLoad('今日抢购');
     log(`[会话${idx}] 今日抢购完成，累计 ${products.size} 个`);
