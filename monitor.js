@@ -326,9 +326,52 @@ function extractFlashProducts(ad) {
   return out;
 }
 
+// ================= 加倍补（feeds.goodsList） =================
+// 该活动页（超级补贴·加倍补）把商品内嵌在 HTML 的 feeds.goodsList 里，结构与十点抢新完全不同：
+//   jump.params.skuId / wname / displayPrice(补贴到手价) / jdPrice(京东价)
+function extractFeedGoods(html) {
+  const out = new Map();
+  const s = html.replace(/\\"/g, '"');
+  const gi = s.indexOf('"goodsList"');
+  if (gi < 0) return out;
+  const arrStart = s.indexOf('[', gi);
+  if (arrStart < 0) return out;
+  let d = 0, st = false, es = false, end = -1;
+  for (let i = arrStart; i < s.length; i++) {
+    const c = s[i];
+    if (es) { es = false; continue; }
+    if (c === '\\') { es = true; continue; }
+    if (c === '"') st = !st;
+    if (st) continue;
+    if (c === '[') d++;
+    else if (c === ']') { d--; if (d === 0) { end = i + 1; break; } }
+  }
+  if (end < 0) return out;
+  let list;
+  try { list = JSON.parse(s.slice(arrStart, end)); } catch (e) { return out; }
+  (list || []).forEach(g => {
+    const jp = (g.jump && g.jump.params) || {};
+    const sku = String(jp.skuId || jp.sku || g.skuId || '');
+    if (!/^\d{5,}$/.test(sku) || out.has(sku)) return;
+    const price = g.displayPrice != null && String(g.displayPrice) !== '' ? String(g.displayPrice)
+      : (g.basePrice != null ? String(g.basePrice) : '');
+    const orig = g.jdPrice != null ? String(g.jdPrice) : '';
+    out.set(sku, {
+      sku, source: 'feed',
+      name: g.wname || g.name || '',
+      price: price || orig,
+      orig: orig && orig !== price ? orig : '',
+      shop: g.shopName || '',
+      isNew: false,
+      pic: g.imageUrl || g.smallImageUrl || '',
+    });
+  });
+  return out;
+}
+
 function buildSnapshot(html) {
-  const react = extractReactData(html);
-  const ad = react.activityData || {};
+  let ad = {};
+  try { ad = extractReactData(html).activityData || {}; } catch (e) { ad = {}; }
   const stage = extractStageData(ad);
   const products = extractMainProducts(ad);
   const flash = extractFlashProducts(ad);
@@ -344,6 +387,21 @@ function buildSnapshot(html) {
   for (const [sku, p] of flash) {
     hotzone.set(sku, p);
   }
+  // 加倍补等页面：react 楼层里没有商品，商品内嵌在 feeds.goodsList 里。
+  // 这类页面通用扫描也会抓到同样的 sku（但只有 jdPrice、来源是 jsf 不参与推送），
+  // 所以只要 react 三个来源都没商品，就用 feed 商品覆盖（带 wname/displayPrice/店铺）
+  let feedN = 0;
+  if (!flash.size) {
+    const feed = extractFeedGoods(html);
+    // 安全门槛：feed 与楼层商品 SKU 重合度 ≥50% 才采用（防止风控降级页把"猜你喜欢"推荐流当活动商品）
+    const baseSkus = [...products.keys()];
+    const overlap = baseSkus.filter(k => feed.has(k)).length;
+    const denom = Math.min(feed.size, baseSkus.length);
+    if (feed.size && denom && overlap / denom >= 0.5) {
+      feedN = feed.size;
+      for (const [sku, p] of feed) hotzone.set(sku, p);
+    }
+  }
   const curStage = stage.stages.find(s => String(s.stageId) === stage.currentStageId) || {};
   return {
     time: new Date().toISOString(),
@@ -358,6 +416,7 @@ function buildSnapshot(html) {
     mainCount: products.size,
     stageCount: stage.products.size,
     flashCount: flash.size,
+    feedCount: feedN,
     products: Object.fromEntries([...hotzone.entries()].map(([sku, p]) => [sku, { ...p, streak: 1, firstSeen: new Date().toISOString() }])),
   };
 }
@@ -369,7 +428,7 @@ function diffSnapshots(prev, curr) {
   const prevBook = prev.priceBook || {};
   const prevOffline = prev.offline || {};
   const ev = { addedMain: [], addedHotzoneConfirmed: [], hotzoneCandidates: [], removed: [], priceChanged: [], stageChanged: null };
-  const isTracked = (p) => p.source === 'main' || p.source === 'stage' || p.source === 'flash';
+  const isTracked = (p) => p.source === 'main' || p.source === 'stage' || p.source === 'flash' || p.source === 'feed';
   for (const [sku, p] of Object.entries(currP)) {
     const old = prevP[sku];
     if (!old) {
@@ -801,7 +860,7 @@ async function main() {
   const prevBook = (prev && prev.priceBook) || {};
   const book = {};
   for (const p of Object.values(snap.products)) {
-    if ((p.source === 'main' || p.source === 'stage' || p.source === 'flash') && p.price)
+    if ((p.source === 'main' || p.source === 'stage' || p.source === 'flash' || p.source === 'feed') && p.price)
       book[p.sku] = { price: p.price, orig: p.orig || '', name: p.name, at: bookNow };
   }
   for (const [sku, e] of Object.entries(prevBook)) {
@@ -815,7 +874,7 @@ async function main() {
   const offline = {};
   for (const [sku, old] of Object.entries((prev && prev.products) || {})) {
     if (snap.products[sku]) continue;
-    if (!(old.source === 'main' || old.source === 'stage' || old.source === 'flash')) continue;
+    if (!(old.source === 'main' || old.source === 'stage' || old.source === 'flash' || old.source === 'feed')) continue;
     const rec = prevOffline[sku];
     offline[sku] = { name: old.name || '', price: old.price || '', rounds: (rec ? (rec.rounds || 0) : 0) + 1, at: bookNow };
   }
@@ -879,7 +938,7 @@ async function main() {
     // 老商品因 notified 去重不会重复推送，但新场次的清单必须完整（否则用户只看到 11 个/实际 42 个）
     const stageAll = isStageStart
       ? Object.values(snap.products)
-        .filter(p => p.source === 'flash' || p.source === 'stage' || p.source === 'main')
+        .filter(p => p.source === 'flash' || p.source === 'stage' || p.source === 'main' || p.source === 'feed')
         .sort((a, b) => (parseFloat(a.price) || 99999) - (parseFloat(b.price) || 99999))
       : [];
     const listAll = stageAll.length ? stageAll : ev.addedMain;

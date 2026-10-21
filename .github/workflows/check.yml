@@ -58,6 +58,22 @@ jobs:
           node monitor.js || echo "退出码 $?（1=有更新，属正常）"
           echo "=== 场A 完成 ==="
 
+      - name: 执行监控-场C（加倍补）
+        id: runC
+        if: ${{ !inputs.test_push }}
+        env:
+          QMSG_KEY: ${{ secrets.QMSG_KEY }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
+          PAGE_URL: 'https://pro.m.jd.com/mall/active/USFY4Q1KPsHd54cN8AVUPHZdHpT/index.html'
+          STATE_PATH: ./data/snapshot-jiabei.json
+          LOG_PATH: ./data/history-jiabei.log
+          PAGE_LABEL: '场C'
+        run: |
+          echo "=== 场C 开始 $(date -Iseconds) ==="
+          node monitor.js || echo "退出码 $?（1=有更新，属正常）"
+          echo "=== 场C 完成 ==="
+
       - name: 推送链路测试
         id: runTest
         if: ${{ inputs.test_push }}
