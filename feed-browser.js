@@ -24,7 +24,7 @@ const { chromium } = require('playwright');
 const ACTIVITY = process.env.ACTIVITY_ID || 'USFY4Q1KPsHd54cN8AVUPHZdHpT';
 const PAGE_URL = `https://pro.m.jd.com/mall/active/${ACTIVITY}/index.html`;
 const OUT = process.env.FEED_FILE || path.join(__dirname, 'data', 'feed-latest.json');
-const MAX_SCROLL = Number(process.env.MAX_SCROLL || 12);
+const MAX_SCROLL = Number(process.env.MAX_SCROLL || 30);
 const UA = 'Mozilla/5.0 (Linux; Android 13; Pixel 7; wv) AppleWebKit/537.36 (KHTML, like Gecko) ' +
   'Version/4.0 Chrome/120.0.0.0 Mobile Safari/537.36 jdapp;JDAndroid;14.0.0;';
 
@@ -105,34 +105,52 @@ function ingest(p) {
     }
   });
 
+  // 缓慢滚到底部并等待接口：到底 + 连续多次无新增才停
+  async function scrollLoad(tag, maxRounds) {
+    let idle = 0, lastY = -1;
+    for (let i = 0; i < maxRounds; i++) {
+      const before = products.size;
+      const y = await page.evaluate(() => {
+        const before = window.scrollY;
+        window.scrollBy(0, 600);
+        return { before, after: window.scrollY, bottom: window.innerHeight + window.scrollY >= document.body.scrollHeight - 40 };
+      });
+      await page.waitForTimeout(1500);
+      if (products.size === before) idle++; else idle = 0;
+      // 到底且没有新商品：尝试找"加载更多/点击加载"按钮
+      if (y.bottom && idle >= 2) {
+        const more = page.getByText(/加载更多|点击加载|查看更多/).first();
+        if (await more.count().catch(() => 0)) {
+          await more.click({ timeout: 3000 }).catch(() => {});
+          idle = 0;
+        }
+      }
+      const stuck = y.before === y.after && y.bottom;
+      if (stuck) idle++;
+      if (idle >= 6) {
+        log(`${tag}：连续 6 次无新增（底部=${y.bottom} scrollY=${y.after}），结束`);
+        break;
+      }
+    }
+  }
+
   try {
     await page.goto(PAGE_URL, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    await page.waitForTimeout(4000);
-    let idle = 0;
-    for (let i = 0; i < MAX_SCROLL; i++) {
-      const before = products.size;
-      await page.evaluate(() => window.scrollBy(0, 800));
-      await page.waitForTimeout(1300);
-      if (products.size === before) idle++; else idle = 0;
-      if (products.size > 0 && idle >= 3) { log('连续 3 次滚动无新增，提前结束'); break; }
-    }
+    await page.waitForTimeout(5000);
+    await scrollLoad('今日抢购', MAX_SCROLL);
+    log(`今日抢购：累计 ${products.size} 个`);
 
-    // 「明日预告」tab：通常展示下一场商品，数量往往比今日多
+    // 「明日预告」tab：展示下一场商品
     if (process.env.INCLUDE_TOMORROW !== '0') {
       const tab = page.getByText('明日预告', { exact: false }).first();
       if (await tab.count()) {
         await tab.click({ timeout: 8000 }).catch(e => log('点击明日预告失败：' + e.message));
         currentTab = 'tomorrow';
         log('已切换到「明日预告」tab');
-        await page.waitForTimeout(4000);
-        let idle2 = 0;
-        for (let i = 0; i < MAX_SCROLL; i++) {
-          const before = products.size;
-          await page.evaluate(() => window.scrollBy(0, 800));
-          await page.waitForTimeout(1300);
-          if (products.size === before) idle2++; else idle2 = 0;
-          if (idle2 >= 3) { log('明日预告：连续 3 次滚动无新增，结束'); break; }
-        }
+        await page.waitForTimeout(5000);
+        const beforeT = products.size;
+        await scrollLoad('明日预告', MAX_SCROLL);
+        log(`明日预告：新增 ${products.size - beforeT} 个`);
       } else {
         log('未找到「明日预告」tab，跳过');
       }

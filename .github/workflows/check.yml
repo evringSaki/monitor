@@ -25,7 +25,7 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     permissions:
       contents: write   # 写回 snapshot.json 到仓库
     steps:

@@ -1231,8 +1231,18 @@ async function runTodayDiff(products) {
   const ev = { added: [], sellable: [], priceChanged: [], soldOut: [] };
   for (const p of products) {
     const old = prevBySku.get(p.sku);
-    if (!old) { ev.added.push(p); continue; }
+    if (!old) {
+      // 浏览器通道抓取的列表偶有缺漏（接口分页不稳定）：新增需连续 2 轮确认，避免误报刷屏
+      p.streak = 1;
+      p.pending = true;
+      continue;
+    }
     p.streak = (old.streak || 1) + 1;
+    if (old.pending) {
+      // 上一轮是待确认状态：本轮仍在 → 确认为真上新
+      p.pending = false;
+      if (p.streak >= 2) ev.added.push(p);
+    }
     if (String(old.canSell) !== 'Y' && String(p.canSell) === 'Y') ev.sellable.push(p);
     if (String(old.canSell) === 'Y' && String(p.canSell) !== 'Y') ev.soldOut.push(p);
     if (old.price && p.price && old.price !== p.price) ev.priceChanged.push({ ...p, from: old.price, to: p.price });
