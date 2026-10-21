@@ -58,6 +58,20 @@ jobs:
           node monitor.js || echo "退出码 $?（1=有更新，属正常）"
           echo "=== 场A 完成 ==="
 
+      - name: 浏览器通道-场C（加倍补今日抢购数据）
+        id: runBrowser
+        if: ${{ !inputs.test_push }}
+        env:
+          ACTIVITY_ID: USFY4Q1KPsHd54cN8AVUPHZdHpT
+          FEED_FILE: ./data/feed-latest.json
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: |
+          echo "=== 浏览器通道开始 $(date -Iseconds) ==="
+          rm -f ./data/feed-latest.json
+          npm i playwright --no-save --silent
+          node feed-browser.js || echo "浏览器通道失败（退出码 $?），场C 本轮跳过"
+          echo "=== 浏览器通道完成 ==="
+
       - name: 执行监控-场C（加倍补·今日抢购）
         id: runC
         if: ${{ !inputs.test_push }}
@@ -65,9 +79,8 @@ jobs:
           QMSG_KEY: ${{ secrets.QMSG_KEY }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
           MODE: 'today'
-          PAGE_URL: 'https://pro.m.jd.com/mall/active/USFY4Q1KPsHd54cN8AVUPHZdHpT/index.html'
+          FEED_FILE: ./data/feed-latest.json
           STATE_PATH: ./data/snapshot-jiabei.json
           LOG_PATH: ./data/history-jiabei.log
           PAGE_LABEL: '场C'

@@ -1119,6 +1119,21 @@ function fmtToday(p) {
 
 async function mainToday() {
   ensureDir(STATE_PATH);
+  // 浏览器通道：feed-browser.js 已把商品写成 JSON，这里只做快照对比与推送（无需 cookie）
+  if (process.env.FEED_FILE) {
+    let feed;
+    try { feed = JSON.parse(fs.readFileSync(process.env.FEED_FILE, 'utf8')); }
+    catch (e) { log('读取浏览器商品数据失败：' + e.message); process.exit(0); }
+    const list = (feed.products || []).filter(p => p && p.sku);
+    log(`浏览器通道：读取到 ${list.length} 个商品`);
+    if (!list.length) { log('商品为空，跳过本次'); process.exit(0); }
+    if (list.length < MIN_TODAY_PRODUCTS) {
+      log(`警告：仅 ${list.length} 个商品（< 阈值 ${MIN_TODAY_PRODUCTS}），疑似加载不全，跳过本次`);
+      process.exit(0);
+    }
+    list.forEach(p => log('  · ' + fmtToday(p)));
+    return runTodayDiff(list);
+  }
   if (!JD_COOKIE) { log('错误：未设置 JD_COOKIE 环境变量（需要登录态才能拿到今日抢购数据）'); process.exit(2); }
 
   // 1) 带登录 cookie 抓活动页（不走 jina 中转——cookie 只应发给京东 itself）
@@ -1194,7 +1209,11 @@ async function mainToday() {
   }
 
   products.forEach(p => log('  · ' + fmtToday(p)));
+  return runTodayDiff(products);
+}
 
+// 今日抢购/加倍补：快照对比 + 推送（products 来自 cookie SSR 或浏览器通道）
+async function runTodayDiff(products) {
   // 3) 首跑建基线
   if (!fs.existsSync(STATE_PATH)) {
     fs.writeFileSync(STATE_PATH, JSON.stringify({ time: new Date().toISOString(), total: products.length, products }, null, 2));
