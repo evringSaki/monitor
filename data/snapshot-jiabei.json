@@ -1,364 +1,318 @@
 {
-  "time": "2026-10-21T18:35:40.377Z",
-  "activityName": "上新活动",
-  "stage": {
-    "id": "",
-    "time": "",
-    "et": "",
-    "all": []
-  },
-  "total": 19,
-  "mainCount": 19,
-  "stageCount": 0,
-  "flashCount": 0,
-  "feedCount": 19,
-  "products": {
-    "156981": {
-      "sku": "156981",
-      "source": "feed",
-      "name": "南孚聚能环5代 5号碱性电池2粒",
-      "price": "6.9",
-      "orig": "",
-      "shop": "南孚京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/505659/16/8401/88235/6a87f011Ff3515fca/0083320320a5fe92.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
+  "time": "2026-10-21T18:38:22.100Z",
+  "total": 24,
+  "products": [
+    {
+      "sku": "100313025645",
+      "name": "花田熊-教师节膏滋礼盒B*1盒",
+      "price": "17.9",
+      "orig": "49.9",
+      "process": "1%",
+      "shop": "花田熊京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "199",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
     },
-    "1044439": {
-      "sku": "1044439",
-      "source": "feed",
-      "name": "丰蓝1号燃气灶电池 1粒装",
+    {
+      "sku": "100273418618",
+      "name": "BeBi意大利进口蓝莓果酱150g/瓶",
+      "price": "15.9",
+      "orig": "39",
+      "process": "0%",
+      "shop": "BeBi母婴京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "40",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100176696374",
+      "name": "秋田满满 牛油果热炒油250ml",
+      "price": "19",
+      "orig": "45.9",
+      "process": "63%",
+      "shop": "秋田满满京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "15",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "10128385350947",
+      "name": "粉色少女手链福牌手串8mm",
+      "price": "1",
+      "orig": "6.01",
+      "process": "18%",
+      "shop": "京喜自营官方店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "287",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100390824802",
+      "name": "婴幼儿酸奶棒棒西梅香蕉味45g",
+      "price": "2.9",
+      "orig": "8.9",
+      "process": "8%",
+      "shop": "花田熊京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "230",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100206065825",
+      "name": "BeBi意大利进口草莓果酱150g/瓶",
+      "price": "15.9",
+      "orig": "39",
+      "process": "2%",
+      "shop": "BeBi母婴京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "196",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100327711391",
+      "name": "小兔团团DHA高钙牛乳小奶棒108g",
+      "price": "9.9",
+      "orig": "19.9",
+      "process": "4%",
+      "shop": "布拉粉小兔团团京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "96",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "10220488500835",
+      "name": "文玩运转国潮风送女友睛水转运珠",
+      "price": "1",
+      "orig": "6.7",
+      "process": "5%",
+      "shop": "京喜自营官方店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "379",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100030561995",
+      "name": "北京稻香村四季平安糕点礼盒530g",
+      "price": "64",
+      "orig": "108.9",
+      "process": "10%",
+      "shop": "北京稻香村京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "18",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100273418630",
+      "name": "意大利进口黄杏味儿童果酱",
+      "price": "15.9",
+      "orig": "39",
+      "process": "14%",
+      "shop": "BeBi母婴京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "6",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100429637470",
+      "name": "小兔团团鸡内金冻干山楂条60g",
+      "price": "14.9",
+      "orig": "29.9",
+      "process": "2%",
+      "shop": "布拉粉小兔团团京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "49",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100128417114",
+      "name": "秋田满满 核桃粉+虾皮粉+海苔粉",
+      "price": "19",
+      "orig": "39.9",
+      "process": "13%",
+      "shop": "秋田满满京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "35",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100327998073",
+      "name": "益生元山药雪梨果丹皮山楂卷",
+      "price": "11.9",
+      "orig": "23.9",
+      "process": "2%",
+      "shop": "布拉粉小兔团团京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "49",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "10193456399597",
+      "name": "手链生日情人节本命年金刚结1条",
+      "price": "1",
+      "orig": "8.15",
+      "process": "15%",
+      "shop": "京喜自营官方店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "254",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:11.939Z"
+    },
+    {
+      "sku": "100357914364",
+      "name": "国家地理黑色户外运动背包20L",
+      "price": "199",
+      "orig": "799",
+      "process": "0%",
+      "shop": "国家地理（National Geographic）京东自营专区",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "20",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100328245213",
+      "name": "小兔团团巧克力星球桶杯儿童零食",
+      "price": "14.9",
+      "orig": "29.9",
+      "process": "2%",
+      "shop": "布拉粉小兔团团京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "49",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100269451459",
+      "name": "国家地理淡棕色户外运动背包25L",
+      "price": "299",
+      "orig": "1099",
+      "process": "5%",
+      "shop": "国家地理（National Geographic）京东自营专区",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "19",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100412894074",
+      "name": "一次性敏肌可用旅行差旅便携毛巾",
+      "price": "2.9",
+      "orig": "5.9",
+      "process": "67%",
+      "shop": "Q21个护家清京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "33",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100113242657",
+      "name": "【德国进口】欧乐B iO2爆款标装",
+      "price": "1",
+      "orig": "348",
+      "process": "26%",
+      "shop": "欧乐B口腔护理京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100125774407",
+      "name": "德力西轨道插座 80+4五孔玄铁灰",
+      "price": "135.5",
+      "orig": "503",
+      "process": "16%",
+      "shop": "德力西京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100149152325",
+      "name": "植村秀shu uemura焕颜臻黑洁颜泥",
       "price": "4.9",
-      "orig": "",
-      "shop": "南孚京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/418004/22/8319/34748/69e09003F840df6f3/00ae1e01e01cabf4.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
+      "orig": "50",
+      "process": "20%",
+      "shop": "植村秀京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
     },
-    "10103007017250": {
-      "sku": "10103007017250",
-      "source": "feed",
-      "name": "【全网特惠】麻酱鸡蛋 10枚45g+",
-      "price": "6.96",
-      "orig": "",
+    {
+      "sku": "100320539477",
+      "name": "蘭LAN时光冷霜面霜15g",
+      "price": "1",
+      "orig": "89",
+      "process": "30%",
+      "shop": "蘭京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:14.574Z"
+    },
+    {
+      "sku": "100237877121",
+      "name": "潘婷3分钟护发素40ml",
+      "price": "1",
+      "orig": "9.9",
+      "process": "19%",
+      "shop": "宝洁京东自营旗舰店",
+      "canSell": "N",
+      "soldOut": "",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:15.856Z"
+    },
+    {
+      "sku": "10208917351358",
+      "name": "加厚法兰绒保暖绒毯多功能单条装",
+      "price": "1",
+      "orig": "9.9",
+      "process": "26%",
       "shop": "京喜自营官方店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/438021/17/8009/31624/6a105841F313e0294/0083320320d47041.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100039386834": {
-      "sku": "100039386834",
-      "source": "feed",
-      "name": "飞鹤星飞帆4段25g*4条高钙CBP",
-      "price": "9.9",
-      "orig": "",
-      "shop": "飞鹤京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/392071/12/16127/51000/6985b24aF481ee42b/00ae1e01e0ef5c15.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100076359603": {
-      "sku": "100076359603",
-      "source": "feed",
-      "name": "上海除菌香皂105g*3块",
-      "price": "9.9",
-      "orig": "",
-      "shop": "上海药皂京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t20271011/196114/14/48905/38193/67088776Ff0d12109/40eb7128dd276b25.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100216546140": {
-      "sku": "100216546140",
-      "source": "feed",
-      "name": "babycare易穿短裤式纸尿裤XXL4",
-      "price": "6.9",
-      "orig": "",
-      "shop": "Babycare京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/391540/3/5770/26238/69731a1dF2b82308c/00ae1e01e0aaf93a.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10228631471641": {
-      "sku": "10228631471641",
-      "source": "feed",
-      "name": "JEPOO新款马桶刷 S型刷毛两个装",
-      "price": "5.97",
-      "orig": "",
-      "shop": "JEPOO官方旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/451790/16/18686/13670/6a39ef41Fdf1289ac/0083320320187e90.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10208209241605": {
-      "sku": "10208209241605",
-      "source": "feed",
-      "name": "立白超洁清新洗衣粉280g",
-      "price": "9.6",
-      "orig": "",
-      "shop": "立白家庭环境清洁旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/430096/13/239/47344/69f2f6ebFe4d49093/00ae1e01e050f7c7.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10130875690531": {
-      "sku": "10130875690531",
-      "source": "feed",
-      "name": "【全网特惠】流油咸鸭蛋8枚50g",
-      "price": "5.49",
-      "orig": "",
-      "shop": "京喜自营官方店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/292569/40/25799/41506/689494b0Fcdcdc0ac/571fb7091ae99843.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100192077414": {
-      "sku": "100192077414",
-      "source": "feed",
-      "name": "南孚碳性电池5号4粒",
-      "price": "3.5",
-      "orig": "",
-      "shop": "南孚京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/283240/4/13979/40904/67ecd70fFda40fad0/82297366ebae54b3.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100303040232": {
-      "sku": "100303040232",
-      "source": "feed",
-      "name": "京东鲜花玫瑰10枝随机色",
-      "price": "9.9",
-      "orig": "",
-      "shop": "京东鲜花自营专区",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/275074/31/13945/68992/67eb39a9F1658a257/2b2c1b25365c3377.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100386200804": {
-      "sku": "100386200804",
-      "source": "feed",
-      "name": "上海基础硫磺皂85g*5块",
-      "price": "8.9",
-      "orig": "",
-      "shop": "上海药皂京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/507479/9/3084/54668/6a8428d2F8c208633/08ee320320b2ce6e.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100121333739": {
-      "sku": "100121333739",
-      "source": "feed",
-      "name": "babycare山茶纸尿裤L码3片",
-      "price": "9.89",
-      "orig": "",
-      "shop": "Babycare京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/216841/4/48262/38486/673c3956F6a9311cb/349467466b2151ce.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100355115784": {
-      "sku": "100355115784",
-      "source": "feed",
-      "name": "半亩花田防断发洗发水100g便捷装",
-      "price": "9.89",
-      "orig": "",
-      "shop": "半亩花田京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/441779/1/2144/32359/6a15391aF3f60cd59/0083320320922761.png!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10181700613035": {
-      "sku": "10181700613035",
-      "source": "feed",
-      "name": "立白超洁洗衣粉245g+大师粉35g",
-      "price": "9.6",
-      "orig": "",
-      "shop": "立白大师香氛洗衣液旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/446216/24/816/54908/6a1a87ffFfb4b4129/008332032029158c.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10212546294330": {
-      "sku": "10212546294330",
-      "source": "feed",
-      "name": "山林谷物鲜鸡蛋10枚",
-      "price": "5.19",
-      "orig": "",
-      "shop": "京喜自营官方店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/406543/8/996/22792/69bba3a3F13e4f889/00ae1e01e03ab2c2.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100101523077": {
-      "sku": "100101523077",
-      "source": "feed",
-      "name": "京鲜生 贝贝南瓜净重3斤",
-      "price": "8.9",
-      "orig": "",
-      "shop": "蔬菜源头直发京东自营专区",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t20270819/54842/13/25976/65501/66c29921F54db4536/7f24ab086aa5c4dc.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "10115227892091": {
-      "sku": "10115227892091",
-      "source": "feed",
-      "name": "金龙鱼高筋面粉1kg",
-      "price": "5.99",
-      "orig": "",
-      "shop": "谷乐食品专营店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t20280619/306252/10/12067/18505/6854b5a3Fb1ec923e/0923c3ba20a5e925.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
-    },
-    "100265457887": {
-      "sku": "100265457887",
-      "source": "feed",
-      "name": "babycare非凡大师拉拉裤XXL码3片",
-      "price": "6.89",
-      "orig": "",
-      "shop": "Babycare京东自营旗舰店",
-      "isNew": false,
-      "pic": "https://m.360buyimg.com/seckillcms/jfs/t1/429781/33/1208/84285/69f30b58Facecd16c/00833203209997cc.jpg!q50",
-      "streak": 9,
-      "firstSeen": "2026-10-21T17:59:53.851Z"
+      "canSell": "N",
+      "soldOut": "Y",
+      "remainNum": "",
+      "stageStartTime": "",
+      "firstSeen": "2026-10-21T18:38:17.143Z"
     }
-  },
-  "reminders": {},
-  "priceBook": {
-    "156981": {
-      "price": "6.9",
-      "orig": "",
-      "name": "南孚聚能环5代 5号碱性电池2粒",
-      "at": 1792607740378
-    },
-    "1044439": {
-      "price": "4.9",
-      "orig": "",
-      "name": "丰蓝1号燃气灶电池 1粒装",
-      "at": 1792607740378
-    },
-    "10103007017250": {
-      "price": "6.96",
-      "orig": "",
-      "name": "【全网特惠】麻酱鸡蛋 10枚45g+",
-      "at": 1792607740378
-    },
-    "100039386834": {
-      "price": "9.9",
-      "orig": "",
-      "name": "飞鹤星飞帆4段25g*4条高钙CBP",
-      "at": 1792607740378
-    },
-    "100076359603": {
-      "price": "9.9",
-      "orig": "",
-      "name": "上海除菌香皂105g*3块",
-      "at": 1792607740378
-    },
-    "100216546140": {
-      "price": "6.9",
-      "orig": "",
-      "name": "babycare易穿短裤式纸尿裤XXL4",
-      "at": 1792607740378
-    },
-    "10228631471641": {
-      "price": "5.97",
-      "orig": "",
-      "name": "JEPOO新款马桶刷 S型刷毛两个装",
-      "at": 1792607740378
-    },
-    "10208209241605": {
-      "price": "9.6",
-      "orig": "",
-      "name": "立白超洁清新洗衣粉280g",
-      "at": 1792607740378
-    },
-    "10130875690531": {
-      "price": "5.49",
-      "orig": "",
-      "name": "【全网特惠】流油咸鸭蛋8枚50g",
-      "at": 1792607740378
-    },
-    "100192077414": {
-      "price": "3.5",
-      "orig": "",
-      "name": "南孚碳性电池5号4粒",
-      "at": 1792607740378
-    },
-    "100303040232": {
-      "price": "9.9",
-      "orig": "",
-      "name": "京东鲜花玫瑰10枝随机色",
-      "at": 1792607740378
-    },
-    "100386200804": {
-      "price": "8.9",
-      "orig": "",
-      "name": "上海基础硫磺皂85g*5块",
-      "at": 1792607740378
-    },
-    "100121333739": {
-      "price": "9.89",
-      "orig": "",
-      "name": "babycare山茶纸尿裤L码3片",
-      "at": 1792607740378
-    },
-    "100355115784": {
-      "price": "9.89",
-      "orig": "",
-      "name": "半亩花田防断发洗发水100g便捷装",
-      "at": 1792607740378
-    },
-    "10181700613035": {
-      "price": "9.6",
-      "orig": "",
-      "name": "立白超洁洗衣粉245g+大师粉35g",
-      "at": 1792607740378
-    },
-    "10212546294330": {
-      "price": "5.19",
-      "orig": "",
-      "name": "山林谷物鲜鸡蛋10枚",
-      "at": 1792607740378
-    },
-    "100101523077": {
-      "price": "8.9",
-      "orig": "",
-      "name": "京鲜生 贝贝南瓜净重3斤",
-      "at": 1792607740378
-    },
-    "10115227892091": {
-      "price": "5.99",
-      "orig": "",
-      "name": "金龙鱼高筋面粉1kg",
-      "at": 1792607740378
-    },
-    "100265457887": {
-      "price": "6.89",
-      "orig": "",
-      "name": "babycare非凡大师拉拉裤XXL码3片",
-      "at": 1792607740378
-    }
-  },
-  "offline": {},
-  "notified": []
+  ]
 }
