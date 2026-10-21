@@ -367,6 +367,7 @@ function diffSnapshots(prev, curr) {
   const prevP = prev.products || {};
   const currP = curr.products || {};
   const prevBook = prev.priceBook || {};
+  const prevOffline = prev.offline || {};
   const ev = { addedMain: [], addedHotzoneConfirmed: [], hotzoneCandidates: [], removed: [], priceChanged: [], stageChanged: null };
   const isTracked = (p) => p.source === 'main' || p.source === 'stage' || p.source === 'flash';
   for (const [sku, p] of Object.entries(currP)) {
@@ -377,11 +378,18 @@ function diffSnapshots(prev, curr) {
       if (isTracked(p) && !wasNotified) ev.addedMain.push(p);
       else if (isTracked(p) && wasNotified) {
         p.streak = (prevP[sku] && prevP[sku].streak) || 2;
-        // 楼层轮换消失又重现：直接对比会因旧快照没有该商品而漏掉变价，
-        // 改用价格册 priceBook（消失的商品价格保留 3 天）对比
-        const pb = prevBook[sku];
-        if (pb && pb.price && p.price && pb.price !== p.price)
-          ev.priceChanged.push({ sku, name: p.name, from: pb.price, to: p.price, orig: p.orig || pb.orig || '' });
+        // 下架后重新上架：offline 里记录了"连续缺席轮数"，≥2 轮才算真下架（排除楼层轮换抖动）
+        const off = prevOffline[sku];
+        if (off && (off.rounds || 0) >= 2) {
+          p.restock = true;
+          ev.addedMain.push(p);   // 回归也要推
+        } else {
+          // 楼层轮换消失又重现：直接对比会因旧快照没有该商品而漏掉变价，
+          // 改用价格册 priceBook（消失的商品价格保留 3 天）对比
+          const pb = prevBook[sku];
+          if (pb && pb.price && p.price && pb.price !== p.price)
+            ev.priceChanged.push({ sku, name: p.name, from: pb.price, to: p.price, orig: p.orig || pb.orig || '' });
+        }
       }
       else { p.pending = true; ev.hotzoneCandidates.push(p); }
     } else {
@@ -415,7 +423,7 @@ function diffSnapshots(prev, curr) {
 }
 
 function fmtProduct(p) {
-  const name = p.name ? p.name.slice(0, 40) : '(热区商品)';
+  const name = (p.restock ? '[重新上架] ' : '') + (p.name ? p.name.slice(0, 40) : '(热区商品)');
   const price = p.price ? `￥${p.price}${p.orig && p.orig !== p.price ? `（日常价￥${p.orig}）` : ''}` : '';
   const extra = [];
   if (p.stock) extra.push(`库存${p.stock}`);
@@ -669,7 +677,7 @@ async function pushPlusAll(title, content) {
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
 function productsHtml(items) {
   return items.map((p, i) => {
-    const name = String(p.name || '').slice(0, 40) || '（热区商品）';
+    const name = (p.restock ? '🔄 ' : '') + (String(p.name || '').slice(0, 40) || '（热区商品）');
     const bits = [];
     // 现价=专享价；日常价不同则加删除线展示，对齐"￥229（原价 ￥350）"的常见样式
     if (p.price) bits.push('￥' + p.price + (p.orig && p.orig !== p.price ? ' <s>日常价￥' + p.orig + '</s>' : ''));
@@ -800,6 +808,21 @@ async function main() {
     if (!book[sku] && bookNow - (e.at || 0) <= 3 * 864e5) book[sku] = e;
   }
   snap.priceBook = book;
+
+  // 下架记录表：记录"本轮消失"的 tracked 商品及连续缺席轮数，
+  // ≥2 轮视为真下架；之后重新出现会以"重新上架"再推一次（价格册用于保留旧价）
+  const prevOffline = (prev && prev.offline) || {};
+  const offline = {};
+  for (const [sku, old] of Object.entries((prev && prev.products) || {})) {
+    if (snap.products[sku]) continue;
+    if (!(old.source === 'main' || old.source === 'stage' || old.source === 'flash')) continue;
+    const rec = prevOffline[sku];
+    offline[sku] = { name: old.name || '', price: old.price || '', rounds: (rec ? (rec.rounds || 0) : 0) + 1, at: bookNow };
+  }
+  for (const [sku, rec] of Object.entries(prevOffline)) {
+    if (!offline[sku] && !snap.products[sku] && bookNow - (rec.at || 0) <= 3 * 864e5) offline[sku] = rec;
+  }
+  snap.offline = offline;
   // 只推楼层/时段商品（有名字有价格的正经商品）；热区图片位不推（无名、噪音大，只在快照里记录）
   const confirmed = ev.addedMain.length;
   // 已推送名单持久化：本轮推送的 SKU 记入 snap.notified（楼层轮换导致商品消失重现时不再重复推送）
@@ -855,9 +878,10 @@ async function main() {
       : [];
     const listAll = stageAll.length ? stageAll : ev.addedMain;
     const totalN = listAll.length;
+    const restockN = ev.addedMain.filter(p => p.restock).length;
     const head = isStageStart
       ? `【上新监控】新场次开始：${label || '新时段'}！本场 ${totalN} 个商品${confirmed ? `（新上 ${confirmed} 个）` : ''}`
-      : `【上新监控】检测到上新 ${confirmed} 个商品！`;
+      : `【上新监控】检测到上新 ${confirmed} 个商品${restockN ? `（其中重新上架 ${restockN} 个）` : ''}！`;
     log((isStageStart ? '【新场次】' : '【上新】') + `${totalN} 个商品：\n` + listAll.map(p => '  + ' + fmtProduct(p)).join('\n'));
     // QQ（Qmsg）通道禁"价格类词 + ￥ + 链接"（实测：仅"价格"二字即被判违规并静默丢弃），
     // 所以这里只推商品名；价格/库存/限购仍在 history.log 与快照里，App 内可见
