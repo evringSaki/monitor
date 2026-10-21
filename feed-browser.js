@@ -24,7 +24,9 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const ACTIVITY = process.env.ACTIVITY_ID || 'USFY4Q1KPsHd54cN8AVUPHZdHpT';
-const PAGE_URL = `https://pro.m.jd.com/mall/active/${ACTIVITY}/index.html`;
+// 带上 App 分享链接里的参数：不加这些参数拿到的可能是另一套 feed 流（少十几个商品）
+const PAGE_URL = `https://pro.m.jd.com/mall/active/${ACTIVITY}/index.html`
+  + '?babelChannel=ttt3&homepagebybt=1&secJump=1&visitScene=1';
 const OUT = process.env.FEED_FILE || path.join(__dirname, 'data', 'feed-latest.json');
 const SESSIONS = Number(process.env.SESSIONS || 2);
 const MAX_SCROLL = Number(process.env.MAX_SCROLL || 30);
