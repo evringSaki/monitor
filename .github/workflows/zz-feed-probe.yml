@@ -1,0 +1,35 @@
+name: feed-probe
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: 试探 queryBabelFeeds
+        run: |
+          ACTIVITY="USFY4Q1KPsHd54cN8AVUPHZdHpT"
+          UA="Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+          REF="https://pro.m.jd.com/mall/active/${ACTIVITY}/index.html"
+          echo "=== 1) POST body={pageNum,activityId} ==="
+          curl -s -m 20 -A "$UA" -e "$REF" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -X POST "https://api.m.jd.com/client.action?functionId=queryBabelFeeds&appid=newtry&t=$(date +%s000)" \
+            --data-urlencode "body={\"pageNum\":1,\"activityId\":\"${ACTIVITY}\"}" \
+            --data "appid=newtry&functionId=queryBabelFeeds" -w "\nHTTP %{http_code}\n" | head -c 700
+          echo ""
+          echo "=== 2) GET 参数 ==="
+          curl -s -m 20 -A "$UA" -e "$REF" -G "https://api.m.jd.com/client.action" \
+            --data-urlencode "functionId=queryBabelFeeds" \
+            --data-urlencode "appid=newtry" \
+            --data-urlencode "t=$(date +%s000)" \
+            --data-urlencode "body={\"pageNum\":1,\"activityId\":\"${ACTIVITY}\"}" \
+            -w "\nHTTP %{http_code}\n" | head -c 700
+          echo ""
+          echo "=== 3) POST 带 componentId ==="
+          curl -s -m 20 -A "$UA" -e "$REF" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -X POST "https://api.m.jd.com/client.action?functionId=queryBabelFeeds&appid=newtry&t=$(date +%s000)" \
+            --data-urlencode "body={\"pageNum\":1,\"activityId\":\"${ACTIVITY}\",\"componentId\":\"121275241200\",\"pageSize\":20}" \
+            --data "appid=newtry&functionId=queryBabelFeeds" -w "\nHTTP %{http_code}\n" | head -c 700
