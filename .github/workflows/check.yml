@@ -114,12 +114,21 @@ jobs:
           git config user.name "monitor-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -f data/ 2>/dev/null || true
-          # 仅当有变更时提交
           if git diff --cached --quiet; then
             echo "无变更，跳过 commit"
-          else
-            git commit -m "chore: 更新监控快照 $(date -Iseconds)"
-            git pull --rebase --autostash 2>/dev/null || true
-            git push
-            echo "已提交新快照"
+            exit 0
           fi
+          git commit -m "chore: 更新监控快照 $(date -Iseconds)"
+          for i in 1 2 3; do
+            git fetch origin main --quiet || true
+            git rebase --autostash origin/main >/dev/null 2>&1 || git rebase --abort >/dev/null 2>&1 || true
+            # 用 HEAD:main 推送，避免 detached HEAD 导致 "not currently on a branch"
+            if git push origin HEAD:main; then
+              echo "已提交新快照"
+              exit 0
+            fi
+            echo "推送失败，${i}/3 次，5 秒后重试"
+            sleep 5
+          done
+          echo "回写快照失败（不影响监控推送）"
+          exit 0
