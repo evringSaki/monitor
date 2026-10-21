@@ -843,21 +843,29 @@ async function main() {
   const hasNew = confirmed > 0;
   const hasPrice = ev.priceChanged.length > 0;
 
-  if (hasNew) {
-    const allNew = ev.addedMain;
+  if (hasNew || ev.stageChanged) {
     const label = stageLabel(snap.stage);
     const isStageStart = !!ev.stageChanged;
+    // 新场次：推"本场全部在售商品"，而不是只推本轮新增——
+    // 老商品因 notified 去重不会重复推送，但新场次的清单必须完整（否则用户只看到 11 个/实际 42 个）
+    const stageAll = isStageStart
+      ? Object.values(snap.products)
+        .filter(p => p.source === 'flash' || p.source === 'stage' || p.source === 'main')
+        .sort((a, b) => (parseFloat(a.price) || 99999) - (parseFloat(b.price) || 99999))
+      : [];
+    const listAll = stageAll.length ? stageAll : ev.addedMain;
+    const totalN = listAll.length;
     const head = isStageStart
-      ? `【上新监控】新场次开始：${label || '新时段'}！共 ${confirmed} 个商品`
+      ? `【上新监控】新场次开始：${label || '新时段'}！本场 ${totalN} 个商品${confirmed ? `（新上 ${confirmed} 个）` : ''}`
       : `【上新监控】检测到上新 ${confirmed} 个商品！`;
-    log((isStageStart ? '【新场次】' : '【上新】') + `${confirmed} 个商品：\n` + allNew.map(p => '  + ' + fmtProduct(p)).join('\n'));
+    log((isStageStart ? '【新场次】' : '【上新】') + `${totalN} 个商品：\n` + listAll.map(p => '  + ' + fmtProduct(p)).join('\n'));
     // QQ（Qmsg）通道禁"价格类词 + ￥ + 链接"（实测：仅"价格"二字即被判违规并静默丢弃），
     // 所以这里只推商品名；价格/库存/限购仍在 history.log 与快照里，App 内可见
-    const lines = allNew.slice(0, 8).map((p, i) => `${i + 1}. ${cleanName(p.name).slice(0, 26) || '新品'}`);
-    const tail = (confirmed > 8 ? `...等共 ${confirmed} 个\n` : '') + `（详情请打开官方 App 查看）\n时间: ${ts()}`;
+    const lines = listAll.slice(0, 8).map((p, i) => `${i + 1}. ${cleanName(p.name).slice(0, 26) || '新品'}`);
+    const tail = (totalN > 8 ? `...等共 ${totalN} 个\n` : '') + `（详情请打开官方 App 查看）\n时间: ${ts()}`;
     await qmsgPushList(head, lines, tail);
     // 微信（PushPlus）通道：完整版——名称可点链接 + 价格/库存/限购，QQ 被过滤的商品这里照发
-    let wxBody = productsHtml(allNew.slice(0, 20)) + (confirmed > 20 ? `<br>...等共 ${confirmed} 个` : '');
+    let wxBody = productsHtml(listAll.slice(0, 50)) + (totalN > 50 ? `<br>...等共 ${totalN} 个` : '');
     // 同一轮还有变价：追加"变动"段（旧逻辑用 else-if，上新出现时变价被吞且快照已更新，永远丢失）
     if (hasPrice) {
       wxBody += `<br>——<br>💰 <b>变价 ${ev.priceChanged.length} 个</b><br>` +
@@ -866,17 +874,11 @@ async function main() {
     }
     wxBody += '<br>——<br>时间: ' + ts();
     await pushPlusAll(head, wxBody);
-  } else if (ev.stageChanged) {
-    const label = stageLabel(snap.stage);
-    log(`场次已切换至 ${label}（stageId=${snap.stage.id}），但商品列表无变化`);
-    await qmsgPush(`【上新监控】场次已切换：${label || '新时段'}\n当前共 ${snap.stageCount || 0} 个商品\n时间: ${ts()}`);
-    await pushPlusAll(`【上新监控】场次已切换 ${label || '新时段'}`,
-      `场次已切换：<b>${label || '新时段'}</b><br>当前共 ${snap.stageCount || 0} 个商品<br>时间: ${ts()}`);
   }
 
   // 变价推送：独立于上新/场次切换判断（不再被 else-if 吞掉）；
   // QQ 通道只提示条数（价格数字/词会被 Qmsg 判违规静默丢弃），微信发完整明细
-  if (hasPrice && !hasNew) {
+  if (hasPrice && !hasNew && !ev.stageChanged) {
     log(`【价格变动】${ev.priceChanged.length} 个`);
     await qmsgPush(`【上新监控】${ev.priceChanged.length} 个商品信息有变动，请打开官方 App 查看\n` +
       ev.priceChanged.slice(0, 5).map(c => `· ${cleanName(c.name) || '（未命名）'}`).join('\n'));
