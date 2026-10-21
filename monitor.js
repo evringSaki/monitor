@@ -820,7 +820,13 @@ async function main() {
     offline[sku] = { name: old.name || '', price: old.price || '', rounds: (rec ? (rec.rounds || 0) : 0) + 1, at: bookNow };
   }
   for (const [sku, rec] of Object.entries(prevOffline)) {
-    if (!offline[sku] && !snap.products[sku] && bookNow - (rec.at || 0) <= 3 * 864e5) offline[sku] = rec;
+    if (!offline[sku] && !snap.products[sku]) offline[sku] = rec;
+  }
+  // 不按时间过期（3 天后回归也要能识别为"重新上架"），只保数量上限，超出丢最久未出现的
+  const offKeys = Object.keys(offline);
+  if (offKeys.length > 800) {
+    offKeys.sort((a, b) => (offline[a].at || 0) - (offline[b].at || 0));
+    offKeys.slice(0, offKeys.length - 800).forEach(k => { delete offline[k]; });
   }
   snap.offline = offline;
   // 只推楼层/时段商品（有名字有价格的正经商品）；热区图片位不推（无名、噪音大，只在快照里记录）
