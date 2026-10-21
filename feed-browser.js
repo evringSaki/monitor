@@ -150,7 +150,14 @@ function ingest(p) {
     if (process.env.INCLUDE_TOMORROW !== '0') {
       const tab = page.getByText('明日预告', { exact: false }).first();
       if (await tab.count()) {
-        await tab.click({ timeout: 8000 }).catch(e => log('点击明日预告失败：' + e.message));
+        await tab.scrollIntoViewIfNeeded().catch(() => {});
+        await tab.click({ timeout: 5000, force: true }).catch(async (e) => {
+          log('常规点击失败，改用 JS 点击：' + e.message.slice(0, 60));
+          await page.evaluate(() => {
+            const els = [...document.querySelectorAll('*')].filter(el => el.children.length === 0 && (el.textContent || '').trim() === '明日预告');
+            if (els[0]) els[0].click();
+          }).catch(() => {});
+        });
         currentTab = 'tomorrow';
         log('已切换到「明日预告」tab');
         await page.waitForTimeout(5000);

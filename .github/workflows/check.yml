@@ -1,6 +1,11 @@
 name: 上新监控
 # schedule 重新注册 touch
 
+# 同一时间只允许一个监控运行，避免并发 push 造成快照冲突
+concurrency:
+  group: monitor-${{ github.ref }}
+  cancel-in-progress: false
+
 on:
   # 推送代码时立即触发（快照回写不触发，避免死循环）
   push:
