@@ -34,6 +34,7 @@ function ts() {
 function log(msg) { console.log(`[${ts()}] [browser] ${msg}`); }
 
 const products = new Map();
+let currentTab = 'today';
 
 function ingest(p) {
   const pr = p.productResult || {};
@@ -48,6 +49,7 @@ function ingest(p) {
   const rate = st.soldRate != null ? String(st.soldRate) : (pr.productProcess != null ? String(pr.productProcess) : '');
   const item = {
     sku,
+    tab: currentTab,
     name: pr.name || pr.shortTitle || '',
     price,
     orig: jd && jd !== price ? jd : '',
@@ -114,6 +116,27 @@ function ingest(p) {
       if (products.size === before) idle++; else idle = 0;
       if (products.size > 0 && idle >= 3) { log('连续 3 次滚动无新增，提前结束'); break; }
     }
+
+    // 「明日预告」tab：通常展示下一场商品，数量往往比今日多
+    if (process.env.INCLUDE_TOMORROW !== '0') {
+      const tab = page.getByText('明日预告', { exact: false }).first();
+      if (await tab.count()) {
+        await tab.click({ timeout: 8000 }).catch(e => log('点击明日预告失败：' + e.message));
+        currentTab = 'tomorrow';
+        log('已切换到「明日预告」tab');
+        await page.waitForTimeout(4000);
+        let idle2 = 0;
+        for (let i = 0; i < MAX_SCROLL; i++) {
+          const before = products.size;
+          await page.evaluate(() => window.scrollBy(0, 800));
+          await page.waitForTimeout(1300);
+          if (products.size === before) idle2++; else idle2 = 0;
+          if (idle2 >= 3) { log('明日预告：连续 3 次滚动无新增，结束'); break; }
+        }
+      } else {
+        log('未找到「明日预告」tab，跳过');
+      }
+    }
   } catch (e) {
     log('页面操作异常：' + e.message);
   }
@@ -122,7 +145,8 @@ function ingest(p) {
   const list = [...products.values()];
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify({ time: new Date().toISOString(), total: list.length, products: list }, null, 2));
-  log(`完成：${list.length} 个商品，耗时 ${((Date.now() - started) / 1000).toFixed(1)}s → ${OUT}`);
+  const todayN = list.filter(p => p.tab !== 'tomorrow').length;
+  log(`完成：今日 ${todayN} + 明日预告 ${list.length - todayN} = ${list.length} 个商品，耗时 ${((Date.now() - started) / 1000).toFixed(1)}s → ${OUT}`);
   if (!list.length) {
     log('警告：未截获任何商品（页面可能被验证/接口未触发）');
     process.exit(1);

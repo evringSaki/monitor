@@ -1114,7 +1114,7 @@ function fmtToday(p) {
   // productProcess 自带 "16%"，去重；开抢时间用 UTC+8 显示北京时间
   const pct = String(p.process || '').replace(/%$/, '');
   const t = p.stageStartTime ? new Date(+p.stageStartTime + 8 * 3600e3).toISOString().replace('T', ' ').slice(0, 16) : '';
-  return `${p.name || '(未命名)'} ￥${p.price || '?'} 已抢${pct}% ${p.shop || '-'} SKU:${p.sku}${t ? ' 开抢:' + t : ''} https://item.m.jd.com/product/${p.sku}.html`;
+  return `${p.tab === 'tomorrow' ? '[明日预告] ' : ''}${p.name || '(未命名)'} ￥${p.price || '?'} 已抢${pct}% ${p.shop || '-'} SKU:${p.sku}${t ? ' 开抢:' + t : ''} https://item.m.jd.com/product/${p.sku}.html`;
 }
 
 async function mainToday() {
@@ -1249,9 +1249,11 @@ async function runTodayDiff(products) {
   };
 
   if (ev.added.length) {
-    const lines = ev.added.map(p => `${p.name || '新品'} ￥${p.price} 已抢${String(p.process).replace(/%$/, '')}%`);
-    const htmlBody = ev.added.slice(0, 20).map((p, i) =>
-      `${i + 1}. <a href="https://item.m.jd.com/product/${p.sku}.html">${p.name || '新品'}</a><br>&nbsp;&nbsp;￥${p.price} ｜ 已抢 ${p.process}% ｜ ${p.shop || ''}`).join('<br>');
+    const tabTag = (p) => p.tab === 'tomorrow' ? '【明日预告】' : '';
+    const lines = ev.added.map(p => `${tabTag(p)}${p.name || '新品'} ￥${p.price} 已抢${String(p.process).replace(/%$/, '')}%`);
+    const htmlBody = ev.added.slice(0, 40).map((p, i) =>
+      `${i + 1}. ${tabTag(p)}<a href="https://item.m.jd.com/product/${p.sku}.html">${p.name || '新品'}</a><br>&nbsp;&nbsp;￥${p.price} ｜ 已抢 ${p.process}% ｜ ${p.shop || ''}`).join('<br>') +
+      (ev.added.length > 40 ? `<br>...等共 ${ev.added.length} 个` : '');
     await notify(`新上 ${ev.added.length} 个商品！`, lines, htmlBody + '<br>——<br>时间: ' + ts());
     process.exit(1);
   }
