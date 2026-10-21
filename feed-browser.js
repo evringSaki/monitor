@@ -91,45 +91,47 @@ function ingest(p) {
     locale: 'zh-CN',
   });
   const page = await ctx.newPage();
+  let inflight = 0;
+  let lastPageNum = 0;
+  page.on('request', r => { if (r.url().includes('queryBabelFeeds')) inflight++; });
+  page.on('requestfailed', r => { if (r.url().includes('queryBabelFeeds')) inflight = Math.max(0, inflight - 1); });
   page.on('response', async res => {
     const u = res.url();
     if (!u.includes('queryBabelFeeds')) return;
     try {
       const j = await res.json();
       const floors = j.floorList || [];
+      lastPageNum = Number(j.pageNum || lastPageNum);
       let added = 0;
       floors.forEach(f => (f.providerData || []).forEach(p => { if (ingest(p)) added++; }));
       log(`截获 queryBabelFeeds pageNum=${j.pageNum} 楼层=${floors.length} 新增=${added} 累计=${products.size}`);
     } catch (e) {
       log('响应解析失败：' + e.message);
+    } finally {
+      inflight = Math.max(0, inflight - 1);
     }
   });
 
-  // 缓慢滚到底部并等待接口：到底 + 连续多次无新增才停
+  // 滚到底部并等待接口：只有"没有请求在飞 + 连续多次无新增 + 高度不再增长"才停
   async function scrollLoad(tag, maxRounds) {
-    let idle = 0, lastY = -1;
+    let idle = 0, lastH = 0, sameH = 0;
     for (let i = 0; i < maxRounds; i++) {
       const before = products.size;
-      const y = await page.evaluate(() => {
-        const before = window.scrollY;
-        window.scrollBy(0, 600);
-        return { before, after: window.scrollY, bottom: window.innerHeight + window.scrollY >= document.body.scrollHeight - 40 };
+      const st = await page.evaluate(() => {
+        window.scrollBy(0, 500);
+        return {
+          y: window.scrollY,
+          h: document.body.scrollHeight,
+          bottom: window.innerHeight + window.scrollY >= document.body.scrollHeight - 40,
+        };
       });
-      await page.waitForTimeout(1500);
-      // 还没抓到任何商品时不判定 idle（页面可能仍在渲染/接口未触发）
-      if (products.size > 0 && products.size === before) idle++; else if (products.size > before) idle = 0;
-      // 到底且没有新商品：尝试找"加载更多/点击加载"按钮
-      if (y.bottom && idle >= 2) {
-        const more = page.getByText(/加载更多|点击加载|查看更多/).first();
-        if (await more.count().catch(() => 0)) {
-          await more.click({ timeout: 3000 }).catch(() => {});
-          idle = 0;
-        }
-      }
-      const stuck = y.before === y.after && y.bottom;
-      if (stuck) idle++;
-      if (idle >= 6) {
-        log(`${tag}：连续 6 次无新增（底部=${y.bottom} scrollY=${y.after}），结束`);
+      await page.waitForTimeout(2000);
+      if (st.h === lastH) sameH++; else { sameH = 0; lastH = st.h; }
+      if (products.size > before) idle = 0;
+      else if (inflight === 0) idle++;
+      if (i % 5 === 0) log(`${tag} 进度：scrollY=${st.y} 高度=${st.h} 累计=${products.size} 待响应=${inflight} 页码=${lastPageNum}`);
+      if (idle >= 8 && sameH >= 3) {
+        log(`${tag}：结束（底部=${st.bottom} scrollY=${st.y} 高度=${st.h} 累计=${products.size} 页码=${lastPageNum}）`);
         break;
       }
     }
@@ -146,8 +148,8 @@ function ingest(p) {
     await scrollLoad('今日抢购', MAX_SCROLL);
     log(`今日抢购：累计 ${products.size} 个`);
 
-    // 「明日预告」tab：展示下一场商品
-    if (process.env.INCLUDE_TOMORROW !== '0') {
+    // 「明日预告」tab：默认关闭（抓不到/无必要）
+    if (process.env.INCLUDE_TOMORROW === '1') {
       // 先回到顶部，否则 tab 在视口外点击会被拦截
       await page.evaluate(() => window.scrollTo(0, 0));
       await page.waitForTimeout(1200);
