@@ -482,6 +482,8 @@ const QMSG_STATUS_TEXT = {
   '-1': '❌ 发送失败',
 };
 let qmsgLastPostAt = 0;
+// 当前场次 id（用于生成活动页定位链接的 linkStage 参数）
+let CURRENT_STAGE_ID = '';
 
 // 剔除 Qmsg 判违规的内容（实测规律，见上方注释）：
 //   URL、IPv4、长数字串(SKU)，以及最隐蔽的【价格表达】(￥1299 / 1299 元)——
@@ -675,15 +677,20 @@ async function pushPlusAll(title, content) {
 }
 
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
-// 活动页定位链接：页面自身用 innerAnchor/innerLink 定位商品（由京东 App 原生插件执行）
+// 活动页定位链接：参数取自官方 App 分享链接模板
+//   link=<sku>      要定位的商品
+//   linkGroup       活动分组 id（固定）
+//   linkStage       场次 id（随场次变化，用当前场次）
 // 必须用 pro.m.jd.com 实时页；h5static 是静态缓存，会提示"页面信息非最新"
+const LINK_GROUP = '25196962';
 function buildDeepLink(sku) {
   const m = String(PAGE_URL).match(/\/mall\/active\/([A-Za-z0-9]+)\//);
   if (!m) return 'https://item.m.jd.com/product/' + sku + '.html';
   const act = m[1];
-  const inner = encodeURIComponent(JSON.stringify({ innerAnchor: sku }));
+  const stageId = CURRENT_STAGE_ID || process.env.STAGE_ID || '';
+  const stage = stageId ? `&linkStage=${stageId}` : '';
   return `https://pro.m.jd.com/mall/active/${act}/index.html`
-    + `?babelChannel=ttt1&fromHomePage=1&innerAnchor=${sku}&innerLink=${inner}&_ts=${Date.now()}`;
+    + `?babelChannel=ttt1&link=${sku}&linkGroup=${LINK_GROUP}${stage}&fromHomePage=1&_ts=${Date.now()}`;
 }
 // 二维码页：点开才加载二维码，不占消息体积
 function qrPageUrl(p) {
@@ -766,6 +773,7 @@ async function main() {
   let snap;
   try { snap = buildSnapshot(html); }
   catch (e) { log('解析失败：' + e.message + '（页面结构可能已变）'); process.exit(2); }
+  CURRENT_STAGE_ID = (snap.stage && snap.stage.id) || '';
 
   log(`抓取成功：${snap.total} 个 SKU（时段商品 ${snap.stageCount || 0} 个 / 楼层商品 ${snap.mainCount} 个）`);
   if (snap.stage && snap.stage.id) {
