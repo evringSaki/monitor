@@ -675,9 +675,15 @@ async function pushPlusAll(title, content) {
 }
 
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
-// 商品链接：直接用详情页（活动页深链的 link= 定位在普通浏览器无效，且 h5static 会提示"非最新"）
+// 活动页定位链接：页面自身用 innerAnchor/innerLink 定位商品（由京东 App 原生插件执行）
+// 必须用 pro.m.jd.com 实时页；h5static 是静态缓存，会提示"页面信息非最新"
 function buildDeepLink(sku) {
-  return 'https://item.m.jd.com/product/' + sku + '.html';
+  const m = String(PAGE_URL).match(/\/mall\/active\/([A-Za-z0-9]+)\//);
+  if (!m) return 'https://item.m.jd.com/product/' + sku + '.html';
+  const act = m[1];
+  const inner = encodeURIComponent(JSON.stringify({ innerAnchor: sku }));
+  return `https://pro.m.jd.com/mall/active/${act}/index.html`
+    + `?babelChannel=ttt1&fromHomePage=1&innerAnchor=${sku}&innerLink=${inner}&_ts=${Date.now()}`;
 }
 // 二维码页：点开才加载二维码，不占消息体积
 function qrPageUrl(p) {
