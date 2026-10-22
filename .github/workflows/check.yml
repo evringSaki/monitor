@@ -51,7 +51,6 @@ jobs:
         id: runA
         if: ${{ !inputs.test_push }}
         env:
-          QMSG_KEY: ${{ secrets.QMSG_KEY }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
           PAGE_URL: 'https://pro.m.jd.com/mall/active/6WUG9FgpNWoAAx9qRSPsmSiVcyt/index.html'
@@ -67,7 +66,6 @@ jobs:
         id: runTest
         if: ${{ inputs.test_push }}
         env:
-          QMSG_KEY: ${{ secrets.QMSG_KEY }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
           LOG_PATH: ./data/history.log
