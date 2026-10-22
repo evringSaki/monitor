@@ -675,10 +675,8 @@ async function pushPlusAll(title, content) {
 }
 
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
-// 活动页深链：带 link=<sku> 参数，点开直达该商品所在的场次/位置（h5static 域名微信内更易打开）
+// 商品链接：直接用详情页（活动页深链的 link= 定位在普通浏览器无效，且 h5static 会提示"非最新"）
 function buildDeepLink(sku) {
-  const m = String(PAGE_URL).match(/\/mall\/active\/([A-Za-z0-9]+)\//);
-  if (m) return 'https://h5static.m.jd.com/mall/active/' + m[1] + '/index.html?babelChannel=ttt1&link=' + sku + '&fromHomePage=1';
   return 'https://item.m.jd.com/product/' + sku + '.html';
 }
 // 二维码页：点开才加载二维码，不占消息体积
