@@ -675,7 +675,24 @@ async function pushPlusAll(title, content) {
 }
 
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
-function productsHtml(items) {
+// 活动页深链：带 link=<sku> 参数，点开直达该商品所在的场次/位置（h5static 域名微信内更易打开）
+function buildDeepLink(sku) {
+  const m = String(PAGE_URL).match(/\/mall\/active\/([A-Za-z0-9]+)\//);
+  if (m) return 'https://h5static.m.jd.com/mall/active/' + m[1] + '/index.html?babelChannel=ttt1&link=' + sku + '&fromHomePage=1';
+  return 'https://item.m.jd.com/product/' + sku + '.html';
+}
+// 二维码页：点开才加载二维码，不占消息体积
+function qrPageUrl(p) {
+  const q = new URLSearchParams();
+  q.set('sku', p.sku);
+  q.set('name', String(p.name || '').slice(0, 18));
+  q.set('url', buildDeepLink(p.sku));
+  return 'https://evringsaki.github.io/monitor/qr.html?' + q.toString();
+}
+
+// items：商品数组；newSkus：本轮新品 SKU 集合（只有新品才附「二维码·链接」）
+function productsHtml(items, newSkus) {
+  const linkSet = newSkus || null;
   return items.map((p, i) => {
     const name = (p.restock ? '🔄 ' : '') + (String(p.name || '').slice(0, 40) || '（热区商品）');
     const bits = [];
@@ -683,7 +700,10 @@ function productsHtml(items) {
     if (p.price) bits.push('￥' + p.price + (p.orig && p.orig !== p.price ? ' <s>日常价￥' + p.orig + '</s>' : ''));
     if (p.stock) bits.push('库存' + p.stock);
     if (p.limit) bits.push('限购' + p.limit);
-    return (i + 1) + '. <a href="https://item.m.jd.com/product/' + p.sku + '.html">' + name + '</a><br>&nbsp;&nbsp;' + bits.join(' ｜ ');
+    const tools = (linkSet && linkSet.has(p.sku))
+      ? ' · <a href="' + qrPageUrl(p) + '">二维码</a> · <a href="' + buildDeepLink(p.sku) + '">链接</a>'
+      : '';
+    return (i + 1) + '. <a href="https://item.m.jd.com/product/' + p.sku + '.html">' + name + '</a><br>&nbsp;&nbsp;' + bits.join(' ｜ ') + tools;
   }).join('<br>');
 }
 
@@ -895,7 +915,9 @@ async function main() {
     const tail = (totalN > 8 ? `...等共 ${totalN} 个\n` : '') + `（详情请打开官方 App 查看）\n时间: ${ts()}`;
     await qmsgPushList(head, lines, tail);
     // 微信（PushPlus）通道：完整版——名称可点链接 + 价格/库存/限购，QQ 被过滤的商品这里照发
-    let wxBody = productsHtml(listAll.slice(0, 50)) + (totalN > 50 ? `<br>...等共 ${totalN} 个` : '');
+    // 只有本轮新品附加「二维码 · 链接」（点开二维码页，不占消息体积）
+    const newSkuSet = new Set(ev.addedMain.map(x => x.sku));
+    let wxBody = productsHtml(listAll.slice(0, 50), newSkuSet) + (totalN > 50 ? `<br>...等共 ${totalN} 个` : '');
     // 同一轮还有变价：追加"变动"段（旧逻辑用 else-if，上新出现时变价被吞且快照已更新，永远丢失）
     if (hasPrice) {
       wxBody += `<br>——<br>💰 <b>变价 ${ev.priceChanged.length} 个</b><br>` +

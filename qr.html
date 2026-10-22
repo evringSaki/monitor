@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>商品二维码</title>
+<style>
+:root{--bg:#0d1117;--card:#151b26;--line:#232b3a;--txt:#e6edf3;--dim:#8b949e;--acc:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:18px}
+.wrap{max-width:420px;margin:0 auto}
+h1{font-size:15px;font-weight:600;margin:0 0 4px}
+.name{color:var(--dim);font-size:13px;margin-bottom:14px;word-break:break-all}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+#qr{display:inline-block;padding:10px;background:#fff;border-radius:10px;min-height:220px;min-width:220px}
+.link{word-break:break-all;background:#0f1520;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px;color:var(--dim);margin-top:14px;text-align:left}
+.btn{display:block;width:100%;margin-top:12px;padding:11px;border-radius:9px;border:1px solid var(--line);background:#1b2434;color:var(--txt);font-size:14px;text-align:center;text-decoration:none}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#0b1220;font-weight:600}
+.tip{color:var(--dim);font-size:12px;margin-top:10px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>商品二维码</h1>
+  <div class="name" id="name">-</div>
+  <div class="card">
+    <div id="qr"></div>
+    <div class="tip">用京东 App 扫码，直达活动页商品</div>
+    <div class="link" id="urlText">-</div>
+    <a class="btn primary" id="openBtn" href="#" rel="noopener">在京东中打开</a>
+    <a class="btn" id="copyBtn" href="javascript:;">复制链接</a>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var sku = q.get('sku') || '';
+  var name = q.get('name') || '';
+  var url = q.get('url') || (sku ? 'https://item.m.jd.com/product/' + sku + '.html' : '');
+  document.getElementById('name').textContent = (name ? name + '  ' : '') + 'SKU ' + sku;
+  document.getElementById('urlText').textContent = url;
+  document.getElementById('openBtn').href = url;
+  if (!url) { document.getElementById('qr').textContent = '缺少商品链接'; return; }
+  if (window.QRCode) {
+    new QRCode(document.getElementById('qr'), { text: url, width: 220, height: 220, correctLevel: QRCode.CorrectLevel.M });
+  } else {
+    document.getElementById('qr').innerHTML = '<div style="color:#000;padding:20px;font-size:12px">二维码库加载失败，请直接复制下方链接</div>';
+  }
+  document.getElementById('copyBtn').onclick = function () {
+    var done = function () { document.getElementById('copyBtn').textContent = '已复制'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, done);
+    else { var t = document.createElement('textarea'); t.value = url; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+  };
+})();
+</script>
+</body>
+</html>
