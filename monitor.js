@@ -919,8 +919,8 @@ async function main() {
       : `【上新监控】检测到上新 ${confirmed} 个商品${restockN ? `（其中重新上架 ${restockN} 个）` : ''}！`;
     log((isStageStart ? '【新场次】' : '【上新】') + `${totalN} 个商品：\n` + listAll.map(p => '  + ' + fmtProduct(p)).join('\n'));
     // 微信（PushPlus）通道：完整版——名称可点链接 + 价格/库存/限购
-    // 只有本轮新品附加「二维码 · 链接」（点开二维码页，不占消息体积）
-    const newSkuSet = new Set(ev.addedMain.map(x => x.sku));
+    // 推送清单里每个商品都附「二维码 · 链接」（点开二维码页，不占消息体积）
+    const newSkuSet = new Set(listAll.map(x => x.sku));
     let wxBody = productsHtml(listAll.slice(0, 50), newSkuSet) + (totalN > 50 ? `<br>...等共 ${totalN} 个` : '');
     // 同一轮还有变价：追加"变动"段（旧逻辑用 else-if，上新出现时变价被吞且快照已更新，永远丢失）
     if (hasPrice) {
