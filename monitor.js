@@ -669,11 +669,24 @@ async function pushPlusQQSend(title, content) {
   return ok;
 }
 
-// 微信 + QQ 机器人同时推（同一 PushPlus 账号，两个渠道内容一致）
+// PushPlus App 渠道：推送到 PushPlus 官方 App（独立 token，内容与微信一致）
+const PUSHPLUS_APP_TOKEN = process.env.PUSHPLUS_APP_TOKEN || '';
+async function pushPlusAppSend(title, content) {
+  const tk = PUSHPLUS_APP_TOKEN || PUSHPLUS_TOKEN;
+  if (!tk) { log('未配置 PUSHPLUS_APP_TOKEN，跳过 App 推送'); return false; }
+  const body = JSON.stringify({ token: tk, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'app' });
+  const r = await httpPostJson('www.pushplus.plus', '/send', body);
+  const ok = !!(r.json && r.json.code === 200);
+  log('PushPlus(App) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
+  return ok;
+}
+
+// 微信 + QQ 机器人 + App 同时推（三个渠道内容一致）
 async function pushPlusAll(title, content) {
   const a = await pushPlusSend(title, content);
   const b = await pushPlusQQSend(title, content);
-  return a || b;
+  const c = await pushPlusAppSend(title, content);
+  return a || b || c;
 }
 
 // 微信版商品清单：商品名是可点链接，价格/库存/限购齐全（QQ 通道发不了的这里全有）
@@ -1236,4 +1249,4 @@ if (process.env.QMSG_TEST === '1') {
 }
 
 // 供 qmsg_selftest.js 复用（验证推送是否真的送达 QQ，而不只是接口返回 success）
-module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, pushPlusQQSend, pushPlusAll, productsHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };
+module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, pushPlusQQSend, pushPlusAppSend, pushPlusAll, productsHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };

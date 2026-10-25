@@ -53,6 +53,7 @@ jobs:
         env:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
+          PUSHPLUS_APP_TOKEN: ${{ secrets.PUSHPLUS_APP_TOKEN }}
           PAGE_URL: 'https://pro.m.jd.com/mall/active/6WUG9FgpNWoAAx9qRSPsmSiVcyt/index.html'
           STATE_PATH: ./data/snapshot.json
           LOG_PATH: ./data/history.log
@@ -68,6 +69,7 @@ jobs:
         env:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_QQ_TOKEN: ${{ secrets.PUSHPLUS_QQ_TOKEN }}
+          PUSHPLUS_APP_TOKEN: ${{ secrets.PUSHPLUS_APP_TOKEN }}
           LOG_PATH: ./data/history.log
           QMSG_TEST: '1'
         run: |
