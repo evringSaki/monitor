@@ -732,10 +732,12 @@ function productsHtml(items, newSkus) {
 }
 
 // 变价明细（微信）：对齐"￥839（日常价 ￥1399） → ￥419.5（日常价 ￥1399）"样式
+// 每条同样附「二维码 · 链接」
 function priceChangeHtml(list) {
   return list.map(c => {
     const og = c.orig ? `（日常价 ￥${c.orig}）` : '';
-    return `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from}${og} → <b>￥${c.to}</b>${og}`;
+    const tools = ` · <a href="${qrPageUrl(c)}">二维码</a> · <a href="${buildDeepLink(c.sku)}">链接</a>`;
+    return `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from}${og} → <b>￥${c.to}</b>${og}${tools}`;
   }).join('<br>');
 }
 
