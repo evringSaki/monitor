@@ -1251,4 +1251,4 @@ if (process.env.QMSG_TEST === '1') {
 }
 
 // 供 qmsg_selftest.js 复用（验证推送是否真的送达 QQ，而不只是接口返回 success）
-module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, pushPlusQQSend, pushPlusAppSend, pushPlusAll, productsHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };
+module.exports = { sanitizeForQmsg, cleanName, qmsgPush, qmsgPushList, pushPlusSend, pushPlusQQSend, pushPlusAppSend, pushPlusAll, productsHtml, priceChangeHtml, qmsgSend, qmsgStatus, qmsgSendChecked, fallbackForQmsg, QMSG_STATUS_TEXT };
