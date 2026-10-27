@@ -378,9 +378,11 @@ function diffSnapshots(prev, curr) {
       if (isTracked(p) && !wasNotified) ev.addedMain.push(p);
       else if (isTracked(p) && wasNotified) {
         p.streak = (prevP[sku] && prevP[sku].streak) || 2;
-        // 下架后重新上架：offline 里记录了"连续缺席轮数"，≥2 轮才算真下架（排除楼层轮换抖动）
+        // 下架后重新上架：offline 里记录了"连续缺席轮数"。
+        // 秒杀楼层是完整列表下发，缺 1 轮基本就是真售罄/下架；时段/楼层商品会因轮换抖动，需 2 轮
         const off = prevOffline[sku];
-        if (off && (off.rounds || 0) >= 2) {
+        const needRounds = p.source === 'flash' ? 1 : 2;
+        if (off && (off.rounds || 0) >= needRounds) {
           p.restock = true;
           ev.addedMain.push(p);   // 回归也要推
         } else {
