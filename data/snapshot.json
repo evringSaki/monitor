@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-28T21:55:23.312Z",
+  "time": "2026-10-28T22:01:08.925Z",
   "activityName": "上新活动",
   "stage": {
     "id": "344835759",
@@ -26,8 +26,8 @@
       }
     ]
   },
-  "total": 84,
-  "mainCount": 15,
+  "total": 86,
+  "mainCount": 14,
   "stageCount": 12,
   "flashCount": 14,
   "products": {
@@ -39,7 +39,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -51,7 +51,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 61,
+      "streak": 62,
       "firstSeen": "2026-10-28T17:00:52.599Z",
       "pending": false
     },
@@ -63,7 +63,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 111,
+      "streak": 112,
       "firstSeen": "2026-10-28T12:10:30.666Z",
       "pending": false
     },
@@ -75,7 +75,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.389Z",
       "pending": false
     },
@@ -87,7 +87,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.389Z",
       "pending": false
     },
@@ -99,9 +99,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.389Z",
       "pending": false
+    },
+    "10045630531502": {
+      "sku": "10045630531502",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-28T22:01:08.925Z",
+      "pending": true
     },
     "100289388932": {
       "sku": "100289388932",
@@ -111,44 +123,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 213,
+      "streak": 214,
       "firstSeen": "2026-10-28T03:45:28.415Z",
-      "pending": false
-    },
-    "100006143183": {
-      "sku": "100006143183",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.389Z",
-      "pending": false
-    },
-    "100156852995": {
-      "sku": "100156852995",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 357,
-      "firstSeen": "2026-10-27T13:00:58.277Z",
-      "pending": false
-    },
-    "100044596035": {
-      "sku": "100044596035",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
     "10177602932285": {
@@ -159,32 +135,44 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
-    "100231593113": {
-      "sku": "100231593113",
+    "100006143183": {
+      "sku": "100006143183",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 109,
-      "firstSeen": "2026-10-28T12:25:28.578Z",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.389Z",
       "pending": false
     },
-    "10226945294112": {
-      "sku": "10226945294112",
+    "100044596035": {
+      "sku": "100044596035",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 351,
-      "firstSeen": "2026-10-27T14:05:51.272Z",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "pending": false
+    },
+    "100156852995": {
+      "sku": "100156852995",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 358,
+      "firstSeen": "2026-10-27T13:00:58.277Z",
       "pending": false
     },
     "100133332620": {
@@ -195,7 +183,55 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 111,
+      "streak": 112,
+      "firstSeen": "2026-10-28T12:10:30.666Z",
+      "pending": false
+    },
+    "100231593113": {
+      "sku": "100231593113",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 110,
+      "firstSeen": "2026-10-28T12:25:28.578Z",
+      "pending": false
+    },
+    "100127087887": {
+      "sku": "100127087887",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "pending": false
+    },
+    "10226945294112": {
+      "sku": "10226945294112",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 352,
+      "firstSeen": "2026-10-27T14:05:51.272Z",
+      "pending": false
+    },
+    "100239972313": {
+      "sku": "100239972313",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 112,
       "firstSeen": "2026-10-28T12:10:30.666Z",
       "pending": false
     },
@@ -207,21 +243,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 259,
+      "streak": 260,
       "firstSeen": "2026-10-27T23:00:59.422Z",
       "pending": false
     },
-    "100127087887": {
-      "sku": "100127087887",
+    "100249981712": {
+      "sku": "100249981712",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-10-28T22:01:08.925Z",
+      "pending": true
     },
     "10220297278335": {
       "sku": "10220297278335",
@@ -231,20 +267,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
-      "pending": false
-    },
-    "100239972313": {
-      "sku": "100239972313",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 111,
-      "firstSeen": "2026-10-28T12:10:30.666Z",
       "pending": false
     },
     "10230324838340": {
@@ -255,32 +279,44 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 46,
+      "streak": 47,
       "firstSeen": "2026-10-28T18:10:32.645Z",
       "pending": false
     },
-    "100043755889": {
-      "sku": "100043755889",
+    "10021066708427": {
+      "sku": "10021066708427",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "streak": 1,
+      "firstSeen": "2026-10-28T22:01:08.925Z",
+      "pending": true
+    },
+    "100016396244": {
+      "sku": "100016396244",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 84,
+      "firstSeen": "2026-10-28T15:00:48.566Z",
       "pending": false
     },
-    "100087533327": {
-      "sku": "100087533327",
+    "100048883077": {
+      "sku": "100048883077",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "streak": 26,
+      "firstSeen": "2026-10-28T20:00:51.349Z",
       "pending": false
     },
     "100118576939": {
@@ -291,7 +327,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -303,43 +339,31 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 357,
+      "streak": 358,
       "firstSeen": "2026-10-27T13:00:58.277Z",
       "pending": false
     },
-    "100048883077": {
-      "sku": "100048883077",
+    "100087533327": {
+      "sku": "100087533327",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 25,
-      "firstSeen": "2026-10-28T20:00:51.349Z",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
-    "100016396244": {
-      "sku": "100016396244",
+    "100043755889": {
+      "sku": "100043755889",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 83,
-      "firstSeen": "2026-10-28T15:00:48.566Z",
-      "pending": false
-    },
-    "100049239409": {
-      "sku": "100049239409",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -351,20 +375,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 357,
+      "streak": 358,
       "firstSeen": "2026-10-27T13:00:58.277Z",
       "pending": false
     },
-    "100162789464": {
-      "sku": "100162789464",
+    "100049239409": {
+      "sku": "100049239409",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 25,
-      "firstSeen": "2026-10-28T20:00:51.349Z",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
     "100324242014": {
@@ -375,8 +399,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 69,
+      "streak": 70,
       "firstSeen": "2026-10-28T16:15:47.656Z",
+      "pending": false
+    },
+    "100162789464": {
+      "sku": "100162789464",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 26,
+      "firstSeen": "2026-10-28T20:00:51.349Z",
       "pending": false
     },
     "100306278320": {
@@ -387,7 +423,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 25,
+      "streak": 26,
       "firstSeen": "2026-10-28T20:00:51.349Z",
       "pending": false
     },
@@ -399,9 +435,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 357,
+      "streak": 358,
       "firstSeen": "2026-10-27T13:00:58.277Z",
       "pending": false
+    },
+    "100025733278": {
+      "sku": "100025733278",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-10-28T22:01:08.925Z",
+      "pending": true
     },
     "100260943316": {
       "sku": "100260943316",
@@ -411,7 +459,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -423,7 +471,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -435,7 +483,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 109,
+      "streak": 110,
       "firstSeen": "2026-10-28T12:25:28.579Z",
       "pending": false
     },
@@ -447,7 +495,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -459,7 +507,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -471,32 +519,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 123,
+      "streak": 124,
       "firstSeen": "2026-10-28T11:10:36.759Z",
       "pending": false
     },
-    "100061695599": {
-      "sku": "100061695599",
+    "100397077626": {
+      "sku": "100397077626",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
-      "pending": false
-    },
-    "10223564907391": {
-      "sku": "10223564907391",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 123,
-      "firstSeen": "2026-10-28T11:10:36.759Z",
+      "streak": 47,
+      "firstSeen": "2026-10-28T18:10:32.645Z",
       "pending": false
     },
     "100221108551": {
@@ -507,7 +543,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 123,
+      "streak": 124,
+      "firstSeen": "2026-10-28T11:10:36.759Z",
+      "pending": false
+    },
+    "10223564907391": {
+      "sku": "10223564907391",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 124,
       "firstSeen": "2026-10-28T11:10:36.759Z",
       "pending": false
     },
@@ -519,55 +567,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 109,
+      "streak": 110,
       "firstSeen": "2026-10-28T12:25:28.579Z",
       "pending": false
     },
-    "100397077626": {
-      "sku": "100397077626",
+    "100061695599": {
+      "sku": "100061695599",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 46,
-      "firstSeen": "2026-10-28T18:10:32.645Z",
-      "pending": false
-    },
-    "100145066352": {
-      "sku": "100145066352",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
-      "pending": false
-    },
-    "100088640019": {
-      "sku": "100088640019",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
-      "firstSeen": "2026-10-28T21:15:37.390Z",
-      "pending": false
-    },
-    "100362880826": {
-      "sku": "100362880826",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -579,7 +591,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 123,
+      "streak": 124,
       "firstSeen": "2026-10-28T11:10:36.759Z",
       "pending": false
     },
@@ -591,7 +603,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
@@ -603,7 +615,55 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 72,
+      "streak": 73,
+      "firstSeen": "2026-10-28T16:00:51.357Z",
+      "pending": false
+    },
+    "100088640019": {
+      "sku": "100088640019",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "pending": false
+    },
+    "100291830033": {
+      "sku": "100291830033",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 71,
+      "firstSeen": "2026-10-28T16:10:31.449Z",
+      "pending": false
+    },
+    "100362880826": {
+      "sku": "100362880826",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
+      "pending": false
+    },
+    "10123986918104": {
+      "sku": "10123986918104",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 73,
       "firstSeen": "2026-10-28T16:00:51.357Z",
       "pending": false
     },
@@ -615,20 +675,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 41,
+      "streak": 42,
       "firstSeen": "2026-10-28T18:35:25.023Z",
       "pending": false
     },
-    "100291830033": {
-      "sku": "100291830033",
+    "100145066352": {
+      "sku": "100145066352",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 70,
-      "firstSeen": "2026-10-28T16:10:31.449Z",
+      "streak": 11,
+      "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
     "100256520799": {
@@ -639,19 +699,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 13,
+      "streak": 14,
       "firstSeen": "2026-10-28T21:00:45.723Z",
       "pending": false
     },
-    "10123986918104": {
-      "sku": "10123986918104",
+    "10224740483986": {
+      "sku": "10224740483986",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 72,
+      "streak": 73,
       "firstSeen": "2026-10-28T16:00:51.357Z",
       "pending": false
     },
@@ -663,45 +723,21 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 10,
+      "streak": 11,
       "firstSeen": "2026-10-28T21:15:37.390Z",
       "pending": false
     },
-    "100331681632": {
-      "sku": "100331681632",
+    "10165732870551": {
+      "sku": "10165732870551",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 25,
-      "firstSeen": "2026-10-28T20:00:51.349Z",
-      "pending": false
-    },
-    "10224740483986": {
-      "sku": "10224740483986",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 72,
-      "firstSeen": "2026-10-28T16:00:51.357Z",
-      "pending": false
-    },
-    "100022646694": {
-      "sku": "100022646694",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 13,
-      "firstSeen": "2026-10-28T21:00:45.723Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-10-28T22:01:08.925Z",
+      "pending": true
     },
     "100406224576": {
       "sku": "100406224576",
@@ -711,37 +747,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 13,
+      "streak": 14,
       "firstSeen": "2026-10-28T21:00:45.723Z",
       "pending": false
-    },
-    "100111362704": {
-      "sku": "100111362704",
-      "source": "main",
-      "name": "",
-      "price": "",
-      "orig": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-10-28T21:55:23.312Z"
-    },
-    "10237134829655": {
-      "sku": "10237134829655",
-      "source": "flash",
-      "name": "babyincoming蓓茵可婴儿被子儿童豆豆被新生儿毯子秋冬季幼儿园盖被桑蚕丝毛毯 【加厚可脱胆被 建议温度0°C-15°C】童话音乐会 120*150cm",
-      "price": "99",
-      "orig": "423",
-      "promoStatus": "E2",
-      "promoBegin": "2026-10-28 20:00:00",
-      "promoEnd": "2026-10-29 09:59:59",
-      "deleted": false,
-      "shop": "BABY INCOMING旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/544411/20/12408/14370/6adc73a8Ffac0c3da/00ae0c80c8c51b60.jpg",
-      "streak": 113,
-      "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10095627547539": {
       "sku": "10095627547539",
@@ -756,7 +764,23 @@
       "shop": "OAK FAMILY旗舰店",
       "isNew": false,
       "pic": "jfs/t1/547168/25/8885/8406/6adf14c4F38823409/00ae0c80c8cce566.png",
-      "streak": 113,
+      "streak": 114,
+      "firstSeen": "2026-10-28T12:00:48.601Z"
+    },
+    "10237134829655": {
+      "sku": "10237134829655",
+      "source": "flash",
+      "name": "babyincoming蓓茵可婴儿被子儿童豆豆被新生儿毯子秋冬季幼儿园盖被桑蚕丝毛毯 【加厚可脱胆被 建议温度0°C-15°C】童话音乐会 120*150cm",
+      "price": "99",
+      "orig": "423",
+      "promoStatus": "E2",
+      "promoBegin": "2026-10-28 20:00:00",
+      "promoEnd": "2026-10-29 09:59:59",
+      "deleted": false,
+      "shop": "BABY INCOMING旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/544411/20/12408/14370/6adc73a8Ffac0c3da/00ae0c80c8c51b60.jpg",
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10165918863879": {
@@ -772,7 +796,7 @@
       "shop": "OAK FAMILY旗舰店",
       "isNew": false,
       "pic": "jfs/t1/558168/39/1041/11628/6adf1774F5e7a65f5/00ae0c80c82d10d5.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10187092864623": {
@@ -788,7 +812,7 @@
       "shop": "爱贝迪拉 AIBEDILA婴童寝居官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/546690/34/12392/17976/6adf1e77F084010af/02760c80c8da4668.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10234435525405": {
@@ -804,23 +828,7 @@
       "shop": "BABY INCOMING旗舰店",
       "isNew": false,
       "pic": "jfs/t1/557000/2/592/9550/6adc744cF739de247/00ae0c80c8f980d5.jpg",
-      "streak": 113,
-      "firstSeen": "2026-10-28T12:00:48.601Z"
-    },
-    "10167242444319": {
-      "sku": "10167242444319",
-      "source": "flash",
-      "name": "英氏60支兰精天丝绣花儿童亲肤轻奢被套 满天星 100*120cm",
-      "price": "165",
-      "orig": "349",
-      "promoStatus": "E2",
-      "promoBegin": "2026-10-28 20:00:00",
-      "promoEnd": "2026-10-29 09:59:59",
-      "deleted": false,
-      "shop": "英氏 YEEHOO母婴家纺旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/546122/34/10284/5794/6adf1665F8209ec03/00ae0c80c8092c10.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10238139610656": {
@@ -836,7 +844,23 @@
       "shop": "爱贝迪拉 AIBEDILA官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/554768/1/3377/25172/6adf0a98F6842ff48/00ae0c80c8739cb6.png",
-      "streak": 113,
+      "streak": 114,
+      "firstSeen": "2026-10-28T12:00:48.601Z"
+    },
+    "10167242444319": {
+      "sku": "10167242444319",
+      "source": "flash",
+      "name": "英氏60支兰精天丝绣花儿童亲肤轻奢被套 满天星 100*120cm",
+      "price": "165",
+      "orig": "349",
+      "promoStatus": "E2",
+      "promoBegin": "2026-10-28 20:00:00",
+      "promoEnd": "2026-10-29 09:59:59",
+      "deleted": false,
+      "shop": "英氏 YEEHOO母婴家纺旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/546122/34/10284/5794/6adf1665F8209ec03/00ae0c80c8092c10.png",
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10167227919120": {
@@ -852,7 +876,7 @@
       "shop": "英氏 YEEHOO母婴家纺旗舰店",
       "isNew": false,
       "pic": "jfs/t1/554918/18/2183/12841/6adf15b1F682600a1/00ae0c80c855a307.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10158221578369": {
@@ -868,7 +892,7 @@
       "shop": "英氏 YEEHOO母婴家纺旗舰店",
       "isNew": false,
       "pic": "jfs/t1/543143/32/11883/9393/6adf1380F8391a1ed/00ae0c80c8fe7ca4.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10235495608748": {
@@ -884,7 +908,7 @@
       "shop": "英氏 YEEHOO母婴家纺旗舰店",
       "isNew": false,
       "pic": "jfs/t1/544416/21/12700/10743/6adf12b4F4d7c3640/00ae0c80c87e3052.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10096361056488": {
@@ -900,7 +924,7 @@
       "shop": "OAK FAMILY旗舰店",
       "isNew": false,
       "pic": "jfs/t1/544787/28/12570/10156/6adf1563Fbe2e2eb1/00ae0c80c8ddf4aa.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10235451409605": {
@@ -916,7 +940,7 @@
       "shop": "英氏 YEEHOO母婴家纺旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545329/29/10895/11369/6adf118dFa15c13a3/00ae0c80c8b39a3e.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10238139610661": {
@@ -932,7 +956,7 @@
       "shop": "爱贝迪拉 AIBEDILA官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/548899/21/8007/29071/6adf0a92F40665442/00ae0c80c8d129aa.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10187092864628": {
@@ -948,20 +972,7 @@
       "shop": "爱贝迪拉 AIBEDILA婴童寝居官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/553522/12/3643/18387/6adf1c73F73d8adda/02760c80c808600b.png",
-      "streak": 113,
-      "firstSeen": "2026-10-28T12:00:48.601Z"
-    },
-    "10032078232662": {
-      "sku": "10032078232662",
-      "source": "stage",
-      "stageId": "344835759",
-      "name": "婴儿加厚豆豆被",
-      "price": "192",
-      "stock": "100",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/550548/31/2384/14370/6adc739cF7e1a8b92/00ae0c80c80d3d97.jpg",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10025267130997": {
@@ -974,7 +985,20 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/545562/11/13486/8406/6adf14a4Fb09bff28/00ae0c80c87034b5.png",
-      "streak": 113,
+      "streak": 114,
+      "firstSeen": "2026-10-28T12:00:48.601Z"
+    },
+    "10032078232662": {
+      "sku": "10032078232662",
+      "source": "stage",
+      "stageId": "344835759",
+      "name": "婴儿加厚豆豆被",
+      "price": "192",
+      "stock": "100",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/550548/31/2384/14370/6adc739cF7e1a8b92/00ae0c80c80d3d97.jpg",
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10028277310443": {
@@ -987,7 +1011,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/550560/33/7136/11628/6adf173dF52441215/00ae0c80c8a38f7c.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10031234603074": {
@@ -1000,7 +1024,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/548173/4/7496/35460/6adf2100F9f969f1f/02760c80c8e6b022.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10036020337451": {
@@ -1013,20 +1037,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/550763/1/4494/9550/6adc743eF83fad1f2/00ae0c80c8fce2cf.jpg",
-      "streak": 113,
-      "firstSeen": "2026-10-28T12:00:48.601Z"
-    },
-    "10030674917800": {
-      "sku": "10030674917800",
-      "source": "stage",
-      "stageId": "344835759",
-      "name": "英氏兰精天丝被套",
-      "price": "329",
-      "stock": "30",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/548081/31/8137/5794/6adf164cF9fb244a5/00ae0c80c85d19ca.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10036190678737": {
@@ -1039,7 +1050,20 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/542533/19/14801/25172/6adf0a64Fc2acb8af/00ae0c80c81099da.png",
-      "streak": 113,
+      "streak": 114,
+      "firstSeen": "2026-10-28T12:00:48.601Z"
+    },
+    "10030674917800": {
+      "sku": "10030674917800",
+      "source": "stage",
+      "stageId": "344835759",
+      "name": "英氏兰精天丝被套",
+      "price": "329",
+      "stock": "30",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/548081/31/8137/5794/6adf164cF9fb244a5/00ae0c80c85d19ca.png",
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10030673525268": {
@@ -1052,7 +1076,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/553680/25/3273/12841/6adf157eF0297ef88/00ae0c80c8341edb.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10029716926071": {
@@ -1065,7 +1089,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/558016/20/1135/9393/6adf135cF5118afd3/00ae0c80c84418ab.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10036109504063": {
@@ -1078,7 +1102,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/558259/12/777/10743/6adf12a9F52641568/00ae0c80c88a2475.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.601Z"
     },
     "10025318853624": {
@@ -1091,7 +1115,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/553459/34/4071/10156/6adf1552Fa1314f01/00ae0c80c810284b.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.602Z"
     },
     "10036104123869": {
@@ -1104,7 +1128,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/547457/6/9374/11369/6adf110dFf22a1af0/00ae0c80c8efb09a.png",
-      "streak": 113,
+      "streak": 114,
       "firstSeen": "2026-10-28T12:00:48.602Z"
     }
   },
@@ -1233,161 +1257,161 @@
       "name": "卡西欧学生腕表",
       "at": 1793188554912
     },
-    "10237134829655": {
-      "price": "99",
-      "orig": "423",
-      "name": "babyincoming蓓茵可婴儿被子儿童豆豆被新生儿毯子秋冬季幼儿园盖被桑蚕丝毛毯 【加厚可脱胆被 建议温度0°C-15°C】童话音乐会 120*150cm",
-      "at": 1793224523317
-    },
     "10095627547539": {
       "price": "194.5",
       "orig": "389",
       "name": "OAK FAMILY婴儿包被秋冬季纱布夹棉防惊跳加厚抱被宝宝包裹被新生儿包单 梨果庄园 90*90cm",
-      "at": 1793224523317
+      "at": 1793224868929
+    },
+    "10237134829655": {
+      "price": "99",
+      "orig": "423",
+      "name": "babyincoming蓓茵可婴儿被子儿童豆豆被新生儿毯子秋冬季幼儿园盖被桑蚕丝毛毯 【加厚可脱胆被 建议温度0°C-15°C】童话音乐会 120*150cm",
+      "at": 1793224868929
     },
     "10165918863879": {
       "price": "59.5",
       "orig": "119",
       "name": "OAK FAMILY新生儿纯棉长方巾宝宝洗澡洗脸巾两条装 2条礼盒装拍嗝巾【梨园/梦境】55*25cm 50*28cm",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10187092864623": {
       "price": "99",
       "orig": "198",
       "name": "爱贝迪拉（AIBEDILA）婴儿睡袋春秋冬季宝宝儿童1-3-6岁纯棉分腿防踢被惊跳恒温连体衣 限时下单享半价【恒温空气层 室温16-24°】熊猫花花 M【身高80-95cm】15个月-2.5岁",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10234435525405": {
       "price": "89",
       "orig": "259",
       "name": "babyincoming蓓茵可婴儿睡袋儿童分腿式防踢被秋冬保暖恒温夹棉新生儿0-3岁 繁星独角兽【桑蚕丝+恒温】室温15-20℃ S码（建议身高70-85cm）",
-      "at": 1793224523317
-    },
-    "10167242444319": {
-      "price": "165",
-      "orig": "349",
-      "name": "英氏60支兰精天丝绣花儿童亲肤轻奢被套 满天星 100*120cm",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10238139610656": {
       "price": "131.99",
       "orig": "286",
       "name": "爱贝迪拉（AIBEDILA）【桑蚕丝】儿童防踢被子秋冬加厚3到6岁中大童男宝宝女睡袋 纯棉×贴布绣款【尺寸80*130CM】波妮兔一家（单被） 根据身高 年龄选择",
-      "at": 1793224523317
+      "at": 1793224868929
+    },
+    "10167242444319": {
+      "price": "165",
+      "orig": "349",
+      "name": "英氏60支兰精天丝绣花儿童亲肤轻奢被套 满天星 100*120cm",
+      "at": 1793224868929
     },
     "10167227919120": {
       "price": "165",
       "orig": "349",
       "name": "英氏婴儿睡袋分腿竹棉新生婴幼儿防踢被a类品质 短袖 M码（建议身高90-100cm 2-3.5岁 11-14KG）",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10158221578369": {
       "price": "425",
       "orig": "849",
       "name": "英氏导湿恒温婴儿睡袋春秋儿童分腿宝宝防踢被四季厚款 竹棉爱的绒分腿睡袋（月亮） S(建议身高70-90cm 3-24个月 7-11KG)",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10235495608748": {
       "price": "289",
       "orig": "578",
       "name": "英氏儿童纯棉被套贡缎100%棉婴幼儿透气不闷A类新疆棉被罩 花间小鹿 200*230cm",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10096361056488": {
       "price": "259",
       "orig": "518",
       "name": "OAK FAMILY新生婴儿一体式防惊跳睡袋加厚秋冬男女宝宝睡袋 胖达熊 66cm（推荐3-6个月）",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10235451409605": {
       "price": "289",
       "orig": "578",
       "name": "英氏（YEEHOO）被子儿童51%大豆纤维被纯棉抗菌被芯A类秋冬被宝宝婴儿被褥盖被 【A类】洛丽塔小兔 100*120cm （建议0-5岁/幼儿园床） 冬被",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10238139610661": {
       "price": "169.99",
       "orig": "370",
       "name": "爱贝迪拉（AIBEDILA）【桑蚕丝】儿童防踢被子秋冬加厚3到6岁中大童男宝宝女睡袋 纯棉×贴布绣款【尺寸100*160】超级工程象（单被） 根据身高 年龄选择",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10187092864628": {
       "price": "99",
       "orig": "198",
       "name": "爱贝迪拉（AIBEDILA）婴儿睡袋春秋冬季宝宝儿童1-3-6岁纯棉分腿防踢被惊跳恒温连体衣 限时下单享半价【恒温空气层 室温16-24°】小兔安安 M【身高80-95cm】15个月-2.5岁",
-      "at": 1793224523317
-    },
-    "10032078232662": {
-      "price": "192",
-      "orig": "",
-      "name": "婴儿加厚豆豆被",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10025267130997": {
       "price": "389",
       "orig": "",
       "name": "夹棉新生儿抱被",
-      "at": 1793224523317
+      "at": 1793224868929
+    },
+    "10032078232662": {
+      "price": "192",
+      "orig": "",
+      "name": "婴儿加厚豆豆被",
+      "at": 1793224868929
     },
     "10028277310443": {
       "price": "119",
       "orig": "",
       "name": "纯棉长方巾口水巾",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10031234603074": {
       "price": "199",
       "orig": "",
       "name": "爱贝迪拉儿童睡袋",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10036020337451": {
       "price": "169",
       "orig": "",
       "name": "婴儿分腿式睡袋",
-      "at": 1793224523317
-    },
-    "10030674917800": {
-      "price": "329",
-      "orig": "",
-      "name": "英氏兰精天丝被套",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10036190678737": {
       "price": "280.98",
       "orig": "",
       "name": "贴布绣秋冬防踢被",
-      "at": 1793224523317
+      "at": 1793224868929
+    },
+    "10030674917800": {
+      "price": "329",
+      "orig": "",
+      "name": "英氏兰精天丝被套",
+      "at": 1793224868929
     },
     "10030673525268": {
       "price": "329",
       "orig": "",
       "name": "英氏竹棉睡袋",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10029716926071": {
       "price": "849",
       "orig": "",
       "name": "英氏恒温绒睡袋",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10036109504063": {
       "price": "578",
       "orig": "",
       "name": "英氏全棉贡缎被套",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10025318853624": {
       "price": "518",
       "orig": "",
       "name": "加厚一体式睡袋",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "10036104123869": {
       "price": "578",
       "orig": "",
       "name": "英氏全棉大豆被",
-      "at": 1793224523317
+      "at": 1793224868929
     },
     "100016396244": {
       "price": "1",
@@ -3406,6 +3430,12 @@
       "price": "290",
       "rounds": 1,
       "at": 1793188848605
+    },
+    "100111362704": {
+      "name": "",
+      "price": "",
+      "rounds": 1,
+      "at": 1793224868929
     },
     "100440225186": {
       "name": "1号会员店（One’s Member）5.0蛋白高钙牛奶 240ml*6瓶 高蛋白 营养早餐新鲜牛奶",
