@@ -13,8 +13,10 @@ on:
     paths-ignore:
       - 'data/**'
   # 定时触发（标准写法，GitHub 最稳）
-  schedule:
-    - cron: '*/5 * * * *'        # 每 5 分钟
+  # 由 cron-job.org 每 5 分钟触发 repository_dispatch（下面这条 GitHub 自带定时已停用，
+  # 两者同时启用会让每 5 分钟跑两次、互相抢着回写快照）
+  # schedule:
+  #   - cron: '*/5 * * * *'
   # 外部准时钟（cron-job.org）触发入口
   repository_dispatch:
     types: [monitor]
@@ -90,15 +92,25 @@ jobs:
             exit 0
           fi
           git commit -m "chore: 更新监控快照 $(date -Iseconds)"
-          for i in 1 2 3; do
+          # 并发/远端已前进时的稳健回写：
+          #   1) fetch 远端
+          #   2) git reset（mixed）把索引对齐到远端最新，工作区的快照文件保持不变
+          #   3) 重新 add data/ 形成"远端代码 + 本地快照"的提交
+          # 这样不会因为 rebase 冲突而拿着旧 HEAD 反复被拒
+          for i in 1 2 3 4; do
             git fetch origin main --quiet || true
-            git rebase --autostash origin/main >/dev/null 2>&1 || git rebase --abort >/dev/null 2>&1 || true
-            # 用 HEAD:main 推送，避免 detached HEAD 导致 "not currently on a branch"
+            git reset --quiet origin/main 2>/dev/null || true
+            git add -f data/ 2>/dev/null || true
+            if git diff --cached --quiet; then
+              echo "快照已与远端一致"
+              exit 0
+            fi
+            git commit -q -m "chore: 更新监控快照 $(date -Iseconds)" || true
             if git push origin HEAD:main; then
               echo "已提交新快照"
               exit 0
             fi
-            echo "推送失败，${i}/3 次，5 秒后重试"
+            echo "推送失败，${i}/4 次，5 秒后重试"
             sleep 5
           done
           echo "回写快照失败（不影响监控推送）"
