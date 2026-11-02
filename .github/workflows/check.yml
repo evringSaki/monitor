@@ -30,7 +30,7 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write   # 写回 snapshot.json 到仓库
     steps:
@@ -58,9 +58,11 @@ jobs:
           STATE_PATH: ./data/snapshot.json
           LOG_PATH: ./data/history.log
           PAGE_LABEL: '场A'
+          LOOP_TIMES: '3'
+          LOOP_INTERVAL: '60000'
         run: |
           echo "=== 场A 开始 $(date -Iseconds) ==="
-          node monitor.js || echo "退出码 $?（1=有更新，属正常）"
+          node loop.js || echo "退出码 $?（1=有更新，属正常）"
           echo "=== 场A 完成 ==="
 
       - name: 推送链路测试
