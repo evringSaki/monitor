@@ -716,6 +716,21 @@ function qrPageUrl(p) {
   return 'https://evringsaki.github.io/monitor/qr.html?' + q.toString();
 }
 
+// 同一商品常以不同 SKU 出现在时段/楼层与秒杀楼层（如 嘉士利牛肉薄脆饼：时段￥39.9 / 秒杀￥1），
+// 推送时按名字前 6 个字符去重，优先保留秒杀楼层（价格更真实）的版本
+function dedupePush(list) {
+  const norm = (p) => String(p.name || '').replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g, '').slice(0, 6);
+  const out = [];
+  for (const p of list) {
+    const k = norm(p);
+    const i = k ? out.findIndex(q => norm(q) === k && q.source !== p.source) : -1;
+    if (i < 0) { out.push(p); continue; }
+    const q = out[i];
+    out[i] = (p.source === 'flash' && q.source !== 'flash') ? p : q;
+  }
+  return out;
+}
+
 // items：商品数组；newSkus：本轮新品 SKU 集合（只有新品才附「二维码·链接」）
 function productsHtml(items, newSkus) {
   const linkSet = newSkus || null;
@@ -928,12 +943,12 @@ async function main() {
         .filter(p => p.source === 'flash' || p.source === 'stage' || p.source === 'main')
         .sort((a, b) => (parseFloat(a.price) || 99999) - (parseFloat(b.price) || 99999))
       : [];
-    const listAll = stageAll.length ? stageAll : ev.addedMain;
+    const listAll = dedupePush(stageAll.length ? stageAll : ev.addedMain);
     const totalN = listAll.length;
-    const restockN = ev.addedMain.filter(p => p.restock).length;
+    const restockN = listAll.filter(p => p.restock).length;
     const head = isStageStart
       ? `【上新监控】新场次开始：${label || '新时段'}！本场 ${totalN} 个商品${confirmed ? `（新上 ${confirmed} 个）` : ''}`
-      : `【上新监控】检测到上新 ${confirmed} 个商品${restockN ? `（其中重新上架 ${restockN} 个）` : ''}！`;
+      : `【上新监控】检测到上新 ${totalN} 个商品${restockN ? `（其中重新上架 ${restockN} 个）` : ''}！`;
     log((isStageStart ? '【新场次】' : '【上新】') + `${totalN} 个商品：\n` + listAll.map(p => '  + ' + fmtProduct(p)).join('\n'));
     // 微信（PushPlus）通道：完整版——名称可点链接 + 价格/库存/限购
     // 推送清单里每个商品都附「二维码 · 链接」（点开二维码页，不占消息体积）

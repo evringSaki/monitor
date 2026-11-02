@@ -58,7 +58,7 @@ jobs:
           STATE_PATH: ./data/snapshot.json
           LOG_PATH: ./data/history.log
           PAGE_LABEL: '场A'
-          LOOP_TIMES: '3'
+          LOOP_TIMES: '5'
           LOOP_INTERVAL: '60000'
         run: |
           echo "=== 场A 开始 $(date -Iseconds) ==="
