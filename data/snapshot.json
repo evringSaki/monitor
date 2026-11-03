@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-03T13:38:13.526Z",
+  "time": "2026-11-03T13:42:41.125Z",
   "activityName": "上新活动",
   "stage": {
     "id": "347066387",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "total": 156,
+  "total": 154,
   "mainCount": 69,
   "stageCount": 57,
   "flashCount": 69,
@@ -39,8 +39,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 182,
-      "firstSeen": "2026-11-03T09:38:31.261Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "8125586": {
@@ -51,9 +51,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
     "10177602932285": {
       "sku": "10177602932285",
@@ -63,8 +63,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100138814934": {
+      "sku": "100138814934",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "10187125827084": {
@@ -75,8 +87,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100335886514": {
@@ -87,68 +99,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100233716033": {
-      "sku": "100233716033",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100285953129": {
-      "sku": "100285953129",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100133332620": {
-      "sku": "100133332620",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100138814934": {
-      "sku": "100138814934",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 7,
-      "firstSeen": "2026-11-03T13:23:42.657Z",
-      "pending": false
-    },
-    "100307255283": {
-      "sku": "100307255283",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100040390465": {
@@ -159,32 +111,44 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
-    "100348277396": {
-      "sku": "100348277396",
+    "100285953129": {
+      "sku": "100285953129",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "100250078883": {
-      "sku": "100250078883",
+    "100133332620": {
+      "sku": "100133332620",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100102386346": {
+      "sku": "100102386346",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "10101811435868": {
@@ -195,8 +159,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100250078883": {
+      "sku": "100250078883",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100190320719": {
@@ -207,68 +183,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100102386346": {
-      "sku": "100102386346",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100247371389": {
-      "sku": "100247371389",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100032172654": {
-      "sku": "100032172654",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100044596035": {
-      "sku": "100044596035",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100025590019": {
-      "sku": "100025590019",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100388478872": {
@@ -279,21 +195,57 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
-    "10160310534734": {
-      "sku": "10160310534734",
+    "100247371389": {
+      "sku": "100247371389",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
+    },
+    "100032172654": {
+      "sku": "100032172654",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100025590019": {
+      "sku": "100025590019",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100044596035": {
+      "sku": "100044596035",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
     "10230324838340": {
       "sku": "10230324838340",
@@ -303,32 +255,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100327980386": {
-      "sku": "100327980386",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100176796758": {
-      "sku": "100176796758",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100087533327": {
@@ -339,8 +267,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100318574842": {
+      "sku": "100318574842",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100289780334": {
+      "sku": "100289780334",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100016396244": {
@@ -351,44 +303,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 15,
-      "firstSeen": "2026-11-03T13:02:37.322Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "100318574842": {
-      "sku": "100318574842",
+    "10226945294112": {
+      "sku": "10226945294112",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
-    "100422549272": {
-      "sku": "100422549272",
+    "100327980386": {
+      "sku": "100327980386",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100183588838": {
-      "sku": "100183588838",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100324242014": {
@@ -399,56 +339,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100049239409": {
-      "sku": "100049239409",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100117965571": {
-      "sku": "100117965571",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "10226945294112": {
-      "sku": "10226945294112",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100188052359": {
-      "sku": "100188052359",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100239972313": {
@@ -459,44 +351,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100420271238": {
-      "sku": "100420271238",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100015742640": {
-      "sku": "100015742640",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100289780334": {
-      "sku": "100289780334",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100029011985": {
@@ -507,44 +363,44 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "100201858079": {
-      "sku": "100201858079",
+    "100183588838": {
+      "sku": "100183588838",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
-    "100088640019": {
-      "sku": "100088640019",
+    "100049239409": {
+      "sku": "100049239409",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "10163335522763": {
-      "sku": "10163335522763",
+    "100188052359": {
+      "sku": "100188052359",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100422546318": {
@@ -555,32 +411,68 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "10182423626788": {
-      "sku": "10182423626788",
+    "100088640019": {
+      "sku": "100088640019",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
-    "100399311034": {
-      "sku": "100399311034",
+    "10163335522763": {
+      "sku": "10163335522763",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100420271238": {
+      "sku": "100420271238",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100374386596": {
+      "sku": "100374386596",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 268,
+      "firstSeen": "2026-11-03T07:32:41.037Z",
+      "pending": false
+    },
+    "10235605405807": {
+      "sku": "10235605405807",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 268,
+      "firstSeen": "2026-11-03T07:32:41.037Z",
       "pending": false
     },
     "100043755889": {
@@ -591,9 +483,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
     },
     "100377393160": {
       "sku": "100377393160",
@@ -603,7 +495,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 130,
+      "streak": 132,
       "firstSeen": "2026-11-03T10:31:40.096Z",
       "pending": false
     },
@@ -615,128 +507,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100374386596": {
-      "sku": "100374386596",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 266,
-      "firstSeen": "2026-11-03T07:32:41.037Z",
-      "pending": false
-    },
-    "10123809417811": {
-      "sku": "10123809417811",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "10237897621320": {
-      "sku": "10237897621320",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 130,
-      "firstSeen": "2026-11-03T10:31:40.096Z",
-      "pending": false
-    },
-    "10235605405807": {
-      "sku": "10235605405807",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 266,
-      "firstSeen": "2026-11-03T07:32:41.037Z",
-      "pending": false
-    },
-    "100341380656": {
-      "sku": "100341380656",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 130,
-      "firstSeen": "2026-11-03T10:31:40.096Z",
-      "pending": false
-    },
-    "10164845162146": {
-      "sku": "10164845162146",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "10097690450020": {
-      "sku": "10097690450020",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100048883077": {
-      "sku": "100048883077",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "100190999031": {
-      "sku": "100190999031",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
-    },
-    "10229495715335": {
-      "sku": "10229495715335",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100428858646": {
@@ -747,9 +519,93 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
+    },
+    "10237897621320": {
+      "sku": "10237897621320",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.125Z",
+      "pending": true
+    },
+    "100341380656": {
+      "sku": "100341380656",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 11,
+      "firstSeen": "2026-11-03T13:11:26.036Z",
+      "pending": false
+    },
+    "10123809417811": {
+      "sku": "10123809417811",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "10164845162146": {
+      "sku": "10164845162146",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100048883077": {
+      "sku": "100048883077",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "10229495715335": {
+      "sku": "10229495715335",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100190999031": {
+      "sku": "100190999031",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
     "100127087887": {
       "sku": "100127087887",
@@ -759,21 +615,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
-    },
-    "100084573724": {
-      "sku": "100084573724",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
     "100132588038": {
       "sku": "100132588038",
@@ -783,8 +627,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100097260950": {
@@ -795,9 +639,9 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
     "100288929358": {
       "sku": "100288929358",
@@ -807,32 +651,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
-    "100237372949": {
-      "sku": "100237372949",
+    "10227097936270": {
+      "sku": "10227097936270",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-03T13:35:33.968Z",
-      "pending": false
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
     },
-    "100291830033": {
-      "sku": "100291830033",
+    "100331681632": {
+      "sku": "100331681632",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 130,
-      "firstSeen": "2026-11-03T10:31:40.096Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
     "100043181586": {
@@ -843,24 +687,156 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 47,
-      "firstSeen": "2026-11-03T12:05:51.835Z",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
       "pending": false
     },
-    "10238295930572": {
-      "sku": "10238295930572",
+    "100061695599": {
+      "sku": "100061695599",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100237372949": {
+      "sku": "100237372949",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100291830033": {
+      "sku": "100291830033",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 132,
+      "firstSeen": "2026-11-03T10:31:40.096Z",
+      "pending": false
+    },
+    "100266661882": {
+      "sku": "100266661882",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100245452103": {
+      "sku": "100245452103",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100167134431": {
+      "sku": "100167134431",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100362880826": {
+      "sku": "100362880826",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-03T13:39:36.537Z",
+      "pending": false
+    },
+    "100154188652": {
+      "sku": "100154188652",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 8,
+      "firstSeen": "2026-11-03T13:27:39.607Z",
+      "pending": false
+    },
+    "10165732870551": {
+      "sku": "10165732870551",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100145066352": {
+      "sku": "100145066352",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100428825452": {
+      "sku": "100428825452",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 1,
+      "firstSeen": "2026-11-03T13:42:41.126Z",
+      "pending": true
+    },
+    "100416769468": {
+      "sku": "100416769468",
       "source": "flash",
-      "name": "卡伴儿童纯棉成长睡袋0-12岁A类可开合穿脱防踢被护肚 月亮熊（150cm） 成长睡袋12纯棉",
-      "price": "139",
-      "orig": "249",
+      "name": "bledilait儿童枕头婴儿定型枕新生纠正头型矫正宝宝防偏头0到6个月硅胶枕头",
+      "price": "39.9",
+      "orig": "79.9",
       "promoStatus": "E2",
       "promoBegin": "2026-11-03 20:00:00",
       "promoEnd": "2026-11-04 09:59:59",
       "deleted": false,
-      "shop": "CURBBLAN 卡伴旗舰店",
+      "shop": "bledilait京东自营旗舰店",
       "isNew": false,
-      "pic": "jfs/t1/548050/21/9851/10206/6ae84dfbF0bbb9732/00ae0c80c852d26e.png",
-      "streak": 51,
+      "pic": "jfs/t1/557792/8/5704/6483/6ae7ef1aFe46524d7/00ae0c80c873653a.png",
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100295668687": {
@@ -876,7 +852,7 @@
       "shop": "诺梵亚京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/548234/2/12303/15408/6ae93c8dF3a992d60/00ae0c80c89b105a.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100420176076": {
@@ -892,423 +868,7 @@
       "shop": "i-baby京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/550943/25/9789/50901/6ae82e83F698c7e6c/02760c80c8fb35fc.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100326395276": {
-      "sku": "100326395276",
-      "source": "flash",
-      "name": "哈卡达Hagaday儿童枕头1-3岁四季通用婴儿硅胶枕专用",
-      "price": "219",
-      "orig": "439",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "hagaday哈卡达京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/549757/16/12492/2373/6ae93aaaF1451c62e/02760c80c840af1e.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100252813915": {
-      "sku": "100252813915",
-      "source": "flash",
-      "name": "安可新 婴儿围嘴【4条装】宝宝纯棉8层纱布可洗式儿童围兜 27*28cm",
-      "price": "16.9",
-      "orig": "39.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "安可新京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/549095/36/11970/16197/6ae84d9eF1c6f4bc5/00ae0c80c85c455a.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100414621004": {
-      "sku": "100414621004",
-      "source": "flash",
-      "name": "贝因美（Beingmate）婴儿抱被纯棉秋冬宝宝包被初生新生儿产房防惊跳包巾 伴眠95*95",
-      "price": "80",
-      "orig": "189",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "贝因美婴童用品京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/551081/15/11373/18507/6ae93f0cF6f6865f0/00ae0c80c8efde15.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100199034230": {
-      "sku": "100199034230",
-      "source": "flash",
-      "name": "贝易床围栏宝宝床上防护栏床护栏云母灰1.8+2+2m",
-      "price": "742",
-      "orig": "1788",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "贝易BEIESTATE京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/556604/25/5779/15865/6ae93ba7Fd2043074/00ae0c80c8b57531.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100420175844": {
-      "sku": "100420175844",
-      "source": "flash",
-      "name": "ibaby×outlast恒温豆豆被儿童被子幼儿园宝宝秋冬100g啾啾花语120*150",
-      "price": "324.99",
-      "orig": "650",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "i-baby京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/550943/25/9789/50901/6ae82e83F698c7e6c/02760c80c8fb35fc.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100331216307": {
-      "sku": "100331216307",
-      "source": "flash",
-      "name": "9i9婴儿定型枕头宝宝枕头新生儿童枕枕套可拆洗可调节蓝",
-      "price": "29.9",
-      "orig": "79",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "9i9京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/548073/27/11878/32887/6ae80265F1f6a93bb/02760c80c8fda46c.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100367160604": {
-      "sku": "100367160604",
-      "source": "flash",
-      "name": "安可新【9条装】 婴儿一次性浴巾儿童游泳便携绵柔加厚浴巾",
-      "price": "16.9",
-      "orig": "33.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "安可新京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/562427/18/5193/29899/6ae802e8F2b5decf0/00ae0c80c806cc12.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10096361056488": {
-      "sku": "10096361056488",
-      "source": "flash",
-      "name": "OAK FAMILY新生婴儿一体式防惊跳睡袋加厚秋冬男女宝宝睡袋 胖达熊 66cm（推荐3-6个月）",
-      "price": "259",
-      "orig": "518",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "OAK FAMILY旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/567765/8/4638/10156/6ae852d6F5e8c2f17/00ae0c80c8e2a009.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100331098297": {
-      "sku": "100331098297",
-      "source": "flash",
-      "name": "贝博氏babybox婴儿定型枕0-6个月睡圆头纠正头型宝宝枕头0-1岁抗菌款",
-      "price": "39.9",
-      "orig": "299",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "贝博氏京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/553295/24/7224/7091/6ae7efc5Ffbe11441/00ae0c80c8a475c0.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10235426817355": {
-      "sku": "10235426817355",
-      "source": "flash",
-      "name": "ibaby×outlast太空科技恒温深睡安抚婴被宝宝盖毯儿童睡被秋冬-清 钻石格不倒绒-鹦语花香-秋冬款14-18℃ 110*140cm",
-      "price": "99",
-      "orig": "339",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "i-baby官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/548857/31/12589/22336/6ae84c32Fd08f0692/02760c80c813c433.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100434133890": {
-      "sku": "100434133890",
-      "source": "flash",
-      "name": "卡贝乐婴儿定型枕头新生儿见面礼物宝宝枕头0-6个月以上睡圆头1-3岁",
-      "price": "64.5",
-      "orig": "129",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "卡贝乐母婴京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/568411/34/3187/12085/6ae843a6F745f6699/00ae0c80c8ed6d4e.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100438488896": {
-      "sku": "100438488896",
-      "source": "flash",
-      "name": "葆氏儿童枕头豆豆绒枕安抚枕双面可躺幼儿园宝宝透气亲肤学生午睡枕头",
-      "price": "29.9",
-      "orig": "69",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "葆氏京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/550275/6/11062/12773/6ae7ef19F435aba4e/00ae0c80c8661269.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100317907723": {
-      "sku": "100317907723",
-      "source": "flash",
-      "name": "贝因美（Beingmate）婴儿睡袋宝宝秋冬纯棉恒温分腿睡袋儿童一体防踢被子中厚 伴眠L",
-      "price": "100",
-      "orig": "299",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "贝因美婴童用品京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/572235/30/715/23987/6ae93f09Fa3a576d4/00ae0c80c8cc087d.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10216970025052": {
-      "sku": "10216970025052",
-      "source": "flash",
-      "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 纯真白兔 【90码】推荐身高80-90cm",
-      "price": "99",
-      "orig": "199",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "i-baby官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/568802/30/2484/11301/6ae84a1fF7787737c/02760c80c82b59fe.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10082087937250": {
-      "sku": "10082087937250",
-      "source": "flash",
-      "name": "babycare新生儿毛毯盖毯幼儿园宝宝午睡秋冬四季空调被毯子被子儿童节礼物 【福利款】梅尼尔紫-双面抑菌绒毯",
-      "price": "79",
-      "orig": "159",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "Babycare官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/554159/23/5469/43502/6ae1ce0cF603b6f91/02760c80c864c0a2.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10167604760601": {
-      "sku": "10167604760601",
-      "source": "flash",
-      "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【49%有机棉+33%粘胶纤维+18%莱卡纤维】澳洲云兔连帽浴巾80*80cm",
-      "price": "89",
-      "orig": "169",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "love to dream旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/551446/37/12446/6587/6ae84cb1F769407c4/00ae0c80c848c8fe.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100330570711": {
-      "sku": "100330570711",
-      "source": "flash",
-      "name": "喜亲宝婴儿云片枕宝宝枕头10层纯棉纱布枕巾新生儿平枕拍嗝巾2条装",
-      "price": "26",
-      "orig": "56",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "喜亲宝京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/551933/29/8233/47686/6ae7f67eF8d652b19/00ae0c80c8f267ad.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10205579784928": {
-      "sku": "10205579784928",
-      "source": "flash",
-      "name": "OAK FAMILY秋冬宝宝夹棉睡袋纯棉加厚儿童防踢被婴儿分腿睡衣保暖爬服 星际漫游 73cm",
-      "price": "244.5",
-      "orig": "489",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "OAK FAMILY旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/568209/28/3617/13500/6ae85302F27b1c798/00ae0c80c80827aa.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10235973956647": {
-      "sku": "10235973956647",
-      "source": "flash",
-      "name": "小魔箭活动【暖姜羊毛】分腿/睡袋恒温春秋冬款宝宝婴儿童四季通用防踢 羊毛x暖姜【加厚推荐0-10℃】森林奇遇记 XL/100码建议身高90-100CM",
-      "price": "124.45",
-      "orig": "248.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "小魔箭 XMAARROWF旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/548981/1/11716/15746/6ae95dceF40b200ca/02760c80c8095c82.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10235450684505": {
-      "sku": "10235450684505",
-      "source": "flash",
-      "name": "英氏（YEEHOO）婴儿豆豆毯纯棉被套可机洗防踢薄被子午睡毯幼儿童盖毯四季通用 星梦奇旅（不含芯） 100*120cm",
-      "price": "159",
-      "orig": "318",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "英氏 YEEHOO母婴家纺旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/570338/3/1504/10031/6ae85c4bF39e7576b/00ae0c80c807f38f.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100416769468": {
-      "sku": "100416769468",
-      "source": "flash",
-      "name": "bledilait儿童枕头婴儿定型枕新生纠正头型矫正宝宝防偏头0到6个月硅胶枕头",
-      "price": "39.9",
-      "orig": "79.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "bledilait京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/557792/8/5704/6483/6ae7ef1aFe46524d7/00ae0c80c873653a.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100433481642": {
-      "sku": "100433481642",
-      "source": "flash",
-      "name": "喜亲宝 婴儿定型枕头新生儿安抚抱枕睡枕宝宝双面可用【睡头型+安抚】蓝",
-      "price": "38",
-      "orig": "79",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "喜亲宝京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/556220/33/7679/12896/6ae7f6a1Feedbd790/00ae0c80c862d629.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10158221578366": {
-      "sku": "10158221578366",
-      "source": "flash",
-      "name": "英氏导湿恒温婴儿睡袋春秋儿童分腿宝宝防踢被四季厚款 竹棉爱的绒分腿睡袋（鸟） M(建议身高90-100cm 2-3.5岁 11-14KG)",
-      "price": "450",
-      "orig": "1049",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "英氏 YEEHOO母婴家纺旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/551893/7/8675/10569/6ae85d66F977fa4fa/00ae0c80c8c58653.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10232809594838": {
-      "sku": "10232809594838",
-      "source": "flash",
-      "name": "babycare婴儿睡袋四季通用款山茶花儿童防踢被神器中大童春夏宝宝睡袋 【柔暖厚夹棉】瞌睡兔（推荐室温：12-16℃） 90cm",
-      "price": "249",
-      "orig": "499",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "Babycare官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/545168/23/13927/34285/6ae1cdd4F3abc0c92/02760c80c805f237.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100434450874": {
-      "sku": "100434450874",
-      "source": "flash",
-      "name": "9i9新生儿枕头婴儿枕巾纯棉纱布初生宝宝平枕拍嗝巾护肚巾吸汗透气",
-      "price": "12.9",
-      "orig": "34.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "9i9京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/570646/9/1202/48464/6ae80246Fc9c3600f/02760c80c8c1e233.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10228742627255": {
-      "sku": "10228742627255",
-      "source": "flash",
-      "name": "良良（liangliang）婴儿抱被纯棉新生儿包被襁褓微厚包单四季通用防惊跳 【竹棉纱布-夏季款】绿野（适合20-30℃） 95*95cm",
-      "price": "99",
-      "orig": "328",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-03 20:00:00",
-      "promoEnd": "2026-11-04 09:59:59",
-      "deleted": false,
-      "shop": "良良官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/547911/7/8715/14133/6adf3daaF7bbd83bc/02760c80c849279e.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100306242723": {
@@ -1324,7 +884,423 @@
       "shop": "好孩子京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/553451/17/8923/27770/6ae9442aFe4b937a6/00ae0c80c8c95d67.png",
-      "streak": 51,
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100252813915": {
+      "sku": "100252813915",
+      "source": "flash",
+      "name": "安可新 婴儿围嘴【4条装】宝宝纯棉8层纱布可洗式儿童围兜 27*28cm",
+      "price": "16.9",
+      "orig": "39.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "安可新京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/549095/36/11970/16197/6ae84d9eF1c6f4bc5/00ae0c80c85c455a.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100330570711": {
+      "sku": "100330570711",
+      "source": "flash",
+      "name": "喜亲宝婴儿云片枕宝宝枕头10层纯棉纱布枕巾新生儿平枕拍嗝巾2条装",
+      "price": "26",
+      "orig": "56",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "喜亲宝京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/551933/29/8233/47686/6ae7f67eF8d652b19/00ae0c80c8f267ad.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100199034230": {
+      "sku": "100199034230",
+      "source": "flash",
+      "name": "贝易床围栏宝宝床上防护栏床护栏云母灰1.8+2+2m",
+      "price": "742",
+      "orig": "1788",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "贝易BEIESTATE京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/556604/25/5779/15865/6ae93ba7Fd2043074/00ae0c80c8b57531.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100420175844": {
+      "sku": "100420175844",
+      "source": "flash",
+      "name": "ibaby×outlast恒温豆豆被儿童被子幼儿园宝宝秋冬100g啾啾花语120*150",
+      "price": "324.99",
+      "orig": "650",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "i-baby京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/550943/25/9789/50901/6ae82e83F698c7e6c/02760c80c8fb35fc.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100317907723": {
+      "sku": "100317907723",
+      "source": "flash",
+      "name": "贝因美（Beingmate）婴儿睡袋宝宝秋冬纯棉恒温分腿睡袋儿童一体防踢被子中厚 伴眠L",
+      "price": "100",
+      "orig": "299",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "贝因美婴童用品京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/572235/30/715/23987/6ae93f09Fa3a576d4/00ae0c80c8cc087d.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100367160604": {
+      "sku": "100367160604",
+      "source": "flash",
+      "name": "安可新【9条装】 婴儿一次性浴巾儿童游泳便携绵柔加厚浴巾",
+      "price": "16.9",
+      "orig": "33.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "安可新京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/562427/18/5193/29899/6ae802e8F2b5decf0/00ae0c80c806cc12.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100326395276": {
+      "sku": "100326395276",
+      "source": "flash",
+      "name": "哈卡达Hagaday儿童枕头1-3岁四季通用婴儿硅胶枕专用",
+      "price": "219",
+      "orig": "439",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "hagaday哈卡达京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/549757/16/12492/2373/6ae93aaaF1451c62e/02760c80c840af1e.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100433481642": {
+      "sku": "100433481642",
+      "source": "flash",
+      "name": "喜亲宝 婴儿定型枕头新生儿安抚抱枕睡枕宝宝双面可用【睡头型+安抚】蓝",
+      "price": "38",
+      "orig": "79",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "喜亲宝京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/556220/33/7679/12896/6ae7f6a1Feedbd790/00ae0c80c862d629.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10235426817355": {
+      "sku": "10235426817355",
+      "source": "flash",
+      "name": "ibaby×outlast太空科技恒温深睡安抚婴被宝宝盖毯儿童睡被秋冬-清 钻石格不倒绒-鹦语花香-秋冬款14-18℃ 110*140cm",
+      "price": "99",
+      "orig": "339",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "i-baby官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/548857/31/12589/22336/6ae84c32Fd08f0692/02760c80c813c433.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100414621004": {
+      "sku": "100414621004",
+      "source": "flash",
+      "name": "贝因美（Beingmate）婴儿抱被纯棉秋冬宝宝包被初生新生儿产房防惊跳包巾 伴眠95*95",
+      "price": "80",
+      "orig": "189",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "贝因美婴童用品京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/551081/15/11373/18507/6ae93f0cF6f6865f0/00ae0c80c8efde15.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100434450874": {
+      "sku": "100434450874",
+      "source": "flash",
+      "name": "9i9新生儿枕头婴儿枕巾纯棉纱布初生宝宝平枕拍嗝巾护肚巾吸汗透气",
+      "price": "12.9",
+      "orig": "34.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "9i9京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/570646/9/1202/48464/6ae80246Fc9c3600f/02760c80c8c1e233.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10238295930572": {
+      "sku": "10238295930572",
+      "source": "flash",
+      "name": "卡伴儿童纯棉成长睡袋0-12岁A类可开合穿脱防踢被护肚 月亮熊（150cm） 成长睡袋12纯棉",
+      "price": "139",
+      "orig": "249",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "CURBBLAN 卡伴旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/548050/21/9851/10206/6ae84dfbF0bbb9732/00ae0c80c852d26e.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10216970025052": {
+      "sku": "10216970025052",
+      "source": "flash",
+      "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 纯真白兔 【90码】推荐身高80-90cm",
+      "price": "99",
+      "orig": "199",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "i-baby官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/568802/30/2484/11301/6ae84a1fF7787737c/02760c80c82b59fe.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10082087937250": {
+      "sku": "10082087937250",
+      "source": "flash",
+      "name": "babycare新生儿毛毯盖毯幼儿园宝宝午睡秋冬四季空调被毯子被子儿童节礼物 【福利款】梅尼尔紫-双面抑菌绒毯",
+      "price": "79",
+      "orig": "159",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "Babycare官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/554159/23/5469/43502/6ae1ce0cF603b6f91/02760c80c864c0a2.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10096361056488": {
+      "sku": "10096361056488",
+      "source": "flash",
+      "name": "OAK FAMILY新生婴儿一体式防惊跳睡袋加厚秋冬男女宝宝睡袋 胖达熊 66cm（推荐3-6个月）",
+      "price": "259",
+      "orig": "518",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "OAK FAMILY旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/567765/8/4638/10156/6ae852d6F5e8c2f17/00ae0c80c8e2a009.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100331098297": {
+      "sku": "100331098297",
+      "source": "flash",
+      "name": "贝博氏babybox婴儿定型枕0-6个月睡圆头纠正头型宝宝枕头0-1岁抗菌款",
+      "price": "39.9",
+      "orig": "299",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "贝博氏京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/553295/24/7224/7091/6ae7efc5Ffbe11441/00ae0c80c8a475c0.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10235973956647": {
+      "sku": "10235973956647",
+      "source": "flash",
+      "name": "小魔箭活动【暖姜羊毛】分腿/睡袋恒温春秋冬款宝宝婴儿童四季通用防踢 羊毛x暖姜【加厚推荐0-10℃】森林奇遇记 XL/100码建议身高90-100CM",
+      "price": "124.45",
+      "orig": "248.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "小魔箭 XMAARROWF旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/548981/1/11716/15746/6ae95dceF40b200ca/02760c80c8095c82.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10205579784928": {
+      "sku": "10205579784928",
+      "source": "flash",
+      "name": "OAK FAMILY秋冬宝宝夹棉睡袋纯棉加厚儿童防踢被婴儿分腿睡衣保暖爬服 星际漫游 73cm",
+      "price": "244.5",
+      "orig": "489",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "OAK FAMILY旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/568209/28/3617/13500/6ae85302F27b1c798/00ae0c80c80827aa.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10235450684505": {
+      "sku": "10235450684505",
+      "source": "flash",
+      "name": "英氏（YEEHOO）婴儿豆豆毯纯棉被套可机洗防踢薄被子午睡毯幼儿童盖毯四季通用 星梦奇旅（不含芯） 100*120cm",
+      "price": "159",
+      "orig": "318",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "英氏 YEEHOO母婴家纺旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/570338/3/1504/10031/6ae85c4bF39e7576b/00ae0c80c807f38f.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10167604760601": {
+      "sku": "10167604760601",
+      "source": "flash",
+      "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【49%有机棉+33%粘胶纤维+18%莱卡纤维】澳洲云兔连帽浴巾80*80cm",
+      "price": "89",
+      "orig": "169",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "love to dream旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/551446/37/12446/6587/6ae84cb1F769407c4/00ae0c80c848c8fe.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100331216307": {
+      "sku": "100331216307",
+      "source": "flash",
+      "name": "9i9婴儿定型枕头宝宝枕头新生儿童枕枕套可拆洗可调节蓝",
+      "price": "29.9",
+      "orig": "79",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "9i9京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/548073/27/11878/32887/6ae80265F1f6a93bb/02760c80c8fda46c.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10232809594838": {
+      "sku": "10232809594838",
+      "source": "flash",
+      "name": "babycare婴儿睡袋四季通用款山茶花儿童防踢被神器中大童春夏宝宝睡袋 【柔暖厚夹棉】瞌睡兔（推荐室温：12-16℃） 90cm",
+      "price": "249",
+      "orig": "499",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "Babycare官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/545168/23/13927/34285/6ae1cdd4F3abc0c92/02760c80c805f237.png",
+      "streak": 54,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10228742627255": {
+      "sku": "10228742627255",
+      "source": "flash",
+      "name": "良良（liangliang）婴儿抱被纯棉新生儿包被襁褓微厚包单四季通用防惊跳 【竹棉纱布-夏季款】绿野（适合20-30℃） 95*95cm",
+      "price": "99",
+      "orig": "328",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "良良官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/547911/7/8715/14133/6adf3daaF7bbd83bc/02760c80c849279e.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10158221578366": {
+      "sku": "10158221578366",
+      "source": "flash",
+      "name": "英氏导湿恒温婴儿睡袋春秋儿童分腿宝宝防踢被四季厚款 竹棉爱的绒分腿睡袋（鸟） M(建议身高90-100cm 2-3.5岁 11-14KG)",
+      "price": "450",
+      "orig": "1049",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "英氏 YEEHOO母婴家纺旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/551893/7/8675/10569/6ae85d66F977fa4fa/00ae0c80c8c58653.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100434133890": {
+      "sku": "100434133890",
+      "source": "flash",
+      "name": "卡贝乐婴儿定型枕头新生儿见面礼物宝宝枕头0-6个月以上睡圆头1-3岁",
+      "price": "64.5",
+      "orig": "129",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "卡贝乐母婴京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/568411/34/3187/12085/6ae843a6F745f6699/00ae0c80c8ed6d4e.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100438488896": {
+      "sku": "100438488896",
+      "source": "flash",
+      "name": "葆氏儿童枕头豆豆绒枕安抚枕双面可躺幼儿园宝宝透气亲肤学生午睡枕头",
+      "price": "29.9",
+      "orig": "69",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-03 20:00:00",
+      "promoEnd": "2026-11-04 09:59:59",
+      "deleted": false,
+      "shop": "葆氏京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/550275/6/11062/12773/6ae7ef19F435aba4e/00ae0c80c8661269.png",
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100433702584": {
@@ -1340,7 +1316,7 @@
       "shop": "喜亲宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572028/32/264/32601/6ae7f55dFd5accdea/00ae0c80c85eee73.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100433712032": {
@@ -1356,7 +1332,7 @@
       "shop": "喜亲宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569319/37/1507/8157/6ae7f50eF11ee41e4/00ae0c80c8b9e911.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100318468095": {
@@ -1372,7 +1348,7 @@
       "shop": "i-baby京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/556443/11/5335/33818/6ae7fc4bF1802c5f3/02760c80c82f3bd9.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100415322452": {
@@ -1388,7 +1364,7 @@
       "shop": "i-baby京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/556443/11/5335/33818/6ae7fc4bF1802c5f3/02760c80c82f3bd9.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100318468097": {
@@ -1404,7 +1380,7 @@
       "shop": "i-baby京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/556443/11/5335/33818/6ae7fc4bF1802c5f3/02760c80c82f3bd9.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100433711960": {
@@ -1420,7 +1396,7 @@
       "shop": "喜亲宝京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/562529/39/3931/10354/6ae7f518Ffdd6f233/00ae0c80c8b77954.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100323480453": {
@@ -1436,7 +1412,7 @@
       "shop": "爱宝适京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561835/30/5876/937/6ae8465eF693b5291/02760c80c824fe14.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100323593019": {
@@ -1452,7 +1428,7 @@
       "shop": "P.Health Kids京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569396/37/2498/6131/6ae81c12F9980db9e/00ae0c80c8867b36.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100144259848": {
@@ -1468,7 +1444,7 @@
       "shop": "棉之润京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569632/26/1787/9976/6ae84e41Fb0e14751/00ae0c80c8d104ba.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100280291623": {
@@ -1484,7 +1460,7 @@
       "shop": "P.Health Kids京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/535953/33/13082/17865/6ae81b5fF551657c3/00ae0c80c805f3e4.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100305971756": {
@@ -1500,7 +1476,7 @@
       "shop": "爱宝适京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561835/30/5876/937/6ae8465eF693b5291/02760c80c824fe14.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10235426817351": {
@@ -1516,7 +1492,7 @@
       "shop": "i-baby官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/557046/34/6425/25576/6ae84be2F863e2e3a/02760c80c8249c5b.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10216970025065": {
@@ -1532,7 +1508,7 @@
       "shop": "i-baby官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/568802/30/2484/11301/6ae84a1fF7787737c/02760c80c82b59fe.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10216970025058": {
@@ -1548,7 +1524,7 @@
       "shop": "i-baby官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/562387/9/4368/13384/6ae84b07Fb351148d/02760c80c8d0aedb.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100435629162": {
@@ -1564,7 +1540,7 @@
       "shop": "安可新京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/551688/3/12057/42320/6ae84ea6F9c811ec5/00ae0c80c8a2a952.png",
-      "streak": 519,
+      "streak": 521,
       "firstSeen": "2026-11-03T02:01:05.655Z"
     },
     "100339318680": {
@@ -1580,7 +1556,7 @@
       "shop": "安可新京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/567698/30/3703/33225/6ae84b93Ff8f4ac15/00ae0c80c80f622d.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10238210069009": {
@@ -1596,7 +1572,7 @@
       "shop": "love to dream旗舰店",
       "isNew": false,
       "pic": "jfs/t1/558244/5/6474/6587/6ae84ca9F50cf6455/00ae0c80c835f6d6.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10167604760602": {
@@ -1612,7 +1588,7 @@
       "shop": "love to dream旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569717/22/1870/6587/6ae84cadF462d88b2/00ae0c80c884d330.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10232809594839": {
@@ -1628,7 +1604,7 @@
       "shop": "Babycare官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545168/23/13927/34285/6ae1cdd4F3abc0c92/02760c80c805f237.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100328795541": {
@@ -1644,7 +1620,7 @@
       "shop": "爱宝适京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561835/30/5876/937/6ae8465eF693b5291/02760c80c824fe14.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100430819408": {
@@ -1660,7 +1636,7 @@
       "shop": "爱宝适京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561835/30/5876/937/6ae8465eF693b5291/02760c80c824fe14.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100439906016": {
@@ -1676,7 +1652,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/567618/24/4493/7190/6ae855f8F9a800dcb/02760c80c8b9c43a.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100439906148": {
@@ -1692,7 +1668,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572265/22/387/8921/6ae856d5F0c5127d8/02760c80c895c39b.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100439906116": {
@@ -1708,7 +1684,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572265/22/387/8921/6ae856d5F0c5127d8/02760c80c895c39b.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100334196191": {
@@ -1724,7 +1700,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/553206/3/9098/5590/6ae856adF69de3c4e/02760c80c88bab06.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100439906108": {
@@ -1740,7 +1716,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/553206/3/9098/5590/6ae856adF69de3c4e/02760c80c88bab06.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100322095219": {
@@ -1756,7 +1732,7 @@
       "shop": "良良京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/571282/31/1187/10113/6ae8908bF79eeb7e3/00ae0c80c84c4fc5.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100439906188": {
@@ -1772,7 +1748,7 @@
       "shop": "水星儿童（MERCURY Kids）母婴京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/567618/24/4493/7190/6ae855f8F9a800dcb/02760c80c8b9c43a.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100395526388": {
@@ -1788,7 +1764,7 @@
       "shop": "良良京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/571075/25/1436/2350/6ae893c0F787bfd4d/00ae0c80c8d90e11.jpg",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100420765314": {
@@ -1804,7 +1780,7 @@
       "shop": "良良京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/562353/29/4447/10113/6ae892d2F3d907acf/00ae0c80c8aa0401.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100420765274": {
@@ -1820,7 +1796,7 @@
       "shop": "良良京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/567967/8/3580/7881/6ae89070F633f04eb/00ae0c80c865e681.jpg",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100444049680": {
@@ -1836,7 +1812,7 @@
       "shop": "雅鹿·自由自在婴童寝居京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/563068/21/5235/26160/6ae86280F96c60fc8/02760c80c8299b0e.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100444049808": {
@@ -1852,7 +1828,7 @@
       "shop": "雅鹿·自由自在婴童寝居京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569975/21/1733/22937/6ae86230F220a4580/02760c80c8890721.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100444049826": {
@@ -1868,7 +1844,7 @@
       "shop": "雅鹿·自由自在婴童寝居京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/570550/17/1852/28223/6ae86213F92dc50d8/02760c80c89ab16d.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100336269997": {
@@ -1884,7 +1860,7 @@
       "shop": "雅鹿·自由自在婴童寝居京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/558131/30/6700/19836/6ae8630eFc3cb57f8/02760c80c8532fb7.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10235969509908": {
@@ -1900,7 +1876,7 @@
       "shop": "小魔箭 XMAARROWF旗舰店",
       "isNew": false,
       "pic": "jfs/t1/552107/39/9700/15851/6ae95d3cFaa4ef86d/02760c80c8b89997.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10235973956634": {
@@ -1916,7 +1892,7 @@
       "shop": "小魔箭 XMAARROWF旗舰店",
       "isNew": false,
       "pic": "jfs/t1/554284/8/7459/15392/6ae95446F9dc636ba/02760c80c8c70eca.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100322095303": {
@@ -1932,7 +1908,7 @@
       "shop": "良良京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/557152/16/5880/10113/6ae89087Ff8fddfca/00ae0c80c863d0a7.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10083040561773": {
@@ -1948,33 +1924,7 @@
       "shop": "德佑官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/555688/4/6375/10424/6ae85cbbF95f5736c/00ae0c80c8f95ab0.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10036380207009": {
-      "sku": "10036380207009",
-      "source": "stage",
-      "stageId": "347066387",
-      "name": "成长睡袋",
-      "price": "249",
-      "stock": "10",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/572542/19/58/10206/6ae84d3bF1322292b/00ae0c80c8e49c1c.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "100339995280": {
-      "sku": "100339995280",
-      "source": "stage",
-      "stageId": "347066387",
-      "name": "哈卡达枕头1-3岁",
-      "price": "413.28",
-      "stock": "150",
-      "limit": "2",
-      "shop": "",
-      "pic": "jfs/t1/551267/29/8692/10608/6ae93a89Fccdaa6c4/02760c80c8bac20c.png",
-      "streak": 51,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100260267902": {
@@ -1987,33 +1937,7 @@
       "limit": "2",
       "shop": "",
       "pic": "jfs/t1/554266/14/7611/15865/6ae93b9eFd8b8a13f/00ae0c80c8857678.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.442Z"
-    },
-    "10025318853624": {
-      "sku": "10025318853624",
-      "source": "stage",
-      "stageId": "347066387",
-      "name": "加厚一体式睡袋",
-      "price": "518",
-      "stock": "5",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/551327/35/10360/10156/6ae852c6F40c8d55e/00ae0c80c8b8fc85.png",
-      "streak": 52,
-      "firstSeen": "2026-11-03T12:01:00.443Z"
-    },
-    "10036102175879": {
-      "sku": "10036102175879",
-      "source": "stage",
-      "stageId": "347066387",
-      "name": "ibaby睡被",
-      "price": "339",
-      "stock": "200",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/549093/34/12814/19337/6ae84c07Ff691233d/00ae0c80c8abc04a.png",
-      "streak": 51,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "100317907661": {
@@ -2026,7 +1950,46 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/545118/3/13632/23987/6ae93efaF8dbd0188/00ae0c80c83a5985.png",
-      "streak": 51,
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "100339995280": {
+      "sku": "100339995280",
+      "source": "stage",
+      "stageId": "347066387",
+      "name": "哈卡达枕头1-3岁",
+      "price": "413.28",
+      "stock": "150",
+      "limit": "2",
+      "shop": "",
+      "pic": "jfs/t1/551267/29/8692/10608/6ae93a89Fccdaa6c4/02760c80c8bac20c.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10036102175879": {
+      "sku": "10036102175879",
+      "source": "stage",
+      "stageId": "347066387",
+      "name": "ibaby睡被",
+      "price": "339",
+      "stock": "200",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/549093/34/12814/19337/6ae84c07Ff691233d/00ae0c80c8abc04a.png",
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.442Z"
+    },
+    "10036380207009": {
+      "sku": "10036380207009",
+      "source": "stage",
+      "stageId": "347066387",
+      "name": "成长睡袋",
+      "price": "249",
+      "stock": "10",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/572542/19/58/10206/6ae84d3bF1322292b/00ae0c80c8e49c1c.png",
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     },
     "10034456368002": {
@@ -2039,7 +2002,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/568571/19/3509/13306/6ae849f4F9df8e38d/00ae0c80c893f399.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10024595642288": {
@@ -2052,33 +2015,20 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/571923/28/792/35879/6ae85dd4Fa8578dc4/00ae0c80c805a0b5.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
-    "10030708587564": {
-      "sku": "10030708587564",
+    "10025318853624": {
+      "sku": "10025318853624",
       "source": "stage",
       "stageId": "347066387",
-      "name": "连帽浴巾",
-      "price": "169",
-      "stock": "20",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/555660/29/8316/6587/6ae84c6cFc0b9f401/00ae0c80c87f8ff3.png",
-      "streak": 51,
-      "firstSeen": "2026-11-03T12:01:00.443Z"
-    },
-    "10033512286048": {
-      "sku": "10033512286048",
-      "source": "stage",
-      "stageId": "347066387",
-      "name": "纯棉加厚分腿睡衣",
-      "price": "489",
+      "name": "加厚一体式睡袋",
+      "price": "518",
       "stock": "5",
       "limit": "1",
       "shop": "",
-      "pic": "jfs/t1/549724/9/9824/13500/6ae8530dFb32de8b7/00ae0c80c8a83dc5.png",
-      "streak": 52,
+      "pic": "jfs/t1/551327/35/10360/10156/6ae852c6F40c8d55e/00ae0c80c8b8fc85.png",
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10036151792876": {
@@ -2091,7 +2041,20 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/554756/3/9708/49110/6ae95db7F37c8adb5/02760c80c8efd163.png",
-      "streak": 51,
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.443Z"
+    },
+    "10033512286048": {
+      "sku": "10033512286048",
+      "source": "stage",
+      "stageId": "347066387",
+      "name": "纯棉加厚分腿睡衣",
+      "price": "489",
+      "stock": "5",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/549724/9/9824/13500/6ae8530dFb32de8b7/00ae0c80c8a83dc5.png",
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10036104344677": {
@@ -2104,20 +2067,20 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/552522/6/9414/10031/6ae85c2bFa0c807dd/00ae0c80c8db20f2.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
-    "10029716926071": {
-      "sku": "10029716926071",
+    "10030708587564": {
+      "sku": "10030708587564",
       "source": "stage",
       "stageId": "347066387",
-      "name": "英氏爱的绒睡袋",
-      "price": "1049",
-      "stock": "10",
+      "name": "连帽浴巾",
+      "price": "169",
+      "stock": "20",
       "limit": "1",
       "shop": "",
-      "pic": "jfs/t1/569166/13/2176/10569/6ae85d2dF313a34aa/00ae0c80c8878486.png",
-      "streak": 52,
+      "pic": "jfs/t1/555660/29/8316/6587/6ae84c6cFc0b9f401/00ae0c80c87f8ff3.png",
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10021342771458": {
@@ -2130,7 +2093,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/547099/2/12253/5288/6ae85dbbF82e79cd1/00ae0c80c8dc28a3.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "14361871098": {
@@ -2143,7 +2106,20 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/556110/18/6718/14771/6ae862f8Fd26c71da/00ae0c80c83eb4c6.png",
-      "streak": 51,
+      "streak": 53,
+      "firstSeen": "2026-11-03T12:01:00.443Z"
+    },
+    "10029716926071": {
+      "sku": "10029716926071",
+      "source": "stage",
+      "stageId": "347066387",
+      "name": "英氏爱的绒睡袋",
+      "price": "1049",
+      "stock": "10",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/569166/13/2176/10569/6ae85d2dF313a34aa/00ae0c80c8878486.png",
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "100318468135": {
@@ -2156,7 +2132,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/548420/31/12184/8936/6ae7fb40F50065b51/00ae0c80c8d2c105.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "100317967692": {
@@ -2169,7 +2145,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/562158/40/3839/2350/6ae893afFb151f1be/00ae0c80c87627a1.jpg",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10036151872403": {
@@ -2182,7 +2158,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/570896/6/1523/45516/6ae95d1eF1fe306b3/02760c80c84e20bf.png",
-      "streak": 51,
+      "streak": 53,
       "firstSeen": "2026-11-03T12:01:00.443Z"
     },
     "10024652160214": {
@@ -2195,7 +2171,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/562886/21/3565/10424/6ae85caeF596370af/00ae0c80c81df9fc.png",
-      "streak": 52,
+      "streak": 54,
       "firstSeen": "2026-11-03T12:01:00.442Z"
     }
   },
@@ -2273,533 +2249,533 @@
       "name": "得力旺旺抱抱桶",
       "at": 1793676039982
     },
-    "10238295930572": {
-      "price": "139",
-      "orig": "249",
-      "name": "卡伴儿童纯棉成长睡袋0-12岁A类可开合穿脱防踢被护肚 月亮熊（150cm） 成长睡袋12纯棉",
-      "at": 1793713093530
+    "100416769468": {
+      "price": "39.9",
+      "orig": "79.9",
+      "name": "bledilait儿童枕头婴儿定型枕新生纠正头型矫正宝宝防偏头0到6个月硅胶枕头",
+      "at": 1793713361130
     },
     "100295668687": {
       "price": "250",
       "orig": "700",
       "name": "诺梵亚床围栏婴儿防摔防护栏挡板T5铂金款免打孔三面 1.8+2.0+2.0三面装",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100420176076": {
       "price": "79",
       "orig": "269",
       "name": "ibaby企鹅绒儿童被子午睡毯子沙发毯幼儿园毛毯秋冬绅士北极熊120×150",
-      "at": 1793713093530
-    },
-    "100326395276": {
-      "price": "219",
-      "orig": "439",
-      "name": "哈卡达Hagaday儿童枕头1-3岁四季通用婴儿硅胶枕专用",
-      "at": 1793713093530
-    },
-    "100252813915": {
-      "price": "16.9",
-      "orig": "39.9",
-      "name": "安可新 婴儿围嘴【4条装】宝宝纯棉8层纱布可洗式儿童围兜 27*28cm",
-      "at": 1793713093530
-    },
-    "100414621004": {
-      "price": "80",
-      "orig": "189",
-      "name": "贝因美（Beingmate）婴儿抱被纯棉秋冬宝宝包被初生新生儿产房防惊跳包巾 伴眠95*95",
-      "at": 1793713093530
-    },
-    "100199034230": {
-      "price": "742",
-      "orig": "1788",
-      "name": "贝易床围栏宝宝床上防护栏床护栏云母灰1.8+2+2m",
-      "at": 1793713093530
-    },
-    "100420175844": {
-      "price": "324.99",
-      "orig": "650",
-      "name": "ibaby×outlast恒温豆豆被儿童被子幼儿园宝宝秋冬100g啾啾花语120*150",
-      "at": 1793713093530
-    },
-    "100331216307": {
-      "price": "29.9",
-      "orig": "79",
-      "name": "9i9婴儿定型枕头宝宝枕头新生儿童枕枕套可拆洗可调节蓝",
-      "at": 1793713093530
-    },
-    "100367160604": {
-      "price": "16.9",
-      "orig": "33.9",
-      "name": "安可新【9条装】 婴儿一次性浴巾儿童游泳便携绵柔加厚浴巾",
-      "at": 1793713093530
-    },
-    "10096361056488": {
-      "price": "259",
-      "orig": "518",
-      "name": "OAK FAMILY新生婴儿一体式防惊跳睡袋加厚秋冬男女宝宝睡袋 胖达熊 66cm（推荐3-6个月）",
-      "at": 1793713093530
-    },
-    "100331098297": {
-      "price": "39.9",
-      "orig": "299",
-      "name": "贝博氏babybox婴儿定型枕0-6个月睡圆头纠正头型宝宝枕头0-1岁抗菌款",
-      "at": 1793713093530
-    },
-    "10235426817355": {
-      "price": "99",
-      "orig": "339",
-      "name": "ibaby×outlast太空科技恒温深睡安抚婴被宝宝盖毯儿童睡被秋冬-清 钻石格不倒绒-鹦语花香-秋冬款14-18℃ 110*140cm",
-      "at": 1793713093530
-    },
-    "100434133890": {
-      "price": "64.5",
-      "orig": "129",
-      "name": "卡贝乐婴儿定型枕头新生儿见面礼物宝宝枕头0-6个月以上睡圆头1-3岁",
-      "at": 1793713093530
-    },
-    "100438488896": {
-      "price": "29.9",
-      "orig": "69",
-      "name": "葆氏儿童枕头豆豆绒枕安抚枕双面可躺幼儿园宝宝透气亲肤学生午睡枕头",
-      "at": 1793713093530
-    },
-    "100317907723": {
-      "price": "100",
-      "orig": "299",
-      "name": "贝因美（Beingmate）婴儿睡袋宝宝秋冬纯棉恒温分腿睡袋儿童一体防踢被子中厚 伴眠L",
-      "at": 1793713093530
-    },
-    "10216970025052": {
-      "price": "99",
-      "orig": "199",
-      "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 纯真白兔 【90码】推荐身高80-90cm",
-      "at": 1793713093530
-    },
-    "10082087937250": {
-      "price": "79",
-      "orig": "159",
-      "name": "babycare新生儿毛毯盖毯幼儿园宝宝午睡秋冬四季空调被毯子被子儿童节礼物 【福利款】梅尼尔紫-双面抑菌绒毯",
-      "at": 1793713093530
-    },
-    "10167604760601": {
-      "price": "89",
-      "orig": "169",
-      "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【49%有机棉+33%粘胶纤维+18%莱卡纤维】澳洲云兔连帽浴巾80*80cm",
-      "at": 1793713093530
-    },
-    "100330570711": {
-      "price": "26",
-      "orig": "56",
-      "name": "喜亲宝婴儿云片枕宝宝枕头10层纯棉纱布枕巾新生儿平枕拍嗝巾2条装",
-      "at": 1793713093530
-    },
-    "10205579784928": {
-      "price": "244.5",
-      "orig": "489",
-      "name": "OAK FAMILY秋冬宝宝夹棉睡袋纯棉加厚儿童防踢被婴儿分腿睡衣保暖爬服 星际漫游 73cm",
-      "at": 1793713093530
-    },
-    "10235973956647": {
-      "price": "124.45",
-      "orig": "248.9",
-      "name": "小魔箭活动【暖姜羊毛】分腿/睡袋恒温春秋冬款宝宝婴儿童四季通用防踢 羊毛x暖姜【加厚推荐0-10℃】森林奇遇记 XL/100码建议身高90-100CM",
-      "at": 1793713093530
-    },
-    "10235450684505": {
-      "price": "159",
-      "orig": "318",
-      "name": "英氏（YEEHOO）婴儿豆豆毯纯棉被套可机洗防踢薄被子午睡毯幼儿童盖毯四季通用 星梦奇旅（不含芯） 100*120cm",
-      "at": 1793713093530
-    },
-    "100416769468": {
-      "price": "39.9",
-      "orig": "79.9",
-      "name": "bledilait儿童枕头婴儿定型枕新生纠正头型矫正宝宝防偏头0到6个月硅胶枕头",
-      "at": 1793713093530
-    },
-    "100433481642": {
-      "price": "38",
-      "orig": "79",
-      "name": "喜亲宝 婴儿定型枕头新生儿安抚抱枕睡枕宝宝双面可用【睡头型+安抚】蓝",
-      "at": 1793713093530
-    },
-    "10158221578366": {
-      "price": "450",
-      "orig": "1049",
-      "name": "英氏导湿恒温婴儿睡袋春秋儿童分腿宝宝防踢被四季厚款 竹棉爱的绒分腿睡袋（鸟） M(建议身高90-100cm 2-3.5岁 11-14KG)",
-      "at": 1793713093530
-    },
-    "10232809594838": {
-      "price": "249",
-      "orig": "499",
-      "name": "babycare婴儿睡袋四季通用款山茶花儿童防踢被神器中大童春夏宝宝睡袋 【柔暖厚夹棉】瞌睡兔（推荐室温：12-16℃） 90cm",
-      "at": 1793713093530
-    },
-    "100434450874": {
-      "price": "12.9",
-      "orig": "34.9",
-      "name": "9i9新生儿枕头婴儿枕巾纯棉纱布初生宝宝平枕拍嗝巾护肚巾吸汗透气",
-      "at": 1793713093530
-    },
-    "10228742627255": {
-      "price": "99",
-      "orig": "328",
-      "name": "良良（liangliang）婴儿抱被纯棉新生儿包被襁褓微厚包单四季通用防惊跳 【竹棉纱布-夏季款】绿野（适合20-30℃） 95*95cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100306242723": {
       "price": "150",
       "orig": "669",
       "name": "好孩子（gb）防踢被睡袋儿童透气防蹬被子7A抗菌春秋中大童空调保暖幼儿园",
-      "at": 1793713093530
+      "at": 1793713361130
+    },
+    "100252813915": {
+      "price": "16.9",
+      "orig": "39.9",
+      "name": "安可新 婴儿围嘴【4条装】宝宝纯棉8层纱布可洗式儿童围兜 27*28cm",
+      "at": 1793713361130
+    },
+    "100330570711": {
+      "price": "26",
+      "orig": "56",
+      "name": "喜亲宝婴儿云片枕宝宝枕头10层纯棉纱布枕巾新生儿平枕拍嗝巾2条装",
+      "at": 1793713361130
+    },
+    "100199034230": {
+      "price": "742",
+      "orig": "1788",
+      "name": "贝易床围栏宝宝床上防护栏床护栏云母灰1.8+2+2m",
+      "at": 1793713361130
+    },
+    "100420175844": {
+      "price": "324.99",
+      "orig": "650",
+      "name": "ibaby×outlast恒温豆豆被儿童被子幼儿园宝宝秋冬100g啾啾花语120*150",
+      "at": 1793713361130
+    },
+    "100317907723": {
+      "price": "100",
+      "orig": "299",
+      "name": "贝因美（Beingmate）婴儿睡袋宝宝秋冬纯棉恒温分腿睡袋儿童一体防踢被子中厚 伴眠L",
+      "at": 1793713361130
+    },
+    "100367160604": {
+      "price": "16.9",
+      "orig": "33.9",
+      "name": "安可新【9条装】 婴儿一次性浴巾儿童游泳便携绵柔加厚浴巾",
+      "at": 1793713361130
+    },
+    "100326395276": {
+      "price": "219",
+      "orig": "439",
+      "name": "哈卡达Hagaday儿童枕头1-3岁四季通用婴儿硅胶枕专用",
+      "at": 1793713361130
+    },
+    "100433481642": {
+      "price": "38",
+      "orig": "79",
+      "name": "喜亲宝 婴儿定型枕头新生儿安抚抱枕睡枕宝宝双面可用【睡头型+安抚】蓝",
+      "at": 1793713361130
+    },
+    "10235426817355": {
+      "price": "99",
+      "orig": "339",
+      "name": "ibaby×outlast太空科技恒温深睡安抚婴被宝宝盖毯儿童睡被秋冬-清 钻石格不倒绒-鹦语花香-秋冬款14-18℃ 110*140cm",
+      "at": 1793713361130
+    },
+    "100414621004": {
+      "price": "80",
+      "orig": "189",
+      "name": "贝因美（Beingmate）婴儿抱被纯棉秋冬宝宝包被初生新生儿产房防惊跳包巾 伴眠95*95",
+      "at": 1793713361130
+    },
+    "100434450874": {
+      "price": "12.9",
+      "orig": "34.9",
+      "name": "9i9新生儿枕头婴儿枕巾纯棉纱布初生宝宝平枕拍嗝巾护肚巾吸汗透气",
+      "at": 1793713361130
+    },
+    "10238295930572": {
+      "price": "139",
+      "orig": "249",
+      "name": "卡伴儿童纯棉成长睡袋0-12岁A类可开合穿脱防踢被护肚 月亮熊（150cm） 成长睡袋12纯棉",
+      "at": 1793713361130
+    },
+    "10216970025052": {
+      "price": "99",
+      "orig": "199",
+      "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 纯真白兔 【90码】推荐身高80-90cm",
+      "at": 1793713361130
+    },
+    "10082087937250": {
+      "price": "79",
+      "orig": "159",
+      "name": "babycare新生儿毛毯盖毯幼儿园宝宝午睡秋冬四季空调被毯子被子儿童节礼物 【福利款】梅尼尔紫-双面抑菌绒毯",
+      "at": 1793713361130
+    },
+    "10096361056488": {
+      "price": "259",
+      "orig": "518",
+      "name": "OAK FAMILY新生婴儿一体式防惊跳睡袋加厚秋冬男女宝宝睡袋 胖达熊 66cm（推荐3-6个月）",
+      "at": 1793713361130
+    },
+    "100331098297": {
+      "price": "39.9",
+      "orig": "299",
+      "name": "贝博氏babybox婴儿定型枕0-6个月睡圆头纠正头型宝宝枕头0-1岁抗菌款",
+      "at": 1793713361130
+    },
+    "10235973956647": {
+      "price": "124.45",
+      "orig": "248.9",
+      "name": "小魔箭活动【暖姜羊毛】分腿/睡袋恒温春秋冬款宝宝婴儿童四季通用防踢 羊毛x暖姜【加厚推荐0-10℃】森林奇遇记 XL/100码建议身高90-100CM",
+      "at": 1793713361130
+    },
+    "10205579784928": {
+      "price": "244.5",
+      "orig": "489",
+      "name": "OAK FAMILY秋冬宝宝夹棉睡袋纯棉加厚儿童防踢被婴儿分腿睡衣保暖爬服 星际漫游 73cm",
+      "at": 1793713361130
+    },
+    "10235450684505": {
+      "price": "159",
+      "orig": "318",
+      "name": "英氏（YEEHOO）婴儿豆豆毯纯棉被套可机洗防踢薄被子午睡毯幼儿童盖毯四季通用 星梦奇旅（不含芯） 100*120cm",
+      "at": 1793713361130
+    },
+    "10167604760601": {
+      "price": "89",
+      "orig": "169",
+      "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【49%有机棉+33%粘胶纤维+18%莱卡纤维】澳洲云兔连帽浴巾80*80cm",
+      "at": 1793713361130
+    },
+    "100331216307": {
+      "price": "29.9",
+      "orig": "79",
+      "name": "9i9婴儿定型枕头宝宝枕头新生儿童枕枕套可拆洗可调节蓝",
+      "at": 1793713361130
+    },
+    "10232809594838": {
+      "price": "249",
+      "orig": "499",
+      "name": "babycare婴儿睡袋四季通用款山茶花儿童防踢被神器中大童春夏宝宝睡袋 【柔暖厚夹棉】瞌睡兔（推荐室温：12-16℃） 90cm",
+      "at": 1793713361130
+    },
+    "10228742627255": {
+      "price": "99",
+      "orig": "328",
+      "name": "良良（liangliang）婴儿抱被纯棉新生儿包被襁褓微厚包单四季通用防惊跳 【竹棉纱布-夏季款】绿野（适合20-30℃） 95*95cm",
+      "at": 1793713361130
+    },
+    "10158221578366": {
+      "price": "450",
+      "orig": "1049",
+      "name": "英氏导湿恒温婴儿睡袋春秋儿童分腿宝宝防踢被四季厚款 竹棉爱的绒分腿睡袋（鸟） M(建议身高90-100cm 2-3.5岁 11-14KG)",
+      "at": 1793713361130
+    },
+    "100434133890": {
+      "price": "64.5",
+      "orig": "129",
+      "name": "卡贝乐婴儿定型枕头新生儿见面礼物宝宝枕头0-6个月以上睡圆头1-3岁",
+      "at": 1793713361130
+    },
+    "100438488896": {
+      "price": "29.9",
+      "orig": "69",
+      "name": "葆氏儿童枕头豆豆绒枕安抚枕双面可躺幼儿园宝宝透气亲肤学生午睡枕头",
+      "at": 1793713361130
     },
     "100433702584": {
       "price": "19.3",
       "orig": "39",
       "name": "喜亲宝新生儿包巾宝宝粘扣防惊跳包巾襁褓巾无声魔术贴包单80*35cm蓝",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100433712032": {
       "price": "39",
       "orig": "79.9",
       "name": "喜亲宝 新生儿抱被宝宝恒温豆豆绒包单包被初生婴儿睡袋 90*90天空之城",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100318468095": {
       "price": "99",
       "orig": "499",
       "name": "ibaby恒温空气层婴儿睡袋儿童分腿睡袋宝宝防踢被包被秋冬憨憨小熊120",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100415322452": {
       "price": "99",
       "orig": "499",
       "name": "ibaby恒温空气层婴儿睡袋儿童分腿睡袋宝宝防踢被包被秋冬憨憨小熊110",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100318468097": {
       "price": "99",
       "orig": "499",
       "name": "ibaby恒温空气层婴儿睡袋儿童分腿睡袋宝宝防踢被包被秋冬软萌熊猫90",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100433711960": {
       "price": "14.5",
       "orig": "29.9",
       "name": "喜亲宝 宝宝围嘴儿童洗漱巾毛巾婴幼儿洗脸巾擦脸巾宝宝口水巾（蓝色1条",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100323480453": {
       "price": "15.9",
       "orig": "25.9",
       "name": "爱宝适婴儿防抓手套0-1岁新生儿护手防抓脸手套纯棉四季款3双装 S921",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100323593019": {
       "price": "149",
       "orig": "339",
       "name": "碧荷（P.Health）儿童U型枕宝宝旅行安全座椅枕婴儿枕头u型枕护颈枕 1-6岁精灵绿",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100144259848": {
       "price": "16",
       "orig": "31.9",
       "name": "棉之润一次性浴巾加厚90g/㎡大号洗脸巾珍珠纹旅行出差毛巾5包装",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100280291623": {
       "price": "129",
       "orig": "299",
       "name": "碧荷（P.Health）婴儿斜坡枕防吐奶溢奶斜坡垫哺乳枕宝宝喂奶哄睡神器新生儿床中床",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100305971756": {
       "price": "9.9",
       "orig": "32.9",
       "name": "爱宝适婴儿定型枕0-1岁新生儿枕头舒适透气定型枕宝宝枕头粉小熊S219",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10235426817351": {
       "price": "99",
       "orig": "339",
       "name": "ibaby×outlast太空科技恒温深睡安抚婴被宝宝盖毯儿童睡被秋冬-清 钻石格不倒绒-鹿谷栖野-秋冬款14-18℃ 110*140cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10216970025065": {
       "price": "99",
       "orig": "199",
       "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 软萌熊猫 【80码】推荐身高70-80cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10216970025058": {
       "price": "99",
       "orig": "199",
       "name": "ibaby×outlast太空科技恒温空气层儿童睡袋婴儿包被宝宝睡被防踢被 憨憨小熊 【80码】推荐身高70-80cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100435629162": {
       "price": "22.6",
       "orig": "49.9",
       "name": "安可新一次性口水巾婴儿围兜宝宝围嘴新生儿免洗内径加大饭兜40片兔子款",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100339318680": {
       "price": "19.9",
       "orig": "39.9",
       "name": "安可新婴儿一次性隔尿垫新生儿护理垫隔水透气尿垫姨妈垫46片33*45cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10238210069009": {
       "price": "89",
       "orig": "169",
       "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【100%有机棉 米菲联名款】连帽浴巾80*80cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10167604760602": {
       "price": "89",
       "orig": "169",
       "name": "LOVE TO dream新生婴儿包巾包单包被宝宝抱被浴巾超软吸水毛巾80*80cm 【49%有机棉+33%粘胶纤维+18%莱卡纤维】宇宙之梦连帽浴巾80*80cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10232809594839": {
       "price": "249",
       "orig": "499",
       "name": "babycare婴儿睡袋四季通用款山茶花儿童防踢被神器中大童春夏宝宝睡袋 【柔暖厚夹棉】瞌睡兔（推荐室温：12-16℃） 100cm",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100328795541": {
       "price": "15.9",
       "orig": "16.9",
       "name": "爱宝适儿童防撞角透明防磕碰防撞护角茶几家具包边贴条保护套24只装S742",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100430819408": {
       "price": "15.9",
       "orig": "29.9",
       "name": "爱宝适儿童安全锁婴儿防夹手防开多功能柜子锁安全长锁6个装卡通款S363",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100439906016": {
       "price": "299",
       "orig": "579",
       "name": "水星儿童（MERCURY Kids）幼儿园春秋抗菌六件套(海蓝色/海洋)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100439906148": {
       "price": "335",
       "orig": "669",
       "name": "水星儿童（MERCURY Kids）水星家纺 幼儿园抗菌七件套(湖水绿/远古龙)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100439906116": {
       "price": "299",
       "orig": "579",
       "name": "水星儿童（MERCURY Kids）幼儿园春秋抗菌六件套(湖水绿/远古龙)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100334196191": {
       "price": "335",
       "orig": "669",
       "name": "水星儿童（MERCURY Kids）水星家纺 幼儿园抗菌七件套(奶油粉/粉桃桃)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100439906108": {
       "price": "299",
       "orig": "579",
       "name": "水星儿童（MERCURY Kids）幼儿园春秋抗菌六件套(奶油粉/粉桃桃)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100322095219": {
       "price": "173",
       "orig": "346",
       "name": "良良儿童枕头流动塑型A类抗菌宝宝枕四季定型枕3-6岁小熊款(单枕套)",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100439906188": {
       "price": "335",
       "orig": "669",
       "name": "水星儿童（MERCURY Kids）水星家纺 幼儿园抗菌七件套(海蓝色/海洋)0.6-1m床 婴幼儿A类",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100395526388": {
       "price": "149.5",
       "orig": "299",
       "name": "良良婴儿儿童硅胶枕头6-12岁宝宝护脊护颈婴儿枕防螨可水洗粉",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100420765314": {
       "price": "153",
       "orig": "306",
       "name": "良良婴儿枕头流动塑型抗菌宝宝枕四季定型儿童枕0-3岁小兔款(单枕套)",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100420765274": {
       "price": "153",
       "orig": "306",
       "name": "良良婴儿枕头流动塑型抗菌宝宝枕四季定型儿童枕0-3岁小熊款(单枕套)",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100444049680": {
       "price": "74.4",
       "orig": "149",
       "name": "雅鹿·自由自在四件套儿童学生宿舍单人床上用品1.5/1.8米床 米奇绅士",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100444049808": {
       "price": "69.4",
       "orig": "139",
       "name": "雅鹿·自由自在110g磨毛学生儿童四件套宿舍单人床上用品1.5/1.8米床 爱心熊",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100444049826": {
       "price": "54.4",
       "orig": "109",
       "name": "雅鹿·自由自在学生宿舍三件套磨毛抗菌单人床上用品 0.9/1.2床 爱心熊",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100336269997": {
       "price": "75",
       "orig": "159",
       "name": "雅鹿·自由自在全棉酒店隔脏睡袋床单被罩枕套单人出差旅行160*230cm 青柠蓝花",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10235969509908": {
       "price": "119.9",
       "orig": "239.8",
       "name": "小魔箭活动【桑蚕丝】分腿/婴儿恒温睡袋宝宝防踢被秋冬款加厚四季通用 桑蚕丝&恒温(10A抗菌）【加厚0-10℃】皇室天鹅 100码XL（建议90-100CM，3-5岁）",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10235973956634": {
       "price": "108.9",
       "orig": "217.8",
       "name": "小魔箭活动【暖姜羊毛】分腿/睡袋恒温春秋冬款宝宝婴儿童四季通用防踢 羊毛x暖姜【中厚推荐10-20℃】飞马奇遇 3XL/120码建议身高110-125CM",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100322095303": {
       "price": "173",
       "orig": "346",
       "name": "良良儿童枕头流动塑型A类抗菌宝宝枕四季定型枕3-6岁小兔款(单枕套)",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10083040561773": {
       "price": "1",
       "orig": "19.9",
       "name": "德佑婴儿隔尿垫一次性隔尿垫婴儿不可水洗护理垫宝宝用品隔尿垫 【便携金装】M码4片",
-      "at": 1793713093530
-    },
-    "10036380207009": {
-      "price": "249",
-      "orig": "",
-      "name": "成长睡袋",
-      "at": 1793713093530
-    },
-    "100339995280": {
-      "price": "413.28",
-      "orig": "",
-      "name": "哈卡达枕头1-3岁",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100260267902": {
       "price": "1092",
       "orig": "",
       "name": "贝易三面云母灰",
-      "at": 1793713093530
-    },
-    "10025318853624": {
-      "price": "518",
-      "orig": "",
-      "name": "加厚一体式睡袋",
-      "at": 1793713093530
-    },
-    "10036102175879": {
-      "price": "339",
-      "orig": "",
-      "name": "ibaby睡被",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100317907661": {
       "price": "299",
       "orig": "",
       "name": "贝因美防踢被",
-      "at": 1793713093530
+      "at": 1793713361130
+    },
+    "100339995280": {
+      "price": "413.28",
+      "orig": "",
+      "name": "哈卡达枕头1-3岁",
+      "at": 1793713361130
+    },
+    "10036102175879": {
+      "price": "339",
+      "orig": "",
+      "name": "ibaby睡被",
+      "at": 1793713361130
+    },
+    "10036380207009": {
+      "price": "249",
+      "orig": "",
+      "name": "成长睡袋",
+      "at": 1793713361130
     },
     "10034456368002": {
       "price": "199",
       "orig": "",
       "name": "ibaby睡袋",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10024595642288": {
       "price": "79",
       "orig": "",
       "name": "双面绒毯",
-      "at": 1793713093530
+      "at": 1793713361130
     },
-    "10030708587564": {
-      "price": "169",
+    "10025318853624": {
+      "price": "518",
       "orig": "",
-      "name": "连帽浴巾",
-      "at": 1793713093530
-    },
-    "10033512286048": {
-      "price": "489",
-      "orig": "",
-      "name": "纯棉加厚分腿睡衣",
-      "at": 1793713093530
+      "name": "加厚一体式睡袋",
+      "at": 1793713361130
     },
     "10036151792876": {
       "price": "248.9",
       "orig": "",
       "name": "羊毛睡袋真5折",
-      "at": 1793713093530
+      "at": 1793713361130
+    },
+    "10033512286048": {
+      "price": "489",
+      "orig": "",
+      "name": "纯棉加厚分腿睡衣",
+      "at": 1793713361130
     },
     "10036104344677": {
       "price": "318",
       "orig": "",
       "name": "英氏豆豆绒被套",
-      "at": 1793713093530
+      "at": 1793713361130
     },
-    "10029716926071": {
-      "price": "1049",
+    "10030708587564": {
+      "price": "169",
       "orig": "",
-      "name": "英氏爱的绒睡袋",
-      "at": 1793713093530
+      "name": "连帽浴巾",
+      "at": 1793713361130
     },
     "10021342771458": {
       "price": "249",
       "orig": "",
       "name": "秋冬睡袋",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "14361871098": {
       "price": "159",
       "orig": "",
       "name": "良良新生儿抱被",
-      "at": 1793713093530
+      "at": 1793713361130
+    },
+    "10029716926071": {
+      "price": "1049",
+      "orig": "",
+      "name": "英氏爱的绒睡袋",
+      "at": 1793713361130
     },
     "100318468135": {
       "price": "199",
       "orig": "",
       "name": "ibaby小奶泡睡袋",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100317967692": {
       "price": "299",
       "orig": "",
       "name": "良良硅胶枕",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10036151872403": {
       "price": "239.8",
       "orig": "",
       "name": "桑蚕丝睡袋真5折",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "10024652160214": {
       "price": "9",
       "orig": "",
       "name": "德佑隔尿垫M码4片",
-      "at": 1793713093530
+      "at": 1793713361130
     },
     "100016396244": {
       "price": "1",
@@ -4859,7 +4835,7 @@
       "name": "",
       "price": "",
       "rounds": 1,
-      "at": 1793711709735
+      "at": 1793713299699
     },
     "100441536714": {
       "name": "FFALCON雷鸟电视85英寸 85鹏7 27款 全链路QD-Mini LED 高阶VA安桥音响 96%P3色域 平板电视机85S78B",
