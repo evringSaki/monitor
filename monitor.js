@@ -398,11 +398,24 @@ function diffSnapshots(prev, curr) {
       p.streak = (old.streak || 1) + 1;
       p.firstSeen = old.firstSeen || p.firstSeen;
       if (isTracked(p)) {
-        // 首次从 main/stage 配置价切换为 flash 秒杀价时不报变价（升级过渡，防止整层刷屏），
-        // 之后 flash 价再变化就是真实的秒杀价变动
+        // 首次从 main/stage 配置价切换为 flash 秒杀价时不报变价（升级过渡，防止整层刷屏）
         const flashTakeover = p.source === 'flash' && old.source !== 'flash';
-        if (old.price && p.price && old.price !== p.price && !flashTakeover)
-          ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
+        const committed = old.price;
+        if (flashTakeover) {
+          p.pendingPrice = '';
+        } else if (committed && p.price && String(p.price) !== String(committed)) {
+          // 同一商品可能同时挂在时段楼层和秒杀楼层，秒杀那份时有时无 →
+          // 价格会来回跳（如 ￥32 ↔ ￥26.9）。新价需连续两轮一致才算真实变价
+          if (old.pendingPrice && String(old.pendingPrice) === String(p.price)) {
+            ev.priceChanged.push({ sku, name: p.name, from: committed, to: p.price, orig: p.orig || old.orig || '' });
+            p.pendingPrice = '';
+          } else {
+            p.pendingPrice = p.price;
+            p.price = committed;   // 未确认前快照保持旧价，避免抖动写回
+          }
+        } else {
+          p.pendingPrice = '';
+        }
       } else {
         if (old.pending && p.streak >= HOTZONE_CONFIRM_N) {
           p.pending = false;
