@@ -936,9 +936,9 @@ async function main() {
   }
   // 不按时间过期（3 天后回归也要能识别为"重新上架"），只保数量上限，超出丢最久未出现的
   const offKeys = Object.keys(offline);
-  if (offKeys.length > 800) {
+  if (offKeys.length > 2000) {
     offKeys.sort((a, b) => (offline[a].at || 0) - (offline[b].at || 0));
-    offKeys.slice(0, offKeys.length - 800).forEach(k => { delete offline[k]; });
+    offKeys.slice(0, offKeys.length - 2000).forEach(k => { delete offline[k]; });
   }
   snap.offline = offline;
   // 只推楼层/时段商品（有名字有价格的正经商品）；热区图片位不推（无名、噪音大，只在快照里记录）
@@ -947,7 +947,7 @@ async function main() {
   const prevNotified = (prev && prev.notified) || [];
   if (confirmed > 0) {
     const add = ev.addedMain.map(p => p.sku);
-    snap.notified = [...new Set([...prevNotified, ...add])].slice(-600); // 上限600防无限增长
+    snap.notified = [...new Set([...prevNotified, ...add])].slice(-1500); // 上限600防无限增长
   } else snap.notified = prevNotified;
 
   // 5.5) 给无名字的新商品（热区 SKU）补名字：活动页热区只有链接没名字，
