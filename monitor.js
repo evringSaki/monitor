@@ -947,7 +947,7 @@ async function main() {
   const prevNotified = (prev && prev.notified) || [];
   if (confirmed > 0) {
     const add = ev.addedMain.map(p => p.sku);
-    snap.notified = [...new Set([...prevNotified, ...add])].slice(-1500); // 上限600防无限增长
+    snap.notified = [...new Set([...prevNotified, ...add])].slice(-1500); // 上限 1500，防无限增长
   } else snap.notified = prevNotified;
 
   // 5.5) 给无名字的新商品（热区 SKU）补名字：活动页热区只有链接没名字，
