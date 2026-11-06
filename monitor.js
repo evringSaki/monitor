@@ -398,11 +398,25 @@ function diffSnapshots(prev, curr) {
       p.streak = (old.streak || 1) + 1;
       p.firstSeen = old.firstSeen || p.firstSeen;
       if (isTracked(p)) {
-        // 同一商品可能同时挂在时段楼层（配置价 ￥32）和秒杀楼层（￥26.9），秒杀那份时有时无。
-        // 来源切换导致的价格差不是真实变价 → 只在"同一来源内"价格变化时才推，即时推送、不延迟。
-        const sameSource = old.source === p.source;
-        if (old.price && p.price && old.price !== p.price && sameSource)
-          ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
+        // 同一商品可能同时挂在时段楼层（配置价 ￥32）和秒杀楼层（秒杀价 ￥26.9），秒杀那份时有时无。
+        // 处理：秒杀楼层本轮缺该商品时，沿用上次秒杀价与来源，不回落成配置价 →
+        // 价格不再抖动，真实秒杀价变化仍然立即推送（无延迟、不漏推）。
+        // 兜底：连续 12 轮（约 1 小时）都不在秒杀楼层，才静默回落为时段价。
+        if (old.source === 'flash' && p.source !== 'flash' && old.price) {
+          const rounds = (old.stageRounds || 0) + 1;
+          if (rounds < 12) {
+            p.price = old.price;
+            p.orig = old.orig || p.orig;
+            p.source = 'flash';
+            p.stageRounds = rounds;
+          } else {
+            p.stageRounds = 0;   // 真回落到时段价，静默处理
+          }
+        } else {
+          p.stageRounds = 0;
+          if (old.price && p.price && old.price !== p.price)
+            ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
+        }
       } else {
         if (old.pending && p.streak >= HOTZONE_CONFIRM_N) {
           p.pending = false;
