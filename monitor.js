@@ -399,23 +399,44 @@ function diffSnapshots(prev, curr) {
       p.firstSeen = old.firstSeen || p.firstSeen;
       if (isTracked(p)) {
         // 同一商品可能同时挂在时段楼层（配置价 ￥32）和秒杀楼层（秒杀价 ￥26.9），秒杀那份时有时无。
-        // 处理：秒杀楼层本轮缺该商品时，沿用上次秒杀价与来源，不回落成配置价 →
-        // 价格不再抖动，真实秒杀价变化仍然立即推送（无延迟、不漏推）。
-        // 兜底：连续 12 轮（约 1 小时）都不在秒杀楼层，才静默回落为时段价。
-        if (old.source === 'flash' && p.source !== 'flash' && old.price) {
+        // 解决：两个来源的价格分开记录（stagePrice / flashPrice），各自比对：
+        //   · 秒杀价变化 → 立即推（秒杀价）
+        //   · 时段价变化 → 也立即推（标注"时段价"）
+        //   · 某来源本轮缺失 → 沿用该来源上次价格，不互相覆盖，因此不会因秒杀楼层抖动而刷屏
+        // 展示价优先秒杀价；连续 12 轮（约 1 小时）不在秒杀楼层才回落为时段价。
+        const oldFlash = old.flashPrice || (old.source === 'flash' ? old.price : '');
+        const oldStage = old.stagePrice || (old.source === 'stage' ? old.price : '');
+        const rawSource = p.source;                       // 本轮页面实际给的来源
+        if (rawSource === 'flash') p.flashPrice = p.price;
+        else if (rawSource === 'stage') p.stagePrice = p.price;
+        p.flashPrice = p.flashPrice || oldFlash;
+        p.stagePrice = p.stagePrice || oldStage;
+
+        // 兜底：连续 12 轮（约 1 小时）只在时段楼层出现，说明已退出秒杀活动 → 回落为时段价
+        if (rawSource === 'stage' && oldFlash) {
           const rounds = (old.stageRounds || 0) + 1;
-          if (rounds < 12) {
-            p.price = old.price;
-            p.orig = old.orig || p.orig;
-            p.source = 'flash';
-            p.stageRounds = rounds;
-          } else {
-            p.stageRounds = 0;   // 真回落到时段价，静默处理
-          }
+          if (rounds >= 12) { p.flashPrice = ''; p.stageRounds = 0; }
+          else p.stageRounds = rounds;
         } else {
           p.stageRounds = 0;
-          if (old.price && p.price && old.price !== p.price)
-            ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.price, orig: p.orig || old.orig || '' });
+        }
+
+        // 展示价：有秒杀价用秒杀价，否则用时段价
+        if (p.flashPrice) {
+          p.price = p.flashPrice;
+          p.source = 'flash';
+        } else if (p.stagePrice) {
+          p.price = p.stagePrice;
+          p.source = 'stage';
+        }
+
+        if (oldFlash && p.flashPrice && String(oldFlash) !== String(p.flashPrice)) {
+          ev.priceChanged.push({ sku, name: p.name, from: oldFlash, to: p.flashPrice, orig: p.orig || old.orig || '', kind: 'flash' });
+        } else if (!oldFlash && p.flashPrice && old.price && String(old.price) !== String(p.flashPrice)) {
+          // 之前秒杀价已回落/首次进入秒杀楼层：用上一轮展示价做基线，避免漏推
+          ev.priceChanged.push({ sku, name: p.name, from: old.price, to: p.flashPrice, orig: p.orig || old.orig || '', kind: 'flash' });
+        } else if (oldStage && p.stagePrice && String(oldStage) !== String(p.stagePrice)) {
+          ev.priceChanged.push({ sku, name: p.name, from: oldStage, to: p.stagePrice, orig: p.orig || old.orig || '', kind: 'stage' });
         }
       } else {
         if (old.pending && p.streak >= HOTZONE_CONFIRM_N) {
@@ -662,13 +683,23 @@ function httpPostJson(hostname, urlPath, body) {
   });
 }
 
+// 推送带重试：网络抖动/接口 5xx 时最多尝试 3 次，避免"变化了但没推出去"
+async function pushWithRetry(label, body, name) {
+  let r = null, ok = false;
+  for (let i = 1; i <= 3; i++) {
+    r = await httpPostJson('www.pushplus.plus', '/send', body);
+    ok = !!(r.json && r.json.code === 200);
+    if (ok) break;
+    if (i < 3) { log(`${label} 第 ${i}/3 次提交失败，2 秒后重试`); await sleep(2000); }
+  }
+  log(`${label} ` + (ok ? '✅ 已提交' : '❌ ' + String(r && r.raw).slice(0, 150)));
+  return ok;
+}
+
 async function pushPlusSend(title, content) {
   if (!PUSHPLUS_TOKEN) { log('未配置 PUSHPLUS_TOKEN，跳过微信推送'); return false; }
   const body = JSON.stringify({ token: PUSHPLUS_TOKEN, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html' });
-  const r = await httpPostJson('www.pushplus.plus', '/send', body);
-  const ok = !!(r.json && r.json.code === 200);
-  log('PushPlus(微信) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
-  return ok;
+  return pushWithRetry('PushPlus(微信)', body);
 }
 
 // QQ 渠道（PushPlus 官方 QQ 机器人，需在 pushplus 后台绑定）：与微信同内容，
@@ -679,10 +710,7 @@ async function pushPlusQQSend(title, content) {
   const tk = PUSHPLUS_QQ_TOKEN || PUSHPLUS_TOKEN;
   if (!tk) { log('未配置 PUSHPLUS token，跳过 QQ 机器人推送'); return false; }
   const body = JSON.stringify({ token: tk, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'qq' });
-  const r = await httpPostJson('www.pushplus.plus', '/send', body);
-  const ok = !!(r.json && r.json.code === 200);
-  log('PushPlus(QQ机器人) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
-  return ok;
+  return pushWithRetry('PushPlus(QQ机器人)', body);
 }
 
 // PushPlus App 渠道：推送到 PushPlus 官方 App（独立 token，内容与微信一致）
@@ -691,10 +719,7 @@ async function pushPlusAppSend(title, content) {
   const tk = PUSHPLUS_APP_TOKEN || PUSHPLUS_TOKEN;
   if (!tk) { log('未配置 PUSHPLUS_APP_TOKEN，跳过 App 推送'); return false; }
   const body = JSON.stringify({ token: tk, title: String(PAGE_TAG + title).slice(0, 90), content: String(content), template: 'html', channel: 'app' });
-  const r = await httpPostJson('www.pushplus.plus', '/send', body);
-  const ok = !!(r.json && r.json.code === 200);
-  log('PushPlus(App) ' + (ok ? '✅ 已提交' : '❌ ' + String(r.raw).slice(0, 150)));
-  return ok;
+  return pushWithRetry('PushPlus(App)', body);
 }
 
 // 微信 + QQ 机器人 + App 同时推（三个渠道内容一致）
@@ -767,8 +792,9 @@ function productsHtml(items, newSkus) {
 function priceChangeHtml(list) {
   return list.map(c => {
     const og = c.orig ? `（日常价 ￥${c.orig}）` : '';
+    const kindTag = c.kind === 'stage' ? '（时段价）' : '';
     const tools = ` · <a href="${qrPageUrl(c)}">二维码</a> · <a href="${buildDeepLink(c.sku)}">链接</a>`;
-    return `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from}${og} → <b>￥${c.to}</b>${og}${tools}`;
+    return `· <a href="https://item.m.jd.com/product/${c.sku}.html">${c.name || '（未命名）'}</a>：￥${c.from}${og} → <b>￥${c.to}</b>${og}${kindTag}${tools}`;
   }).join('<br>');
 }
 
@@ -844,6 +870,14 @@ async function main() {
   let prev;
   try { prev = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')); }
   catch (e) { prev = { products: {} }; }
+
+  // 页面降级时可能解析不到场次（stage.id 为空）：沿用上一轮场次。
+  // 否则下一轮 prev.stage.id 为空，会漏掉「新场次开始」的推送（商品又被 notified 去重，等于整场没提示）
+  if ((!snap.stage || !snap.stage.id) && prev.stage && prev.stage.id) {
+    log(`警告：本轮未解析到场次信息，沿用上一轮场次（stageId=${prev.stage.id}）`);
+    snap.stage = prev.stage;
+    CURRENT_STAGE_ID = prev.stage.id;
+  }
 
   // ---- 下一场次开抢倒计时 ----
   // 说明：场次是服务端按时间切的，开抢前的商品数据拿不到（要 App 签名接口），
