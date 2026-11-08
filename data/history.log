@@ -111374,88 +111374,162 @@
 [2026/11/8 19:55:10]【场A】 抓取成功：195 个 SKU（时段商品 87 个 / 楼层商品 91 个）
 [2026/11/8 19:55:10]【场A】 当前场次：10:00 场（stageId=331219764）；全部场次：10:00:00 → 20:00:00 → 10:00:00
 [2026/11/8 19:55:10]【场A】 检查完成，无上新 （热区 12 个，仅记录不推送）
-[2026/11/8 19:55:21]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/8 19:55:23]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:55:23]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:55:23]【场A】 等待 7.0 秒后重试...
-[2026/11/8 19:55:31]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:55:31]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:55:31]【场A】 等待 5.2 秒后重试...
-[2026/11/8 19:55:38]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:55:38]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/8 19:55:38]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:55:42]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:55:42]【场A】 第 4/5 次命中验证页，稍后重试
-[2026/11/8 19:55:42]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:55:47]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:55:47]【场A】 第 5 次尝试（jina中转）获取到真实页面，长度 1091922
-[2026/11/8 19:55:47]【场A】 抓取成功：183 个 SKU（时段商品 87 个 / 楼层商品 90 个）
-[2026/11/8 19:55:47]【场A】 当前场次：10:00 场（stageId=331219764）；全部场次：10:00:00 → 20:00:00 → 10:00:00
-[2026/11/8 19:55:47]【场A】 检查完成，无上新 
-[2026/11/8 19:56:47]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/8 19:56:48]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:56:48]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:56:48]【场A】 等待 7.5 秒后重试...
-[2026/11/8 19:56:57]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:56:57]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:56:57]【场A】 等待 6.5 秒后重试...
-[2026/11/8 19:57:04]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:57:04]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/8 19:57:04]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:57:08]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:57:08]【场A】 第 4/5 次命中验证页，稍后重试
-[2026/11/8 19:57:08]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:57:12]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:57:12]【场A】 第 5/5 次命中验证页，稍后重试
-[2026/11/8 19:57:12]【场A】 全部重试均失败（验证页/网络），本次跳过
-[2026/11/8 19:58:12]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/8 19:58:13]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:58:13]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:58:13]【场A】 等待 7.3 秒后重试...
-[2026/11/8 19:58:21]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:58:21]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:58:21]【场A】 等待 6.0 秒后重试...
-[2026/11/8 19:58:28]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:58:28]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/8 19:58:28]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:58:31]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:58:31]【场A】 第 4/5 次命中验证页，稍后重试
-[2026/11/8 19:58:31]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:58:34]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:58:34]【场A】 第 5/5 次命中验证页，稍后重试
-[2026/11/8 19:58:34]【场A】 全部重试均失败（验证页/网络），本次跳过
-[2026/11/8 19:59:34]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/8 19:59:36]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:59:36]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:59:36]【场A】 等待 3.4 秒后重试...
-[2026/11/8 19:59:39]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 19:59:39]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 19:59:39]【场A】 等待 4.8 秒后重试...
-[2026/11/8 19:59:48]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:59:48]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/8 19:59:48]【场A】 等待 2.0 秒后重试...
-[2026/11/8 19:59:53]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 19:59:53]【场A】 第 4 次尝试（jina中转）获取到真实页面，长度 1113461
-[2026/11/8 19:59:53]【场A】 抓取成功：191 个 SKU（时段商品 87 个 / 楼层商品 91 个）
-[2026/11/8 19:59:53]【场A】 当前场次：10:00 场（stageId=331219764）；全部场次：10:00:00 → 20:00:00 → 10:00:00
-[2026/11/8 19:59:53]【场A】 【倒计时】20:00 场 开抢还有约 1 分钟（2026-11-08 20:00:00）
-[2026/11/8 19:59:54]【场A】 PushPlus(微信) ✅ 已提交
-[2026/11/8 19:59:55]【场A】 PushPlus(QQ机器人) ✅ 已提交
-[2026/11/8 19:59:55]【场A】 PushPlus(App) ✅ 已提交
-[2026/11/8 19:59:55]【场A】 检查完成，无上新 （热区 7 个，仅记录不推送）
-[2026/11/8 20:00:55]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/8 20:00:56]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 20:00:56]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 20:00:56]【场A】 等待 7.3 秒后重试...
-[2026/11/8 20:01:04]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/8 20:01:04]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/8 20:01:04]【场A】 等待 3.8 秒后重试...
-[2026/11/8 20:01:09]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 20:01:09]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/8 20:01:09]【场A】 等待 2.0 秒后重试...
-[2026/11/8 20:01:12]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 20:01:12]【场A】 第 4/5 次命中验证页，稍后重试
-[2026/11/8 20:01:12]【场A】 等待 2.0 秒后重试...
-[2026/11/8 20:01:16]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/8 20:01:16]【场A】 第 5/5 次命中验证页，稍后重试
-[2026/11/8 20:01:16]【场A】 全部重试均失败（验证页/网络），本次跳过
+[2026/11/8 20:01:27]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/8 20:01:28]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:01:28]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:01:28]【场A】 等待 4.2 秒后重试...
+[2026/11/8 20:01:32]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:01:32]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:01:32]【场A】 等待 6.5 秒后重试...
+[2026/11/8 20:01:42]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:01:42]【场A】 第 3/5 次命中验证页，稍后重试
+[2026/11/8 20:01:42]【场A】 等待 2.0 秒后重试...
+[2026/11/8 20:01:47]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:01:47]【场A】 第 4 次尝试（jina中转）获取到真实页面，长度 833409
+[2026/11/8 20:01:47]【场A】 抓取成功：143 个 SKU（时段商品 42 个 / 楼层商品 49 个）
+[2026/11/8 20:01:47]【场A】 当前场次：20:00 场（stageId=349634865）；全部场次：20:00:00 → 10:00:00 → 20:00:00
+[2026/11/8 20:01:47]【场A】 【新场次】88 个商品：
+  + 萧邦（Chopard）萧邦品牌定制 真丝眼罩 真丝眼罩 ￥1（日常价￥999） | Chopard萧邦官方旗舰店 | SKU:10238757148706 | https://item.m.jd.com/product/10238757148706.html
+  + 薇薇安·威斯特伍德（Vivienne Westwood）心形吊坠钥匙扣 黄色 西 ￥1（日常价￥850） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100095157267 | https://item.m.jd.com/product/100095157267.html
+  + E.M.【D11折扣】【礼物】女银质镀金耳环 花色 ￥108（日常价￥720） | VMOOFUN旗舰店 | SKU:10139446304021 | https://item.m.jd.com/product/10139446304021.html
+  + E.M.【D11折扣】【礼物】女珍珠五角星装饰耳饰（单只） 金色 ￥125（日常价￥830） | VMOOFUN旗舰店 | SKU:10139443128013 | https://item.m.jd.com/product/10139443128013.html
+  + CZ BY KENNETH JAY LANE【D11秒杀】【礼物】方晶锆石镀金耳 ￥153（日常价￥1050） | VMOOFUN旗舰店 | SKU:10164944177940 | https://item.m.jd.com/product/10164944177940.html
+  + E.M.【D11折扣】【礼物】女金色黄铜镀金耳饰 金色 ￥155（日常价￥1030） | VMOOFUN旗舰店 | SKU:10139447154514 | https://item.m.jd.com/product/10139447154514.html
+  + KENNETH JAY LANE【D11秒杀】【礼物】女镀金项链 金色 ￥157（日常价￥1080） | VMOOFUN旗舰店 | SKU:10163693085745 | https://item.m.jd.com/product/10163693085745.html
+  + 女士项链 ￥191 [库存18 限购1] <场次349634865> | - | SKU:10030290275612 | https://item.m.jd.com/product/10030290275612.html
+  + COMPLETEDWORKS【D11折扣】【礼物】女树脂镀金耳环 绿色 ￥207（日常价￥1380） | VMOOFUN旗舰店 | SKU:10130163146776 | https://item.m.jd.com/product/10130163146776.html
+  + COMPLETEDWORKS【D11折扣】【礼物】女珍珠镀金耳骨夹(单只) 金色 ￥207（日常价￥1380） | VMOOFUN旗舰店 | SKU:10130165222496 | https://item.m.jd.com/product/10130165222496.html
+  + CZ BY KENNETH JAY LANE【D11秒杀】【礼物】女镀金锆石手链 ￥215（日常价￥1480） | VMOOFUN旗舰店 | SKU:10163110661921 | https://item.m.jd.com/product/10163110661921.html
+  + E.M.【D11折扣】【礼物】女纯银戒指 银色L ￥216（日常价￥1440） | VMOOFUN旗舰店 | SKU:10139447544306 | https://item.m.jd.com/product/10139447544306.html
+  + 尤目【D11秒杀】【礼物】/尤目女镀金锆石耳钉 花色 FREE ￥227（日常价￥1290） | VMOOFUN旗舰店 | SKU:10130151962684 | https://item.m.jd.com/product/10130151962684.html
+  + E.M.【D11折扣】【礼物】女银质珍珠耳钉（单只） 白色 ￥231（日常价￥1540） | VMOOFUN旗舰店 | SKU:10139447624186 | https://item.m.jd.com/product/10139447624186.html
+  + JACQUEMUS【D11秒杀】【礼物】女金色发簪 黄色 FREE ￥232（日常价￥1545） | VMOOFUN旗舰店 | SKU:10134981712638 | https://item.m.jd.com/product/10134981712638.html
+  + E.M.【D11折扣】【礼物】女珍珠纯银耳环（单只） 银色 ￥248（日常价￥1650） | VMOOFUN旗舰店 | SKU:10139448477711 | https://item.m.jd.com/product/10139448477711.html
+  + 女士耳环 ￥249 [库存18 限购1] <场次349634865> | - | SKU:10030435016581 | https://item.m.jd.com/product/10030435016581.html
+  + E.M.戒指 ￥255 [库存7 限购2] <场次349634865> | - | SKU:10028265836954 | https://item.m.jd.com/product/10028265836954.html
+  + Y/Project【D11折扣】【礼物】女搪瓷银色耳环YPROJECT 粉红色 ￥273（日常价￥1820） | VMOOFUN旗舰店 | SKU:10134826186822 | https://item.m.jd.com/product/10134826186822.html
+  + 女士发簪 ￥274 [库存12 限购2] <场次349634865> | - | SKU:10027964272942 | https://item.m.jd.com/product/10027964272942.html
+  + LOREN STEWART【D11折扣】【礼物】女银质方晶锆石身体链 银色 ￥275（日常价￥1830） | VMOOFUN旗舰店 | SKU:10139472884400 | https://item.m.jd.com/product/10139472884400.html
+  + E.M.【D11折扣】【礼物】女珍珠锆石金属耳环 白色 ￥303（日常价￥2020） | VMOOFUN旗舰店 | SKU:10139447366038 | https://item.m.jd.com/product/10139447366038.html
+  + 女士锆石耳钉 ￥304 [库存16 限购1] <场次349634865> | - | SKU:10027662455736 | https://item.m.jd.com/product/10027662455736.html
+  + COMPLETEDWORKS【D11折扣】【礼物】女镀金树脂耳环 桔色 ￥306（日常价￥2040） | VMOOFUN旗舰店 | SKU:10131874115310 | https://item.m.jd.com/product/10131874115310.html
+  + CZ BY KENNETH JAY LANE【D11秒杀】【礼物】女金色黄铜镀1 ￥326（日常价￥1480） | VMOOFUN旗舰店 | SKU:10163108354363 | https://item.m.jd.com/product/10163108354363.html
+  + 锆石手链 ￥349 [库存25 限购1] <场次349634865> | - | SKU:10030215223448 | https://item.m.jd.com/product/10030215223448.html
+  + Y/Project【D11折扣】【礼物】女YPROJECT黄铜项链 红色 ￥359（日常价￥2390） | VMOOFUN旗舰店 | SKU:10134828301592 | https://item.m.jd.com/product/10134828301592.html
+  + COMPLETEDWORKS【D11折扣】【礼物】女镀金锆石珍珠耳环 金色 ￥371（日常价￥2470） | VMOOFUN旗舰店 | SKU:10130160424722 | https://item.m.jd.com/product/10130160424722.html
+  + COMPLETEDWORKS【D11折扣】【礼物】女镀金锆石珍珠耳环 银色 均码 ￥371（日常价￥2470） | VMOOFUN旗舰店 | SKU:10130162260065 | https://item.m.jd.com/product/10130162260065.html
+  + Calvin KleinCK【刘些宁同款】叠趣系列金色叠戴风小金豆项链35000 ￥386（日常价￥850） | Calvin Klein腕表首饰京东自营旗舰店 | SKU:100319463262 | https://item.m.jd.com/product/100319463262.html
+  + LE GRAMME【D11折扣】【礼物】男纯银圆形开口手镯 银色S ￥407（日常价￥2710） | VMOOFUN旗舰店 | SKU:10139472964373 | https://item.m.jd.com/product/10139472964373.html
+  + LE GRAMME【D11折扣】【礼物】男纯银耳环 银色 ￥414（日常价￥2760） | VMOOFUN旗舰店 | SKU:10139473116717 | https://item.m.jd.com/product/10139473116717.html
+  + 女士项链 ￥436 [库存11 限购2] <场次349634865> | - | SKU:10030215026246 | https://item.m.jd.com/product/10030215026246.html
+  + LE GRAMME【D11折扣】【礼物】男做旧纯银耳环 银色 ￥498（日常价￥3320） | VMOOFUN旗舰店 | SKU:10139473058741 | https://item.m.jd.com/product/10139473058741.html
+  + E.M.【D11折扣】【礼物】女18K金珍珠耳骨夹(单只) 金色 ￥598（日常价￥2390） | VMOOFUN旗舰店 | SKU:10139448396742 | https://item.m.jd.com/product/10139448396742.html
+  + ALESSANDRA RICH【D11秒杀】【礼物】水晶人造珍珠银色夹扣式耳环  ￥611（日常价￥4070） | VMOOFUN旗舰店 | SKU:10146444720531 | https://item.m.jd.com/product/10146444720531.html
+  + LOREN STEWART【D11折扣】【礼物】女925银镀14K金手链 金色  ￥623（日常价￥2490） | VMOOFUN旗舰店 | SKU:10139473009481 | https://item.m.jd.com/product/10139473009481.html
+  + 夹扣式耳环 ￥719 [库存10 限购2] <场次349634865> | - | SKU:10028754829377 | https://item.m.jd.com/product/10028754829377.html
+  + E.M.耳环 ￥720 [库存37 限购1] <场次349634865> | - | SKU:10028265771013 | https://item.m.jd.com/product/10028265771013.html
+  + CK叠趣金色项链 ￥772 [库存1 限购1] <场次349634865> | - | SKU:100239405945 | https://item.m.jd.com/product/100239405945.html
+  + LOREN STEWART【D11折扣】【礼物】女14K金项圈式项链 金色 ￥825（日常价￥3300） | VMOOFUN旗舰店 | SKU:10139472881190 | https://item.m.jd.com/product/10139472881190.html
+  + E.M.五角星耳饰 ￥830 [库存26 限购1] <场次349634865> | - | SKU:10028265480817 | https://item.m.jd.com/product/10028265480817.html
+  + 薇薇安·威斯特伍德  西太后 26秋冬新款  HEBOT恤 黑色 M 至快当日达 ￥907（日常价￥1650） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100397213422 | https://item.m.jd.com/product/100397213422.html
+  + 薇薇安·威斯特伍德  西太后 26秋冬新款  HEBOT恤 白色 M 至快当日达 ￥907（日常价￥1650） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100397213372 | https://item.m.jd.com/product/100397213372.html
+  + 萧邦定制真丝眼罩 ￥999 [库存2 限购1] <场次349634865> | - | SKU:10036430039529 | https://item.m.jd.com/product/10036430039529.html
+  + E.M.耳饰 ￥1030 [库存29 限购1] <场次349634865> | - | SKU:10028265795866 | https://item.m.jd.com/product/10028265795866.html
+  + 薇薇安·威斯特伍德  西太后 26秋冬新款  ANNAT恤 黑色 S 至快当日达 ￥1199（日常价￥2180） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100305574415 | https://item.m.jd.com/product/100305574415.html
+  + 薇薇安·威斯特伍德   西太后 ANNA TOP女士T恤白色 XS 26新品 ￥1199（日常价￥2180） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100305574491 | https://item.m.jd.com/product/100305574491.html
+  + 薇薇安·威斯特伍德  西太后 26秋冬新款  ANNAT恤 黑色 M 至快当日达 ￥1199（日常价￥2180） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100305574453 | https://item.m.jd.com/product/100305574453.html
+  + MELISSA JOY MANNING【D11会员折上9折】【礼物】女14K金珍 ￥1255（日常价￥5690） | VMOOFUN旗舰店 | SKU:10139473088369 | https://item.m.jd.com/product/10139473088369.html
+  + MELISSA JOY MANNING【D11秒杀】【礼物】女14K金耳钉 FR ￥1260（日常价￥5040） | VMOOFUN旗舰店 | SKU:10139472969984 | https://item.m.jd.com/product/10139472969984.html
+  + 女士耳环 ￥1380 [库存5 限购2] <场次349634865> | - | SKU:10027662340549 | https://item.m.jd.com/product/10027662340549.html
+  + 女士耳骨夹 ￥1380 [库存6 限购2] <场次349634865> | - | SKU:10027662980173 | https://item.m.jd.com/product/10027662980173.html
+  + 亚历山大（ALEXANDRE DE PARIS）塞利系列发箍潮流羊皮头箍时尚休闲 ￥1389（日常价￥2530） | Alexandre De Paris官方旗舰店 | SKU:10238791395930 | https://item.m.jd.com/product/10238791395930.html
+  + 亚历山大（ALEXANDRE DE PARIS）塞利系列发箍潮流羊皮头箍时尚休闲 ￥1389（日常价￥2530） | Alexandre De Paris官方旗舰店 | SKU:10238791395931 | https://item.m.jd.com/product/10238791395931.html
+  + 亚历山大（ALEXANDRE DE PARIS）塞利系列发箍潮流羊皮头箍时尚休闲 ￥1389（日常价￥2530） | Alexandre De Paris官方旗舰店 | SKU:10238791395928 | https://item.m.jd.com/product/10238791395928.html
+  + 亚历山大（ALEXANDRE DE PARIS）塞利系列发箍潮流羊皮头箍时尚休闲 ￥1389（日常价￥2530） | Alexandre De Paris官方旗舰店 | SKU:10238791395929 | https://item.m.jd.com/product/10238791395929.html
+  + 亚历山大（ALEXANDRE DE PARIS）浮想系列大号抓夹时尚鲨鱼夹【10 ￥1425（日常价￥2590） | Alexandre De Paris官方旗舰店 | SKU:10238791635107 | https://item.m.jd.com/product/10238791635107.html
+  + 亚历山大（ALEXANDRE DE PARIS）浮想系列大号抓夹时尚鲨鱼夹【10 ￥1425（日常价￥2590） | Alexandre De Paris官方旗舰店 | SKU:10238791635106 | https://item.m.jd.com/product/10238791635106.html
+  + 女士耳钉 ￥1483 [库存23 限购1] <场次349634865> | - | SKU:10028267558700 | https://item.m.jd.com/product/10028267558700.html
+  + E.M.单只耳钉 ￥1540 [库存20 限购1] <场次349634865> | - | SKU:10028265830382 | https://item.m.jd.com/product/10028265830382.html
+  + 亚历山大（ALEXANDRE DE PARIS）绣球花系列中号抓夹发饰【10点抢 ￥1645（日常价￥2990） | Alexandre De Paris官方旗舰店 | SKU:10238791001790 | https://item.m.jd.com/product/10238791001790.html
+  + 西太后新品 ￥1650 [库存5 限购2] <场次349634865> | - | SKU:100305574811 | https://item.m.jd.com/product/100305574811.html
+  + E.M.耳饰 ￥1650 [库存13 限购2] <场次349634865> | - | SKU:10028265892359 | https://item.m.jd.com/product/10028265892359.html
+  + 女士项链 ￥1675 [库存18 限购1] <场次349634865> | - | SKU:10028267609822 | https://item.m.jd.com/product/10028267609822.html
+  + 女士耳环 ￥1820 [库存19 限购1] <场次349634865> | - | SKU:10027951439250 | https://item.m.jd.com/product/10027951439250.html
+  + 女士锆石身体链 ￥1830 [库存12 限购2] <场次349634865> | - | SKU:10028267600024 | https://item.m.jd.com/product/10028267600024.html
+  + E.M.耳环 ￥2020 [库存10 限购2] <场次349634865> | - | SKU:10028265821968 | https://item.m.jd.com/product/10028265821968.html
+  + 女士耳环 ￥2040 [库存15 限购2] <场次349634865> | - | SKU:10027766172280 | https://item.m.jd.com/product/10027766172280.html
+  + 西太后吊带 ￥2180 [库存6 限购2] <场次349634865> | - | SKU:100305574465 | https://item.m.jd.com/product/100305574465.html
+  + 亚历山大（ALEXANDRE DE PARIS）心弦系列发箍奢品发饰轻盈浪漫头饰 ￥2195（日常价￥3990） | Alexandre De Paris官方旗舰店 | SKU:10238791072674 | https://item.m.jd.com/product/10238791072674.html
+  + 薇薇安·威斯特伍德  西太后 26秋冬新款  BEA针织开衫 黑色 M ￥2233（日常价￥4060） | VIVIENNE WESTWOOD京东自营旗舰店 | SKU:100305575137 | https://item.m.jd.com/product/100305575137.html
+  + E.M.耳骨夹 ￥2390 [库存14 限购2] <场次349634865> | - | SKU:10028265900148 | https://item.m.jd.com/product/10028265900148.html
+  + 女士项链 ￥2390 [库存11 限购2] <场次349634865> | - | SKU:10027951615638 | https://item.m.jd.com/product/10027951615638.html
+  + 锆石珍珠耳环 ￥2470 [库存13 限购2] <场次349634865> | - | SKU:10027662197868 | https://item.m.jd.com/product/10027662197868.html
+  + 女士耳环 ￥2470 [库存9 限购2] <场次349634865> | - | SKU:10027662222676 | https://item.m.jd.com/product/10027662222676.html
+  + 女士手链 ￥2490 [库存22 限购1] <场次349634865> | - | SKU:10028267552005 | https://item.m.jd.com/product/10028267552005.html
+  + 亚历山大塞利发箍 ￥2530 [库存2 限购2] <场次349634865> | - | SKU:10036433808470 | https://item.m.jd.com/product/10036433808470.html
+  + 亚历山大浮想抓夹 ￥2590 [库存3 限购3] <场次349634865> | - | SKU:10036433860416 | https://item.m.jd.com/product/10036433860416.html
+  + 男士圆形开口手镯 ￥2710 [库存17 限购1] <场次349634865> | - | SKU:10028267558595 | https://item.m.jd.com/product/10028267558595.html
+  + VERSACE/范思哲【季末优惠】 男女同款Greca项链 3J030-银色 U ￥2800（日常价￥5600） | VERSACE范思哲官方旗舰店 | SKU:10199091450089 | https://item.m.jd.com/product/10199091450089.html
+  + 男女同款项链 ￥2800 [库存12 限购1] <场次349634865> | - | SKU:10033005204594 | https://item.m.jd.com/product/10033005204594.html
+  + 亚历山大绣球抓夹 ￥2990 [库存3 限购3] <场次349634865> | - | SKU:10036433701657 | https://item.m.jd.com/product/10036433701657.html
+  + 项圈式项链 ￥3300 [库存37 限购1] <场次349634865> | - | SKU:10028267602217 | https://item.m.jd.com/product/10028267602217.html
+  + 男士做旧耳环 ￥3320 [库存20 限购1] <场次349634865> | - | SKU:10028267585250 | https://item.m.jd.com/product/10028267585250.html
+  + 亚历山大心弦发箍 ￥3990 [库存10 限购10] <场次349634865> | - | SKU:10036433597791 | https://item.m.jd.com/product/10036433597791.html
+  + 西太后新品 ￥4060 [库存5 限购2] <场次349634865> | - | SKU:100305575109 | https://item.m.jd.com/product/100305575109.html
+  + 卡地亚（Cartier）LOVE系列 窄版 单钻 18K玫瑰金 LOVE戒指单枚 ￥14900（日常价￥19900） | 卡地亚(Cartier)京东自营专区 | SKU:100328209561 | https://item.m.jd.com/product/100328209561.html
+[2026/11/8 20:01:49]【场A】 PushPlus(微信) ✅ 已提交
+[2026/11/8 20:01:51]【场A】 PushPlus(QQ机器人) ✅ 已提交
+[2026/11/8 20:01:52]【场A】 PushPlus(App) ✅ 已提交
+[2026/11/8 20:02:52]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/8 20:02:55]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:02:55]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:02:55]【场A】 等待 3.1 秒后重试...
+[2026/11/8 20:02:59]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:02:59]【场A】 第 2 次尝试（直连）获取到真实页面，长度 896006
+[2026/11/8 20:02:59]【场A】 抓取成功：155 个 SKU（时段商品 42 个 / 楼层商品 49 个）
+[2026/11/8 20:02:59]【场A】 当前场次：20:00 场（stageId=349634865）；全部场次：20:00:00 → 10:00:00 → 20:00:00
+[2026/11/8 20:02:59]【场A】 检查完成，无上新 （热区 16 个，仅记录不推送）
+[2026/11/8 20:03:59]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/8 20:04:00]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:04:00]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:04:00]【场A】 等待 6.0 秒后重试...
+[2026/11/8 20:04:06]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:04:06]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:04:06]【场A】 等待 4.3 秒后重试...
+[2026/11/8 20:04:12]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:04:12]【场A】 第 3 次尝试（jina中转）获取到真实页面，长度 844247
+[2026/11/8 20:04:12]【场A】 抓取成功：143 个 SKU（时段商品 42 个 / 楼层商品 49 个）
+[2026/11/8 20:04:12]【场A】 当前场次：20:00 场（stageId=349634865）；全部场次：20:00:00 → 10:00:00 → 20:00:00
+[2026/11/8 20:04:12]【场A】 检查完成，无上新 （热区 3 个，仅记录不推送）
+[2026/11/8 20:05:13]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/8 20:05:14]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:05:14]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:05:14]【场A】 等待 5.8 秒后重试...
+[2026/11/8 20:05:20]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:05:20]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:05:20]【场A】 等待 5.4 秒后重试...
+[2026/11/8 20:05:27]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:05:27]【场A】 第 3/5 次命中验证页，稍后重试
+[2026/11/8 20:05:27]【场A】 等待 2.0 秒后重试...
+[2026/11/8 20:05:30]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:05:30]【场A】 第 4/5 次命中验证页，稍后重试
+[2026/11/8 20:05:30]【场A】 等待 2.0 秒后重试...
+[2026/11/8 20:05:33]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:05:33]【场A】 第 5/5 次命中验证页，稍后重试
+[2026/11/8 20:05:33]【场A】 全部重试均失败（验证页/网络），本次跳过
+[2026/11/8 20:06:33]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/8 20:06:34]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:06:34]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:06:34]【场A】 等待 5.1 秒后重试...
+[2026/11/8 20:06:39]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/8 20:06:39]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
+[2026/11/8 20:06:39]【场A】 等待 3.8 秒后重试...
+[2026/11/8 20:06:44]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:06:44]【场A】 第 3/5 次命中验证页，稍后重试
+[2026/11/8 20:06:44]【场A】 等待 2.0 秒后重试...
+[2026/11/8 20:06:48]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:06:48]【场A】 第 4/5 次命中验证页，稍后重试
+[2026/11/8 20:06:48]【场A】 等待 2.0 秒后重试...
+[2026/11/8 20:06:51]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
+[2026/11/8 20:06:51]【场A】 第 5/5 次命中验证页，稍后重试
+[2026/11/8 20:06:51]【场A】 全部重试均失败（验证页/网络），本次跳过
