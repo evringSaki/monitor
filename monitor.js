@@ -1012,6 +1012,21 @@ async function main() {
     await pushPlusAll(head, wxBody);
   }
 
+  // ===== 1 元商品单独提醒 =====
+  // 大清单里最多展示 50 条，低价商品容易被淹掉；这里把本轮新上/重新上架的 1 元档商品单独推一条
+  // （新场次时清单本身已按价格排序、1 元商品都在最前面，故不重复推）
+  const CHEAP_MAX = Number(process.env.CHEAP_MAX || 2);
+  const cheapList = dedupePush(ev.addedMain.filter(p => p.price && parseFloat(p.price) <= CHEAP_MAX));
+  if (cheapList.length && !ev.stageChanged) {
+    const cheapSkuSet = new Set(cheapList.map(p => p.sku));
+    const head = `【1元秒杀】检测到 ${cheapList.length} 个 1 元商品${cheapList.some(p => p.restock) ? '（含重新上架）' : ''}！`;
+    log(head + '\n' + cheapList.map(p => '  ' + fmtProduct(p)).join('\n'));
+    await pushPlusAll(head,
+      productsHtml(cheapList.slice(0, 30), cheapSkuSet) +
+      (cheapList.length > 30 ? `<br>...等共 ${cheapList.length} 个` : '') +
+      '<br>——<br>时间: ' + ts());
+  }
+
   // 变价推送：独立于上新/场次切换判断（不再被 else-if 吞掉）
   if (hasPrice && !hasNew && !ev.stageChanged) {
     log(`【价格变动】${ev.priceChanged.length} 个`);
