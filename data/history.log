@@ -161261,63 +161261,33 @@
 [2026/11/14 15:39:49]【场A】 抓取成功：177 个 SKU（时段商品 76 个 / 楼层商品 79 个）
 [2026/11/14 15:39:49]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
 [2026/11/14 15:39:49]【场A】 检查完成，无上新 
-[2026/11/14 15:40:27]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/14 15:40:28]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:40:28]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:40:28]【场A】 等待 5.8 秒后重试...
-[2026/11/14 15:40:34]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:40:34]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:40:34]【场A】 等待 3.0 秒后重试...
-[2026/11/14 15:40:39]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/14 15:40:39]【场A】 第 3/5 次命中验证页，稍后重试
-[2026/11/14 15:40:39]【场A】 等待 2.0 秒后重试...
-[2026/11/14 15:40:44]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/14 15:40:44]【场A】 第 4 次尝试（jina中转）获取到真实页面，长度 1041531
-[2026/11/14 15:40:44]【场A】 抓取成功：176 个 SKU（时段商品 76 个 / 楼层商品 78 个）
-[2026/11/14 15:40:44]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
-[2026/11/14 15:40:44]【场A】 检查完成，无上新 
-[2026/11/14 15:41:44]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/14 15:41:45]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:41:45]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:41:45]【场A】 等待 4.8 秒后重试...
-[2026/11/14 15:41:51]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:41:51]【场A】 第 2 次尝试（直连）获取到真实页面，长度 1047622
-[2026/11/14 15:41:51]【场A】 抓取成功：176 个 SKU（时段商品 76 个 / 楼层商品 78 个）
-[2026/11/14 15:41:51]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
-[2026/11/14 15:41:51]【场A】 检查完成，无上新 
-[2026/11/14 15:42:51]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/14 15:42:52]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:42:52]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:42:52]【场A】 等待 3.9 秒后重试...
-[2026/11/14 15:42:57]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:42:57]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:42:57]【场A】 等待 6.3 秒后重试...
-[2026/11/14 15:43:04]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/14 15:43:04]【场A】 第 3 次尝试（jina中转）获取到真实页面，长度 38935
-[2026/11/14 15:43:04]【场A】 未找到 __react_data__，HTML 已保存到 /home/runner/work/monitor/monitor/data/debug.html
-[2026/11/14 15:43:04]【场A】 HTML 长度: 38935
-[2026/11/14 15:43:04]【场A】 首 300 字符: <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,viewport-fit=cover"> <meta name="format-detecti
-[2026/11/14 15:43:04]【场A】 末 300 字符: 179372/610bb1d5Ef2972c2b/5f06a5cb1683c8cf.jpg" style="width:100%;"/><div style="color:rgb(155, 155, 155);text-align:center;line-height:44px;">加载失败，请点击重试</div>';panel.onclick=function(){window.location.reload();};document.body.appendChild(panel);}}</script> </body> </html>
-[2026/11/14 15:43:04]【场A】 window.* 赋值出现: window.jap =, window.lazyFailedScripts=, window.isStatic=, window.MPingPromise=, window.onGetBridgeChannelType=, window.__bridge_channel_type__=, window.h5CpsMtaData=, window.__babel_pv_reported__=, window.__babel_pv_reported__=, window.putExpoPV=, window.__expo_pv_reported__=, window.putVirtualPv=, window.setMtaSpmParamCB=, window.putFirstExpo=, window.__prepare_tracking__=, window.__track_source_url__=, window.__native_container_aid__=, window.__pv_report_visibility__=, window.BOOMR_mq=, window.BOOMR_API_key=
-[2026/11/14 15:43:04]【场A】 解析失败：未找到 __react_data__（页面结构可能已变，HTML 已保存）（页面结构可能已变）
-[2026/11/14 15:44:04]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/14 15:44:06]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:44:06]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1046024
-[2026/11/14 15:44:06]【场A】 抓取成功：176 个 SKU（时段商品 76 个 / 楼层商品 78 个）
-[2026/11/14 15:44:06]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
-[2026/11/14 15:44:06]【场A】 检查完成，无上新 
-[2026/11/14 15:45:06]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
-[2026/11/14 15:45:07]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:45:07]【场A】 第 1/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:45:07]【场A】 等待 3.9 秒后重试...
-[2026/11/14 15:45:11]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
-[2026/11/14 15:45:11]【场A】 第 2/5 次命中验证页，稍后换 UA 重试
-[2026/11/14 15:45:11]【场A】 等待 3.9 秒后重试...
-[2026/11/14 15:45:17]【场A】 响应状态 200，content-encoding=(无)，content-type=text/plain; charset=utf-8
-[2026/11/14 15:45:17]【场A】 第 3 次尝试（jina中转）获取到真实页面，长度 38934
-[2026/11/14 15:45:17]【场A】 未找到 __react_data__，HTML 已保存到 /home/runner/work/monitor/monitor/data/debug.html
-[2026/11/14 15:45:17]【场A】 HTML 长度: 38934
-[2026/11/14 15:45:17]【场A】 首 300 字符: <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,viewport-fit=cover"> <meta name="format-detecti
-[2026/11/14 15:45:17]【场A】 末 300 字符: 179372/610bb1d5Ef2972c2b/5f06a5cb1683c8cf.jpg" style="width:100%;"/><div style="color:rgb(155, 155, 155);text-align:center;line-height:44px;">加载失败，请点击重试</div>';panel.onclick=function(){window.location.reload();};document.body.appendChild(panel);}}</script> </body> </html>
-[2026/11/14 15:45:17]【场A】 window.* 赋值出现: window.jap =, window.lazyFailedScripts=, window.isStatic=, window.MPingPromise=, window.onGetBridgeChannelType=, window.__bridge_channel_type__=, window.h5CpsMtaData=, window.__babel_pv_reported__=, window.__babel_pv_reported__=, window.putExpoPV=, window.__expo_pv_reported__=, window.putVirtualPv=, window.setMtaSpmParamCB=, window.putFirstExpo=, window.__prepare_tracking__=, window.__track_source_url__=, window.__native_container_aid__=, window.__pv_report_visibility__=, window.BOOMR_mq=, window.BOOMR_API_key=
-[2026/11/14 15:45:17]【场A】 解析失败：未找到 __react_data__（页面结构可能已变，HTML 已保存）（页面结构可能已变）
+[2026/11/14 15:45:37]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/14 15:45:40]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/14 15:45:40]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1044760
+[2026/11/14 15:45:40]【场A】 抓取成功：177 个 SKU（时段商品 76 个 / 楼层商品 79 个）
+[2026/11/14 15:45:40]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/11/14 15:45:40]【场A】 检查完成，无上新 
+[2026/11/14 15:46:40]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/14 15:46:42]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/14 15:46:42]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1082124
+[2026/11/14 15:46:42]【场A】 抓取成功：180 个 SKU（时段商品 76 个 / 楼层商品 78 个）
+[2026/11/14 15:46:42]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/11/14 15:46:42]【场A】 检查完成，无上新 （热区 21 个，仅记录不推送）
+[2026/11/14 15:47:43]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/14 15:47:44]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/14 15:47:45]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1048236
+[2026/11/14 15:47:45]【场A】 抓取成功：177 个 SKU（时段商品 76 个 / 楼层商品 79 个）
+[2026/11/14 15:47:45]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/11/14 15:47:45]【场A】 检查完成，无上新 （热区 17 个，仅记录不推送）
+[2026/11/14 15:48:45]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/14 15:48:47]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/14 15:48:47]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1045219
+[2026/11/14 15:48:47]【场A】 抓取成功：177 个 SKU（时段商品 76 个 / 楼层商品 79 个）
+[2026/11/14 15:48:47]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/11/14 15:48:47]【场A】 检查完成，无上新 
+[2026/11/14 15:49:47]【场A】 警告：未设置 QMSG_KEY 环境变量，将不会推送
+[2026/11/14 15:49:49]【场A】 响应状态 200，content-encoding=br，content-type=text/html;charset=UTF-8
+[2026/11/14 15:49:49]【场A】 第 1 次尝试（直连）获取到真实页面，长度 1047059
+[2026/11/14 15:49:49]【场A】 抓取成功：177 个 SKU（时段商品 76 个 / 楼层商品 79 个）
+[2026/11/14 15:49:49]【场A】 当前场次：10:00 场（stageId=331219770）；全部场次：10:00:00 → 20:00:00 → 10:00:00
+[2026/11/14 15:49:49]【场A】 检查完成，无上新 
