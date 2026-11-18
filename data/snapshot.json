@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-18T11:59:47.808Z",
+  "time": "2026-11-18T12:05:36.892Z",
   "activityName": "上新活动",
   "stage": {
     "id": "331219774",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "total": 182,
+  "total": 184,
   "mainCount": 82,
   "stageCount": 78,
   "flashCount": 81,
@@ -41,7 +41,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/568666/12/2453/11184/6ae859bdF6b3f0779/00ae0c80c8eb7066.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "8.9",
       "flashPrice": "",
@@ -57,7 +57,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/572425/15/6715/11219/6af684cfF91af1c4a/00ae0c80c8a70140.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "36.9",
       "flashPrice": "",
@@ -71,7 +71,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
@@ -85,7 +85,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/557204/5/2832/28774/6ae1affbF8aef4f18/00ae0c80c844a29e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "19.9",
       "flashPrice": "",
@@ -101,34 +101,46 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/580536/22/4946/61466/6af6df65F75673830/00ae0c80c8748528.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "78",
       "flashPrice": "",
       "stageRounds": 0
     },
-    "10045630531502": {
-      "sku": "10045630531502",
+    "10226635384960": {
+      "sku": "10226635384960",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "streak": 1,
+      "firstSeen": "2026-11-18T12:05:36.892Z",
+      "pending": true
+    },
+    "10177602932285": {
+      "sku": "10177602932285",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
-    "10187125827084": {
-      "sku": "10187125827084",
+    "100239972313": {
+      "sku": "100239972313",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
-      "firstSeen": "2026-11-18T08:49:42.529Z",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100289388932": {
@@ -139,20 +151,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
       "pending": false
     },
-    "10021066708427": {
-      "sku": "10021066708427",
+    "100416828326": {
+      "sku": "100416828326",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "10101811435868": {
+      "sku": "10101811435868",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100275593602": {
@@ -163,7 +187,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
       "pending": false
     },
@@ -175,8 +199,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
+      "pending": false
+    },
+    "100140063764": {
+      "sku": "100140063764",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100335886514": {
@@ -187,8 +223,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
+      "pending": false
+    },
+    "10058915079832": {
+      "sku": "10058915079832",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100016396244": {
@@ -199,7 +247,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
       "pending": false
     },
@@ -211,8 +259,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
+      "pending": false
+    },
+    "100092278925": {
+      "sku": "100092278925",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100388478872": {
@@ -223,20 +283,44 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
       "pending": false
     },
-    "10163335522763": {
-      "sku": "10163335522763",
+    "10123809417811": {
+      "sku": "10123809417811",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
-      "firstSeen": "2026-11-18T08:49:42.529Z",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100127087887": {
+      "sku": "100127087887",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100262205021": {
+      "sku": "100262205021",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100318574842": {
@@ -247,8 +331,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 130,
+      "streak": 134,
       "firstSeen": "2026-11-18T08:51:04.202Z",
+      "pending": false
+    },
+    "100310465119": {
+      "sku": "100310465119",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100327980386": {
@@ -259,7 +355,55 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
+      "firstSeen": "2026-11-18T08:49:42.529Z",
+      "pending": false
+    },
+    "100292631740": {
+      "sku": "100292631740",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100285953129": {
+      "sku": "100285953129",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 7,
+      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "pending": false
+    },
+    "10058063569741": {
+      "sku": "10058063569741",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "10163335522763": {
+      "sku": "10163335522763",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
       "pending": false
     },
@@ -271,8 +415,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
+      "pending": false
+    },
+    "100061161382": {
+      "sku": "100061161382",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100049239409": {
+      "sku": "100049239409",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 7,
+      "firstSeen": "2026-11-18T11:57:35.454Z",
       "pending": false
     },
     "100392100836": {
@@ -283,7 +451,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 36,
+      "streak": 40,
       "firstSeen": "2026-11-18T11:06:10.251Z",
       "pending": false
     },
@@ -295,20 +463,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 131,
+      "streak": 135,
       "firstSeen": "2026-11-18T08:49:42.529Z",
-      "pending": false
-    },
-    "100285953129": {
-      "sku": "100285953129",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
       "pending": false
     },
     "100188052359": {
@@ -319,8 +475,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 125,
+      "streak": 129,
       "firstSeen": "2026-11-18T09:00:28.330Z",
+      "pending": false
+    },
+    "10229495715335": {
+      "sku": "10229495715335",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100260943316": {
@@ -331,7 +499,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
@@ -343,20 +511,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
-      "pending": false
-    },
-    "100049239409": {
-      "sku": "100049239409",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
       "pending": false
     },
     "100043755889": {
@@ -367,8 +523,32 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
+      "streak": 7,
       "firstSeen": "2026-11-18T11:57:35.454Z",
+      "pending": false
+    },
+    "100254242331": {
+      "sku": "100254242331",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100097425300": {
+      "sku": "100097425300",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100377393160": {
@@ -379,8 +559,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
+      "pending": false
+    },
+    "100185804238": {
+      "sku": "100185804238",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100048883077": {
@@ -391,8 +583,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
+      "pending": false
+    },
+    "100190999031": {
+      "sku": "100190999031",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "100245452103": {
@@ -403,20 +607,20 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
-    "100237372949": {
-      "sku": "100237372949",
+    "10217472882503": {
+      "sku": "10217472882503",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
     "10207677284025": {
@@ -427,7 +631,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
@@ -439,19 +643,19 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
-    "10238031642330": {
-      "sku": "10238031642330",
+    "100162612658": {
+      "sku": "100162612658",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 4,
+      "streak": 8,
       "firstSeen": "2026-11-18T11:56:33.670Z",
       "pending": false
     },
@@ -463,31 +667,43 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
-    "100245790759": {
-      "sku": "100245790759",
+    "100097260950": {
+      "sku": "100097260950",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
       "pending": false
     },
-    "100187069103": {
-      "sku": "100187069103",
+    "100154188652": {
+      "sku": "100154188652",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
+      "streak": 4,
+      "firstSeen": "2026-11-18T12:00:56.445Z",
+      "pending": false
+    },
+    "100253584841": {
+      "sku": "100253584841",
+      "source": "hotzone",
+      "name": "",
+      "price": "",
+      "shop": "",
+      "isNew": false,
+      "pic": "",
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
@@ -499,31 +715,7 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 11,
-      "firstSeen": "2026-11-18T11:42:58.544Z",
-      "pending": false
-    },
-    "100215555289": {
-      "sku": "100215555289",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
-      "pending": false
-    },
-    "100253584841": {
-      "sku": "100253584841",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 11,
+      "streak": 15,
       "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
@@ -535,211 +727,24 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
+      "streak": 7,
       "firstSeen": "2026-11-18T11:57:35.454Z",
       "pending": false
     },
-    "100312085233": {
-      "sku": "100312085233",
+    "100187069103": {
+      "sku": "100187069103",
       "source": "hotzone",
       "name": "",
       "price": "",
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
+      "streak": 15,
+      "firstSeen": "2026-11-18T11:42:58.544Z",
       "pending": false
     },
-    "100262216425": {
-      "sku": "100262216425",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "100162612658": {
-      "sku": "100162612658",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "100291830033": {
-      "sku": "100291830033",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "10238031987657": {
-      "sku": "10238031987657",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "100333707546": {
-      "sku": "100333707546",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "10235605405807": {
-      "sku": "10235605405807",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
-      "pending": false
-    },
-    "100028158302": {
-      "sku": "100028158302",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
-      "pending": false
-    },
-    "100361705758": {
-      "sku": "100361705758",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "100423234326": {
-      "sku": "100423234326",
-      "source": "flash",
-      "name": "100年润发粉嘟嘟瓶长效控油蓬松轻感无硅油韧养多肽头皮护理留香洗发水50g",
-      "price": "1",
-      "orig": "29.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "100年润发京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/544912/32/12320/6648/6adedd7bFbd6093ca/00ae0c80c898ad11.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "1",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100021709942": {
-      "sku": "100021709942",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "10234314426003": {
-      "sku": "10234314426003",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 3,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
-      "pending": false
-    },
-    "100006494768": {
-      "sku": "100006494768",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "100229279903": {
-      "sku": "100229279903",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:56:33.670Z",
-      "pending": false
-    },
-    "10237897621320": {
-      "sku": "10237897621320",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 1,
-      "firstSeen": "2026-11-18T11:59:47.808Z",
-      "pending": true
-    },
-    "10235131702958": {
-      "sku": "10235131702958",
-      "source": "hotzone",
-      "name": "",
-      "price": "",
-      "shop": "",
-      "isNew": false,
-      "pic": "",
-      "streak": 2,
-      "firstSeen": "2026-11-18T11:58:37.213Z",
-      "pending": false
-    },
-    "100444318320": {
-      "sku": "100444318320",
+    "100444318508": {
+      "sku": "100444318508",
       "source": "main",
       "name": "",
       "price": "",
@@ -747,11 +752,8 @@
       "shop": "",
       "isNew": false,
       "pic": "",
-      "streak": 4,
-      "firstSeen": "2026-11-18T11:57:35.454Z",
-      "flashPrice": "",
-      "stagePrice": "",
-      "stageRounds": 0
+      "streak": 2,
+      "firstSeen": "2026-11-18T12:05:36.892Z"
     },
     "100298045008": {
       "sku": "100298045008",
@@ -766,7 +768,7 @@
       "shop": "极萌京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/556420/7/2963/31800/6ae00588Faea5b2cc/02760c80c83e2128.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -785,7 +787,7 @@
       "shop": "华硕配件京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/568732/30/3622/8375/6ae9a8dcFe96f44a9/02760c80c86d7e39.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -804,7 +806,7 @@
       "shop": "SK-II京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/570011/31/5295/3944/6aed6a96F7fba684f/00ae0c80c8914383.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -823,7 +825,7 @@
       "shop": "泸州老窖京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/577591/32/5527/61466/6af6df83F49d776f5/00ae0c80c8e73566.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -842,7 +844,7 @@
       "shop": "万益蓝WONDERLAB京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569194/17/10537/12384/6afac531F1bcb0d1f/02760c80c84ff0c7.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -861,7 +863,7 @@
       "shop": "禾泱泱京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/571235/19/8451/25983/6afa9874Fcc2e8be4/00ae0c80c8acbdcf.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -880,7 +882,26 @@
       "shop": "雀巢（Nestle）牛奶烘焙京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/536939/21/7653/28774/6ae1b006F9c647c47/00ae0c80c89da8f0.png",
-      "streak": 429,
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "1",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100423234326": {
+      "sku": "100423234326",
+      "source": "flash",
+      "name": "100年润发粉嘟嘟瓶长效控油蓬松轻感无硅油韧养多肽头皮护理留香洗发水50g",
+      "price": "1",
+      "orig": "29.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "100年润发京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/544912/32/12320/6648/6adedd7bFbd6093ca/00ae0c80c898ad11.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -899,7 +920,7 @@
       "shop": "樊文花（fawa）京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561959/6/8937/6417/6aed4514F43946455/00ae0c80c8cd3b48.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -918,7 +939,7 @@
       "shop": "冰希黎（Boitown）京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/543082/24/13570/13103/6ae407dbFe520c120/02760c80c8c71abe.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -937,7 +958,7 @@
       "shop": "理然个护京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/570555/13/2551/2146/6aea99e0Fca16ff70/02760c80c8102e36.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -956,7 +977,7 @@
       "shop": "心相印京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/581297/9/5920/3868/6afad290F0e9e2693/00ae0c80c8b6b773.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -975,7 +996,7 @@
       "shop": "心相印京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/576172/3/10069/5451/6afad28dFd59ed126/00ae0c80c83a8410.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -994,7 +1015,7 @@
       "shop": "心相印京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572235/2/9883/6532/6afad293Fc1300698/00ae0c80c856a357.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -1013,7 +1034,7 @@
       "shop": "滋源京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/549057/31/13351/7473/6ae5b338F971b3471/00ae0c80c8e81e4f.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -1032,7 +1053,7 @@
       "shop": "顽皮京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/583271/30/1951/11889/6af300faFf34b84af/02760c80c8e6e2f8.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -1051,7 +1072,7 @@
       "shop": "美发京东自营专区",
       "isNew": false,
       "pic": "jfs/t1/545341/40/10301/11541/6adb5ef2F3981e2e3/00ae0c80c8404aeb.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -1070,256 +1091,9 @@
       "shop": "洁尔阴个人护理京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/547834/22/13116/11530/6ae30d80Fcb95c78f/00ae0c80c8f13eca.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100048502564": {
-      "sku": "100048502564",
-      "source": "flash",
-      "name": "苏泊尔【京东限定-性价比】有钛无涂层不锈钢不粘炒锅30cm电磁炉炒菜锅",
-      "price": "1",
-      "orig": "439",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": true,
-      "shop": "苏泊尔京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/554416/9/9369/11400/6ae854beFde732d9f/00ae0c80c834a65a.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "1",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "10237763200571": {
-      "sku": "10237763200571",
-      "source": "flash",
-      "name": "斯凯奇（Skechers）户外折叠椅月亮椅便携式钓鱼椅子轻量化阳台休闲小凳子露营椅子 卡其色 加棉舒适升级款",
-      "price": "59.5",
-      "orig": "239",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": true,
-      "shop": "斯凯奇户外装备旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/588630/28/310/15339/6af55eebF8ad78fbf/02760c80c86501cb.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "59.5",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100258221041": {
-      "sku": "100258221041",
-      "source": "flash",
-      "name": "博柏利（BURBERRY）【限时私享优惠】女装 及腰短款轻盈棉质 Ladymoor 外套 夹克",
-      "price": "8500",
-      "orig": "17000",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "BURBERRY京东自营官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/580857/22/6985/6141/6afab969Fc03a512a/00ae0c80c841e96b.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "8500",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "10237775748503": {
-      "sku": "10237775748503",
-      "source": "flash",
-      "name": "蔡司优颜系镜框送LITE防蓝光镜片近视配镜可配度数9901 C1亮黑 镜框+1.67LITE防蓝光镜片（800度内）",
-      "price": "158",
-      "orig": "316",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "优购镜仓官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/580632/5/867/12180/6aeece60Feee6495b/00ae0c80c8843f08.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "158",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100284108101": {
-      "sku": "100284108101",
-      "source": "flash",
-      "name": "仁和青少年专用祛痘膏壬二酸凝胶学生祛痘淡印温和消青春痘30g",
-      "price": "9.9",
-      "orig": "89",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "仁和匠心京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/571554/19/6417/7661/6af3c226Fd491e5e0/00ae0c80c810803c.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "9.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100332063873": {
-      "sku": "100332063873",
-      "source": "flash",
-      "name": "京东京造彩色直液式走珠笔8色1100米速干中性笔手账笔记办公学生考试刷题笔0.5mm全针管 JD1336",
-      "price": "5",
-      "orig": "9.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": true,
-      "shop": "京东京造自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/588044/11/4047/25984/6afa7642F2d9fe669/00ae0c80c87f9207.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "5",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100441833766": {
-      "sku": "100441833766",
-      "source": "flash",
-      "name": "得力（deli）平板拖把家用一拖净免手洗拖布洗拖一体懒人拖地神器 含拖布*2",
-      "price": "14.9",
-      "orig": "39.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "得力（deli）居家清洁京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/579054/26/4659/30076/6af6e84dF653ae9fd/00ae0c80c8409e94.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "14.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "10214910673802": {
-      "sku": "10214910673802",
-      "source": "flash",
-      "name": "VERSACE/范思哲【季末优惠】 男士修身牛仔裤 1D800-蓝色 31",
-      "price": "4100",
-      "orig": "8200",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "VERSACE范思哲官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/580699/5/4121/6110/6af553b9Fc90b2b25/00ae0c80c85bbf6c.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "4100",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100381449130": {
-      "sku": "100381449130",
-      "source": "flash",
-      "name": "LLOYD925银椭圆耳钉环抱耳环耳饰礼盒装Blackpink同款",
-      "price": "130",
-      "orig": "260",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "LLOYD海外京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/570755/12/10954/2264/6afad19fFa9cb0300/02760c80c87fd530.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "130",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100314671853": {
-      "sku": "100314671853",
-      "source": "flash",
-      "name": "DR.JRAIOS可视化挖耳勺掏耳朵神器发光高清1000万不伤耳儿童成人采耳仪器",
-      "price": "88",
-      "orig": "128",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "DR.JRAIOS京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/569304/3/10744/20012/6afbbddcF9e146a35/00ae0c80c8435524.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "88",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100420330122": {
-      "sku": "100420330122",
-      "source": "flash",
-      "name": "施颜适STRIDEX舒缓倍护痘痘贴20贴 水杨祛痘控油舒缓妆前隐形痘痘",
-      "price": "5.9",
-      "orig": "29.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "STRIDEX施颜适京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/568652/24/11028/6901/6afbf7b8Ffbc49a20/02760c80c87887e0.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "5.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100140210058": {
-      "sku": "100140210058",
-      "source": "flash",
-      "name": "Bestway自动充气植绒床垫家用露营加厚气垫床 医院打地铺充气床户外671CY",
-      "price": "69",
-      "orig": "185",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "Bestway京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/579352/19/3549/8939/6af4089eFa8889c63/00ae0c80c8322af5.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "69",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100447305312": {
-      "sku": "100447305312",
-      "source": "flash",
-      "name": "依视路钻晶膜岩非球面近视眼镜片超薄轻有度数远视配眼镜",
-      "price": "260",
-      "orig": "1080",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "太阳镜京东自营专区",
-      "isNew": false,
-      "pic": "jfs/t1/585684/12/5182/11341/6afc28c7F1c819a4f/02760c80c8efac38.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "260",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1336,161 +1110,28 @@
       "shop": "联合利华京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/579142/20/924/10860/6aedb682F155b83e3/02760c80c8af5570.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "14.9",
       "stagePrice": "",
       "stageRounds": 0
     },
-    "100440600108": {
-      "sku": "100440600108",
+    "100441833766": {
+      "sku": "100441833766",
       "source": "flash",
-      "name": "藤田制药马油凡士林手足干裂膏脚后跟干裂粗糙干燥专用皲裂膏修复医用1盒",
-      "price": "31",
-      "orig": "69",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "藤田制药个护京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/575309/31/7551/7647/6af67549F9c5c9392/00ae0c80c8d865e2.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "31",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100422799832": {
-      "sku": "100422799832",
-      "source": "flash",
-      "name": "DR.JRAIOS生姜防脱洗发水防脱发密发增发防脱育发固发养发男女士专用洗头膏",
-      "price": "79",
-      "orig": "118",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "DR.JRAIOS京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/588495/18/3275/24954/6afbbde4F9dfe3ca4/00ae0c80c8723931.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "79",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100229591569": {
-      "sku": "100229591569",
-      "source": "flash",
-      "name": "Coolkiss英国进口儿童防晒喷雾SPF50+高倍防水防汗隔紫外线物理防晒150ml",
-      "price": "48",
-      "orig": "168",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "Coolkiss海外京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/568223/38/5298/6094/6aed5172F6f4f819c/00ae0c80c8606e04.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "48",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100320083079": {
-      "sku": "100320083079",
-      "source": "flash",
-      "name": "摩可适用iPhone Duo手机壳苹果18折叠屏磁吸保护套凯夫拉杜邦芳纶纤维超轻薄裸机手感防爆抗摔高级感",
-      "price": "199",
-      "orig": "399",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "摩可京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/581014/21/2834/8542/6af3ff18F75cb793f/00ae0c80c8c2b219.png",
-      "streak": 76,
-      "firstSeen": "2026-11-18T10:06:47.455Z",
-      "flashPrice": "199",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100438559394": {
-      "sku": "100438559394",
-      "source": "flash",
-      "name": "蒙牛未来星汪汪队雪梨枇杷儿童果汁吸吸袋饮料100g*10袋 清润甘甜",
-      "price": "19.9",
-      "orig": "32",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "蒙牛京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/555550/33/6675/41726/6aead3afF0b127d92/00ae0c80c8d8b9f7.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "19.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100396278816": {
-      "sku": "100396278816",
-      "source": "flash",
-      "name": "博柏利（BURBERRY）【限时私享优惠】女装 短款涂层牛仔 Trench 风衣",
-      "price": "13750",
-      "orig": "27500",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "BURBERRY京东自营官方旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/580904/37/8428/7201/6afab963Fc58a3fd0/00ae0c80c8455bf4.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "13750",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100279280196": {
-      "sku": "100279280196",
-      "source": "flash",
-      "name": "施华洛世奇（SWAROVSKI）【品牌直供】闪耀心动项链 女士项链送女友礼物 5684386",
-      "price": "777",
-      "orig": "1600",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "施华洛世奇（SWAROVSKI）海外京东自营专区",
-      "isNew": false,
-      "pic": "jfs/t1/562885/30/7513/10052/6af14aeaFb6a270fd/00ae0c80c8608227.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "777",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "10228092236356": {
-      "sku": "10228092236356",
-      "source": "flash",
-      "name": "dahua外采4.5米监控电源延长线 外采延长线",
-      "price": "19.9",
+      "name": "得力（deli）平板拖把家用一拖净免手洗拖布洗拖一体懒人拖地神器 含拖布*2",
+      "price": "14.9",
       "orig": "39.9",
       "promoStatus": "E2",
       "promoBegin": "2026-11-18 10:00:00",
       "promoEnd": "2026-11-19 09:59:59",
       "deleted": false,
-      "shop": "大华官方旗舰店",
+      "shop": "得力（deli）居家清洁京东自营旗舰店",
       "isNew": false,
-      "pic": "jfs/t1/572060/5/3240/11834/6aec3e34F363ea4bc/00ae0c80c831e33a.png",
-      "streak": 429,
+      "pic": "jfs/t1/579054/26/4659/30076/6af6e84dF653ae9fd/00ae0c80c8409e94.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "19.9",
+      "flashPrice": "14.9",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1507,85 +1148,47 @@
       "shop": "RALPH LAUREN 拉夫劳伦海外京东自营专区",
       "isNew": false,
       "pic": "jfs/t1/536073/31/9601/7054/6ada1ab0F5428c49f/02760c80c8e24c6e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "706.5",
       "stagePrice": "",
       "stageRounds": 0
     },
-    "100426499024": {
-      "sku": "100426499024",
+    "100284108101": {
+      "sku": "100284108101",
       "source": "flash",
-      "name": "哈药生物重组胶原蛋白抗皱次抛精华次抛*1支",
+      "name": "仁和青少年专用祛痘膏壬二酸凝胶学生祛痘淡印温和消青春痘30g",
       "price": "9.9",
-      "orig": "88",
+      "orig": "89",
       "promoStatus": "E2",
       "promoBegin": "2026-11-18 10:00:00",
       "promoEnd": "2026-11-19 09:59:59",
       "deleted": false,
-      "shop": "哈药生物京东自营旗舰店",
+      "shop": "仁和匠心京东自营旗舰店",
       "isNew": false,
-      "pic": "jfs/t1/547162/2/11091/2764/6ae01047F686b62ec/00ae0c80c8780d6b.png",
-      "streak": 429,
+      "pic": "jfs/t1/571554/19/6417/7661/6af3c226Fd491e5e0/00ae0c80c810803c.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "9.9",
       "stagePrice": "",
       "stageRounds": 0
     },
-    "100115267551": {
-      "sku": "100115267551",
+    "100381449130": {
+      "sku": "100381449130",
       "source": "flash",
-      "name": "EVER EDEN儿童唇膏安唯伊天然植萃婴幼儿宝宝专用 4.2g",
-      "price": "33.5",
-      "orig": "99",
+      "name": "LLOYD925银椭圆耳钉环抱耳环耳饰礼盒装Blackpink同款",
+      "price": "130",
+      "orig": "260",
       "promoStatus": "E2",
       "promoBegin": "2026-11-18 10:00:00",
       "promoEnd": "2026-11-19 09:59:59",
       "deleted": false,
-      "shop": "Evereden安唯伊海外京东自营旗舰店",
+      "shop": "LLOYD海外京东自营旗舰店",
       "isNew": false,
-      "pic": "jfs/t1/557190/15/13786/6357/6af6ce22F062f0c31/00ae0c80c8fec72e.png",
-      "streak": 429,
+      "pic": "jfs/t1/570755/12/10954/2264/6afad19fFa9cb0300/02760c80c87fd530.png",
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "33.5",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "10238806496440": {
-      "sku": "10238806496440",
-      "source": "flash",
-      "name": "BEN & JERRY'S进口组合本杰瑞冰淇淋大桶装雪糕冰糕奶砖冰激凌奶糕【频道专享】 【27年1月到期】草莓芝士*4桶",
-      "price": "159",
-      "orig": "318",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "moogo海外专营店",
-      "isNew": false,
-      "pic": "jfs/t1/567869/36/9874/19846/6af582d9F6d35fb8c/00ae0c80c8fd0636.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "159",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100247530969": {
-      "sku": "100247530969",
-      "source": "flash",
-      "name": "曼龙婴儿爬爬垫宝宝加厚家用防摔ixpe地垫儿童爬行垫180*200*2cm",
-      "price": "220",
-      "orig": "639",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": true,
-      "shop": "曼龙京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/579152/19/8161/8593/6afbf2f8Faf0e6f23/00ae0c80c85501a9.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "220",
+      "flashPrice": "130",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1602,7 +1205,216 @@
       "shop": "谷雨京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/549622/18/9918/5291/6ae44f45Fb122b2ed/02760c80c8787cbc.png",
-      "streak": 429,
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "1",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100447305312": {
+      "sku": "100447305312",
+      "source": "flash",
+      "name": "依视路钻晶膜岩非球面近视眼镜片超薄轻有度数远视配眼镜",
+      "price": "260",
+      "orig": "1080",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "太阳镜京东自营专区",
+      "isNew": false,
+      "pic": "jfs/t1/585684/12/5182/11341/6afc28c7F1c819a4f/02760c80c8efac38.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "260",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100420330122": {
+      "sku": "100420330122",
+      "source": "flash",
+      "name": "施颜适STRIDEX舒缓倍护痘痘贴20贴 水杨祛痘控油舒缓妆前隐形痘痘",
+      "price": "5.9",
+      "orig": "29.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "STRIDEX施颜适京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/568652/24/11028/6901/6afbf7b8Ffbc49a20/02760c80c87887e0.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "5.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100313594894": {
+      "sku": "100313594894",
+      "source": "flash",
+      "name": "MLVISION玄景 M6 Display AI+AR显示眼镜 磁吸模块化 拍摄翻译+提词器 科技礼物",
+      "price": "1449.5",
+      "orig": "2999",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "MLVISION京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/575314/23/7690/18399/6afa90faF54fe5636/00ae0c80c85a3238.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "1449.5",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100279280196": {
+      "sku": "100279280196",
+      "source": "flash",
+      "name": "施华洛世奇（SWAROVSKI）【品牌直供】闪耀心动项链 女士项链送女友礼物 5684386",
+      "price": "777",
+      "orig": "1600",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "施华洛世奇（SWAROVSKI）海外京东自营专区",
+      "isNew": false,
+      "pic": "jfs/t1/562885/30/7513/10052/6af14aeaFb6a270fd/00ae0c80c8608227.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "777",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100440600108": {
+      "sku": "100440600108",
+      "source": "flash",
+      "name": "藤田制药马油凡士林手足干裂膏脚后跟干裂粗糙干燥专用皲裂膏修复医用1盒",
+      "price": "31",
+      "orig": "69",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "藤田制药个护京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/575309/31/7551/7647/6af67549F9c5c9392/00ae0c80c8d865e2.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "31",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "10237775748503": {
+      "sku": "10237775748503",
+      "source": "flash",
+      "name": "蔡司优颜系镜框送LITE防蓝光镜片近视配镜可配度数9901 C1亮黑 镜框+1.67LITE防蓝光镜片（800度内）",
+      "price": "158",
+      "orig": "316",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "优购镜仓官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/580632/5/867/12180/6aeece60Feee6495b/00ae0c80c8843f08.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "158",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100247530969": {
+      "sku": "100247530969",
+      "source": "flash",
+      "name": "曼龙婴儿爬爬垫宝宝加厚家用防摔ixpe地垫儿童爬行垫180*200*2cm",
+      "price": "220",
+      "orig": "639",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": true,
+      "shop": "曼龙京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/579152/19/8161/8593/6afbf2f8Faf0e6f23/00ae0c80c85501a9.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "220",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100229591569": {
+      "sku": "100229591569",
+      "source": "flash",
+      "name": "Coolkiss英国进口儿童防晒喷雾SPF50+高倍防水防汗隔紫外线物理防晒150ml",
+      "price": "48",
+      "orig": "168",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "Coolkiss海外京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/568223/38/5298/6094/6aed5172F6f4f819c/00ae0c80c8606e04.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "48",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100422799832": {
+      "sku": "100422799832",
+      "source": "flash",
+      "name": "DR.JRAIOS生姜防脱洗发水防脱发密发增发防脱育发固发养发男女士专用洗头膏",
+      "price": "79",
+      "orig": "118",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "DR.JRAIOS京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/588495/18/3275/24954/6afbbde4F9dfe3ca4/00ae0c80c8723931.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "79",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100436687654": {
+      "sku": "100436687654",
+      "source": "flash",
+      "name": "妈咪爱小恐龙新生儿益生菌滴剂8ml 易滴0-3岁可用",
+      "price": "99",
+      "orig": "328",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "妈咪爱京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/580730/20/308/14199/6aed72dfFb6839da6/00ae0c80c8511413.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "99",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100048502564": {
+      "sku": "100048502564",
+      "source": "flash",
+      "name": "苏泊尔【京东限定-性价比】有钛无涂层不锈钢不粘炒锅30cm电磁炉炒菜锅",
+      "price": "1",
+      "orig": "439",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": true,
+      "shop": "苏泊尔京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/554416/9/9369/11400/6ae854beFde732d9f/00ae0c80c834a65a.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -1621,123 +1433,47 @@
       "shop": "川廿制药京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/580899/31/429/25602/6aedb1b6F75847909/02760c80c88fb7c9.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "35",
       "stagePrice": "",
       "stageRounds": 0
     },
-    "100335228740": {
-      "sku": "100335228740",
+    "100115267551": {
+      "sku": "100115267551",
       "source": "flash",
-      "name": "多米纳斯（Dominus）正牌干红葡萄酒2023年750mL 美国纳帕名庄 送礼【JWS精选】",
-      "price": "1399",
-      "orig": "4299",
+      "name": "EVER EDEN儿童唇膏安唯伊天然植萃婴幼儿宝宝专用 4.2g",
+      "price": "33.5",
+      "orig": "99",
       "promoStatus": "E2",
       "promoBegin": "2026-11-18 10:00:00",
       "promoEnd": "2026-11-19 09:59:59",
       "deleted": false,
-      "shop": "京东全球购名庄葡萄酒自营旗舰店",
+      "shop": "Evereden安唯伊海外京东自营旗舰店",
       "isNew": false,
-      "pic": "jfs/t1/588976/31/706/5804/6af68303F9a700b85/00ae0c80c8a68ae5.png",
-      "streak": 428,
+      "pic": "jfs/t1/557190/15/13786/6357/6af6ce22F062f0c31/00ae0c80c8fec72e.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "1399",
+      "flashPrice": "33.5",
       "stagePrice": "",
       "stageRounds": 0
     },
-    "100336405315": {
-      "sku": "100336405315",
+    "10238806496440": {
+      "sku": "10238806496440",
       "source": "flash",
-      "name": "Keep薄绒暖感软呼啦圈女瘦肚子减肥专用收腹加重不伤腰薄绒天空蓝",
-      "price": "29.9",
-      "orig": "73.9",
+      "name": "BEN & JERRY'S进口组合本杰瑞冰淇淋大桶装雪糕冰糕奶砖冰激凌奶糕【频道专享】 【27年1月到期】草莓芝士*4桶",
+      "price": "159",
+      "orig": "318",
       "promoStatus": "E2",
       "promoBegin": "2026-11-18 10:00:00",
       "promoEnd": "2026-11-19 09:59:59",
       "deleted": false,
-      "shop": "Keep京东自营旗舰店",
+      "shop": "moogo海外专营店",
       "isNew": false,
-      "pic": "jfs/t1/588178/21/4110/59357/6afab6edF272a6041/00ae0c80c89f54b0.png",
-      "streak": 428,
+      "pic": "jfs/t1/567869/36/9874/19846/6af582d9F6d35fb8c/00ae0c80c8fd0636.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "29.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100382837072": {
-      "sku": "100382837072",
-      "source": "flash",
-      "name": "汤臣倍健倍儿健启高儿童液体钙 2支尝鲜装 儿童青少年补钙 【试吃装】",
-      "price": "4.9",
-      "orig": "49",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "汤臣倍健京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/545075/11/4221/6489/6ad09804F44c74a10/02760c80c8c63fd4.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "4.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100320105071": {
-      "sku": "100320105071",
-      "source": "flash",
-      "name": "3M思高竹纤维周抛抹布25*28cm 20片/卷抗菌抗油不用洗洁精",
-      "price": "17.9",
-      "orig": "39.9",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "3M家庭清洁京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/575585/15/7186/11219/6af684f7Fb4a872e8/00ae0c80c859c333.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "17.9",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100313594894": {
-      "sku": "100313594894",
-      "source": "flash",
-      "name": "MLVISION玄景 M6 Display AI+AR显示眼镜 磁吸模块化 拍摄翻译+提词器 科技礼物",
-      "price": "1449.5",
-      "orig": "2999",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "MLVISION京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/575314/23/7690/18399/6afa90faF54fe5636/00ae0c80c85a3238.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "1449.5",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100382275472": {
-      "sku": "100382275472",
-      "source": "flash",
-      "name": "颐莲（RELLET）颐莲×这一秒过火联名礼盒PDRN胶原蛋白三文鱼面膜次抛",
-      "price": "9.9",
-      "orig": "339",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": true,
-      "shop": "颐莲（RELLET）京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/570413/35/7888/57545/6af280b0F18f25236/00ae0c80c854c9df.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "9.9",
+      "flashPrice": "159",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1754,9 +1490,313 @@
       "shop": "妈咪爱京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572024/18/1853/13099/6aeaf999F4e46096d/00ae0c80c802ef09.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "99",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100314671853": {
+      "sku": "100314671853",
+      "source": "flash",
+      "name": "DR.JRAIOS可视化挖耳勺掏耳朵神器发光高清1000万不伤耳儿童成人采耳仪器",
+      "price": "88",
+      "orig": "128",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "DR.JRAIOS京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/569304/3/10744/20012/6afbbddcF9e146a35/00ae0c80c8435524.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "88",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100320083079": {
+      "sku": "100320083079",
+      "source": "flash",
+      "name": "摩可适用iPhone Duo手机壳苹果18折叠屏磁吸保护套凯夫拉杜邦芳纶纤维超轻薄裸机手感防爆抗摔高级感",
+      "price": "199",
+      "orig": "399",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "摩可京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/581014/21/2834/8542/6af3ff18F75cb793f/00ae0c80c8c2b219.png",
+      "streak": 80,
+      "firstSeen": "2026-11-18T10:06:47.455Z",
+      "flashPrice": "199",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100382837072": {
+      "sku": "100382837072",
+      "source": "flash",
+      "name": "汤臣倍健倍儿健启高儿童液体钙 2支尝鲜装 儿童青少年补钙 【试吃装】",
+      "price": "4.9",
+      "orig": "49",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "汤臣倍健京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/545075/11/4221/6489/6ad09804F44c74a10/02760c80c8c63fd4.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "4.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "10237763200571": {
+      "sku": "10237763200571",
+      "source": "flash",
+      "name": "斯凯奇（Skechers）户外折叠椅月亮椅便携式钓鱼椅子轻量化阳台休闲小凳子露营椅子 卡其色 加棉舒适升级款",
+      "price": "59.5",
+      "orig": "239",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": true,
+      "shop": "斯凯奇户外装备旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/588630/28/310/15339/6af55eebF8ad78fbf/02760c80c86501cb.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "59.5",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100320105071": {
+      "sku": "100320105071",
+      "source": "flash",
+      "name": "3M思高竹纤维周抛抹布25*28cm 20片/卷抗菌抗油不用洗洁精",
+      "price": "17.9",
+      "orig": "39.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "3M家庭清洁京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/575585/15/7186/11219/6af684f7Fb4a872e8/00ae0c80c859c333.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "17.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100396278816": {
+      "sku": "100396278816",
+      "source": "flash",
+      "name": "博柏利（BURBERRY）【限时私享优惠】女装 短款涂层牛仔 Trench 风衣",
+      "price": "13750",
+      "orig": "27500",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "BURBERRY京东自营官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/580904/37/8428/7201/6afab963Fc58a3fd0/00ae0c80c8455bf4.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "13750",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100382275472": {
+      "sku": "100382275472",
+      "source": "flash",
+      "name": "颐莲（RELLET）颐莲×这一秒过火联名礼盒PDRN胶原蛋白三文鱼面膜次抛",
+      "price": "9.9",
+      "orig": "339",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": true,
+      "shop": "颐莲（RELLET）京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/570413/35/7888/57545/6af280b0F18f25236/00ae0c80c854c9df.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "9.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "10228092236356": {
+      "sku": "10228092236356",
+      "source": "flash",
+      "name": "dahua外采4.5米监控电源延长线 外采延长线",
+      "price": "19.9",
+      "orig": "39.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "大华官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/572060/5/3240/11834/6aec3e34F363ea4bc/00ae0c80c831e33a.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "19.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100438559394": {
+      "sku": "100438559394",
+      "source": "flash",
+      "name": "蒙牛未来星汪汪队雪梨枇杷儿童果汁吸吸袋饮料100g*10袋 清润甘甜",
+      "price": "19.9",
+      "orig": "32",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "蒙牛京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/555550/33/6675/41726/6aead3afF0b127d92/00ae0c80c8d8b9f7.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "19.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100426499024": {
+      "sku": "100426499024",
+      "source": "flash",
+      "name": "哈药生物重组胶原蛋白抗皱次抛精华次抛*1支",
+      "price": "9.9",
+      "orig": "88",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "哈药生物京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/547162/2/11091/2764/6ae01047F686b62ec/00ae0c80c8780d6b.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "9.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100336405315": {
+      "sku": "100336405315",
+      "source": "flash",
+      "name": "Keep薄绒暖感软呼啦圈女瘦肚子减肥专用收腹加重不伤腰薄绒天空蓝",
+      "price": "29.9",
+      "orig": "73.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "Keep京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/588178/21/4110/59357/6afab6edF272a6041/00ae0c80c89f54b0.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "29.9",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100258221041": {
+      "sku": "100258221041",
+      "source": "flash",
+      "name": "博柏利（BURBERRY）【限时私享优惠】女装 及腰短款轻盈棉质 Ladymoor 外套 夹克",
+      "price": "8500",
+      "orig": "17000",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "BURBERRY京东自营官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/580857/22/6985/6141/6afab969Fc03a512a/00ae0c80c841e96b.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "8500",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100140210058": {
+      "sku": "100140210058",
+      "source": "flash",
+      "name": "Bestway自动充气植绒床垫家用露营加厚气垫床 医院打地铺充气床户外671CY",
+      "price": "69",
+      "orig": "185",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "Bestway京东自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/579352/19/3549/8939/6af4089eFa8889c63/00ae0c80c8322af5.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "69",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100335228740": {
+      "sku": "100335228740",
+      "source": "flash",
+      "name": "多米纳斯（Dominus）正牌干红葡萄酒2023年750mL 美国纳帕名庄 送礼【JWS精选】",
+      "price": "1399",
+      "orig": "4299",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "京东全球购名庄葡萄酒自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/588976/31/706/5804/6af68303F9a700b85/00ae0c80c8a68ae5.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "1399",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "100332063873": {
+      "sku": "100332063873",
+      "source": "flash",
+      "name": "京东京造彩色直液式走珠笔8色1100米速干中性笔手账笔记办公学生考试刷题笔0.5mm全针管 JD1336",
+      "price": "5",
+      "orig": "9.9",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": true,
+      "shop": "京东京造自营旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/588044/11/4047/25984/6afa7642F2d9fe669/00ae0c80c87f9207.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "5",
+      "stagePrice": "",
+      "stageRounds": 0
+    },
+    "10214910673802": {
+      "sku": "10214910673802",
+      "source": "flash",
+      "name": "VERSACE/范思哲【季末优惠】 男士修身牛仔裤 1D800-蓝色 31",
+      "price": "4100",
+      "orig": "8200",
+      "promoStatus": "E2",
+      "promoBegin": "2026-11-18 10:00:00",
+      "promoEnd": "2026-11-19 09:59:59",
+      "deleted": false,
+      "shop": "VERSACE范思哲官方旗舰店",
+      "isNew": false,
+      "pic": "jfs/t1/580699/5/4121/6110/6af553b9Fc90b2b25/00ae0c80c85bbf6c.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "flashPrice": "4100",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1773,28 +1813,9 @@
       "shop": "禾泱泱京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/582792/22/6137/12312/6afaba36F1caebb9f/02760c80c893191f.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "29",
-      "stagePrice": "",
-      "stageRounds": 0
-    },
-    "100436687654": {
-      "sku": "100436687654",
-      "source": "flash",
-      "name": "妈咪爱小恐龙新生儿益生菌滴剂8ml 易滴0-3岁可用",
-      "price": "99",
-      "orig": "328",
-      "promoStatus": "E2",
-      "promoBegin": "2026-11-18 10:00:00",
-      "promoEnd": "2026-11-19 09:59:59",
-      "deleted": false,
-      "shop": "妈咪爱京东自营旗舰店",
-      "isNew": false,
-      "pic": "jfs/t1/580730/20/308/14199/6aed72dfFb6839da6/00ae0c80c8511413.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "flashPrice": "99",
       "stagePrice": "",
       "stageRounds": 0
     },
@@ -1811,7 +1832,7 @@
       "shop": "氧巴活泉水饮京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/576526/4/1259/11306/6aeda337Fc62ce29d/00ae0c80c8d2c491.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "29.9",
       "stagePrice": "",
@@ -1830,7 +1851,7 @@
       "shop": "Ego QV海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/558116/38/8242/9509/6aeb08e7Ff2478f33/00ae0c80c8c7a9b7.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "29",
       "stagePrice": "",
@@ -1849,7 +1870,7 @@
       "shop": "京东美妆礼品自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/575289/4/3821/9429/6af17deaF61dfb2dc/00ae0c80c8b59731.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "399",
       "stagePrice": "",
@@ -1868,7 +1889,7 @@
       "shop": "京东美妆礼品自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/580995/31/1701/11347/6af17f62Fab69e5d6/00ae0c80c8766d9b.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "299",
       "stagePrice": "",
@@ -1887,7 +1908,7 @@
       "shop": "京东美妆礼品自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/570497/24/7232/5694/6af17df4F34c2cf03/00ae0c80c897ac80.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "329",
       "stagePrice": "",
@@ -1906,7 +1927,7 @@
       "shop": "植村秀京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/561400/14/6833/5805/6aec5b9eF944aab67/00ae0c80c8a9feab.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "54",
       "stagePrice": "",
@@ -1925,7 +1946,7 @@
       "shop": "Bestway京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/571759/3/6064/26615/6af408a8F5c5c7306/00ae0c80c815608f.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "99",
       "stagePrice": "",
@@ -1944,7 +1965,7 @@
       "shop": "全棉时代卫生用品京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/587314/39/1901/13677/6af56d27F6b4739ea/02760c80c8aa9c44.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "7.5",
       "stagePrice": "",
@@ -1963,7 +1984,7 @@
       "shop": "RALPH LAUREN 拉夫劳伦海外京东自营专区",
       "isNew": false,
       "pic": "jfs/t1/536073/31/9601/7054/6ada1ab0F5428c49f/02760c80c8e24c6e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "706.5",
       "stagePrice": "",
@@ -1982,7 +2003,7 @@
       "shop": "乐互宜京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/556411/34/6582/11184/6ae859ceF1c5c6d92/00ae0c80c8132544.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1.99",
       "stagePrice": "",
@@ -2001,7 +2022,7 @@
       "shop": "嘉宝莉（CARPOLY）京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/581214/1/3696/9223/6af45d78F8e0e39dd/00ae0c80c85e83f7.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "69",
       "stagePrice": "",
@@ -2020,7 +2041,7 @@
       "shop": "久卜制药个人护理京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/571354/11/9756/5737/6af66841Fa6112b61/00ae0c80c814bdc9.jpg",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "37",
       "stagePrice": "",
@@ -2039,7 +2060,7 @@
       "shop": "润百颜京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/575348/33/4280/7553/6af1559aFa3df4d9c/00ae0c80c8990aeb.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "4.9",
       "stagePrice": "",
@@ -2058,7 +2079,7 @@
       "shop": "STANLEY海外京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/545314/18/11377/9742/6ae06e01Ffb99e81e/00ae0c80c84a7b6e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "129",
       "stagePrice": "",
@@ -2077,7 +2098,7 @@
       "shop": "SETH WOOD京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/572010/13/2674/4567/6aed74c0F4c83ed45/02760c80c8c80117.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "4.9",
       "stagePrice": "",
@@ -2096,7 +2117,7 @@
       "shop": "Keep京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/581000/36/8064/34346/6afab6f1F79568f7d/00ae0c80c89594a1.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "29.9",
       "stagePrice": "",
@@ -2115,7 +2136,7 @@
       "shop": "1号会员店",
       "isNew": false,
       "pic": "jfs/t1/576283/15/7904/4968/6afc4eafF46b7644c/00ae0c80c896ec9d.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "19.9",
       "stagePrice": "",
@@ -2134,7 +2155,7 @@
       "shop": "1号会员店",
       "isNew": false,
       "pic": "jfs/t1/587939/28/5272/22528/6afc4e86F99eabd57/00ae0c80c856a387.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "19.9",
       "stagePrice": "",
@@ -2153,7 +2174,7 @@
       "shop": "联合利华京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/568136/35/6279/15108/6aedb2a6F7e20c4fb/00ae0c80c8d3b853.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "14.9",
       "stagePrice": "",
@@ -2172,7 +2193,7 @@
       "shop": "亿滋京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/539566/30/11147/45714/6ad07afbF5614dd0a/02760c80c8a2182e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "8.9",
       "stagePrice": "",
@@ -2191,7 +2212,7 @@
       "shop": "本田制药个护京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569800/31/10768/11759/6af67462F8602696d/00ae0c80c8b4e2c5.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "31",
       "stagePrice": "",
@@ -2210,7 +2231,7 @@
       "shop": "蒙牛京东自营旗舰店",
       "isNew": false,
       "pic": "jfs/t1/548959/5/13214/17206/6aead470F38a7f14c/00ae0c80c850b96f.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "16.9",
       "stagePrice": "",
@@ -2229,7 +2250,7 @@
       "shop": "diesel官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/569794/30/9805/5388/6afc14dfFb3fabd25/00ae0c80c80cc51e.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -2248,7 +2269,7 @@
       "shop": "diesel官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/588411/3/4393/9892/6afc14c1F4fa98aa6/00ae0c80c8adf297.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -2267,7 +2288,7 @@
       "shop": "diesel官方旗舰店",
       "isNew": false,
       "pic": "jfs/t1/583052/19/6436/3330/6afc1490F8f975813/00ae0c80c87b1571.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "flashPrice": "1",
       "stagePrice": "",
@@ -2283,7 +2304,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/557271/7/8422/47173/6ae9a8c2Fbbf88256/02760c80c88493af.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "999",
       "flashPrice": "",
@@ -2299,7 +2320,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/583121/6/5920/39550/6afac4daF96278a4b/00ae0c80c8d54f17.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "9.9",
       "flashPrice": "",
@@ -2315,7 +2336,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/569194/14/10479/25983/6afa9857Fa482dd60/00ae0c80c8e1ee74.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "39.8",
       "flashPrice": "",
@@ -2331,7 +2352,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/546672/36/10361/3233/6adedd6dF17403b9a/00ae0c80c81a5feb.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "9.9",
       "flashPrice": "",
@@ -2347,7 +2368,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/554810/28/6318/4423/6ae407b8Fe6684bef/00ae0c80c8d33fd0.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "19.9",
       "flashPrice": "",
@@ -2363,7 +2384,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/576080/37/8360/6532/6afad25bF87b40065/00ae0c80c89654f2.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "4.9",
       "flashPrice": "",
@@ -2379,7 +2400,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/552181/6/8611/5750/6ae5b33dF7f335287/00ae0c80c8991a82.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "9.9",
       "flashPrice": "",
@@ -2395,7 +2416,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/587290/36/484/29746/6af30258F12055d3e/00ae0c80c843d920.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "9.9",
       "flashPrice": "",
@@ -2411,169 +2432,9 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/563160/29/1629/9646/6ae30d65Ff23d30ca/00ae0c80c8a51a0f.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "7.9",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100248028156": {
-      "sku": "100248028156",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "苏泊尔有钛炒锅",
-      "price": "439",
-      "stock": "15",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/569510/7/2007/11400/6ae854adF45b1c50e/00ae0c80c8f005ea.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "439",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "10036324013864": {
-      "sku": "10036324013864",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "斯凯奇充棉月亮椅",
-      "price": "119",
-      "stock": "5",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/568919/34/11080/66328/6afa79ddFa8735a80/00ae0c80c8aafb6b.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "119",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100258221077": {
-      "sku": "100258221077",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "及腰短款棉质外套",
-      "price": "17000",
-      "stock": "2",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/587035/17/3837/6141/6afab8e9F3990c75a/00ae0c80c83d425d.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "17000",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "10036181822480": {
-      "sku": "10036181822480",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "买框送防蓝光镜片",
-      "price": "316",
-      "stock": "30",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/580670/1/840/12180/6aeece4eF36211d55/00ae0c80c8e13c28.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "316",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100259786850": {
-      "sku": "100259786850",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "京造8色直液式笔",
-      "price": "9.9",
-      "stock": "20",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/572142/39/7759/25984/6afa7621Fac285dc6/00ae0c80c87ba006.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "9.9",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100289858920": {
-      "sku": "100289858920",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "得力加宽平板拖把",
-      "price": "30.9",
-      "stock": "180",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/568344/24/9066/72354/6af6e2c0F76b35aee/02760c80c8270d18.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "30.9",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "10034289048199": {
-      "sku": "10034289048199",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "男士牛仔裤",
-      "price": "8200",
-      "stock": "3",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/586964/40/1678/6110/6af553aaF0706d877/00ae0c80c8793c9b.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "8200",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100381448204": {
-      "sku": "100381448204",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "925银耳钉",
-      "price": "239",
-      "stock": "15",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/570244/19/10735/11732/6afad17bFd698013b/02760c80c832ad61.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "239",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100315506977": {
-      "sku": "100315506977",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "高清可视化挖耳勺",
-      "price": "128",
-      "stock": "100",
-      "limit": "2",
-      "shop": "",
-      "pic": "jfs/t1/570325/3/11528/20012/6afbbdb8Fc48f1da4/00ae0c80c8300d1b.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "128",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100399730820": {
-      "sku": "100399730820",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "施颜适痘痘贴",
-      "price": "19.9",
-      "stock": "100",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/582845/21/8297/61589/6afbf6e7F45abc933/02760c80c8e1c6b3.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "19.9",
       "flashPrice": "",
       "stageRounds": 0
     },
@@ -2587,89 +2448,25 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/579301/39/513/49950/6aed99ccFc3159542/02760c80c86d90d9.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "29.9",
       "flashPrice": "",
       "stageRounds": 0
     },
-    "100306381452": {
-      "sku": "100306381452",
+    "100289858920": {
+      "sku": "100289858920",
       "source": "stage",
       "stageId": "331219774",
-      "name": "高倍儿童防晒喷雾",
-      "price": "98",
-      "stock": "100",
-      "limit": "5",
-      "shop": "",
-      "pic": "jfs/t1/569714/10/5358/6094/6aed5154Fe59250e5/00ae0c80c897c670.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "98",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100035972469": {
-      "sku": "100035972469",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "未来星雪梨枇杷",
-      "price": "27.9",
-      "stock": "100",
+      "name": "得力加宽平板拖把",
+      "price": "30.9",
+      "stock": "180",
       "limit": "1",
       "shop": "",
-      "pic": "jfs/t1/574632/17/1408/41726/6aead387Fea1633a5/00ae0c80c8806e45.png",
-      "streak": 429,
+      "pic": "jfs/t1/568344/24/9066/72354/6af6e2c0F76b35aee/02760c80c8270d18.png",
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "27.9",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100304826083": {
-      "sku": "100304826083",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "短款涂层牛仔风衣",
-      "price": "27500",
-      "stock": "1",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/586854/38/4855/7201/6afab8e2F27d0e65c/00ae0c80c862f8c8.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "27500",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100294994600": {
-      "sku": "100294994600",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "施华闪耀心动项链",
-      "price": "839",
-      "stock": "2",
-      "limit": "2",
-      "shop": "",
-      "pic": "jfs/t1/585052/17/283/10052/6af14ae2F60ab6b59/00ae0c80c83eac77.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "839",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "10035357596350": {
-      "sku": "10035357596350",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "4.5米监控延长线",
-      "price": "39.9",
-      "stock": "200",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/554323/27/11934/11834/6aec3e21Fc4f966b9/00ae0c80c86bf899.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "39.9",
+      "stagePrice": "30.9",
       "flashPrice": "",
       "stageRounds": 0
     },
@@ -2683,25 +2480,121 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/524842/14/14247/7255/6ada1a6dF74fba9ff/00ae0c80c85d24bf.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "859",
       "flashPrice": "",
       "stageRounds": 0
     },
-    "100431891608": {
-      "sku": "100431891608",
+    "100381448204": {
+      "sku": "100381448204",
       "source": "stage",
       "stageId": "331219774",
-      "name": "哈药生物次抛精华",
-      "price": "29.9",
-      "stock": "100",
-      "limit": "10",
+      "name": "925银耳钉",
+      "price": "239",
+      "stock": "15",
+      "limit": "1",
       "shop": "",
-      "pic": "jfs/t1/551648/17/7459/2764/6ae0103bF988fe0f7/00ae0c80c8b43e1e.png",
-      "streak": 429,
+      "pic": "jfs/t1/570244/19/10735/11732/6afad17bFd698013b/02760c80c832ad61.png",
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "29.9",
+      "stagePrice": "239",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100399730820": {
+      "sku": "100399730820",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "施颜适痘痘贴",
+      "price": "19.9",
+      "stock": "100",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/582845/21/8297/61589/6afbf6e7F45abc933/02760c80c8e1c6b3.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "19.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100294994600": {
+      "sku": "100294994600",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "施华闪耀心动项链",
+      "price": "839",
+      "stock": "2",
+      "limit": "2",
+      "shop": "",
+      "pic": "jfs/t1/585052/17/283/10052/6af14ae2F60ab6b59/00ae0c80c83eac77.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "839",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "10036181822480": {
+      "sku": "10036181822480",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "买框送防蓝光镜片",
+      "price": "316",
+      "stock": "30",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/580670/1/840/12180/6aeece4eF36211d55/00ae0c80c8e13c28.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "316",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100247504329": {
+      "sku": "100247504329",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "曼龙爬行垫",
+      "price": "449",
+      "stock": "2",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/572144/38/10803/8593/6afbf2e9F9eb3551d/00ae0c80c8e7865e.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "449",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100306381452": {
+      "sku": "100306381452",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "高倍儿童防晒喷雾",
+      "price": "98",
+      "stock": "100",
+      "limit": "5",
+      "shop": "",
+      "pic": "jfs/t1/569714/10/5358/6094/6aed5154Fe59250e5/00ae0c80c897c670.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "98",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100248028156": {
+      "sku": "100248028156",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "苏泊尔有钛炒锅",
+      "price": "439",
+      "stock": "15",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/569510/7/2007/11400/6ae854adF45b1c50e/00ae0c80c8f005ea.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "439",
       "flashPrice": "",
       "stageRounds": 0
     },
@@ -2715,7 +2608,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/587473/1/2248/3725/6af6ce10F0973ae49/00ae0c80c8557ca5.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "67",
       "flashPrice": "",
@@ -2731,57 +2624,9 @@
       "limit": "3",
       "shop": "",
       "pic": "jfs/t1/553902/33/12032/19846/6af582caF9ccb8bb2/00ae0c80c886cb4f.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "318",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100247504329": {
-      "sku": "100247504329",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "曼龙爬行垫",
-      "price": "449",
-      "stock": "2",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/572144/38/10803/8593/6afbf2e9F9eb3551d/00ae0c80c8e7865e.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "449",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100236243013": {
-      "sku": "100236243013",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "Keep薄绒呼啦圈",
-      "price": "59.9",
-      "stock": "15",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/580514/34/7015/59357/6afab6e5F8a5db42c/00ae0c80c86be7e0.png",
-      "streak": 428,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "59.9",
-      "flashPrice": "",
-      "stageRounds": 0
-    },
-    "100240847091": {
-      "sku": "100240847091",
-      "source": "stage",
-      "stageId": "331219774",
-      "name": "颐莲联名礼盒",
-      "price": "189",
-      "stock": "62",
-      "limit": "1",
-      "shop": "",
-      "pic": "jfs/t1/569972/8/5887/57545/6af280a0Fd4cc157a/00ae0c80c8bd2fe6.png",
-      "streak": 429,
-      "firstSeen": "2026-11-18T02:05:30.426Z",
-      "stagePrice": "189",
       "flashPrice": "",
       "stageRounds": 0
     },
@@ -2795,9 +2640,185 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/550353/2/10101/10044/6aeaf988F91842ecd/00ae0c80c8e232c1.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "288",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100315506977": {
+      "sku": "100315506977",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "高清可视化挖耳勺",
+      "price": "128",
+      "stock": "100",
+      "limit": "2",
+      "shop": "",
+      "pic": "jfs/t1/570325/3/11528/20012/6afbbdb8Fc48f1da4/00ae0c80c8300d1b.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "128",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "10036324013864": {
+      "sku": "10036324013864",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "斯凯奇充棉月亮椅",
+      "price": "119",
+      "stock": "5",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/568919/34/11080/66328/6afa79ddFa8735a80/00ae0c80c8aafb6b.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "119",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100304826083": {
+      "sku": "100304826083",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "短款涂层牛仔风衣",
+      "price": "27500",
+      "stock": "1",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/586854/38/4855/7201/6afab8e2F27d0e65c/00ae0c80c862f8c8.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "27500",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100240847091": {
+      "sku": "100240847091",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "颐莲联名礼盒",
+      "price": "189",
+      "stock": "62",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/569972/8/5887/57545/6af280a0Fd4cc157a/00ae0c80c8bd2fe6.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "189",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "10035357596350": {
+      "sku": "10035357596350",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "4.5米监控延长线",
+      "price": "39.9",
+      "stock": "200",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/554323/27/11934/11834/6aec3e21Fc4f966b9/00ae0c80c86bf899.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "39.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100035972469": {
+      "sku": "100035972469",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "未来星雪梨枇杷",
+      "price": "27.9",
+      "stock": "100",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/574632/17/1408/41726/6aead387Fea1633a5/00ae0c80c8806e45.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "27.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100431891608": {
+      "sku": "100431891608",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "哈药生物次抛精华",
+      "price": "29.9",
+      "stock": "100",
+      "limit": "10",
+      "shop": "",
+      "pic": "jfs/t1/551648/17/7459/2764/6ae0103bF988fe0f7/00ae0c80c8b43e1e.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "29.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100236243013": {
+      "sku": "100236243013",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "Keep薄绒呼啦圈",
+      "price": "59.9",
+      "stock": "15",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/580514/34/7015/59357/6afab6e5F8a5db42c/00ae0c80c86be7e0.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "59.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100258221077": {
+      "sku": "100258221077",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "及腰短款棉质外套",
+      "price": "17000",
+      "stock": "2",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/587035/17/3837/6141/6afab8e9F3990c75a/00ae0c80c83d425d.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "17000",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "100259786850": {
+      "sku": "100259786850",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "京造8色直液式笔",
+      "price": "9.9",
+      "stock": "20",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/572142/39/7759/25984/6afa7621Fac285dc6/00ae0c80c87ba006.png",
+      "streak": 432,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "9.9",
+      "flashPrice": "",
+      "stageRounds": 0
+    },
+    "10034289048199": {
+      "sku": "10034289048199",
+      "source": "stage",
+      "stageId": "331219774",
+      "name": "男士牛仔裤",
+      "price": "8200",
+      "stock": "3",
+      "limit": "1",
+      "shop": "",
+      "pic": "jfs/t1/586964/40/1678/6110/6af553aaF0706d877/00ae0c80c8793c9b.png",
+      "streak": 433,
+      "firstSeen": "2026-11-18T02:05:30.426Z",
+      "stagePrice": "8200",
       "flashPrice": "",
       "stageRounds": 0
     },
@@ -2811,7 +2832,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/575629/29/8021/38676/6afab9ccF9c1c2ba9/00ae0c80c8fe3e73.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "238",
       "flashPrice": "",
@@ -2827,7 +2848,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/556683/23/11066/9429/6af17de4Ff029f4b0/00ae0c80c806e6e8.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "890",
       "flashPrice": "",
@@ -2843,7 +2864,7 @@
       "limit": "20",
       "shop": "",
       "pic": "jfs/t1/575876/13/4790/9223/6af45d47F3d5d6fc8/00ae0c80c8bde32e.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "115.9",
       "flashPrice": "",
@@ -2859,7 +2880,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/577074/16/1930/3547/6af15503Fc5609953/00ae0c80c8673e01.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "24.9",
       "flashPrice": "",
@@ -2875,7 +2896,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/568233/32/5044/3915/6aed7373F0abc6762/00ae0c80c8e8014d.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "29.9",
       "flashPrice": "",
@@ -2891,7 +2912,7 @@
       "limit": "5",
       "shop": "",
       "pic": "jfs/t1/556509/16/9485/8071/6aedb289Fd3c43b59/00ae0c80c8965617.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "29.9",
       "flashPrice": "",
@@ -2907,7 +2928,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/571271/32/7821/11759/6af67405Fc163a5fc/00ae0c80c8e3da19.png",
-      "streak": 428,
+      "streak": 432,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "62",
       "flashPrice": "",
@@ -2923,7 +2944,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/557000/22/9162/17206/6aead462Fa84b58cd/00ae0c80c8631180.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "26.9",
       "flashPrice": "",
@@ -2939,7 +2960,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/588088/25/5535/5388/6afc14d1F8b858220/00ae0c80c834246a.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "499",
       "flashPrice": "",
@@ -2955,7 +2976,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/568720/31/12710/9892/6afc14b8F1ad76fa9/00ae0c80c8542e0b.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "499",
       "flashPrice": "",
@@ -2971,7 +2992,7 @@
       "limit": "1",
       "shop": "",
       "pic": "jfs/t1/583529/2/6979/3330/6afc1480F5858ef73/00ae0c80c8a66ec1.png",
-      "streak": 429,
+      "streak": 433,
       "firstSeen": "2026-11-18T02:05:30.426Z",
       "stagePrice": "199",
       "flashPrice": "",
@@ -3022,775 +3043,775 @@
       "price": "8.9",
       "orig": "",
       "name": "乐互宜透气拉拉裤",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "1335961": {
       "price": "36.9",
       "orig": "",
       "name": "热卖款3M周抛抹布",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "3821980": {
       "price": "19.9",
       "orig": "",
       "name": "雀巢提拉米苏基底",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "6959280": {
       "price": "78",
       "orig": "",
       "name": "泸州火箭队100ml",
-      "at": 1795003187814
-    },
-    "100423234326": {
-      "price": "1",
-      "orig": "29.9",
-      "name": "100年润发粉嘟嘟瓶长效控油蓬松轻感无硅油韧养多肽头皮护理留香洗发水50g",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100298045008": {
       "price": "1",
       "orig": "4999",
       "name": "极萌负压水光仪【全能弹3月量】自打家用美容器院线美白抗衰祛黄提亮补水嫩肤生日礼物保价双11",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100436951136": {
       "price": "1",
       "orig": "1599",
       "name": "华硕灵耀16英寸电脑包弹道尼龙双肩包头层牛皮商务通勤出差大容量背包",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100222538901": {
       "price": "1",
       "orig": "200",
       "name": "SK-II神仙水精华10ml抗皱保湿修护紧致体验装",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100325741055": {
       "price": "1",
       "orig": "78",
       "name": "泸州老窖28度高光酒NBA火箭队限定款100ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100337074757": {
       "price": "1",
       "orig": "69",
       "name": "万益蓝grow儿童dha藻油学生青少年补6-18岁记脑忆力 2条",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100430687926": {
       "price": "1",
       "orig": "39.8",
       "name": "禾泱泱婴幼儿宝宝零食营养小虾条原味海虾味26g入口易溶虾味泡芙6月+",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100328040251": {
       "price": "1",
       "orig": "29.9",
       "name": "雀巢（Nestle）提拉米苏手作基底调制稀奶油250g*1盒烘焙原料快手早餐下午茶新品",
-      "at": 1795003187814
+      "at": 1795003536898
+    },
+    "100423234326": {
+      "price": "1",
+      "orig": "29.9",
+      "name": "100年润发粉嘟嘟瓶长效控油蓬松轻感无硅油韧养多肽头皮护理留香洗发水50g",
+      "at": 1795003536898
     },
     "100263981412": {
       "price": "1",
       "orig": "15.9",
       "name": "樊文花4号光蕴臻采精华液紧致保湿舒缓肌肤面部精华2ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100328126753": {
       "price": "1",
       "orig": "19.9",
       "name": "冰希黎（Boitown）旷世男士淡香水2ml持久留香大牌京东自营男生香水生日礼物送老公",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100330304413": {
       "price": "1",
       "orig": "19.9",
       "name": "理然零度蓬松水男士打底造型喷雾旅行装便携自然蓬松持久定型9ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100341189951": {
       "price": "1",
       "orig": "15.8",
       "name": "心相印手帕纸东方纸上系列清欢款7张12包四层月下白茶香小包便携",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100341178235": {
       "price": "1",
       "orig": "15.8",
       "name": "心相印手帕纸东方纸上系列既白款7张12包四层无香小包便携",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100433849556": {
       "price": "1",
       "orig": "4.9",
       "name": "心相印Kitty湿厕纸10抽1包便携出行小包加厚可冲散",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100133115263": {
       "price": "1",
       "orig": "15",
       "name": "SEE YOUNG PRO芯源蛋白致臻修护发膜霜8g 京东试用",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100434540876": {
       "price": "1",
       "orig": "9.9",
       "name": "顽皮小金盾猫粮100%鲜肉营养小轻袋体态管理全价成猫粮100g",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100420616010": {
       "price": "1",
       "orig": "15.9",
       "name": "奈（十八本）美发洗发露 洋甘菊&花旗参 袋装10ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100422609564": {
       "price": "1",
       "orig": "9.9",
       "name": "洁尔阴氨基酸私处洗护液男女私密清洗止痒抑菌清洁净味便携装洗液8g*3支",
-      "at": 1795003187814
-    },
-    "100048502564": {
-      "price": "1",
-      "orig": "439",
-      "name": "苏泊尔【京东限定-性价比】有钛无涂层不锈钢不粘炒锅30cm电磁炉炒菜锅",
-      "at": 1795003187814
-    },
-    "10237763200571": {
-      "price": "59.5",
-      "orig": "239",
-      "name": "斯凯奇（Skechers）户外折叠椅月亮椅便携式钓鱼椅子轻量化阳台休闲小凳子露营椅子 卡其色 加棉舒适升级款",
-      "at": 1795003187814
-    },
-    "100258221041": {
-      "price": "8500",
-      "orig": "17000",
-      "name": "博柏利（BURBERRY）【限时私享优惠】女装 及腰短款轻盈棉质 Ladymoor 外套 夹克",
-      "at": 1795003187814
-    },
-    "10237775748503": {
-      "price": "158",
-      "orig": "316",
-      "name": "蔡司优颜系镜框送LITE防蓝光镜片近视配镜可配度数9901 C1亮黑 镜框+1.67LITE防蓝光镜片（800度内）",
-      "at": 1795003187814
-    },
-    "100284108101": {
-      "price": "9.9",
-      "orig": "89",
-      "name": "仁和青少年专用祛痘膏壬二酸凝胶学生祛痘淡印温和消青春痘30g",
-      "at": 1795003187814
-    },
-    "100332063873": {
-      "price": "5",
-      "orig": "9.9",
-      "name": "京东京造彩色直液式走珠笔8色1100米速干中性笔手账笔记办公学生考试刷题笔0.5mm全针管 JD1336",
-      "at": 1795003187814
-    },
-    "100441833766": {
-      "price": "14.9",
-      "orig": "39.9",
-      "name": "得力（deli）平板拖把家用一拖净免手洗拖布洗拖一体懒人拖地神器 含拖布*2",
-      "at": 1795003187814
-    },
-    "10214910673802": {
-      "price": "4100",
-      "orig": "8200",
-      "name": "VERSACE/范思哲【季末优惠】 男士修身牛仔裤 1D800-蓝色 31",
-      "at": 1795003187814
-    },
-    "100381449130": {
-      "price": "130",
-      "orig": "260",
-      "name": "LLOYD925银椭圆耳钉环抱耳环耳饰礼盒装Blackpink同款",
-      "at": 1795003187814
-    },
-    "100314671853": {
-      "price": "88",
-      "orig": "128",
-      "name": "DR.JRAIOS可视化挖耳勺掏耳朵神器发光高清1000万不伤耳儿童成人采耳仪器",
-      "at": 1795003187814
-    },
-    "100420330122": {
-      "price": "5.9",
-      "orig": "29.9",
-      "name": "施颜适STRIDEX舒缓倍护痘痘贴20贴 水杨祛痘控油舒缓妆前隐形痘痘",
-      "at": 1795003187814
-    },
-    "100140210058": {
-      "price": "69",
-      "orig": "185",
-      "name": "Bestway自动充气植绒床垫家用露营加厚气垫床 医院打地铺充气床户外671CY",
-      "at": 1795003187814
-    },
-    "100447305312": {
-      "price": "260",
-      "orig": "1080",
-      "name": "依视路钻晶膜岩非球面近视眼镜片超薄轻有度数远视配眼镜",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100328893811": {
       "price": "14.9",
       "orig": "49",
       "name": "金纺自营新品120天留香香氛衣物护理剂山茶香型袋装1KG",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100440600108": {
-      "price": "31",
-      "orig": "69",
-      "name": "藤田制药马油凡士林手足干裂膏脚后跟干裂粗糙干燥专用皲裂膏修复医用1盒",
-      "at": 1795003187814
-    },
-    "100422799832": {
-      "price": "79",
-      "orig": "118",
-      "name": "DR.JRAIOS生姜防脱洗发水防脱发密发增发防脱育发固发养发男女士专用洗头膏",
-      "at": 1795003187814
-    },
-    "100229591569": {
-      "price": "48",
-      "orig": "168",
-      "name": "Coolkiss英国进口儿童防晒喷雾SPF50+高倍防水防汗隔紫外线物理防晒150ml",
-      "at": 1795003187814
-    },
-    "100320083079": {
-      "price": "199",
-      "orig": "399",
-      "name": "摩可适用iPhone Duo手机壳苹果18折叠屏磁吸保护套凯夫拉杜邦芳纶纤维超轻薄裸机手感防爆抗摔高级感",
-      "at": 1795003187814
-    },
-    "100438559394": {
-      "price": "19.9",
-      "orig": "32",
-      "name": "蒙牛未来星汪汪队雪梨枇杷儿童果汁吸吸袋饮料100g*10袋 清润甘甜",
-      "at": 1795003187814
-    },
-    "100396278816": {
-      "price": "13750",
-      "orig": "27500",
-      "name": "博柏利（BURBERRY）【限时私享优惠】女装 短款涂层牛仔 Trench 风衣",
-      "at": 1795003187814
-    },
-    "100279280196": {
-      "price": "777",
-      "orig": "1600",
-      "name": "施华洛世奇（SWAROVSKI）【品牌直供】闪耀心动项链 女士项链送女友礼物 5684386",
-      "at": 1795003187814
-    },
-    "10228092236356": {
-      "price": "19.9",
+    "100441833766": {
+      "price": "14.9",
       "orig": "39.9",
-      "name": "dahua外采4.5米监控电源延长线 外采延长线",
-      "at": 1795003187814
+      "name": "得力（deli）平板拖把家用一拖净免手洗拖布洗拖一体懒人拖地神器 含拖布*2",
+      "at": 1795003536898
     },
     "100237490023": {
       "price": "706.5",
       "orig": "1413",
       "name": "RALPH LAUREN 拉夫劳伦夏季潮流男士送礼物经典T恤短袖Polo衫710534735黑色XL",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100426499024": {
+    "100284108101": {
       "price": "9.9",
-      "orig": "88",
-      "name": "哈药生物重组胶原蛋白抗皱次抛精华次抛*1支",
-      "at": 1795003187814
+      "orig": "89",
+      "name": "仁和青少年专用祛痘膏壬二酸凝胶学生祛痘淡印温和消青春痘30g",
+      "at": 1795003536898
     },
-    "100115267551": {
-      "price": "33.5",
-      "orig": "99",
-      "name": "EVER EDEN儿童唇膏安唯伊天然植萃婴幼儿宝宝专用 4.2g",
-      "at": 1795003187814
-    },
-    "10238806496440": {
-      "price": "159",
-      "orig": "318",
-      "name": "BEN & JERRY'S进口组合本杰瑞冰淇淋大桶装雪糕冰糕奶砖冰激凌奶糕【频道专享】 【27年1月到期】草莓芝士*4桶",
-      "at": 1795003187814
-    },
-    "100247530969": {
-      "price": "220",
-      "orig": "639",
-      "name": "曼龙婴儿爬爬垫宝宝加厚家用防摔ixpe地垫儿童爬行垫180*200*2cm",
-      "at": 1795003187814
+    "100381449130": {
+      "price": "130",
+      "orig": "260",
+      "name": "LLOYD925银椭圆耳钉环抱耳环耳饰礼盒装Blackpink同款",
+      "at": 1795003536898
     },
     "100353545240": {
       "price": "1",
       "orig": "59",
       "name": "谷雨光能复原次抛1.5ml*5支",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100434643230": {
-      "price": "35",
-      "orig": "82.8",
-      "name": "川廿制药灰指甲特有效专用指甲增厚发黄变厚真菌感染脱甲坏甲抑菌液搭药贴",
-      "at": 1795003187814
+    "100447305312": {
+      "price": "260",
+      "orig": "1080",
+      "name": "依视路钻晶膜岩非球面近视眼镜片超薄轻有度数远视配眼镜",
+      "at": 1795003536898
     },
-    "100335228740": {
-      "price": "1399",
-      "orig": "4299",
-      "name": "多米纳斯（Dominus）正牌干红葡萄酒2023年750mL 美国纳帕名庄 送礼【JWS精选】",
-      "at": 1795003187814
-    },
-    "100336405315": {
-      "price": "29.9",
-      "orig": "73.9",
-      "name": "Keep薄绒暖感软呼啦圈女瘦肚子减肥专用收腹加重不伤腰薄绒天空蓝",
-      "at": 1795003187814
-    },
-    "100382837072": {
-      "price": "4.9",
-      "orig": "49",
-      "name": "汤臣倍健倍儿健启高儿童液体钙 2支尝鲜装 儿童青少年补钙 【试吃装】",
-      "at": 1795003187814
-    },
-    "100320105071": {
-      "price": "17.9",
-      "orig": "39.9",
-      "name": "3M思高竹纤维周抛抹布25*28cm 20片/卷抗菌抗油不用洗洁精",
-      "at": 1795003187814
+    "100420330122": {
+      "price": "5.9",
+      "orig": "29.9",
+      "name": "施颜适STRIDEX舒缓倍护痘痘贴20贴 水杨祛痘控油舒缓妆前隐形痘痘",
+      "at": 1795003536898
     },
     "100313594894": {
       "price": "1449.5",
       "orig": "2999",
       "name": "MLVISION玄景 M6 Display AI+AR显示眼镜 磁吸模块化 拍摄翻译+提词器 科技礼物",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100382275472": {
-      "price": "9.9",
-      "orig": "339",
-      "name": "颐莲（RELLET）颐莲×这一秒过火联名礼盒PDRN胶原蛋白三文鱼面膜次抛",
-      "at": 1795003187814
+    "100279280196": {
+      "price": "777",
+      "orig": "1600",
+      "name": "施华洛世奇（SWAROVSKI）【品牌直供】闪耀心动项链 女士项链送女友礼物 5684386",
+      "at": 1795003536898
     },
-    "100436695116": {
-      "price": "99",
-      "orig": "328",
-      "name": "妈咪爱小恐龙婴幼儿乳糖酶水解蛋白新升级25000型不耐受高活性酶30支装",
-      "at": 1795003187814
+    "100440600108": {
+      "price": "31",
+      "orig": "69",
+      "name": "藤田制药马油凡士林手足干裂膏脚后跟干裂粗糙干燥专用皲裂膏修复医用1盒",
+      "at": 1795003536898
     },
-    "100434471566": {
-      "price": "29",
-      "orig": "238",
-      "name": "禾泱泱海伊登三文鱼液体深海鱼油omega3 DHA+EPA液体天然TG型鱼油51ml",
-      "at": 1795003187814
+    "10237775748503": {
+      "price": "158",
+      "orig": "316",
+      "name": "蔡司优颜系镜框送LITE防蓝光镜片近视配镜可配度数9901 C1亮黑 镜框+1.67LITE防蓝光镜片（800度内）",
+      "at": 1795003536898
+    },
+    "100247530969": {
+      "price": "220",
+      "orig": "639",
+      "name": "曼龙婴儿爬爬垫宝宝加厚家用防摔ixpe地垫儿童爬行垫180*200*2cm",
+      "at": 1795003536898
+    },
+    "100229591569": {
+      "price": "48",
+      "orig": "168",
+      "name": "Coolkiss英国进口儿童防晒喷雾SPF50+高倍防水防汗隔紫外线物理防晒150ml",
+      "at": 1795003536898
+    },
+    "100422799832": {
+      "price": "79",
+      "orig": "118",
+      "name": "DR.JRAIOS生姜防脱洗发水防脱发密发增发防脱育发固发养发男女士专用洗头膏",
+      "at": 1795003536898
     },
     "100436687654": {
       "price": "99",
       "orig": "328",
       "name": "妈咪爱小恐龙新生儿益生菌滴剂8ml 易滴0-3岁可用",
-      "at": 1795003187814
+      "at": 1795003536898
+    },
+    "100048502564": {
+      "price": "1",
+      "orig": "439",
+      "name": "苏泊尔【京东限定-性价比】有钛无涂层不锈钢不粘炒锅30cm电磁炉炒菜锅",
+      "at": 1795003536898
+    },
+    "100434643230": {
+      "price": "35",
+      "orig": "82.8",
+      "name": "川廿制药灰指甲特有效专用指甲增厚发黄变厚真菌感染脱甲坏甲抑菌液搭药贴",
+      "at": 1795003536898
+    },
+    "100115267551": {
+      "price": "33.5",
+      "orig": "99",
+      "name": "EVER EDEN儿童唇膏安唯伊天然植萃婴幼儿宝宝专用 4.2g",
+      "at": 1795003536898
+    },
+    "10238806496440": {
+      "price": "159",
+      "orig": "318",
+      "name": "BEN & JERRY'S进口组合本杰瑞冰淇淋大桶装雪糕冰糕奶砖冰激凌奶糕【频道专享】 【27年1月到期】草莓芝士*4桶",
+      "at": 1795003536898
+    },
+    "100436695116": {
+      "price": "99",
+      "orig": "328",
+      "name": "妈咪爱小恐龙婴幼儿乳糖酶水解蛋白新升级25000型不耐受高活性酶30支装",
+      "at": 1795003536898
+    },
+    "100314671853": {
+      "price": "88",
+      "orig": "128",
+      "name": "DR.JRAIOS可视化挖耳勺掏耳朵神器发光高清1000万不伤耳儿童成人采耳仪器",
+      "at": 1795003536898
+    },
+    "100320083079": {
+      "price": "199",
+      "orig": "399",
+      "name": "摩可适用iPhone Duo手机壳苹果18折叠屏磁吸保护套凯夫拉杜邦芳纶纤维超轻薄裸机手感防爆抗摔高级感",
+      "at": 1795003536898
+    },
+    "100382837072": {
+      "price": "4.9",
+      "orig": "49",
+      "name": "汤臣倍健倍儿健启高儿童液体钙 2支尝鲜装 儿童青少年补钙 【试吃装】",
+      "at": 1795003536898
+    },
+    "10237763200571": {
+      "price": "59.5",
+      "orig": "239",
+      "name": "斯凯奇（Skechers）户外折叠椅月亮椅便携式钓鱼椅子轻量化阳台休闲小凳子露营椅子 卡其色 加棉舒适升级款",
+      "at": 1795003536898
+    },
+    "100320105071": {
+      "price": "17.9",
+      "orig": "39.9",
+      "name": "3M思高竹纤维周抛抹布25*28cm 20片/卷抗菌抗油不用洗洁精",
+      "at": 1795003536898
+    },
+    "100396278816": {
+      "price": "13750",
+      "orig": "27500",
+      "name": "博柏利（BURBERRY）【限时私享优惠】女装 短款涂层牛仔 Trench 风衣",
+      "at": 1795003536898
+    },
+    "100382275472": {
+      "price": "9.9",
+      "orig": "339",
+      "name": "颐莲（RELLET）颐莲×这一秒过火联名礼盒PDRN胶原蛋白三文鱼面膜次抛",
+      "at": 1795003536898
+    },
+    "10228092236356": {
+      "price": "19.9",
+      "orig": "39.9",
+      "name": "dahua外采4.5米监控电源延长线 外采延长线",
+      "at": 1795003536898
+    },
+    "100438559394": {
+      "price": "19.9",
+      "orig": "32",
+      "name": "蒙牛未来星汪汪队雪梨枇杷儿童果汁吸吸袋饮料100g*10袋 清润甘甜",
+      "at": 1795003536898
+    },
+    "100426499024": {
+      "price": "9.9",
+      "orig": "88",
+      "name": "哈药生物重组胶原蛋白抗皱次抛精华次抛*1支",
+      "at": 1795003536898
+    },
+    "100336405315": {
+      "price": "29.9",
+      "orig": "73.9",
+      "name": "Keep薄绒暖感软呼啦圈女瘦肚子减肥专用收腹加重不伤腰薄绒天空蓝",
+      "at": 1795003536898
+    },
+    "100258221041": {
+      "price": "8500",
+      "orig": "17000",
+      "name": "博柏利（BURBERRY）【限时私享优惠】女装 及腰短款轻盈棉质 Ladymoor 外套 夹克",
+      "at": 1795003536898
+    },
+    "100140210058": {
+      "price": "69",
+      "orig": "185",
+      "name": "Bestway自动充气植绒床垫家用露营加厚气垫床 医院打地铺充气床户外671CY",
+      "at": 1795003536898
+    },
+    "100335228740": {
+      "price": "1399",
+      "orig": "4299",
+      "name": "多米纳斯（Dominus）正牌干红葡萄酒2023年750mL 美国纳帕名庄 送礼【JWS精选】",
+      "at": 1795003536898
+    },
+    "100332063873": {
+      "price": "5",
+      "orig": "9.9",
+      "name": "京东京造彩色直液式走珠笔8色1100米速干中性笔手账笔记办公学生考试刷题笔0.5mm全针管 JD1336",
+      "at": 1795003536898
+    },
+    "10214910673802": {
+      "price": "4100",
+      "orig": "8200",
+      "name": "VERSACE/范思哲【季末优惠】 男士修身牛仔裤 1D800-蓝色 31",
+      "at": 1795003536898
+    },
+    "100434471566": {
+      "price": "29",
+      "orig": "238",
+      "name": "禾泱泱海伊登三文鱼液体深海鱼油omega3 DHA+EPA液体天然TG型鱼油51ml",
+      "at": 1795003536898
     },
     "100446661854": {
       "price": "29.9",
       "orig": "59.9",
       "name": "氧巴活泉【矿泉】天然苏打水 pH8.0+无糖无汽500ml*24瓶纸箱装 弱碱饮用水",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100445385642": {
       "price": "29",
       "orig": "69",
       "name": "QV小老虎面霜100g(便携装)婴儿润肤霜宝宝婴儿面霜滋润保湿澳洲Ego",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100070837307": {
       "price": "399",
       "orig": "890",
       "name": "博柏利（BURBERRY）伦敦男士淡香水100ml 节日生日礼物送男友老公",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100318688749": {
       "price": "299",
       "orig": "630",
       "name": "博柏利（BURBERRY）伦敦男士淡香水50ml节日生日礼物送男友老公中秋节礼物",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100318692697": {
       "price": "329",
       "orig": "810",
       "name": "博柏利（BURBERRY）红粉恋歌女士淡香水50ml香氛生日礼物送女友中秋节礼物",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100065839725": {
       "price": "54",
       "orig": "109.9",
       "name": "植村秀（shu uemura）植村秀全新臻萃养肤洁颜油 50ML",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100144513884": {
       "price": "99",
       "orig": "419",
       "name": "Bestway自动充气床垫带靠垫 户外车载垫充气沙发打地铺加厚加大 671DJ",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100450583008": {
       "price": "7.5",
       "orig": "19.9",
       "name": "全棉时代奈丝公主超净吸消毒级纯棉超薄透气日夜用卫生巾290mm8片京东自营",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100316910226": {
       "price": "706.5",
       "orig": "1413",
       "name": "RALPH LAUREN 拉夫劳伦夏季潮流男士送礼物经典T恤短袖Polo衫710534735黑色M",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100292481268": {
       "price": "1.99",
       "orig": "29.9",
       "name": "乐互宜零闷感成人拉拉裤XL2片试用装(臀围大于110cm)透气内裤型纸尿裤",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100230270675": {
       "price": "69",
       "orig": "198",
       "name": "嘉宝莉（CARPOLY） 防锈漆水性金属漆入户门改色漆彩钢瓦翻新专用漆油漆涂料白色3kg",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100322758917": {
       "price": "37",
       "orig": "96",
       "name": "久卜制药点痣膏无痕脸部去痣点斑疣去黑痣不留疤专用无痛无痕无痛无痕1盒",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100252700815": {
       "price": "4.9",
       "orig": "28",
       "name": "润百颜华熙生物屏障多维修护次抛精华液1支ECM舒缓护肤品|尝鲜试用",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100333946065": {
       "price": "129",
       "orig": "398",
       "name": "STANLEY水杯保冷保温杯男女大容量不锈钢冷饮杯子实用便携啤酒杯473ML红",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100258347816": {
       "price": "4.9",
       "orig": "29.9",
       "name": "SETH WOOD沐浴露乳液持久留香男女士法国香氛洗澡便携旅行装 体验装50ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100444318562": {
       "price": "29.9",
       "orig": "73.9",
       "name": "Keep毛绒暖感软呼啦圈女瘦肚子减肥专用收腹加重不伤腰毛绒氧气紫",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100440225184": {
       "price": "19.9",
       "orig": "49.9",
       "name": "1号会员店（One's Member）牛乳鲜布丁 100g*8",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100440225058": {
       "price": "19.9",
       "orig": "39.9",
       "name": "1号会员店（One’s Member）5.0蛋白高钙牛奶 950ml*2瓶 高蛋白 低温新鲜奶",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100209140163": {
       "price": "14.9",
       "orig": "39.9",
       "name": "金纺自营玉龙雪山玫瑰香氛400*4  新品上市",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100328177513": {
       "price": "8.9",
       "orig": "23.9",
       "name": "炫迈爆酸潮玩瓶 大颗粒无糖口香糖21g*3 三口味爆酸mini 不含赠品",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100441522912": {
       "price": "31",
       "orig": "79",
       "name": "本州制薬马油凡士林干裂贴手指足部脚后跟干皲裂口愈合透气防水专用贴1盒",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100416748268": {
       "price": "16.9",
       "orig": "39",
       "name": "蒙牛纯甄吸吸酸奶「蓝莓果粒」100g*10袋*1提 袋装儿童酸牛奶",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10239022352146": {
       "price": "1",
       "orig": "499",
       "name": "活动赠品 帆布袋【单拍不发】 通色 通码",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10239024072484": {
       "price": "1",
       "orig": "499",
       "name": "DIESEL活动赠品 收纳包【拍下不发】 通色 通码",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10239022885493": {
       "price": "1",
       "orig": "199",
       "name": "【会员专享】会员赠礼笔记本，赠品拍下不发货 通色 通码",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100436021950": {
       "price": "999",
       "orig": "",
       "name": "华硕电脑包",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100445664290": {
       "price": "9.9",
       "orig": "",
       "name": "DHA专注饮",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100038910694": {
       "price": "39.8",
       "orig": "",
       "name": "禾泱泱小虾条26g",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100423214320": {
       "price": "9.9",
       "orig": "",
       "name": "百年润发粉嘟嘟瓶",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100062836758": {
       "price": "19.9",
       "orig": "",
       "name": "冰希黎旷世男香",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100005511754": {
       "price": "4.9",
       "orig": "",
       "name": "心相印湿厕纸10片",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100136836230": {
       "price": "9.9",
       "orig": "",
       "name": "滋源Pro修护发膜",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100015937260": {
       "price": "9.9",
       "orig": "",
       "name": "顽皮小轻袋100g",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100238548388": {
       "price": "7.9",
       "orig": "",
       "name": "爆款洗液便携装",
-      "at": 1795003187814
-    },
-    "100248028156": {
-      "price": "439",
-      "orig": "",
-      "name": "苏泊尔有钛炒锅",
-      "at": 1795003187814
-    },
-    "10036324013864": {
-      "price": "119",
-      "orig": "",
-      "name": "斯凯奇充棉月亮椅",
-      "at": 1795003187814
-    },
-    "100258221077": {
-      "price": "17000",
-      "orig": "",
-      "name": "及腰短款棉质外套",
-      "at": 1795003187814
-    },
-    "10036181822480": {
-      "price": "316",
-      "orig": "",
-      "name": "买框送防蓝光镜片",
-      "at": 1795003187814
-    },
-    "100259786850": {
-      "price": "9.9",
-      "orig": "",
-      "name": "京造8色直液式笔",
-      "at": 1795003187814
-    },
-    "100289858920": {
-      "price": "30.9",
-      "orig": "",
-      "name": "得力加宽平板拖把",
-      "at": 1795003187814
-    },
-    "10034289048199": {
-      "price": "8200",
-      "orig": "",
-      "name": "男士牛仔裤",
-      "at": 1795003187814
-    },
-    "100381448204": {
-      "price": "239",
-      "orig": "",
-      "name": "925银耳钉",
-      "at": 1795003187814
-    },
-    "100315506977": {
-      "price": "128",
-      "orig": "",
-      "name": "高清可视化挖耳勺",
-      "at": 1795003187814
-    },
-    "100399730820": {
-      "price": "19.9",
-      "orig": "",
-      "name": "施颜适痘痘贴",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100285820711": {
       "price": "29.9",
       "orig": "",
       "name": "金纺小香瓶柔顺剂",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100306381452": {
-      "price": "98",
+    "100289858920": {
+      "price": "30.9",
       "orig": "",
-      "name": "高倍儿童防晒喷雾",
-      "at": 1795003187814
-    },
-    "100035972469": {
-      "price": "27.9",
-      "orig": "",
-      "name": "未来星雪梨枇杷",
-      "at": 1795003187814
-    },
-    "100304826083": {
-      "price": "27500",
-      "orig": "",
-      "name": "短款涂层牛仔风衣",
-      "at": 1795003187814
-    },
-    "100294994600": {
-      "price": "839",
-      "orig": "",
-      "name": "施华闪耀心动项链",
-      "at": 1795003187814
-    },
-    "10035357596350": {
-      "price": "39.9",
-      "orig": "",
-      "name": "4.5米监控延长线",
-      "at": 1795003187814
+      "name": "得力加宽平板拖把",
+      "at": 1795003536898
     },
     "100161773678": {
       "price": "859",
       "orig": "",
       "name": "短袖POLO衫",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100431891608": {
-      "price": "29.9",
+    "100381448204": {
+      "price": "239",
       "orig": "",
-      "name": "哈药生物次抛精华",
-      "at": 1795003187814
+      "name": "925银耳钉",
+      "at": 1795003536898
     },
-    "100114881156": {
-      "price": "67",
+    "100399730820": {
+      "price": "19.9",
       "orig": "",
-      "name": "安唯伊秋冬唇膏",
-      "at": 1795003187814
+      "name": "施颜适痘痘贴",
+      "at": 1795003536898
     },
-    "10036435315570": {
-      "price": "318",
+    "100294994600": {
+      "price": "839",
       "orig": "",
-      "name": "本杰瑞冰淇淋4桶",
-      "at": 1795003187814
+      "name": "施华闪耀心动项链",
+      "at": 1795003536898
+    },
+    "10036181822480": {
+      "price": "316",
+      "orig": "",
+      "name": "买框送防蓝光镜片",
+      "at": 1795003536898
     },
     "100247504329": {
       "price": "449",
       "orig": "",
       "name": "曼龙爬行垫",
-      "at": 1795003187814
+      "at": 1795003536898
     },
-    "100236243013": {
-      "price": "59.9",
+    "100306381452": {
+      "price": "98",
       "orig": "",
-      "name": "Keep薄绒呼啦圈",
-      "at": 1795003187814
+      "name": "高倍儿童防晒喷雾",
+      "at": 1795003536898
     },
-    "100240847091": {
-      "price": "189",
+    "100248028156": {
+      "price": "439",
       "orig": "",
-      "name": "颐莲联名礼盒",
-      "at": 1795003187814
+      "name": "苏泊尔有钛炒锅",
+      "at": 1795003536898
+    },
+    "100114881156": {
+      "price": "67",
+      "orig": "",
+      "name": "安唯伊秋冬唇膏",
+      "at": 1795003536898
+    },
+    "10036435315570": {
+      "price": "318",
+      "orig": "",
+      "name": "本杰瑞冰淇淋4桶",
+      "at": 1795003536898
     },
     "100047887337": {
       "price": "288",
       "orig": "",
       "name": "妈咪爱升级乳糖酶",
-      "at": 1795003187814
+      "at": 1795003536898
+    },
+    "100315506977": {
+      "price": "128",
+      "orig": "",
+      "name": "高清可视化挖耳勺",
+      "at": 1795003536898
+    },
+    "10036324013864": {
+      "price": "119",
+      "orig": "",
+      "name": "斯凯奇充棉月亮椅",
+      "at": 1795003536898
+    },
+    "100304826083": {
+      "price": "27500",
+      "orig": "",
+      "name": "短款涂层牛仔风衣",
+      "at": 1795003536898
+    },
+    "100240847091": {
+      "price": "189",
+      "orig": "",
+      "name": "颐莲联名礼盒",
+      "at": 1795003536898
+    },
+    "10035357596350": {
+      "price": "39.9",
+      "orig": "",
+      "name": "4.5米监控延长线",
+      "at": 1795003536898
+    },
+    "100035972469": {
+      "price": "27.9",
+      "orig": "",
+      "name": "未来星雪梨枇杷",
+      "at": 1795003536898
+    },
+    "100431891608": {
+      "price": "29.9",
+      "orig": "",
+      "name": "哈药生物次抛精华",
+      "at": 1795003536898
+    },
+    "100236243013": {
+      "price": "59.9",
+      "orig": "",
+      "name": "Keep薄绒呼啦圈",
+      "at": 1795003536898
+    },
+    "100258221077": {
+      "price": "17000",
+      "orig": "",
+      "name": "及腰短款棉质外套",
+      "at": 1795003536898
+    },
+    "100259786850": {
+      "price": "9.9",
+      "orig": "",
+      "name": "京造8色直液式笔",
+      "at": 1795003536898
+    },
+    "10034289048199": {
+      "price": "8200",
+      "orig": "",
+      "name": "男士牛仔裤",
+      "at": 1795003536898
     },
     "100235458910": {
       "price": "238",
       "orig": "",
       "name": "海伊登液体鱼油",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100070573216": {
       "price": "890",
       "orig": "",
       "name": "博柏利男士香水",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100230270725": {
       "price": "115.9",
       "orig": "",
       "name": "嘉宝莉金属漆",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100169493951": {
       "price": "24.9",
       "orig": "",
       "name": "润百颜修护次抛",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100192890983": {
       "price": "29.9",
       "orig": "",
       "name": "香氛沐浴露50ml",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100201973423": {
       "price": "29.9",
       "orig": "",
       "name": "金纺玫瑰柔顺剂",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100288079404": {
       "price": "62",
       "orig": "",
       "name": "本州制薬干裂贴",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100261851767": {
       "price": "26.9",
       "orig": "",
       "name": "纯甄蓝莓味酸奶",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10036456867776": {
       "price": "499",
       "orig": "",
       "name": "帆布袋",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10036456709008": {
       "price": "499",
       "orig": "",
       "name": "收纳包",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "10036457295372": {
       "price": "199",
       "orig": "",
       "name": "笔记本",
-      "at": 1795003187814
+      "at": 1795003536898
     },
     "100029368921": {
       "price": "1",
@@ -4772,11 +4793,11 @@
       "rounds": 1,
       "at": 1794103347152
     },
-    "100444318508": {
+    "100444318320": {
       "name": "",
       "price": "",
       "rounds": 1,
-      "at": 1795003187814
+      "at": 1795003256451
     },
     "100029368921": {
       "name": "爱贝迪拉儿童吸汗巾a类幼儿园大号小月龄婴儿宝宝止汗垫背巾隔汗巾",
